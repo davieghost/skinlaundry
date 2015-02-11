@@ -24,5 +24,5 @@ $("#nav-open").click(function(e) {
   // but don't close it when the nav itself is clicked
   $("#nav-page").click(function(e) {
     e.stopPropagation();
-    e.preventDefault();
+    //e.preventDefault();
   });
