@@ -127,11 +127,110 @@ body {
 }
 
 #nav-open {
-	position: absolute;
+	position: fixed;
 	z-index: 8000;
 	display: inline-block;
 	left: 15px;
 	top: 55px;
+  width: 34px;
+  height: 36px;
+  color: white;
+  background-color: rgb(61, 195, 195);
+  .line {
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+  }
+  .line-one {
+    width: 22px;
+    top: 10px;
+    left: 6px;
+  }
+  .line-two {
+    width: 22px;
+    top: 17px;
+    left: 6px;
+  }
+  .line-three {
+    width: 22px;
+    top: 24px;
+    left: 6px;
+  }
+  &:not(.close):hover .line-one {
+        -webkit-animation: BUBBLE .2s 1; /* Safari 4+ */
+        -moz-animation:    BUBBLE .2s 1; /* Fx 5+ */
+        -o-animation:      BUBBLE .2s 1; /* Opera 12+ */
+        animation:         BUBBLE .2s 1; /* IE 10+ */
+  }
+  &:not(.close):hover .line-two {
+    -webkit-animation: BUBBLE .2s 1;
+    -moz-animation:    BUBBLE .2s 1;
+    -o-animation:      BUBBLE .2s 1;
+    animation:         BUBBLE .2s 1;
+    -webkit-animation-delay: .05s;
+    animation-delay: .05s;
+  }
+  &:not(.close):hover .line-three {
+    -webkit-animation: BUBBLE .2s 1;
+    -moz-animation:    BUBBLE .2s 1;
+    -o-animation:      BUBBLE .2s 1;
+    animation:         BUBBLE .2s 1;
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+  }
+    @-webkit-keyframes BUBBLE {
+      0%   {
+        width: 22px;
+        left: 6px;
+      }
+      50%   {
+        width: 28px;
+        left: 3px;
+      }
+      100%   {
+        width: 22px;
+        left: 6px;
+      }
+    }
+    @-moz-keyframes BUBBLE {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @-o-keyframes BUBBLE {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes BUBBLE {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  &.close .line {
+    height:2px;
+    background-color:#FFF;
+  }
+  &.close .line-one {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center;
+    top: 18px;
+  }
+  &.close .line-two {
+    opacity:0;
+  }
+  &.close .line-three {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transform-origin: center;
+    top: 18px;
+  }
 }
 
 #nav-page {

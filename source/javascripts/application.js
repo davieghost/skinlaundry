@@ -9,8 +9,10 @@ $("#nav-open").click(function(e) {
 
     if($np.hasClass('open')){
     	$np.removeClass('open');
+      $(this).removeClass('close');
     }else {
     	$np.addClass('open');
+      $(this).addClass('close');
     }
 
   });
