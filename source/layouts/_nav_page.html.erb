@@ -1,6 +1,7 @@
 <div id="nav-open"><%= image_tag "menu_placeholder.jpg", :class => "none"  %></div>
 <div id="nav-page">
-	<div id="list-wrapper">
+	<div id="nav-wrapper">
+    <%= image_tag "http://lorempixel.com/200/200/", :class => "small-logo" %>
 		<%= image_tag "full_logo.png", :class => "logo" %>
     <ul>
       <li class="nav-heading">About Us</li>
@@ -13,7 +14,7 @@
     <ul>
       <li class="nav-heading"><a href="/about.html">Shop</a></li>
       <li><a href="#">Products</a></li>
-      <li><a href="treatment">Treatments</a></li>
+      <li><a href="/treatment.html">Treatments</a></li>
     </ul>
     <ul>
       <li class="nav-heading"><a href="/book.html">Book</a></li>
@@ -26,20 +27,20 @@
       <li>be in the know about new locations, products &amp; exclusive offers</li>
       <li><input type="text" placeholder="Enter Your Email Here" class="email-input focus-hide"></input><button>| go</button></li>
     </ul>
-  </div>
-  <div id="list-footer">
-	  <div class="social">
-	  	<a href="">facebook</a>
-	  	<a href="">instagam</a>
-	  </div>	
-	  <div class="nav-footerlinks">
-	  	<ul>
-	  		<li>faq</li>
-	  		<li>terms of use</li>
-	  		<li>shipping &amp; returns</li>
-	  		<li>privacy policy</li>
-	  		<li>contact</li>
-	  	</ul>
-	  </div>
+    <div id="nav-footer">
+      <div class="social">
+        <a class="social-link" href="#"><i class="fa fa-facebook"></i></a>
+        <a class="social-link" href="#"><i class="fa fa-instagram"></i></a>
+      </div>  
+      <div class="nav-footerlinks">
+        <ul>
+          <li><a href="/faq.html">faq</a></li>
+          <li>terms of use</li>
+          <li>shipping &amp; returns</li>
+          <li>privacy policy</li>
+          <li>contact</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

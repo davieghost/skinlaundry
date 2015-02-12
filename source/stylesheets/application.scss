@@ -1,4 +1,6 @@
 /*
+ *= require _normalize
+ *= require _fonts
  *= require_self
  *= require_tree . 
  */
@@ -70,13 +72,15 @@ body {
   	display: inline-block;
   }
 }
+
 #nav-open {
-  	position: absolute;
-  	z-index: 8000;
-  	display: inline-block;
-  	left: 15px;
-		top: 55px;
-  }
+	position: absolute;
+	z-index: 8000;
+	display: inline-block;
+	left: 15px;
+	top: 55px;
+}
+
 #nav-page {
 	position: fixed;
   top: 0;
@@ -95,36 +99,41 @@ body {
   &.open {
     left: 0;
   }
-  #list-wrapper {
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  #nav-wrapper {
     position: relative;
     height: 100%;
-    min-height: 720px; 
+    min-height: 900px; 
     color: black;
-    padding-top: 60px;
-    a {
-      text-decoration: none;
-      color: black;
+    padding-top: 10px;
+    .small-logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    .logo {
+      width: 200px;
+      display: block;
+      margin: 0 auto 50px auto;
     }
     ul {
-      list-style-type: none;
       text-align: left;
+      margin-left: 25%;
     }
     ul:not(:first-of-type) {
       margin-top: 25px;
     }
-    ul:last-of-type {
-      position: absolute;
-      width: 250px;
-      left: 50%;
-      margin-left: -125px;
-      bottom: 0;
-      height: 150px;
-    }
+    ul:last
     .nav-heading {
       letter-spacing: 2px;
       line-height: 21px;
       margin-bottom: 5px;
-      font-family: 'Gotham A', 'Gotham B';
+      font-family: 'DINAlternate-Bold';
       font-size: 12px;
     }
     li:not(.nav-heading) {
@@ -133,12 +142,11 @@ body {
       font-weight: 100;
       line-height: 20px;
       letter-spacing: 2px;
-      font-family: 'DidotLTStd-Italic';
+      font-family: 'DIN';
     }
     .email-input {
       width: 200px;
       margin-top: 8px;
-      font-style: italic;
       text-align: center;
       font-family: 'DidotLTStd-Italic';
       font-size: 13px;
@@ -148,6 +156,23 @@ body {
       transition: all 400ms ease-in;
       &:focus {
         padding-top: 0;
+      }
+    }
+    #nav-footer {
+      position: absolute;
+      width: 250px;
+      left: 50%;
+      margin-left: -125px;
+      bottom: 0;
+      height: 180px;
+      .social-link {
+        display: inline-block;
+        margin: 0 20px;
+      }
+
+      ul {
+        text-align: left;
+        margin-left: 15%;
       }
     }
   }
