@@ -18,6 +18,7 @@ $tablet-width: 1095px;
 
 html, body {
   height: 100%;
+  //height: 3000px;
   -webkit-overflow-scrolling: touch; 
 }
 
@@ -52,6 +53,10 @@ body {
   height: 110px;
   padding-top: 50px;
   padding: 50px 0 0 70px;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
   z-index: 2;
   background-color: #fff;
   @media only screen and (max-width: $mobile-width) {
@@ -199,6 +204,7 @@ body {
   height: 36px;
   color: white;
   background-color: $laundry-green;//rgb(61, 195, 195);
+  cursor: pointer;
   @media only screen and (max-width: $mobile-width) {
     top: 0;
     left: 0;
