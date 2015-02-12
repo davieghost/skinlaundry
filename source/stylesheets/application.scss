@@ -57,6 +57,8 @@ body {
   -moz-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
+  z-index: 2;
+  background-color: #fff;
   @media only screen and (max-width: $mobile-width) {
     position: relative;
     padding: 0;
@@ -455,16 +457,37 @@ body {
     }
   }
 }
+.videobg {
+  min-height: 400px;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  top: 110px;
 
+  video {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+}
+
+.staticwrap {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
 ///////////////////////// FOOTER ///////////////////////////
 
 #footer {
-  position: absolute;
-  bottom: 0;
   height: 250px;
   width: 100%;
   background-color: $laundry-green;
   color: white;
+  z-index: 2;
   a {
     text-decoration: none;
     color: white;
