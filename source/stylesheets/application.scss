@@ -52,24 +52,44 @@ body {
   }
   .logo {
   	display: inline-block;
+    position: relative;
   }
   #shop-nav {
+    position: relative;
+    top: -20px;
   	display: inline-block;
   	li {
+      a {
+        color: rgb(84,83,74);
+        text-decoration: none;
+      }
+      font-family: 'DIN';
+      font-size: 18px;
+      text-transform: uppercase;
   		display: inline-block;
+      margin-right: 18px;
   	}
   }
-  #location-nav {
-  	display: inline-block;
-		li:first-child {
-			display: inline-block;
-		}
-		li {
-			display: none;
-		}
-  }
-  #login {
-  	display: inline-block;
+  #location-login {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    #location-nav {
+    	display: inline-block;
+      font-family: 'DIN';
+      font-size: 11px;
+      text-transform: uppercase;
+      color: rgb(119,123,120);
+  		li:first-child {
+  			display: inline-block;
+  		}
+  		li {
+  			display: none;
+  		}
+    }
+    #login {
+    	display: inline-block;
+    }
   }
 }
 
