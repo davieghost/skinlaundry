@@ -137,8 +137,8 @@ body {
 	position: fixed;
   top: 0;
   height: 100%;
-  left: -400px;
-  width: 400px;
+  left: -455px;
+  width: 455px;
   max-width: 100%;
   z-index: 1000;
   overflow-y: scroll;
@@ -161,7 +161,7 @@ body {
   #nav-wrapper {
     position: relative;
     height: 100%;
-    min-height: 800px; 
+    min-height: 870px; 
     color: black;
     .small-logo {
       width: 100px;
@@ -170,12 +170,12 @@ body {
     .logo {
       width: 200px;
       display: block;
-      margin: 0 auto 38px auto;
+      margin: 0 auto 46px auto;
     }
     #first-time {      
       font-family: 'Archer-LightItalic';
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 400;
       text-align: left;
       margin-left: 36%;
       margin-bottom: 33px;
@@ -185,7 +185,7 @@ body {
     }
     #main-menu {
       text-transform: uppercase;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
       ul {
         text-align: left;
         margin-left: 36%;
@@ -193,12 +193,12 @@ body {
       .nav-heading {
         letter-spacing: 2px;
         line-height: 21px;
-        margin-bottom: 5px;
+        margin: 26px 0 5px 0;
         font-family: 'DINAlternate-Bold';
-        font-size: 12px;
+        font-size: 13px;
       }
       li:not(.nav-heading) {
-        font-size: 10px;
+        font-size: 11px;
         font-weight: 100;
         line-height: 20px;
         letter-spacing: 2px;
@@ -211,28 +211,28 @@ body {
         font-family: 'Archer-LightItalic';
         font-size: 24px; 
         margin-bottom: -6px;
-        font-weight: 700;
+        font-weight: 400;
       }
       p {
         text-transform: uppercase;
         font-family: 'DIN';
         font-size: 9px;
-        margin-bottom: 1px;
+        margin-bottom: 8px;
       }
       #input-and-button {
         position: relative;
-        width: 85%;
+        width: 310px;
+        text-transform: uppercase;
         margin: 0 auto;
+                font-size: 11px;
         .email-input {
           width: 100%;
           margin-top: 8px;
-          text-align: center;
-          font-size: 13px;
-          letter-spacing: 1px;
+          text-align: left;
+          padding: 20px 25px;  
           height: 32px;
-          border: 1px solid rgb(0,177,148); 
-          // padding-top: 7px;
-          font-family: 'DIN';
+          border: 1px solid rgb(0,177,148);  
+          font-family: 'DIN';  
           transition: all 400ms ease-in;
           &:focus {
             padding-top: 0;
@@ -241,12 +241,12 @@ body {
         }
         button {
           position: absolute;
-          right: 0;
-          top: 14px;
+          right: 10px;
+          top: 23px;
           background: none;
           border: none;
-          font-size: 21px;
-          font-family: 'DIM';
+          text-transform: uppercase;
+          font-family: 'DINAlternate-Bold';
           &:focus {
             outline: none;
           }
@@ -263,6 +263,7 @@ body {
         .social-link {
           display: inline-block;
           margin: 0 10px;
+          color: rgb(128,128,128);
         }
       }
       ul {
