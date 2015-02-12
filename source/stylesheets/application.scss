@@ -202,6 +202,7 @@ body {
   height: 36px;
   color: white;
   background-color: $laundry-green;//rgb(61, 195, 195);
+  cursor: pointer;
   @media only screen and (max-width: $mobile-width) {
     top: 0;
     left: 0;
