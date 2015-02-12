@@ -1,0 +1,27 @@
+body.firsttime {
+	#main {
+		margin: 150px auto 0;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+	}
+
+	.block{
+		min-height:250px;
+	}
+
+	.left {
+		width: 38%;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+
+	.right {
+		width: 58%;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+
+}
