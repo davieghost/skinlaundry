@@ -18,6 +18,7 @@ $tablet-width: 1095px;
 
 html, body {
   height: 100%;
+  //height: 3000px;
   -webkit-overflow-scrolling: touch; 
 }
 
@@ -52,6 +53,10 @@ body {
   height: 110px;
   padding-top: 50px;
   padding: 50px 0 0 70px;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
   z-index: 2;
   background-color: #fff;
   @media only screen and (max-width: $mobile-width) {
@@ -199,6 +204,7 @@ body {
   height: 36px;
   color: white;
   background-color: $laundry-green;//rgb(61, 195, 195);
+  cursor: pointer;
   @media only screen and (max-width: $mobile-width) {
     top: 0;
     left: 0;
@@ -454,13 +460,13 @@ body {
 .videobg {
   min-height: 400px;
   width: 100%;
+  height: 100% !important;
   position: relative;
   z-index: 0;
-  top: 110px;
+  overflow: hidden;
 
   video {
     z-index: 0;
-    position: absolute;
     width: 100%;
   }
 
@@ -473,6 +479,8 @@ body {
   width: 100%;
   height: 100%;
   overflow: scroll;
+  margin-bottom: 0;
+  background: 1px solid red;
 }
 ///////////////////////// FOOTER ///////////////////////////
 

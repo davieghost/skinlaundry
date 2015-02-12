@@ -55,3 +55,33 @@ $('.location-mobile').click(function(e){
       $hl.css('display', 'none');
     });
 });
+
+$(document).ready(function(){
+  resizeVideo();
+});
+
+window.onresize = function(){
+  resizeVideo();
+}
+
+function resizeVideo()
+{
+  if(document.body.clientHeight)
+  {
+    var windowHeight = document.body.clientHeight;
+    var vidAspectRatio = 1280 / 720;
+    var windowAspectRatio = document.body.clientWidth / document.body.clientHeight;
+    //scale width to match full height of window
+    var newWidth = Math.round(document.body.clientHeight * vidAspectRatio);
+    console.log(newWidth);
+    if(vidAspectRatio > windowAspectRatio)
+    {
+      //console.log('window taller');
+      $('.videobg video').css('width', newWidth + 'px');
+    }else
+    {
+      //console.log('video taller');
+      $('.videobg video').css('width', '100%');
+    }
+  }
+}
