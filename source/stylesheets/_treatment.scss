@@ -24,17 +24,26 @@ body.treatment {
 		.left {
 			width: 40%;
 			display: inline-block;
+			border: 3px solid black;
+			min-height: 200px;
 			#paragraph2 {
 				width: 80%;
 				margin: 0 auto;
 			}
+			
 		}
 		.right {
 			width: 59%;
 			display: inline-block;
+			min-height: 200px;
 			#paragraph1 {
 				margin-left: 180px;
 			}
+		}
+		
+		#booking {
+			background-image: url('/images/treatment3.jpg');
+			background-size: 100% auto;
 		}
 	}
 }
