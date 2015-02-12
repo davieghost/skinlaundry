@@ -1,6 +1,6 @@
-<div id="header">
+<div id="header" class="hide-mobile">
   <% if page_classes.split(" ").first == "index" %>
-    <%= image_tag "full_logo.png", :class => "logo hide-mobile" %>
+    <%= image_tag "full_logo.png", :class => "logo " %>
   <% else %>
     <a href="/" class="to-home"><%= image_tag "full_logo.png", :class => "logo hide-mobile" %></a> 
   <% end %>
@@ -19,5 +19,19 @@
       <a href=""></a>
       <%= image_tag "shopping_bag.png", class: "shopping-bag" %>
     </div>
+  </div>
+</div>
+<div id="header" class="hide-desktop">
+  <div class="mobile-logolist">
+    <% if page_classes.split(" ").first == "index" %>
+      <%= image_tag "full_logo.png", :class => "logo " %>
+    <% else %>
+      <a href="/" class="to-home"><%= image_tag "full_logo.png", :class => "logo hide-mobile" %></a> 
+    <% end %>
+    <ul id="shop-nav">
+      <li><a href="">Book Now</a></li>
+      <li><a href="">Shop Treatments</a></li>
+      <li><a href="">Shop Products</a></li>
+    </ul>
   </div>
 </div>
