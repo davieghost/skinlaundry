@@ -21,6 +21,7 @@ $("#nav-open").click(function(e) {
   $("body").click(function() {
     if ($("#nav-page").hasClass("open"))
       $("#nav-page").removeClass('open');
+      $("#nav-open").removeClass('close');
   });
 
   // but don't close it when the nav itself is clicked
