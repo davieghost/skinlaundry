@@ -26,3 +26,8 @@ $("#nav-open").click(function(e) {
     e.stopPropagation();
     //e.preventDefault();
   });
+
+
+$('#location-nav').hover(function(){
+  $('.hidden-list').toggle();
+});
