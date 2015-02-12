@@ -9,6 +9,8 @@ $laundry-green: #00b194;
 $mobile-width: 610px;
 $tablet-width: 1095px;
 
+///////////////////// GLOBAL STYLES /////////////////////
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -39,6 +41,8 @@ body {
     display: none!important;
   }
 }
+
+///////////////////////// HEADER ///////////////////////////
 
 #header {
 	position: fixed;
@@ -173,6 +177,9 @@ body {
       }
     }
   }
+}
+
+/////////////////// NAV OPEN/CLOSE BUTTON ///////////////////////
 #nav-open {
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
@@ -288,6 +295,8 @@ body {
     top: 18px;
   }
 }
+
+///////////////////////// NAV PAGE ///////////////////////////
 
 #nav-page {
 	position: fixed;
@@ -438,6 +447,8 @@ body {
   }
 }
 
+///////////////////////// FOOTER ///////////////////////////
+
 #footer {
   position: absolute;
   bottom: 0;
@@ -504,6 +515,7 @@ body {
   }
   .footer-links {
     width: 90%;
+    max-width: 800px;
     text-align: center;
     text-transform: uppercase;
     font-family: 'DIN';
@@ -517,7 +529,7 @@ body {
       margin: 0;
       li {
         display: inline-block;
-        margin: 0 20px;
+        margin: 0 10px;
       }
       li:first-child {
         margin-left: 5px;
@@ -528,7 +540,38 @@ body {
       .social-link {
         margin: 0 10px;
       }
-
+    }
+  }
+  @media only screen and (max-width: $mobile-width) {
+    height: 340px;
+    .join-list {
+      margin: 40px 30px;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 16px;
+      }
+      #input-and-button {
+        width: 85%;
+        .email-input {
+        }
+      }
+    }
+    .footer-links {
+      font-size: 11px;
+      border-top: none;
+      ul {
+        float: none;
+        margin-bottom: 32px;
+        li {
+          margin: 0 10px;
+        }
+      }
+      .social {
+        float: none;
+        font-size: 26px;
+      }
     }
   }
 }
