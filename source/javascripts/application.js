@@ -31,5 +31,11 @@ $("#nav-open").click(function(e) {
 
 
 $('#location-nav').hover(function(){
-  $('.hidden-list').toggle();
+  var $hl = $(".hidden-list");
+  if ($hl.css('display') == 'none') 
+    $hl.css('display', 'block').animate({'opacity': '1'});
+  else
+    $hl.animate({'opacity': '0'}, function() {
+      $hl.css('display', 'none');
+    });
 });

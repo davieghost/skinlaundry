@@ -89,7 +89,7 @@ body {
       background-repeat: no-repeat;
       background-position: 127% -22px;
       background-size: 40%;
-      height: 20px;
+      height: 50px;
       cursor: crosshair;
   		li:first-child {
   			display: inline-block;
@@ -102,6 +102,7 @@ body {
   		}
   		.hidden-list {
   			display: none;
+        opacity: 0;
         list-style: none;
         float: left;
         margin-left: -41px;
