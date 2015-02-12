@@ -121,41 +121,50 @@ body {
       display: block;
       margin: 0 auto 50px auto;
     }
-    ul {
-      text-align: left;
-      margin-left: 25%;
-    }
-    ul:not(:first-of-type) {
-      margin-top: 25px;
-    }
-    ul:last
-    .nav-heading {
-      letter-spacing: 2px;
-      line-height: 21px;
-      margin-bottom: 5px;
-      font-family: 'DINAlternate-Bold';
-      font-size: 12px;
-    }
-    li:not(.nav-heading) {
-      font-size: 10px;
-      font-style: italic;
-      font-weight: 100;
-      line-height: 20px;
-      letter-spacing: 2px;
-      font-family: 'DIN';
-    }
-    .email-input {
-      width: 200px;
-      margin-top: 8px;
+    #first-time {      
+      font-family: 'Archer-LightItalic';
+      font-size: 24px;
+      text-transform: none;
       text-align: center;
-      font-family: 'DidotLTStd-Italic';
-      font-size: 13px;
-      letter-spacing: 1px;
-      height: 32px;
-      padding-top: 7px;
-      transition: all 400ms ease-in;
-      &:focus {
-        padding-top: 0;
+      a {
+        color: rgb(0,177,148);
+      }
+    }
+    #main-menu {
+      ul {
+        text-align: left;
+        margin-left: 25%;
+      }
+      .nav-heading {
+        letter-spacing: 2px;
+        line-height: 21px;
+        margin-bottom: 5px;
+        font-family: 'DINAlternate-Bold';
+        font-size: 12px;
+      }
+      li:not(.nav-heading) {
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 2px;
+        font-family: 'DIN';
+      }
+    }
+    #join {
+      .email-input {
+        width: 200px;
+        margin-top: 8px;
+        text-align: center;
+        font-family: 'DidotLTStd-Italic';
+        font-size: 13px;
+        letter-spacing: 1px;
+        height: 32px;
+        padding-top: 7px;
+        transition: all 400ms ease-in;
+        &:focus {
+          padding-top: 0;
+        }
       }
     }
     #nav-footer {
@@ -169,7 +178,6 @@ body {
         display: inline-block;
         margin: 0 20px;
       }
-
       ul {
         text-align: left;
         margin-left: 15%;
