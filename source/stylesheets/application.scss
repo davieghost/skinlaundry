@@ -113,7 +113,6 @@ body {
   text-align: center;
   cursor: default;
   background-color: white;
-  text-transform: uppercase;
   transition: all 300ms;
   outline: 1px solid green;
   &.open {
@@ -121,6 +120,7 @@ body {
   }
   ul {
     list-style-type: none;
+    padding: 0;
   }
   a {
     text-decoration: none;
@@ -129,7 +129,7 @@ body {
   #nav-wrapper {
     position: relative;
     height: 100%;
-    min-height: 900px; 
+    min-height: 800px; 
     color: black;
     padding-top: 10px;
     .small-logo {
@@ -139,21 +139,24 @@ body {
     .logo {
       width: 200px;
       display: block;
-      margin: 0 auto 50px auto;
+      margin: 0 auto 38px auto;
     }
     #first-time {      
       font-family: 'Archer-LightItalic';
       font-size: 24px;
-      text-transform: none;
-      text-align: center;
+      text-align: left;
+      margin-left: 36%;
+      margin-bottom: 33px;
       a {
         color: rgb(0,177,148);
       }
     }
     #main-menu {
+      text-transform: uppercase;
+      margin-bottom: 60px;
       ul {
         text-align: left;
-        margin-left: 25%;
+        margin-left: 36%;
       }
       .nav-heading {
         letter-spacing: 2px;
@@ -164,7 +167,6 @@ body {
       }
       li:not(.nav-heading) {
         font-size: 10px;
-        font-style: italic;
         font-weight: 100;
         line-height: 20px;
         letter-spacing: 2px;
@@ -172,35 +174,55 @@ body {
       }
     }
     #join {
+      color: rgb(0,177,148);
+      h1 {
+        font-family: 'Archer-LightItalic';
+        font-size: 24px; 
+        margin-bottom: -6px;
+      }
+      p {
+        text-transform: uppercase;
+        font-family: 'DIN';
+        font-size: 9px;
+        margin-bottom: 1px;
+      }
       .email-input {
         width: 200px;
         margin-top: 8px;
         text-align: center;
-        font-family: 'DidotLTStd-Italic';
         font-size: 13px;
         letter-spacing: 1px;
         height: 32px;
-        padding-top: 7px;
+        border: 1px solid rgb(0,177,148); 
+        // padding-top: 7px;
+        font-family: 'DIN';
         transition: all 400ms ease-in;
         &:focus {
           padding-top: 0;
+          outline: none;
         }
       }
     }
     #nav-footer {
       position: absolute;
-      width: 250px;
-      left: 50%;
-      margin-left: -125px;
       bottom: 0;
-      height: 180px;
-      .social-link {
-        display: inline-block;
-        margin: 0 20px;
+      height: 80px;
+      width: 100%;
+      #social {
+        margin-bottom: 20px;
+        .social-link {
+          display: inline-block;
+          margin: 0 20px;
+        }
       }
       ul {
-        text-align: left;
-        margin-left: 15%;
+        text-transform: uppercase;
+        font-family: 'DIN';
+        font-size: 8px;
+        li {
+          display: inline-block;
+          margin: 0 8px;
+        }
       }
     }
   }
