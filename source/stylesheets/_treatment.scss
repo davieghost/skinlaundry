@@ -1,0 +1,40 @@
+
+/*----------------------------- LOOKBOOKS PAGE -----------------------------*/
+
+// this constant should be the same as the MOBILE_WIDTH 
+// constant at the top of _lookbooks.js
+$mobile-width: 700px;   
+
+$background-height: 410px;  
+
+
+body.treatment {
+	background-image: url('/images/placeholder_background.jpg');
+
+	#container {
+		background: white;
+		position: relative;
+		max-width: 980px;
+		margin: 0 auto;
+		top: 120px;
+		#heading {
+			text-align: center;
+			padding: 30px 50px;
+		}
+		.left {
+			width: 40%;
+			display: inline-block;
+			#paragraph2 {
+				width: 80%;
+				margin: 0 auto;
+			}
+		}
+		.right {
+			width: 59%;
+			display: inline-block;
+			#paragraph1 {
+				margin-left: 180px;
+			}
+		}
+	}
+}
