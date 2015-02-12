@@ -163,10 +163,9 @@ body {
     height: 100%;
     min-height: 800px; 
     color: black;
-    padding-top: 10px;
     .small-logo {
       width: 100px;
-      margin-bottom: 20px;
+      margin: 15px 0;
     }
     .logo {
       width: 200px;
@@ -176,6 +175,7 @@ body {
     #first-time {      
       font-family: 'Archer-LightItalic';
       font-size: 24px;
+      font-weight: 700;
       text-align: left;
       margin-left: 36%;
       margin-bottom: 33px;
@@ -211,6 +211,7 @@ body {
         font-family: 'Archer-LightItalic';
         font-size: 24px; 
         margin-bottom: -6px;
+        font-weight: 700;
       }
       p {
         text-transform: uppercase;
@@ -218,20 +219,37 @@ body {
         font-size: 9px;
         margin-bottom: 1px;
       }
-      .email-input {
-        width: 200px;
-        margin-top: 8px;
-        text-align: center;
-        font-size: 13px;
-        letter-spacing: 1px;
-        height: 32px;
-        border: 1px solid rgb(0,177,148); 
-        // padding-top: 7px;
-        font-family: 'DIN';
-        transition: all 400ms ease-in;
-        &:focus {
-          padding-top: 0;
-          outline: none;
+      #input-and-button {
+        position: relative;
+        width: 85%;
+        margin: 0 auto;
+        .email-input {
+          width: 100%;
+          margin-top: 8px;
+          text-align: center;
+          font-size: 13px;
+          letter-spacing: 1px;
+          height: 32px;
+          border: 1px solid rgb(0,177,148); 
+          // padding-top: 7px;
+          font-family: 'DIN';
+          transition: all 400ms ease-in;
+          &:focus {
+            padding-top: 0;
+            outline: none;
+          }
+        }
+        button {
+          position: absolute;
+          right: 0;
+          top: 14px;
+          background: none;
+          border: none;
+          font-size: 21px;
+          font-family: 'DIM';
+          &:focus {
+            outline: none;
+          }
         }
       }
     }
@@ -240,11 +258,11 @@ body {
       bottom: 0;
       height: 80px;
       width: 100%;
-      #social {
+      .social {
         margin-bottom: 20px;
         .social-link {
           display: inline-block;
-          margin: 0 20px;
+          margin: 0 10px;
         }
       }
       ul {
