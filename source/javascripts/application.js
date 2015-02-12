@@ -22,6 +22,10 @@ $("#nav-open").click(function(e) {
     if ($("#nav-page").hasClass("open"))
       $("#nav-page").removeClass('open');
       $("#nav-open").removeClass('close');
+    $(".hidden-list").animate({'opacity': '0'}, function() {
+      $(".hidden-list").css('display', 'none');
+    });
+
   });
 
   // but don't close it when the nav itself is clicked
@@ -32,6 +36,17 @@ $("#nav-open").click(function(e) {
 
 
 $('#location-nav').hover(function(){
+  var $hl = $(".hidden-list");
+  if ($hl.css('display') == 'none') 
+    $hl.css('display', 'block').animate({'opacity': '1'});
+  else
+    $hl.animate({'opacity': '0'}, function() {
+      $hl.css('display', 'none');
+    });
+});
+
+$('.location-mobile').click(function(e){
+  e.stopPropagation();
   var $hl = $(".hidden-list");
   if ($hl.css('display') == 'none') 
     $hl.css('display', 'block').animate({'opacity': '1'});
