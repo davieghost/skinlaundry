@@ -97,6 +97,11 @@ body {
     position: absolute;
     right: 30px;
     top: 66px;
+    @media only screen and (max-width: $mobile-width) {
+      top: -55px;
+      z-index: 8001;
+      right: 0;
+    }
     #location-nav {
     	display: inline-block;
       font-family: 'DIN';
