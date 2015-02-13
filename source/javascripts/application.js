@@ -11,17 +11,24 @@ $(document).ready(function() {
     if($np.hasClass('open')) {
     	$np.removeClass('open');
       $(this).removeClass('close');
+      $('body').css('overflow', 'auto');
     } else {
     	$np.addClass('open');
       $(this).addClass('close');
+      $('body').css('overflow', 'hidden');
     }
+
+
   });
 
   // if the nav is open, close it when the body is clicked
   $("body").click(function() {
-    if ($("#nav-page").hasClass("open"))
+    if ($("#nav-page").hasClass("open")) {
       $("#nav-page").removeClass('open');
       $("#nav-open").removeClass('close');
+      $('body').css('overflow', 'auto');
+    }
+
     $(".hidden-list").animate({'opacity': '0'}, function() {
       $(".hidden-list").css('display', 'none');
     });

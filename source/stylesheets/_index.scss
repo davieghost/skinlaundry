@@ -1,0 +1,343 @@
+$slide-control-color: rgb(125, 125, 125);
+$laundry-green: #00b194;
+$mobile-width: 610px;
+$tablet-width: 1095px;
+
+body.index {
+  #main {
+    width: 90%;
+    margin: 150px auto 0 auto;
+    position: relative;
+    #slider {
+      position: relative;
+      padding-top: 62.2%;
+      overflow-x: hidden;
+      #slide-control {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        z-index: 5;
+        & > * {
+          float: left;
+        }
+        .circle {
+          width: 8px;
+          height: 8px;
+          margin: 6px;
+          border-radius: 5px;
+          border: 1px $slide-control-color solid;
+          &.current {
+            background-color: $slide-control-color;
+          }
+        }
+        #slide-left {
+          cursor: pointer;
+          text-align: center;
+          width: 16px;
+          padding-top: 2px;
+          color: $slide-control-color;
+        }
+        #slide-right {
+          cursor: pointer;
+          text-align: center;
+          width: 16px;
+          padding-top: 2px;
+          color: $slide-control-color;
+        }
+      }
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: none;
+        .overlay-text {
+          position: absolute;
+          text-align: left;
+          h1 {
+            font-family: 'Archer-LightItalic';
+            font-size: 4.0vw;
+            margin-bottom: -6px;
+            font-weight: 400;
+          }
+          p {
+            font-family: 'DIN';
+            font-size: 1.5vw;
+            margin-bottom: 8px;
+          }
+          .text-box {
+            display: inline-block;
+            border: 1px rgb(50, 50, 50) solid;
+            color: rgb(50, 50, 50);
+            text-align: center;
+            font-family: 'DINAlternate-Bold';
+            font-size: 1.3vw;
+            padding: 10px 15px 7px 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            text-decoration: none;
+          }
+        }
+      }
+      #slide-01 {
+        background-image: image-url("index/slide_01.jpg");
+        background-size: 143%;
+        background-position: 56% 0;
+        display: block;
+        .overlay-text {
+          top: 20%;
+          right: 2%;
+          width: 36%;
+          .text-box {
+            margin: 2% 0 0 30%;        
+          }
+
+        }
+      }
+      #slide-02 {
+        background-image: image-url("index/slide_02.jpg");
+      }
+      #slide-03 {
+        background-image: image-url("index/slide_03.jpg");
+        background-size: 170%;
+        background-position: 51% 71%;
+        .overlay-text {
+          top: 20%;
+          left: 7%;
+          width: 25%;
+          .text-box {
+            margin-top: 10%;
+          }
+        }
+      }
+    }
+    #box-set {
+      text-align: center;
+      margin-top: 15px;
+      overflow: auto;
+      .box {
+        display: inline-block;
+        width: 32%;
+        .top-section {
+          position: relative;
+          padding-top: 74.5%;               // controls the aspect ratio of the images
+          background-repeat: no-repeat;
+        }
+        .bottom-section {
+          float: left;
+          width: 100%;
+          text-transform: uppercase;
+          font-family: 'DIN';
+          font-size: 11px;
+          padding: 12px 0;
+          color: white;
+        }
+      }
+      #box-01 {
+        .top-section {
+          background-image: image-url("index/box_01.jpg");
+          background-size: 87%;
+          background-position: 100% 0;
+          background-color: $laundry-green;
+          opacity: 0.5;
+          .overlay-text {
+            position: absolute;
+            text-transform: uppercase;
+            text-align: left;
+            top: 28%;
+            left: 9%;
+            width: 80%;
+            h1 {
+              font-size: 3.0vw;
+              color: white;  
+              font-family: 'DIN';
+            }
+            h2 {
+              margin-top: 5% 0 0 2%;
+              font-size: 1vw;
+              color: $laundry-green;
+              font-family: 'DINAlternate-Bold';
+            }
+          }
+        }
+        .bottom-section {
+          background-color: transparentize($laundry-green, 0.2);
+        }        
+      }
+      #box-02 {
+        margin: 0 1%;
+        .top-section {
+          background-image: image-url("index/box_02.jpg");
+          background-size: 165%;
+          background-position: 68% 50%;
+          .overlay-text {
+            position: absolute;
+            width: 15%;
+            top: 4%;
+            font-size: 1.4vw;
+            left: 47%;
+            height: auto;
+            color: white;
+            font-family: 'Archer-LightItalic';
+            text-align: left;
+          }
+        }
+        .bottom-section {
+          background-color: transparentize($laundry-green, 0.7);
+        }
+      }
+      #box-03 {
+        .top-section {
+          background-image: image-url("index/box_03.jpg");
+          background-size: 100%;
+          background-position: 0 100%;
+        }
+        .bottom-section {
+          background-color: transparentize($laundry-green, 0.7);
+        }
+      }
+      #box-04 {
+        text-align: center; 
+        display: block;
+        width: 100%;
+        .overlay-text {
+          margin: 60px auto 0 auto;
+          width: 35%;
+          h1 {
+            font-family: sans-serif;
+            font-size: 2.5vw;
+            margin-bottom: -2%;
+          }
+          p {
+            font-family: 'Archer-LightItalic';
+            font-size: 2vw;
+          }
+          #stars {
+            margin: 0 auto 13% auto;
+            p:first-child {
+              font-family: 'DINAlternate-Bold';
+              font-size: 1.2vw;
+              color: black;
+              margin-bottom: -4%;
+            }
+            p:last-child {
+              color: $laundry-green;
+              font-size: 2vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $mobile-width) {
+    #main {
+      margin-top: -10px;
+      width: 100%;
+      #slider {
+        margin-bottom: 80px;
+        overflow: visible;
+        #slide-control {
+          width: 92px;
+          top: 106%;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+        .slide {
+          .overlay-text {
+            h1 {
+              font-size: 4.5vw;
+            }
+            p {
+              font-size: 3vw;
+            }
+            .text-box {
+              font-size: 2vw;
+            }
+          }
+        }
+        #slide-01 {
+          .overlay-text {
+            top: 5%;
+            right: 4%;
+            .text-box {
+              margin-left: 16%;
+            }
+          }
+        }
+        #slide-03 {
+          .overlay-text {
+            .text-box {
+              margin-top: 17%;
+            }
+          }
+        }
+      }
+      #box-set {
+        margin: 0 auto 50px auto;
+        width: 90%;
+        .box {
+          float: left;
+          width: 49%;
+        }
+        #box-01 {
+          .top-section {
+            .overlay-text {
+              h1 {
+                font-size: 4vw;
+              }
+              h2 {
+                font-size: 2vw;
+              }
+            }
+          }
+        }
+        #box-02 {
+          float: right;
+          margin: 0;
+          .top-section {
+            .overlay-text {
+              font-size: 2.2vw;
+            }
+          }
+        }
+        #box-03 {
+          float: left;
+          margin-top: 2%;
+        }
+        #box-04 {
+          float: right;
+          position: relative;
+          margin-top: 2%;
+          display: inline-block;
+          background-color: white;
+          width: 49%;
+          .overlay-text {
+            margin: 0 auto;
+            width: 80%;
+            h1 {
+              font-size: 4.5vw;
+              margin-bottom: -10%;
+            }
+            p {
+              font-size: 3.9vw;
+            }
+            #stars {
+              margin-bottom: 0;
+              p:first-child {
+                font-size: 2vw;
+                margin-bottom: -4%;
+              }
+              p:last-child {
+                font-size: 2vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
