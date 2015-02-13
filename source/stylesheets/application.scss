@@ -335,6 +335,7 @@ body {
     color: black;
     @media only screen and (max-width: $mobile-width) {
       padding-top: 40px;
+      min-height: 910px;
     }
     .small-logo {
       width: 100px;
@@ -408,7 +409,6 @@ body {
           font-family: 'DIN';  
           transition: all 400ms ease-in;
           &:focus {
-            padding-top: 0;
             outline: none;
           }
         }
@@ -451,6 +451,7 @@ body {
     }
   }
 }
+
 .videobg {
   min-height: 400px;
   width: 100%;
@@ -463,7 +464,6 @@ body {
     z-index: 0;
     width: 100%;
   }
-
 }
 
 /* .staticwrap {
@@ -541,7 +541,6 @@ body {
           font-family: 'DIN';  
           transition: all 400ms ease-in;
           &:focus {
-            padding-top: 0;
             outline: none;
           }
         }

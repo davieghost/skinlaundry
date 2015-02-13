@@ -230,8 +230,9 @@ body.index {
   @media only screen and (max-width: $mobile-width) {
     #main {
       margin-top: -10px;
+      width: 100%;
       #slider {
-        margin-bottom: 60px;
+        margin-bottom: 80px;
         overflow: visible;
         #slide-control {
           width: 92px;
@@ -242,7 +243,8 @@ body.index {
         }
       }
       #box-set {
-        margin-bottom: 50px;
+        margin: 0 auto 50px auto;
+        width: 90%;
         .box {
           float: left;
           width: 49%;
