@@ -99,6 +99,20 @@ body.index {
       }
       #slide-02 {
         background-image: image-url("index/slide_02.jpg");
+        background-size: 150%;
+        background-position: 50% 76%;
+        .overlay-text {
+          position: absolute;
+          top: 63%;
+          right: 1%;
+          width: 28%;
+          text-align: left;
+          font-family: 'Rollerscript-Smooth';
+          font-size: 16px;
+          font-size: 5vw;
+          line-height: 6vw;
+          color: rgb(50, 50, 50);
+        }
       }
       #slide-03 {
         background-image: image-url("index/slide_03.jpg");
@@ -194,6 +208,21 @@ body.index {
           background-image: image-url("index/box_03.jpg");
           background-size: 100%;
           background-position: 0 100%;
+          .overlay-text {
+            position: absolute;
+            font-family: 'Rollerscript-Smooth';
+            font-size: 2vw;
+          }
+          .overlay-text:first-of-type {
+            top: 39%;
+            left: 1%;
+            width: 40%;
+          }
+          .overlay-text:last-of-type {
+            top: 47%;
+            left: 10%;
+            width: 40%;
+          }
         }
         .bottom-section {
           background-color: transparentize($laundry-green, 0.7);
@@ -261,11 +290,20 @@ body.index {
         }
         #slide-01 {
           .overlay-text {
+            width: 34%;
             top: 5%;
-            right: 4%;
+            right: 6%;
             .text-box {
               margin-left: 16%;
             }
+          }
+        }
+        #slide-02 {
+          .overlay-text {
+            top: 63%;
+            right: 1%;
+            width: 27%;
+
           }
         }
         #slide-03 {
@@ -307,6 +345,11 @@ body.index {
         #box-03 {
           float: left;
           margin-top: 2%;
+          .top-section {
+            .overlay-text {
+              font-size: 3vw;
+            }
+          }
         }
         #box-04 {
           float: right;

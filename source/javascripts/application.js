@@ -18,7 +18,6 @@ $(document).ready(function() {
       $('body').css('overflow', 'hidden');
     }
 
-
   });
 
   // if the nav is open, close it when the body is clicked
