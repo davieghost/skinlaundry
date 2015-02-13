@@ -4,13 +4,14 @@ $tablet-width: 1095px;
 
 body.firsttime {
 	#main {
+		position: relative;
 		margin: 150px auto 0;
 		max-width: 980px;
 		z-index: 1;
 		background-color: #fff;
 		font-family: 'DIN';
-      	font-size: 15px;
-      	@media only screen and (max-width: $mobile-width) {
+    font-size: 15px;
+    @media only screen and (max-width: $mobile-width) {
 		    width: 90%;
 		}
 		line-height: 1.4em;
@@ -18,11 +19,13 @@ body.firsttime {
 	}
 
 	#bottombar {
+		position: relative;
 		margin: 5px auto 0;
 		max-width: 980px;
 		z-index: 1;
 		background: none;
 		text-align: center;
+		padding-bottom: 400px;
 		a.links {
 			display: block;
 			background: rgba(53,193,170,.5);
