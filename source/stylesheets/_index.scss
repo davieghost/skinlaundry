@@ -1,16 +1,185 @@
+$slide-control-color: rgb(125, 125, 125);
+$laundry-green: #00b194;
 
 body.index {
   #main {
     width: 90%;
     margin: 150px auto 0 auto;
-    background-color: red;
+    position: relative;
+    .overlay-text {
+      position: absolute;
+      h1 {
+        font-family: 'Archer-LightItalic';
+        font-size: 4.0vw;
+        margin-bottom: -6px;
+        font-weight: 400;
+      }
+      p {
+        font-family: 'DIN';
+        font-size: 1.5vw;
+        margin-bottom: 8px;
+      }
+      .text-box {
+        display: inline-block;
+        border: 1px rgb(50, 50, 50) solid;
+        color: rgb(50, 50, 50);
+        text-align: center;
+        font-family: 'DINAlternate-Bold';
+        font-size: 1.3vw;
+        padding: 10px 15px 7px 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        text-decoration: none;
+      }
+    }
     #slider {
-      height: 500px;
-      background-color: blue;
+      position: relative;
+      padding-top: 62.2%;
+      overflow-x: hidden;
+      #slide-control {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        z-index: 5;
+        & > * {
+          float: left;
+        }
+        .circle {
+          width: 8px;
+          height: 8px;
+          margin: 6px;
+          border-radius: 5px;
+          border: 1px $slide-control-color solid;
+          &.current {
+            background-color: $slide-control-color;
+          }
+        }
+        #slide-left {
+          cursor: pointer;
+          text-align: center;
+          width: 16px;
+          padding-top: 2px;
+          color: $slide-control-color;
+        }
+        #slide-right {
+          cursor: pointer;
+          text-align: center;
+          width: 16px;
+          padding-top: 2px;
+          color: $slide-control-color;
+        }
+      }
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: none;
+      }
+      #slide-01 {
+        background-image: image-url("index/slide_01.jpg");
+        background-size: 143%;
+        background-position: 56% 0;
+        display: block;
+        .overlay-text {
+          top: 20%;
+          right: 2%;
+          width: 36%;
+          text-align: left;
+          .text-box {
+            margin: 2% 0 0 30%;        
+          }
+
+        }
+      }
+      #slide-02 {
+        background-image: image-url("index/slide_02.jpg");
+      }
+      #slide-03 {
+        background-image: image-url("index/slide_03.jpg");
+        background-size: 170%;
+        background-position: 51% 71%;
+        .overlay-text {
+          top: 20%;
+          left: 7%;
+          width: 25%;
+          text-align: left;
+          .text-box {
+            margin-top: 10%;
+          }
+        }
+      }
     }
     #box-set {
-      height: 700px;
-      background-color: green;
+      text-align: center;
+      margin-top: 15px;
+      .box:not(#box-04) {
+        display: inline-block;
+        width: 32.5%;
+        .top-section {
+          position: relative;
+          padding-top: 74.5%;               // controls the aspect ratio of the images
+          background-repeat: no-repeat;
+        }
+        .bottom-section {
+          float: left;
+          width: 100%;
+          text-transform: uppercase;
+          font-family: 'DIN';
+          font-size: 11px;
+          padding: 12px 0;
+          color: white;
+        }
+      }
+      #box-01 {
+        float: left;
+        .top-section {
+          background-image: image-url("index/box_01.jpg");
+          background-size: 90%;
+          background-position: 100% 0;
+        }
+        .bottom-section {
+          background-color: transparentize($laundry-green, 0.2);
+        }        
+      }
+      #box-02 {
+        .top-section {
+          background-image: image-url("index/box_02.jpg");
+          background-size: 165%;
+          background-position: 68% 50%;
+          .overlay-text {
+            width: 15%;
+            top: 4%;
+            font-size: 1.4vw;
+            left: 47%;
+            height: auto;
+            color: white;
+            font-family: 'Archer-LightItalic';
+            text-align: left;
+          }
+        }
+        .bottom-section {
+          background-color: transparentize($laundry-green, 0.7);
+        }
+      }
+      #box-03 {
+        float: right;
+        .top-section {
+          background-image: image-url("index/box_03.jpg");
+          background-size: 100%;
+          background-position: 0 100%;
+        }
+        .bottom-section {
+          background-color: transparentize($laundry-green, 0.7);
+        }
+      }
+      #box-04 {
+        text-align: center;
+        padding: 100px 200px;
+      }
     }
   }
 }
