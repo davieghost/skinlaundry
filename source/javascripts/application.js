@@ -73,7 +73,7 @@ function resizeVideo()
     var windowAspectRatio = document.body.clientWidth / document.body.clientHeight;
     //scale width to match full height of window
     var newWidth = Math.round(document.body.clientHeight * vidAspectRatio);
-    console.log(newWidth);
+    //console.log(newWidth);
     if(vidAspectRatio > windowAspectRatio)
     {
       //console.log('window taller');
