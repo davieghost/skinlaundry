@@ -25,36 +25,53 @@ body.treatment {
 				padding: 30px 50px;
 			}
 			.row1 {
-				height: 320px;
+				height: 325px;
 			}
 			.row2 {
-				height: 320px;
+				height: 380px;
 			}
 			.row3 {
-				height: 320px;
+				height: 240px;
+				padding-left: 177px;
+				line-height: 1.5em;
 			}
 			.row4 {
-				height: 320px;
+				height: 340px;
+				line-height: 1.5em;
+				overflow: hidden;
 			}
 			.left {
 				width: 40%;
 				display: inline-block;
-				border: 1px dotted blue;
+				vertical-align: top;
 				#paragraph2 {
 					width: 80%;
 					margin: 0 auto;
-					line-height: 1.2em;
-					vertical-align: top;
+					line-height: 1.5em;
+					margin-top: 85px;
+					padding-left: 20px;	
+				}
+				#paragraph4 {
+					width: 80%;
+					margin: 0 auto;
+					margin-top: 85px;
+					padding-left: 20px;	
 				}
 			}
 			.right {
 				width: 59%;
 				display: inline-block;
-				border: 1px dotted red;
+				vertical-align: top;
 				#paragraph1 {
-					width: 80%;
 					vertical-align: top;
-					line-height: 1em;
+					line-height: 1.5em;
+					padding-left: 177px;
+					margin-top: 70px;
+					padding-right: 50px;
+				}
+				#paragraph3 {
+					vertical-align: top;
+
 				}
 			}
 
