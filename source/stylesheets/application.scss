@@ -230,10 +230,10 @@ body {
     left: 6px;
   }
   &:not(.close):hover .line-one {
-        -webkit-animation: BUBBLE .2s 1; /* Safari 4+ */
-        -moz-animation:    BUBBLE .2s 1; /* Fx 5+ */
-        -o-animation:      BUBBLE .2s 1; /* Opera 12+ */
-        animation:         BUBBLE .2s 1; /* IE 10+ */
+    -webkit-animation: BUBBLE .2s 1; /* Safari 4+ */
+    -moz-animation:    BUBBLE .2s 1; /* Fx 5+ */
+    -o-animation:      BUBBLE .2s 1; /* Opera 12+ */
+    animation:         BUBBLE .2s 1; /* IE 10+ */
   }
   &:not(.close):hover .line-two {
     -webkit-animation: BUBBLE .2s 1;
