@@ -1,7 +1,130 @@
+$mobile-width: 610px;
+$green-color: #00b194;
+
 body.book {
 
-	//background-color: red;
 	#main {
-		
-	}
+		position: relative;
+		margin: 150px auto 0;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+		font-family: 'DIN';
+    	font-size: 15px;
+    	height: 620px;
+    	margin-bottom: 55px;
+    	color: #53534a;
+   		@media only screen and (max-width: $mobile-width) {
+   			width: 90%;
+		    margin: 0 auto;
+		    height: 1065px;
+		    margin-bottom: 35px;
+			}
+
+		h1 {
+			font-family: 'Archer-LightItalic';
+	    	font-size: 3em;
+	    	font-weight: 400;
+	    	margin-bottom: .1em;
+
+	    	@media only screen and (max-width: $mobile-width) {
+	    		font-size: 2em;
+	    	}
+		}
+
+		h3 {
+			text-align: center;
+		}
+
+		.head {
+			padding-top: 1em;
+			text-align: center;
+			width: 100%;
+		}
+
+		#customers {
+			width: 100%;
+			height: 401px;
+			margin-top: 60px;
+			text-align: center;
+			@media only screen and (max-width: $mobile-width) {
+				width: 90%;
+				margin: 0 auto;
+				margin-top: 50px;
+			}
+		}
+
+		#returning {
+			float: left;
+			//background-color: #bababa;
+			height: 401px;
+			width: 50%;
+			@media only screen and (max-width: $mobile-width) {
+				float: none;
+				width: 100%;
+				border: none;
+				height: 456px;
+			}
+		}
+
+		#new {
+			float: left;
+			//background-color: #e8e8e8;
+			height: 401px;
+			width: 50%;
+			border-left: 1px solid $green-color;
+			@media only screen and (max-width: $mobile-width) {
+				float: none;
+				width: 100%;
+				border-left: none;
+				border-top: 1px solid $green-color;
+				margin-bottom: 30px;
+				padding-top: 30px;
+				height: 460px;
+			}
+		}
+
+		.forms {
+			height: 50px;
+			width: 45%;
+			border: 2px solid $green-color;
+			font-size: 1em;
+			margin-bottom: 15px;
+			@media only screen and (max-width: 1000px) {
+				width: 85%;
+				border: 1px solid $green-color;
+				font-size: 1.2em;
+			}
+		}
+
+		input {
+			padding: 15px;
+		}
+
+		button {
+			background-color: white;
+			color: $green-color;
+			margin-bottom: 35px;
+			@media only screen and (max-width: $mobile-width) {
+				margin-bottom: 50px;
+			}
+		}
+
+		.submit {
+			position: relative;
+			bottom: -25px;
+			width: 20%;
+			@media only screen and (max-width: $mobile-width) {
+				width: 40%;
+			}
+		}
+
+		#or {
+			height: 50px;
+			display: inline-block;
+			margin-bottom: 15px;
+			line-height: 45px;
+			color: $green-color;
+		}
+	}		
 }
