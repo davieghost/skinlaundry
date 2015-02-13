@@ -13,7 +13,11 @@
 $(document).ready(function() {
   if ($("body").hasClass("index")) {
 
+
+
     // constants
+    var MOBILE_WIDTH = 610;
+
     var NUMSLIDES = $(".slide").length;
     var ANIMATIONSPEED = 1000;
     var EASING = 'easeInOutQuart';
@@ -84,5 +88,17 @@ $(document).ready(function() {
         curSlide = nextSlide;
       }
     });
+  }
+
+  // box-04 adjustment
+  adjustBox4();
+  $(window).resize(adjustBox4);
+
+  function adjustBox4 () {
+    if ($('body').width() <= MOBILE_WIDTH) {
+      $("#box-04").height($("#box-03").height());
+    } else {
+      $("#box-04").css('height', 'auto');
+    }
   }
 });
