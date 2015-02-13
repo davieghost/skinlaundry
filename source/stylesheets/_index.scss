@@ -216,14 +216,19 @@ body.index {
             font-size: 2vw;
           }
           #stars {
-            margin: 0 auto;
-            height: 50px;
-            font-family: 'DINAlternate-Bold';
-            font-size: 1.2vw;
-            color: black;
+            margin: 0 auto 13% auto;
+            p:first-child {
+              font-family: 'DINAlternate-Bold';
+              font-size: 1.2vw;
+              color: black;
+              margin-bottom: -4%;
+            }
+            p:last-child {
+              color: $laundry-green;
+              font-size: 2vw;
+            }
           }
         }
-
       }
     }
   }
@@ -241,6 +246,35 @@ body.index {
           right: 0;
           margin: 0 auto;
         }
+        .slide {
+          .overlay-text {
+            h1 {
+              font-size: 4.5vw;
+            }
+            p {
+              font-size: 3vw;
+            }
+            .text-box {
+              font-size: 2vw;
+            }
+          }
+        }
+        #slide-01 {
+          .overlay-text {
+            top: 5%;
+            right: 4%;
+            .text-box {
+              margin-left: 16%;
+            }
+          }
+        }
+        #slide-03 {
+          .overlay-text {
+            .text-box {
+              margin-top: 17%;
+            }
+          }
+        }
       }
       #box-set {
         margin: 0 auto 50px auto;
@@ -248,6 +282,18 @@ body.index {
         .box {
           float: left;
           width: 49%;
+        }
+        #box-01 {
+          .top-section {
+            .overlay-text {
+              h1 {
+                font-size: 4vw;
+              }
+              h2 {
+                font-size: 2vw;
+              }
+            }
+          }
         }
         #box-02 {
           float: right;
@@ -280,7 +326,14 @@ body.index {
               font-size: 3.9vw;
             }
             #stars {
-              font-size: 2vw;
+              margin-bottom: 0;
+              p:first-child {
+                font-size: 2vw;
+                margin-bottom: -4%;
+              }
+              p:last-child {
+                font-size: 2vw;
+              }
             }
           }
         }
