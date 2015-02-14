@@ -8,10 +8,9 @@
         
               
         <div class="block left row1" id="treatment1"></div><div class="block right top padright row1">
+            <h2 class="hide-desktop">The future of healthy skin</h2>
         	<p>You’re all about simple routines and solutions that actually work. So are we. We’ve taken world-class laser and light therapy out of the doctor’s office and put it into our laundry skin clinics – where it’s fast, affordable and incredibly effective. Our revolutionary treatment administers the perfect dose of laser and light therapy to deep clean skin every time for better skin over time. The 10-minute treatment is so easy – skin looks refreshed from the moment you walk out the door. No makeup necessary.</p>
-        </div>
-
-        <div class="block left padleft padtop row2">
+        </div><div class="block left padleft padtop row2" id="paragraph2">
         	<p>Every Skin Laundry treatment leaves skin deep cleaned and toned. More frequent treatments result in more dramatic improvements in the areas of acne, redness, unevenness, dullness, hyper pigmentation, photo aging. Over time, Regular Skin Laundry Treatments will visibly improve skin’s smoothness, evenness, tone, texture, radiance, and clarity, while diminishing the appearance of pores, reducing the look of lines, wrinkles, and restoring firmer skin.</p>
         </div><div class="block right row2" id="treatment2"></div>
 
@@ -21,7 +20,7 @@
             <p>BOOK A TREATMENT</p>
         
         </div>
-        <div class="block right padright padtop row3">
+        <div class="block right padright padtop row3" id="paragraph3">
         	<h2>Immediate Benefits</h2>
      		<p>-Vaporizes dirt and removes bacteria</br>
 	        -Improves dull complexion and unevenness</br>
@@ -51,3 +50,14 @@
     </div>
 
 </div>
+
+<script>
+    window.onload = function(){
+    if (document.body.clientWidth && document.body.clientWidth < 610) {
+        //reorder for mobile
+        $('#treatment2').insertBefore($('#paragraph2'));
+        $('#treatment4').insertAfter($('#paragraph2'));
+        $('#booking').insertAfter($('#results'));
+        }
+    };
+</script>
