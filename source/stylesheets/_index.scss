@@ -85,9 +85,7 @@ body.index {
         }
       }
       #slide-01 {
-        background-image: image-url("index/slide_01.jpg");
-        background-size: 143%;
-        background-position: 56% 0;
+        background-image: image-url("index/slide_01B.jpg");
         display: block;
         .overlay-text {
           top: 20%;
@@ -100,13 +98,11 @@ body.index {
         }
       }
       #slide-02 {
-        background-image: image-url("index/slide_02.jpg");
-        background-size: 150%;
-        background-position: 50% 76%;
+        background-image: image-url("index/slide_02B.jpg");
         .overlay-text {
           position: absolute;
-          top: 63%;
-          right: 1%;
+          top: 54%;
+          right: 4%;
           width: 28%;
           text-align: left;
           font-family: 'Rollerscript-Smooth';
@@ -117,9 +113,7 @@ body.index {
         }
       }
       #slide-03 {
-        background-image: image-url("index/slide_03.jpg");
-        background-size: 170%;
-        background-position: 51% 71%;
+        background-image: image-url("index/slide_03B.jpg");
         .overlay-text {
           top: 20%;
           left: 7%;
