@@ -17,9 +17,12 @@ body.index {
         position: absolute;
         bottom: 10px;
         right: 20px;
+        text-align: center;
         z-index: 5;
+        padding: 0;
         & > * {
-          float: left;
+          vertical-align: top;
+          display: inline-block;
         }
         .circle {
           width: 8px;
@@ -33,16 +36,14 @@ body.index {
         }
         #slide-left {
           cursor: pointer;
-          text-align: center;
           width: 16px;
-          padding-top: 2px;
+          line-height: 20px;
           color: $slide-control-color;
         }
         #slide-right {
           cursor: pointer;
-          text-align: center;
           width: 16px;
-          padding-top: 2px;
+          line-height: 20px;
           color: $slide-control-color;
         }
       }
@@ -144,6 +145,10 @@ body.index {
           font-size: 11px;
           padding: 12px 0;
           color: white;
+          a {
+            text-decoration: none;
+            color: white;
+          }
         }
       }
       #box-01 {
@@ -162,12 +167,11 @@ body.index {
               text-align: left;
               top: -12%;
               left: 9%;
-              width: 80%;
               color: $laundry-black;
               h1 {
                 font-family: 'Rollerscript-Smooth';
                 font-size: 6vw;
-                margin-bottom: -25%;
+                margin-bottom: -20%;
                 color: $laundry-green;
                 margin-left: 3%;
               }
@@ -257,7 +261,7 @@ body.index {
         margin-top: 9%;
         .overlay-text {
           margin: 0 auto;
-          width: 35%;
+          width: 40%;
           color: $laundry-black;
           img {
             width: 34%;
@@ -265,13 +269,13 @@ body.index {
           }
           p {
             font-family: 'Archer-LightItalic';
-            font-size: 2vw;
+            font-size: 2.3vw;
           }
           #stars {
             margin: 0 auto 13% auto;
             p:first-child {
               font-family: 'DINAlternate-Bold';
-              font-size: 1.2vw;
+              font-size: 1.6vw;
               color: $laundry-black;
               margin-bottom: -4%;
             }
@@ -292,11 +296,10 @@ body.index {
         margin-bottom: 80px;
         overflow: visible;
         #slide-control {
-          width: 73px;
+          width: 100px;
           top: 106%;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
+          left: 50%;
+          margin: 0 0 0 -50px;
           #slide-left, #slide-right {
             display: none;
           }
@@ -364,7 +367,6 @@ body.index {
               .overlay-text {
                 h1 {
                   font-size: 9vw;
-                  margin-bottom: -25%;
                 }
                 h2 {
                   font-size: 5vw;
