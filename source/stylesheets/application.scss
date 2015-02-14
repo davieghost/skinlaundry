@@ -43,6 +43,7 @@ body {
 ///////////////////////// HEADER ///////////////////////////
 
 #header {
+  background-color: rgba(255,255,255,0);
 	position: fixed;
   top: 0px;
   left: 0;
@@ -68,6 +69,10 @@ body {
   	display: inline-block;
   }
   .logo {
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
   	display: inline-block;
     position: relative;
     @media only screen and (max-width: $mobile-width) {
@@ -300,6 +305,7 @@ body {
   }
 }
 
+
 ///////////////////////// NAV PAGE ///////////////////////////
 
 #nav-page {
@@ -309,7 +315,7 @@ body {
   left: -455px;
   width: 455px;
   max-width: 100%;
-  z-index: 1000;
+  z-index: 7999;
   overflow-y: scroll;
   text-align: center;
   cursor: default;
@@ -464,17 +470,6 @@ body {
   }
 }
 
-/* .staticwrap {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  margin-bottom: 0;
-  background: 1px solid red;
-} */
-
 ///////////////////////// FOOTER ///////////////////////////
 
 #footer {
@@ -622,6 +617,36 @@ body {
           font-size: 26px;
         }
       }
+    }
+  }
+}
+
+.nav-open-scrolled {
+  top: 10px!important;
+  left: 20px!important;
+}
+.header-scrolled {
+  height: 56px!important;
+  background-color: white!important;
+  z-index: 7998!important;
+  .logo {
+    height: 36px;
+    top: -36px;
+    position: relative;
+    left: -2px;
+  }
+  #shop-nav{
+    top: -50px!important;
+    //left: 240px!important;
+
+  }
+  a {
+    font-size: 11px;
+  }
+  #location-login {
+    top: 14px;
+    #location-nav {
+      top: -4px;
     }
   }
 }
