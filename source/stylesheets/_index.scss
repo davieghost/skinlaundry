@@ -67,8 +67,8 @@ body.index {
           }
           p {
             font-family: 'DIN';
-            font-size: 1.5vw;
-            margin-bottom: 8px;
+            font-size: 1.9vw;
+            margin-bottom: 15px;
           }
           .text-box {
             display: inline-block;
@@ -85,7 +85,7 @@ body.index {
         }
       }
       #slide-01 {
-        background-image: image-url("index/slide_01B.jpg");
+        background-image: image-url("index/slide_01.jpg");
         display: block;
         .overlay-text {
           top: 20%;
@@ -98,7 +98,7 @@ body.index {
         }
       }
       #slide-02 {
-        background-image: image-url("index/slide_02B.jpg");
+        background-image: image-url("index/slide_02.jpg");
         .overlay-text {
           position: absolute;
           top: 54%;
@@ -113,7 +113,7 @@ body.index {
         }
       }
       #slide-03 {
-        background-image: image-url("index/slide_03B.jpg");
+        background-image: image-url("index/slide_03.jpg");
         .overlay-text {
           top: 20%;
           left: 7%;
@@ -218,7 +218,6 @@ body.index {
             color: white;
             font-family: 'Archer-LightItalic';
             text-align: left;
-            color: $laundry-black;
           }
         }
         .bottom-section {
@@ -255,8 +254,9 @@ body.index {
         text-align: center; 
         display: block;
         width: 100%;
+        margin-top: 9%;
         .overlay-text {
-          margin: 60px auto 0 auto;
+          margin: 0 auto;
           width: 35%;
           color: $laundry-black;
           img {
@@ -337,8 +337,8 @@ body.index {
         }
         #slide-02 {
           .overlay-text {
-            top: 63%;
-            right: 1%;
+            top: 55%;
+            right: 3%;
             width: 27%;
 
           }

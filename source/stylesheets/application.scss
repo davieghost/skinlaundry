@@ -515,7 +515,7 @@ body {
     }
   }
   #bottom-wrapper {
-    background-color: transparentize($laundry-green, 0.25);
+    background-color: transparentize($laundry-green, 0.45);
     overflow: hidden;
     padding-bottom: 20px;
     .join-list {
@@ -542,7 +542,7 @@ body {
         button {
           position: absolute;
           right: 10px;
-          top: 23px;
+          top: 24px;
           background: none;
           border: none;
           text-transform: uppercase;
