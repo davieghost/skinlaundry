@@ -1,0 +1,60 @@
+<div id="main">
+
+    <div id="container">
+
+        <div id="head">
+            <h1>FAQ</h1>
+            <h3 id="subheading">FREQUENTLY ASKED QUESTIONS</h3>
+        </div>
+        
+              
+        <div class="block left row1" id="image1"></div>
+        <div class="block right top padright row1" id="paragraph1">
+            <h2>What is Skin Laundry's Signature Light &#38; Laser Treatment?</h2>
+        	<p>Our Signature Laser &#38; Light Treatment utilizes advanced YAG Laser &#38; technology to completely cleanse your skin by removing all the dirt and bacteria. This helps even out skin tone, decrease pore size, improve scars and blemishes making the skin healthier, stronger and more radiant. The treatment only takes 10 minutes and there is no downtime.</p>
+        </div>
+
+        <div class="block left padleft padtop row2" id="paragraph2">
+            <h2>How does it work?</h2>
+        	<p>Our unique method involves using a YAG laser and IPL (Intense Pulse Light). The laser actively vaporizes excess dirt, makeup and bacteria from your pores first and foremost; the long term effects of the laser can help with pigmentation and collagen production. The IPL works with the brown and red tones of the skin to even out the skin tone as well as stimulate the natural collagen that lies down in the dermis. The combination of laser and IPL clears tones and conditions the skins. The pores are also minimized so they appear less visible.</p>
+        </div>
+
+        <div class="block right row2" id="image2"></div>
+
+        <div class="block left row3" id="booking">
+            <h3 id="contact-us">OUR HIGHLY TRAINED STAFF AND HEALTH CARE PROFESSIONALS WILL BE HAPPY TO ANSWER ANY ADDITIONAL QUESTIONS YOU HAVE. PLEASE CALL 877-SKINTEAM NOW.</h3>
+            <p><a href="#">CONTACT US</a></p>
+        </div>
+
+        <div class="block right padright padtop row3" id="paragraph3">
+        	<h2 id="cost">How much does it cost?</h2>
+     		<p>The overall cost of the treatment is affordable (under $50 with a membership). We have customzed a variety of packages and memberships to make Skin Laundry as affordable and convenient as possible. <a href="#">LEARN MORE HERE</a>.</p>
+            <h2>Who performs the treatment?<br>
+                What areas can be treated?<br>
+                Is it painful?<br>
+                What results can I expect?<br>
+                How soon will I see the results?<br>
+                Should I get multiple treatments?<br>
+                Who should <strong>not</strong> undergo a Skin Laundry treatment?</h2>
+    	</div>
+
+    </div>
+
+    <div id="bottombar">
+        <a class="links" href="#">TRY US ON</a>
+        <a class="links" href="#">FIND A LAUNDRY NEAR YOU</a>
+        <a class="links" href="#">SHOP OUR CLEANSERS</a>
+    </div>
+
+</div>
+
+<script>
+    window.onload = function(){
+    if (document.body.clientWidth && document.body.clientWidth < 610) {
+        //reorder for mobile
+        $('#image2').insertBefore($('#paragraph2'));
+        $('#booking').insertAfter($('#paragraph3'));
+        //$('#booking').insertAfter($('#results'));
+        }
+    };
+</script>
