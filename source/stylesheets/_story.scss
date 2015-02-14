@@ -1,0 +1,323 @@
+@import 'variables';
+
+body.story {
+	#main {
+		position: relative;
+		margin: 150px auto 0;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+		font-family: 'DIN';
+    	font-size: 14px;
+    	line-height: 1.4em;
+		color: #53534a;
+
+		h1 {
+		  font-family: 'Archer-LightItalic';
+	      font-size: 50px;
+	      font-weight: 400;
+	      margin-bottom: .1em;
+	      @media only screen and (max-width: $mobile-width) {
+			   font-size: 40px;
+			   margin-bottom: .5em;
+		  }
+		}
+
+		h2 {
+		  font-family: 'DIN', sans-serif;
+	      font-size: 14px;
+	      text-transform: uppercase;
+	      font-weight: 400;
+	      margin-bottom: 33px;
+	      color: $laundry-green;
+		}
+
+
+		h3 {
+		  font-family: 'Archer-LightItalic';
+	      font-size: 25px;
+	      font-weight: 400;
+	      margin-bottom: .1em;
+	      line-height: 1.4em;
+		}
+
+		.it {
+			font-family: 'Archer-LightItalic';
+	      font-size: 16px;
+		}
+
+		.head {
+			padding-top: 1em;
+			text-align: center;
+			width: 100%;
+			margin-bottom: 4em;
+			@media only screen and (max-width: $mobile-width) {
+			   margin-bottom: auto;
+			}
+		}
+
+	    .block{
+			vertical-align: top;
+			display: inline-block;
+		}
+
+		.row1 {
+			height: 230px;
+		}
+
+		.row2 {
+			height: 310px;
+		}
+
+		.row3 {
+			height: 238px;
+		}
+
+		.row4 {
+			height: 250px;
+		}
+
+		.row5 {
+			height: 212px;
+		}
+
+		.right {
+			width: 58%;
+			margin: 0;
+			padding: 0;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			}
+			a {
+				color: #000;
+				&:visited {
+					color: #000;
+				}
+			}
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.rel {
+			position: relative;
+		}
+
+		.padright {
+			padding-left: 8%;
+			padding-right: 8%;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			   padding-left: 5%;
+			   padding-right: 5%;
+			}
+		}
+
+		#face {
+			background-image:url('/images/face.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			@media only screen and (max-width: $mobile-width) {
+			   height: 220px;
+			}
+		}
+
+		#palmtree {
+			width: 185px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 160px;
+			}
+		}
+
+		#water {
+			background-image:url('/images/water.jpg');
+			background-size: 447px auto;
+			background-repeat: no-repeat;
+			@media only screen and (max-width: $mobile-width) {
+			   height: 120px;
+			}
+		}
+
+		#yenreis {
+			display: inline-block;
+			margin-left: 30px;
+			vertical-align: text-bottom;
+		}
+
+		#founder {
+			display: inline-block;
+			margin-top: -15px;
+		}
+
+		#flowers {
+			width: 185px;
+			height: 212px;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			   height: auto;
+			   display: none;
+			}
+		}
+
+		#imgflowers {
+			position: absolute;
+			bottom: 0;
+			width: 183px;
+			@media only screen and (max-width: $mobile-width) {
+			   		//width: 100%;
+			   		position: static;
+				}
+		}
+
+		#logos {
+			width: 634px;
+			height: 212px;
+			img#imglogos {
+				width: 500px;
+				position: absolute;
+				bottom: 0;
+				left: 70px;
+				@media only screen and (max-width: $mobile-width) {
+			   		width: 80%;
+			   		position: static;
+				}
+			}
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			   height: auto;
+			}
+		}
+
+		#asseenin {
+		  font-family: 'Archer-LightItalic';
+	      font-size: 25px;
+	      font-weight: 400;
+	      margin-bottom: .1em;
+	      line-height: 1.4em;
+	      text-align: left;
+	      @media only screen and (max-width: $mobile-width) {
+			   padding-left: 25px;
+		  }
+		}
+
+		#surfing {
+			background-image:url('/images/surfing.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			width: 158px;
+			height: 212px;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			   height: 180px;
+			   background-size: 34% auto;
+			   background-position: right top;
+			}
+		}
+
+		.padtop {
+			padding-top: 3em !important;
+		}
+
+		.left {
+			width: 38%;
+			margin: 0;
+			padding: 0;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			}
+		}
+
+		#birds{
+			@media only screen and (max-width: $mobile-width) {
+			   height: 140px;
+			}
+		}
+
+		#imgbirds {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			@media only screen and (max-width: $mobile-width) {
+			   position: static;
+			   bottom: none;
+			}
+		}
+
+		#wwd {
+			@media only screen and (max-width: $mobile-width) {
+			   height: auto;
+			}
+		}
+		#imgwwd {
+			margin: 0 auto;
+		}
+
+		.whitetext{
+			color: #fff;
+			padding: 5% 3%;
+			line-height: 1.4em;
+			letter-spacing: 2px;
+			text-align: center;
+		}
+
+		.padleft {
+			padding-left: 5%;
+			padding-right: 5%;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			   padding-left: 5%;
+			   padding-right: 5%;
+			}
+		}
+
+	    @media only screen and (max-width: $mobile-width) {
+		    width: 90%;
+		    margin-top: 0;
+		    line-height: normal;
+		}
+		
+	}
+
+	#bottombar {
+		position: relative;
+		margin: 5px auto 0;
+		max-width: 980px;
+		z-index: 1;
+		background: none;
+		text-align: center;
+		padding-bottom: 80px;
+		a.links {
+			display: block;
+			background: rgba(53,193,170,.5);
+			background: -moz-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,.5)), color-stop(100%, rgba(73,165,191,.5)));
+			background: -webkit-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+			background: -o-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+			background: -ms-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+			background: linear-gradient(to right, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
+			height: 40px;
+			width: 32%;
+			display: inline-block;
+			margin: 3px;
+			padding-top: 15px;
+			color: white;
+			text-decoration: none;
+			&:hover{
+				background-color: white;
+			}
+			@media only screen and (max-width: $mobile-width) {
+		    	width: 60%;
+			}
+			
+		}
+		@media only screen and (max-width: $mobile-width) {
+		    padding-bottom: 30px;
+		}
+	}
+
+}

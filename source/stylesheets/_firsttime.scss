@@ -156,6 +156,7 @@ body.firsttime {
 
 		@media only screen and (max-width: $mobile-width) {
 		    width: 90%;
+		    margin-top: 0;
 		}
 	}
 
@@ -166,7 +167,7 @@ body.firsttime {
 		z-index: 1;
 		background: none;
 		text-align: center;
-		padding-bottom: 400px;
+		padding-bottom: 80px;
 		a.links {
 			display: block;
 			background: rgba(53,193,170,.5);
@@ -177,11 +178,11 @@ body.firsttime {
 			background: -ms-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
 			background: linear-gradient(to right, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
-			height: 50px;
-			width: 30%;
+			height: 40px;
+			width: 32%;
 			display: inline-block;
 			margin: 3px;
-			padding-top: 17px;
+			padding-top: 15px;
 			color: white;
 			text-decoration: none;
 			&:hover{
@@ -191,6 +192,10 @@ body.firsttime {
 		    	width: 60%;
 			}
 			
+		}
+
+		@media only screen and (max-width: $mobile-width) {
+		    padding-bottom: 30px;
 		}
 	}
 
