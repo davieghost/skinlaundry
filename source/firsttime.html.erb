@@ -5,12 +5,15 @@
 	</div>
 
 	<div class="block left row1" id="product"></div><div class="block right top padright row1">
-		<p>Our paperless registration process is quick and easy. It will take about 3 minutes and once we check a valid ID - Don’t forget to bring it!</p>
-		<p>Our Staff will give you a cleansing towel which you can use at our vanity mirror to wipe off any make-up. Please fee free to have a drink of water while you wait.</p>
+		<p>Our paperless registration process is quick and easy. It will take about 3 minutes and once we check a valid ID - Don’t forget to bring it! Our Staff will give you a cleansing towel which you can use at our vanity mirror to wipe off any make-up. Please fee free to have a drink of water while you wait.</p>
+	</div>
+	<div class="block right row2 hide-desktop" id="room">
+
 	</div>
 	<div class="block left padleft padtop row2" id="treatment">
 		<p>Our highly trained healthcare professionals will perform the laser treatment by using a hand piece, which delivers a pulse of laser over the facial area. It feels like a tingling sensation that is noticeable but not painful. The laser hits the dermis and deep cleans by vaporizing impurities in the skin. The laser also targets pigmentation, stimulates collagen production and destroys bacteria.</p>
-	</div><div class="block right row2" id="room">
+	</div>
+	<div class="block right row2 hide-mobile" id="room">
 
 	</div>
 	<div class="block left grad whitetext">
@@ -25,12 +28,3 @@
 	<a class="links" href="#">FIND A LAUNDRY NEAR YOU</a>
 	<a class="links" href="#">SHOP OUR CLEANSERS</a>
 </div>
-<script>
-window.onload = function(){
-	if(document.body.clientWidth && document.body.clientWidth < 610)
-	{
-	//reorder for mobile
-	$('#room').insertBefore($('#treatment'));
-	}
-};
-</script>
