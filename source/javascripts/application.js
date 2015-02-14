@@ -68,9 +68,13 @@ $(document).ready(function() {
 
   $(window).scroll(function(){
     if ($(window).scrollTop() > 100 ) {
-      $('#header').css('display', 'none');
+      //$('#header').addClass('hide-desktop');
+      $('#nav-open').addClass('nav-open-scrolled');
+      $('#header').addClass('header-scrolled');
     } else {
-      $('#header').css('display', 'block');
+      //$('#header').removeClass('hide-desktop');
+      $('#nav-open').removeClass('nav-open-scrolled');
+      $('#header').removeClass('header-scrolled');
     }
   });
 

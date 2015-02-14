@@ -27,15 +27,22 @@
         </div>
 
         <div class="block right padright padtop row3" id="paragraph3">
-        	<h2 id="cost">How much does it cost?</h2>
-     		<p>The overall cost of the treatment is affordable (under $50 with a membership). We have customzed a variety of packages and memberships to make Skin Laundry as affordable and convenient as possible. <a href="#">LEARN MORE HERE</a>.</p>
-            <h2>Who performs the treatment?<br>
-                What areas can be treated?<br>
-                Is it painful?<br>
-                What results can I expect?<br>
-                How soon will I see the results?<br>
-                Should I get multiple treatments?<br>
-                Who should <strong>not</strong> undergo a Skin Laundry treatment?</h2>
+        	<h2 class="question" id="question1"><a href="#">How much does it cost?</a></h2>
+     		<p class="show-class" id="answer1">The overall cost of the treatment is affordable (under $50 with a membership). We have customzed a variety of packages and memberships to make Skin Laundry as affordable and convenient as possible. <a href="#">LEARN MORE HERE</a>.</p>
+            <h2 class="question" id="question2"><a href="#">Who performs the treatment?</a></h2>
+            <p class="show-class" id="answer2">Answer 2 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <h2 class="question" id="question3"><a href="#">What areas can be treated?</a></h2>
+            <p class="show-class" id="answer3">Answer 3 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <h2 class="question" id="question4"><a href="#">Is it painful?</a></h2>
+            <p class="show-class" id="answer4">Answer 4 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <h2 class="question" id="question5"><a href="#">What results can I expect?</a></h2>
+            <p class="show-class" id="answer5">Answer 5 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <h2 class="question" id="question6"><a href="#">How soon will I see the results?</a></h2>
+            <p class="show-class" id="answer6">Answer 6 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <h2 class="question" id="question7"><a href="#">Should I get multiple treatments?</a></h2>
+            <p class="show-class" id="answer7">Answer 7 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <h2 class="question" id="question8"><a href="#">Who should <strong>not</strong> undergo a Skin Laundry treatment?</a></h2>
+            <p class="show-class" id="answer8">Answer 8 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
     	</div>
 
     </div>
@@ -50,11 +57,21 @@
 
 <script>
     window.onload = function(){
-    if (document.body.clientWidth && document.body.clientWidth < 610) {
-        //reorder for mobile
-        $('#image2').insertBefore($('#paragraph2'));
-        $('#booking').insertAfter($('#paragraph3'));
-        //$('#booking').insertAfter($('#results'));
+        if (document.body.clientWidth && document.body.clientWidth < 610) {
+            //reorder for mobile
+            $('#image2').insertBefore($('#paragraph2'));
+            $('#booking').insertAfter($('#paragraph3'));
+            //$('#booking').insertAfter($('#results'));
         }
+
+        var questionNum;
+        var answerNum;
+        $('.question').on('click', function(e) {
+            e.preventDefault();
+            questionNum = $(this).attr('id').slice(-1);
+            answerNum = '#answer'+questionNum;
+            $('.show-class').hide();
+            $(answerNum).toggle();
+        })
     };
 </script>
