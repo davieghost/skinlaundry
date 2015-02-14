@@ -259,10 +259,9 @@ body.index {
         .overlay-text {
           margin: 60px auto 0 auto;
           width: 35%;
-          h1 {
-            font-family: sans-serif;
-            font-size: 2.5vw;
-            margin-bottom: -2%;
+          img {
+            width: 34%;
+            margin-bottom: -4%;
           }
           p {
             font-family: 'Archer-LightItalic';
@@ -405,9 +404,10 @@ body.index {
           .overlay-text {
             margin: 0 auto;
             width: 80%;
-            h1 {
-              font-size: 4.5vw;
+            img {
+              width: 42%;
               margin-bottom: -10%;
+              margin-top: 11%;
             }
             p {
               font-size: 3.9vw;
