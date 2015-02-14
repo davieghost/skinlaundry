@@ -99,6 +99,20 @@ body.index {
       }
       #slide-02 {
         background-image: image-url("index/slide_02.jpg");
+        background-size: 150%;
+        background-position: 50% 76%;
+        .overlay-text {
+          position: absolute;
+          top: 63%;
+          right: 1%;
+          width: 28%;
+          text-align: left;
+          font-family: 'Rollerscript-Smooth';
+          font-size: 16px;
+          font-size: 5vw;
+          line-height: 6vw;
+          color: rgb(50, 50, 50);
+        }
       }
       #slide-03 {
         background-image: image-url("index/slide_03.jpg");
@@ -138,34 +152,58 @@ body.index {
       }
       #box-01 {
         .top-section {
-          background-image: image-url("index/box_01.jpg");
-          background-size: 87%;
-          background-position: 100% 0;
-          background-color: $laundry-green;
-          opacity: 0.5;
-          .overlay-text {
+          .front-layer {
             position: absolute;
-            text-transform: uppercase;
-            text-align: left;
-            top: 28%;
-            left: 9%;
-            width: 80%;
-            h1 {
-              font-size: 3.0vw;
-              color: white;  
-              font-family: 'DIN';
-            }
-            h2 {
-              margin-top: 5% 0 0 2%;
-              font-size: 1vw;
-              color: $laundry-green;
-              font-family: 'DINAlternate-Bold';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            background-color: rgba(0, 177, 144, 0.2);
+            .overlay-text {
+              position: absolute;
+              text-transform: uppercase;
+              text-align: left;
+              top: -12%;
+              left: 9%;
+              width: 80%;
+              h1 {
+                font-family: 'Rollerscript-Smooth';
+                font-size: 6vw;
+                margin-bottom: -25%;
+                color: $laundry-green;
+                margin-left: 3%;
+              }
+              h2 {
+                font-size: 3.0vw;
+                color: white;  
+                font-family: 'DIN';
+              }
+              h3 {
+                margin: 5% 0 0 2%;
+                font-size: 1.3vw;
+                color: $laundry-green;
+                font-family: 'DINAlternate-Bold';
+              }
             }
           }
-        }
+          .back-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-image: image-url("index/box_01.jpg");
+            background-size: 87%;
+            background-position: 100% 0;
+            background-repeat: no-repeat;
+            opacity: 0.4;
+          }
+        }   
         .bottom-section {
-          background-color: transparentize($laundry-green, 0.2);
-        }        
+          background-color: transparentize($laundry-green, 0.5);
+        }     
       }
       #box-02 {
         margin: 0 1%;
@@ -194,6 +232,21 @@ body.index {
           background-image: image-url("index/box_03.jpg");
           background-size: 100%;
           background-position: 0 100%;
+          .overlay-text {
+            position: absolute;
+            font-family: 'Rollerscript-Smooth';
+            font-size: 2vw;
+          }
+          .overlay-text:first-of-type {
+            top: 39%;
+            left: 1%;
+            width: 40%;
+          }
+          .overlay-text:last-of-type {
+            top: 47%;
+            left: 10%;
+            width: 40%;
+          }
         }
         .bottom-section {
           background-color: transparentize($laundry-green, 0.7);
@@ -240,11 +293,25 @@ body.index {
         margin-bottom: 80px;
         overflow: visible;
         #slide-control {
-          width: 92px;
+          width: 73px;
           top: 106%;
           left: 0;
           right: 0;
           margin: 0 auto;
+          #slide-left, #slide-right {
+            display: none;
+          }
+          .circle {
+            border-color: white;
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            border-width: 2px;
+            cursor: pointer;
+            &.current {
+              background-color: white;
+            }
+          }
         }
         .slide {
           .overlay-text {
@@ -261,11 +328,20 @@ body.index {
         }
         #slide-01 {
           .overlay-text {
+            width: 34%;
             top: 5%;
-            right: 4%;
+            right: 6%;
             .text-box {
               margin-left: 16%;
             }
+          }
+        }
+        #slide-02 {
+          .overlay-text {
+            top: 63%;
+            right: 1%;
+            width: 27%;
+
           }
         }
         #slide-03 {
@@ -285,12 +361,18 @@ body.index {
         }
         #box-01 {
           .top-section {
-            .overlay-text {
-              h1 {
-                font-size: 4vw;
-              }
-              h2 {
-                font-size: 2vw;
+            .front-layer {
+              .overlay-text {
+                h1 {
+                  font-size: 9vw;
+                  margin-bottom: -25%;
+                }
+                h2 {
+                  font-size: 5vw;
+                }
+                h3 {
+                  font-size: 2vw;
+                }
               }
             }
           }
@@ -307,6 +389,11 @@ body.index {
         #box-03 {
           float: left;
           margin-top: 2%;
+          .top-section {
+            .overlay-text {
+              font-size: 3vw;
+            }
+          }
         }
         #box-04 {
           float: right;

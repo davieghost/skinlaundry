@@ -18,7 +18,6 @@ $(document).ready(function() {
       $('body').css('overflow', 'hidden');
     }
 
-
   });
 
   // if the nav is open, close it when the body is clicked
@@ -64,6 +63,14 @@ $(document).ready(function() {
       $hl.animate({'opacity': '0'}, function() {
         $hl.css('display', 'none');
       });
+    }
+  });
+
+  $(window).scroll(function(){
+    if ($(window).scrollTop() > 100 ) {
+      $('#header').css('display', 'none');
+    } else {
+      $('#header').css('display', 'block');
     }
   });
 
