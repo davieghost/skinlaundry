@@ -67,9 +67,6 @@ body.story {
 
 		.row2 {
 			height: 310px;
-			@media only screen and (max-width: $mobile-width) {
-				height: 50px;
-			}
 		}
 
 		.row3 {
@@ -133,8 +130,6 @@ body.story {
 			right: 0;
 			@media only screen and (max-width: $mobile-width) {
 			   width: 160px;
-			   left: 0;
-			   top: 30px;
 			}
 		}
 
@@ -255,28 +250,10 @@ body.story {
 		#wwd {
 			@media only screen and (max-width: $mobile-width) {
 			   height: auto;
-			   top: 430px;
-			   position: relative;
-			   left: 13px;
-			   float: right;
-			   width: 230px;
-			}
-			h3 {
-				@media only screen and (max-width: $mobile-width) {
-					display: none;
-				}
-			}
-			p {
-				@media only screen and (max-width: $mobile-width) {
-					font-size: 14px;
-				}
 			}
 		}
 		#imgwwd {
 			margin: 0 auto;
-			@media only screen and (max-width: $mobile-width) {
-				width: 90px;
-			}
 		}
 
 		.whitetext{

@@ -2,8 +2,6 @@
 
 $(document).ready(function() {
 
-  var MOBILE_WIDTH = 610;
-
   /////////////// NAV PAGE OPEN/CLOSE //////////////
 
   $("#nav-open").click(function(e) {
@@ -69,27 +67,16 @@ $(document).ready(function() {
   });
 
   $(window).scroll(function(){
-    if ($(window).scrollTop() > 100 && $('body').width() > MOBILE_WIDTH) {
+    if ($(window).scrollTop() > 100 ) {
+      //$('#header').addClass('hide-desktop');
       $('#nav-open').addClass('nav-open-scrolled');
       $('#header').addClass('header-scrolled');
     } else {
+      //$('#header').removeClass('hide-desktop');
       $('#nav-open').removeClass('nav-open-scrolled');
       $('#header').removeClass('header-scrolled');
     }
   });
-  $(window).resize(function(){
-    $(window).trigger('scroll', function(){
-      if ($('body').width() >= MOBILE_WIDTH) {
-        $('#nav-open').removeClass('nav-open-scrolled');
-        $('#header').removeClass('header-scrolled');
-      }else if($(window).scrollTop() > 100 && $('body').width() > MOBILE_WIDTH){
-        $('#nav-open').addClass('nav-open-scrolled');
-        $('#header').addClass('header-scrolled');
-      }
-    });
-    
-  });
-  
 
   /////////////////// BACKGROUND VIDEO ///////////////
 
