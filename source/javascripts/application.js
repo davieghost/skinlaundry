@@ -67,6 +67,14 @@ $(document).ready(function() {
     }
   });
 
+  $(window).scroll(function(){
+    if ($(window).scrollTop() > 100 ) {
+      $('#header').css('display', 'none');
+    } else {
+      $('#header').css('display', 'block');
+    }
+  });
+
   /////////////////// BACKGROUND VIDEO ///////////////
 
   // resize the video on document ready and window resize
