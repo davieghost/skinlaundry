@@ -48,6 +48,13 @@ body {
   height: 100%;
 }
 
+// makes input padding consistent between firefox and other browsers
+input {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
 ///////////////////////// HEADER ///////////////////////////
 
 #header {
@@ -209,7 +216,7 @@ body {
   width: 34px;
   height: 36px;
   color: white;
-  background-color: $laundry-green;//rgb(61, 195, 195);
+  background-color: $laundry-green;
   cursor: pointer;
   @media only screen and (max-width: $mobile-width) {
     top: 0;
@@ -320,7 +327,7 @@ body {
 	position: fixed;
   top: 0;
   height: 100%;
-  left: -455px;
+  left: -100%;
   width: 455px;
   max-width: 100%;
   z-index: 7999;
@@ -339,6 +346,10 @@ body {
   a {
     text-decoration: none;
     color: $laundry-black;
+    // transition: color 500ms;
+    // // &:hover {
+    // //   color: $laundry-green;
+    // // }
   }
   #nav-wrapper {
     position: relative;
@@ -365,6 +376,9 @@ body {
       text-align: left;
       margin-left: 36%;
       margin-bottom: 33px;
+      @media only screen and (max-width: $mobile-width) {
+        margin-left: 30%;
+      }
       a {
         color: $laundry-green;
       }
@@ -375,6 +389,9 @@ body {
       ul {
         text-align: left;
         margin-left: 36%;
+        @media only screen and (max-width: $mobile-width) {
+          margin-left: 30%;
+        }
       }
       .nav-heading {
         letter-spacing: 2px;
@@ -393,6 +410,8 @@ body {
     }
     .join-list {
       color: $laundry-green;
+      width: 80%;
+      margin: 0 auto;
       h1 {
         font-family: 'Archer-LightItalic';
         font-size: 24px; 
@@ -407,15 +426,15 @@ body {
       }
       #input-and-button {
         position: relative;
-        width: 310px;
+        width: 270px;
         text-transform: uppercase;
-        margin: 0 auto;
         font-size: 11px;
+        margin: 0 auto;
         .email-input {
-          width: 100%;
-          margin-top: 8px;
+          width: 240px;
+          margin: 8px auto 0 auto;
           text-align: left;
-          padding: 20px 25px;  
+          padding: 5px 15px; 
           height: 32px;
           border: 1px solid $laundry-green;  
           font-family: 'DIN';  
@@ -427,7 +446,7 @@ body {
         button {
           position: absolute;
           right: 10px;
-          top: 23px;
+          top: 25px;
           background: none;
           border: none;
           text-transform: uppercase;
@@ -458,7 +477,7 @@ body {
         font-size: 8px;
         li {
           display: inline-block;
-          margin: 0 8px;
+          margin: 5px 8px;
         }
       }
     }
@@ -539,18 +558,24 @@ body {
       text-align: center;
       #input-and-button {
         position: relative;
-        width: 440px;
         text-transform: uppercase;
         margin: 0 auto;
         font-size: 11px;
+        width: 470px;
+        @media only screen and (max-width: $mobile-width) {
+          width: 290px;
+        }
         .email-input {
-          width: 100%;
+          width: 440px;
           margin-top: 8px;
           text-align: left;
-          padding: 20px 25px;  
+          padding: 5px 15px;  
           height: 32px; 
           font-family: 'DIN';  
           transition: all 400ms ease-in;
+          @media only screen and (max-width: $mobile-width) {
+            width: 260px;
+          }
           &:focus {
             outline: none;
           }
@@ -613,22 +638,17 @@ body {
           font-size: 30px;
         }
         p {
-          font-size: 14px;
-        }
-        #input-and-button {
-          width: 85%;
-          .email-input {
-          }
+          font-size: 11px;
         }
       }
       .footer-links {
-        font-size: 10px;
+        font-size: 11px;
         border-top: none;
         ul {
           float: none;
           margin-bottom: 32px;
           li {
-            margin: 0 7px;
+            margin: 5px 7px;
           }
         }
         .social {

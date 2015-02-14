@@ -39,6 +39,26 @@ $(document).ready(function() {
     //e.preventDefault();
   });
 
+  // ///////////// NAV PAGE LINK ROLLOVER /////////////
+
+  var rolloverAnimSpeed = 200;
+  var laundryBlack = "#53534A";
+  var laundryGreen = "#00b194";
+
+  $("#nav-page #main-menu a").hover(function() {
+    console.log("hovering on");
+    $(this).animate({opacity: '0'}, rolloverAnimSpeed, function() {
+      $(this).css('color', laundryGreen);
+      $(this).animate({opacity: '1'}, rolloverAnimSpeed);
+    });
+  }, function() {
+    console.log("hovering off");
+    $(this).animate({opacity: '0'}, rolloverAnimSpeed, function() {
+      $(this).css('color', laundryBlack);
+      $(this).animate({opacity: '1'}, rolloverAnimSpeed);
+    });  
+  });
+
   //////////////////// HEADER //////////////////////
 
   $('#location-nav').hover(function(){
@@ -81,9 +101,6 @@ $(document).ready(function() {
   /////////////////// BACKGROUND VIDEO ///////////////
 
   // resize the video on document ready and window resize
-  resizeVideo();
-  $(window).resize(resizeVideo);
-
   function resizeVideo() {
     if (document.body.clientHeight) {
 
@@ -104,5 +121,20 @@ $(document).ready(function() {
       }
     }
   }
+
+  resizeVideo();
+  $(window).resize(resizeVideo);
+
+  //////// PLACEHOLDER TEXT DISAPPEARS ON FOCUS ///////
+
+  var placeText;
+ 
+  $('.focus-hide').focus(function() {
+    placeText = $(this).attr('placeholder');
+    $(this).css('color', 'transparent');
+    $(this).attr('placeholder','').delay('500').css('color', 'black');
+  }).blur(function() {
+    $(this).attr('placeholder', placeText);
+  }).blur();
 
 });
