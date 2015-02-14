@@ -142,7 +142,7 @@ body.faq {
 			@media only screen and (max-width: $mobile-width) {
 				width: 100%;
 				float: none;
-				height: 284px;;
+				//height: 284px;;
 			}
 			h3 {
 				margin-top: 40px;
@@ -170,9 +170,21 @@ body.faq {
 				}
 			}
 		}
-		#cost {
-			color: #00b194;
+		.question {
+			margin-bottom: -14px;
+			a {
+				text-decoration: none;
+				&:hover {
+					color: #00b194;
+				}
+				&:visited {
+					color: #53534a;
+				}
+			}
+		}
 
+		.show-class {
+			display: none;
 		}
 	}
 	#bottombar {

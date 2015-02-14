@@ -1,6 +1,8 @@
 $(document).ready(function() {
   if ($("body").hasClass("index")) {
 
+    /////////////////// SLIDER ////////////////////
+
     // constants
     var MOBILE_WIDTH = 610;
 
@@ -15,7 +17,7 @@ $(document).ready(function() {
     var sliding = false;
     var curSlide = 0, nextSlide;
 
-    ///////// EVENT HANDLERS //////////
+    /// EVENT HANDLERS ///
 
     // left slide button
     $("#slide-left").click(function() {
@@ -54,6 +56,8 @@ $(document).ready(function() {
       }
     });
   }
+
+  /// FUNCTIONS ///
 
   function slideLeft(cur, next) {
     sliding = true;
@@ -97,9 +101,7 @@ $(document).ready(function() {
     $indicators.eq(next).addClass("current");
   }
 
-  // box-04 adjustment
-  adjustBox4();
-  $(window).resize(adjustBox4);
+  ///////////////// BOX 4 ADJUSTMENT /////////////////////
 
   function adjustBox4 () {
     if ($('body').width() <= MOBILE_WIDTH) {
@@ -108,4 +110,8 @@ $(document).ready(function() {
       $("#box-04").css('height', 'auto');
     }
   }
+
+  adjustBox4();
+  $(window).resize(adjustBox4);
+
 });
