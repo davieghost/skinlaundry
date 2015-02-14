@@ -4,9 +4,7 @@
  *= require_self
  *= require_tree . 
  */
-$laundry-green: #00b194;
-$mobile-width: 610px;
-$tablet-width: 1095px;
+@import 'variables';
 
 ///////////////////// GLOBAL STYLES /////////////////////
 
