@@ -1,5 +1,6 @@
+@import 'variables';
+
 $slide-control-color: rgb(125, 125, 125);
-$laundry-green: #00b194;
 $mobile-width: 610px;
 $tablet-width: 1095px;
 
@@ -57,11 +58,12 @@ body.index {
         .overlay-text {
           position: absolute;
           text-align: left;
+          color: $laundry-black;
           h1 {
             font-family: 'Archer-LightItalic';
             font-size: 4.0vw;
             margin-bottom: -6px;
-            font-weight: 400;
+            font-weight: 400;   
           }
           p {
             font-family: 'DIN';
@@ -70,8 +72,8 @@ body.index {
           }
           .text-box {
             display: inline-block;
-            border: 1px rgb(50, 50, 50) solid;
-            color: rgb(50, 50, 50);
+            border: 1px $laundry-black solid;
+            color: $laundry-black;
             text-align: center;
             font-family: 'DINAlternate-Bold';
             font-size: 1.3vw;
@@ -111,7 +113,7 @@ body.index {
           font-size: 16px;
           font-size: 5vw;
           line-height: 6vw;
-          color: rgb(50, 50, 50);
+          color: $laundry-black;
         }
       }
       #slide-03 {
@@ -159,7 +161,7 @@ body.index {
             width: 100%;
             height: 100%;
             z-index: 3;
-            background-color: rgba(0, 177, 144, 0.2);
+            background-color: rgba(0, 177, 148, 0.2);
             .overlay-text {
               position: absolute;
               text-transform: uppercase;
@@ -167,6 +169,7 @@ body.index {
               top: -12%;
               left: 9%;
               width: 80%;
+              color: $laundry-black;
               h1 {
                 font-family: 'Rollerscript-Smooth';
                 font-size: 6vw;
@@ -221,6 +224,7 @@ body.index {
             color: white;
             font-family: 'Archer-LightItalic';
             text-align: left;
+            color: $laundry-black;
           }
         }
         .bottom-section {
@@ -236,6 +240,7 @@ body.index {
             position: absolute;
             font-family: 'Rollerscript-Smooth';
             font-size: 2vw;
+            color: $laundry-black;
           }
           .overlay-text:first-of-type {
             top: 39%;
@@ -259,6 +264,7 @@ body.index {
         .overlay-text {
           margin: 60px auto 0 auto;
           width: 35%;
+          color: $laundry-black;
           img {
             width: 34%;
             margin-bottom: -4%;
@@ -272,7 +278,7 @@ body.index {
             p:first-child {
               font-family: 'DINAlternate-Bold';
               font-size: 1.2vw;
-              color: black;
+              color: $laundry-black;
               margin-bottom: -4%;
             }
             p:last-child {

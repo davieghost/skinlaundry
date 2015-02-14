@@ -4,6 +4,7 @@
  *= require_self
  *= require_tree . 
  */
+
 @import 'variables';
 
 ///////////////////// GLOBAL STYLES /////////////////////
@@ -324,13 +325,13 @@ body {
   }
   a {
     text-decoration: none;
-    color: black;
+    color: $laundry-black;
   }
   #nav-wrapper {
     position: relative;
     height: 100%;
     min-height: 870px; 
-    color: black;
+    color: $laundry-black;
     @media only screen and (max-width: $mobile-width) {
       padding-top: 40px;
       min-height: 910px;
@@ -418,6 +419,7 @@ body {
           border: none;
           text-transform: uppercase;
           font-family: 'DINAlternate-Bold';
+          color: $laundry-black;
           &:focus {
             outline: none;
           }
@@ -508,7 +510,7 @@ body {
   .instafeed {
     text-align: center;
     padding-bottom: 10px;
-    color: black;
+    color: $laundry-black;
   }
   .image-grid {
     overflow: auto;
@@ -550,6 +552,7 @@ body {
           border: none;
           text-transform: uppercase;
           font-family: 'DINAlternate-Bold';
+          color: $laundry-black;
           &:focus {
             outline: none;
           }
