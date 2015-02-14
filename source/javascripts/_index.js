@@ -13,8 +13,6 @@
 $(document).ready(function() {
   if ($("body").hasClass("index")) {
 
-
-
     // constants
     var MOBILE_WIDTH = 610;
 
@@ -40,22 +38,7 @@ $(document).ready(function() {
         if (nextSlide < 0)
           nextSlide = NUMSLIDES - 1;
 
-        $slides.eq(curSlide).animate({
-          'left': '100%',
-        }, ANIMATIONSPEED, EASING, function() {
-          $(this).css('display', 'none');
-          sliding = false;
-        });
-
-        $slides.eq(nextSlide).css({
-          'left': '-100%',
-          'display': 'block'
-        }).animate({
-          'left': '0',
-        }, ANIMATIONSPEED, EASING);
-
-        $indicators.eq(curSlide).removeClass("current");
-        $indicators.eq(nextSlide).addClass("current");
+        slideLeft(curSlide, nextSlide);
 
         curSlide = nextSlide;
       }
@@ -68,26 +51,64 @@ $(document).ready(function() {
 
         nextSlide = (curSlide + 1) % NUMSLIDES;
 
-        $slides.eq(curSlide).animate({
-          'left': '-100%'
-        }, ANIMATIONSPEED, EASING, function() {
-          $(this).css('display', 'none');
-          sliding = false;
-        });
-
-        $slides.eq(nextSlide).css({
-          'left': '100%',
-          'display': 'block'
-        }).animate({
-          'left': '0'
-        }, ANIMATIONSPEED, EASING);
-
-        $indicators.eq(curSlide).removeClass("current");
-        $indicators.eq(nextSlide).addClass("current");
+        slideRight(curSlide, nextSlide);
 
         curSlide = nextSlide;
       }
     });
+
+    $(".circle").click(function() {
+      if ($('body').width() <= MOBILE_WIDTH) {
+
+        nextSlide = $(this).index() - 1;
+
+        if (curSlide < nextSlide) 
+          slideRight(curSlide, nextSlide);
+        else if (curSlide > nextSlide) 
+          slideLeft(curSlide, nextSlide);
+
+        curSlide = nextSlide;
+
+      }
+    });
+  }
+
+  function slideLeft(cur, next) {
+    $slides.eq(cur).animate({
+      'left': '100%',
+    }, ANIMATIONSPEED, EASING, function() {
+      $(this).css('display', 'none');
+      sliding = false;
+    });
+
+    $slides.eq(next).css({
+      'left': '-100%',
+      'display': 'block'
+    }).animate({
+      'left': '0',
+    }, ANIMATIONSPEED, EASING);
+
+    $indicators.eq(cur).removeClass("current");
+    $indicators.eq(next).addClass("current");
+  }
+
+  function slideRight(cur, next) {
+    $slides.eq(cur).animate({
+      'left': '-100%'
+    }, ANIMATIONSPEED, EASING, function() {
+      $(this).css('display', 'none');
+      sliding = false;
+    });
+
+    $slides.eq(next).css({
+      'left': '100%',
+      'display': 'block'
+    }).animate({
+      'left': '0'
+    }, ANIMATIONSPEED, EASING);
+
+    $indicators.eq(cur).removeClass("current");
+    $indicators.eq(next).addClass("current");
   }
 
   // box-04 adjustment

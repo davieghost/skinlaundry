@@ -1,0 +1,210 @@
+$mobile-width: 700px;   
+$background-height: 410px;  
+
+body.faq {
+
+	#main {
+		position: relative;
+		max-width: 980px;
+		margin: 0 auto;
+		margin-top: 140px;
+		font-size: 13px;
+		min-height: 100%;
+		color: #53534a;
+		@media only screen and (max-width: 604px) {
+			margin-top: 0px;
+			width: 90%;
+			margin: 0 auto;
+		}
+	}	
+
+	#container {
+		background: white;
+		font-family: 'DIN';
+		height: 1400px;
+		@media only screen and (max-width: 604px) {
+			margin-top: -60px;
+			display: table;
+		}
+
+		#head {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		h1 {
+			padding-top: 30px;
+			font-family: 'Archer-LightItalic';
+			font-size: 60px;
+		}
+		h2 {
+			font-family: 'Archer-LightItalic';
+			font-size: 2.5em;
+			line-height: 40px;
+		}
+		#subheading {
+			color: #00b194;
+			letter-spacing: 5px;
+			margin-top: -30px;
+		}
+
+		.row1 {
+			height: 266px;
+		}
+		.row2 {
+			height: 300px;
+		}
+		.row3 {
+			height: 281px;
+			@media only screen and (max-width: $mobile-width) {
+				height: auto;
+			}
+		}
+
+		#image1 {
+			float: left;
+			background-image: url('/images/ipadshare.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			height: 266px;
+			width: 40%;
+			@media only screen and (max-width: $mobile-width) {
+				width: 100%;
+				float: none;
+			}
+		}
+		#paragraph1 {
+			float: left;
+			width: 60%;
+			padding-left: 8%;
+			padding-right: 5%;
+			line-height: 20px;
+			@media only screen and (max-width: $mobile-width) {
+				width: 100%;
+				float: none;
+				margin-bottom: 40px;
+			}
+		}
+		#paragraph2 {
+			float: left;
+			width: 40%;
+			padding-left: 5%;
+			padding-right: 5%;
+			@media only screen and (max-width: $mobile-width) {
+				width: 100%;
+				float: none;
+			}
+		}
+		#contact-us {
+			line-height: 30px;
+		}
+		#paragraph3 {
+			float: right;
+			width: 60%;
+			padding-left: 5%;
+			padding-right: 5%;
+			a {
+				color: #53534a;
+				&:hover {
+					color: #53534a;
+				}
+				&:visited {
+					color: #53534a;
+				}
+			}
+			@media only screen and (max-width: $mobile-width) {
+				width: 100%;
+				float: none;
+			}
+		}
+		#image2 {
+			float: left;
+			background-image: url('/images/treatment2.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			height: 380px;
+			width: 60%;
+			@media only screen and (max-width: $mobile-width) {
+				width: 100%;
+				float: none;
+			}
+		}
+		#booking {
+			float: left;
+			background-image: url('/images/greenblue.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			color: white;
+			margin: 0 auto;
+			padding-left: 5%;
+			padding-right: 5%;
+			width: 40%;
+			height: 281px;
+			@media only screen and (max-width: $mobile-width) {
+				width: 100%;
+				float: none;
+				height: 284px;;
+			}
+			h3 {
+				margin-top: 40px;
+				font-size: 1em;
+				@media only screen and (max-width: $mobile-width) {
+					font-size: 1.5em;
+					padding: 5%;
+				}
+			}
+			p {
+				border: 1px solid white;
+				padding: 20px;
+				text-align: center;
+				width: 50%;
+				margin: 0 auto;
+				a {
+				color: white;
+				text-decoration: none;
+					&:hover {
+						color: white;
+					}
+					&:visited {
+						color: white;
+					}
+				}
+			}
+		}
+		#cost {
+			color: #00b194;
+
+		}
+	}
+	#bottombar {
+			position: relative;
+			margin: 5px auto 0;
+			max-width: 980px;
+			z-index: 1;
+			background: none;
+			text-align: center;
+			a.links {
+				display: block;
+				background: rgba(53,193,170,.5);
+				background: -moz-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,.5)), color-stop(100%, rgba(73,165,191,.5)));
+				background: -webkit-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+				background: -o-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+				background: -ms-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+				background: linear-gradient(to right, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
+				height: 50px;
+				width: 33%;
+				display: inline-block;
+				padding-top: 17px;
+				color: white;
+				text-decoration: none;
+				&:hover{
+					background-color: white;
+				}
+				@media only screen and (max-width: $mobile-width) {
+			    	width: 60%;
+			    	margin: 3px;
+				}
+			}
+		}
+}
