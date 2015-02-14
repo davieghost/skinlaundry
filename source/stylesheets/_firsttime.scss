@@ -1,6 +1,4 @@
-$laundry-green: #00b194;
-$mobile-width: 610px;
-$tablet-width: 1095px;
+@import 'variables';
 
 body.firsttime {
 	#main {
@@ -10,12 +8,155 @@ body.firsttime {
 		z-index: 1;
 		background-color: #fff;
 		font-family: 'DIN';
-    font-size: 15px;
-    @media only screen and (max-width: $mobile-width) {
+	    font-size: 15px;
+	    line-height: 1.4em;
+		color: #53534a;
+
+		h1 {
+		  font-family: 'Archer-LightItalic';
+	      font-size: 50px;
+	      font-weight: 400;
+	      margin-bottom: .1em;
+		}
+
+		h2 {
+		  font-family: 'DIN';
+	      font-size: 14px;
+	      text-transform: uppercase;
+	      font-weight: 400;
+	      margin-bottom: 33px;
+	      color: $laundry-green;
+		}
+
+		.head {
+			padding-top: 1em;
+			text-align: center;
+			width: 100%;
+		}
+
+		.block{
+			vertical-align: top;
+		}
+
+		.row1 {
+			height: 230px;
+		}
+
+		.row2 {
+			height: 330px;
+		}
+
+		.row3 {
+			height: 230px;
+		}
+
+		#product {
+			background-image:url('/images/first_time_product.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			@media only screen and (max-width: $mobile-width) {
+				height: 110px;
+				min-height: 0;
+			}
+		}
+
+		.right {
+			width: 58%;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			}
+			a {
+				color: #000;
+				&:visited {
+					color: #000;
+				}
+			}
+		}
+
+		.padright {
+			padding-left: 20%;
+			padding-right: 10%;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			   padding-left: 5%;
+			   padding-right: 5%;
+			}
+		}
+
+		.padtop {
+			padding-top: 3em !important;
+		}
+
+		.left {
+			width: 38%;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			}
+		}
+
+		.whitetext{
+			color: #fff;
+			padding: 5% 3%;
+			line-height: 1.4em;
+			letter-spacing: 2px;
+			text-align: center;
+		}
+
+		.grad {
+			background: rgba(53,193,170,1);
+			background: -moz-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,1)), color-stop(100%, rgba(73,165,191,1)));
+			background: -webkit-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			background: -o-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			background: -ms-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			background: linear-gradient(to right, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
+			button.contactus {
+				border: 0;
+				width: 130px;
+				height: 40px;
+				display: block;
+				margin: 10px auto;
+				background: none;
+				border: 2px solid #fff;
+				color: #fff;
+				&:hover {
+					color: #000;
+					background-color: #fff;
+				}
+			}
+		}
+
+		.padleft {
+			padding-left: 5%;
+			padding-right: 5%;
+			@media only screen and (max-width: $mobile-width) {
+			   width: 100%;
+			   padding-left: 5%;
+			   padding-right: 5%;
+			}
+		}
+
+		#room {
+			background-image:url('/images/skinlaundry_room.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			//min-height: 390px;
+			@media only screen and (max-width: $mobile-width) {
+				height: 180px;
+				min-height: 0;
+			}
+		}
+
+		@media only screen and (max-width: $mobile-width) {
 		    width: 90%;
 		}
-		line-height: 1.4em;
-		color: #53534a;
 	}
 
 	#bottombar {
@@ -51,158 +192,6 @@ body.firsttime {
 			}
 			
 		}
-	}
-
-	.block{
-		vertical-align: top;
-	}
-
-	.row1 {
-		height: 230px;
-	}
-
-	.row2 {
-		height: 330px;
-	}
-
-	.row3 {
-		height: 230px;
-	}
-
-	rt {
-    	font-size: inherit
-	}
-
-	@media only screen and (max-width: $mobile-width) {
-		rt {
-			display: inline
-		}
-	}
-
-	#product {
-		background-image:url('/images/first_time_product.jpg');
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		@media only screen and (max-width: $mobile-width) {
-			height: 110px;
-			min-height: 0;
-		}
-	}
-
-	.right {
-		width: 58%;
-		display: inline-block;
-		margin: 0;
-		padding: 0;
-		@media only screen and (max-width: $mobile-width) {
-		   width: 100%;
-		}
-		a {
-			color: #000;
-			&:visited {
-				color: #000;
-			}
-		}
-	}
-
-	.padright {
-		padding-left: 20%;
-		padding-right: 10%;
-		@media only screen and (max-width: $mobile-width) {
-		   width: 100%;
-		   padding-left: 5%;
-		   padding-right: 5%;
-		}
-	}
-
-	.padtop {
-		padding-top: 3em !important;
-	}
-
-	.left {
-		width: 38%;
-		display: inline-block;
-		margin: 0;
-		padding: 0;
-		@media only screen and (max-width: $mobile-width) {
-		   width: 100%;
-		}
-	}
-
-	.whitetext{
-		color: #fff;
-		padding: 5% 3%;
-		line-height: 1.4em;
-		letter-spacing: 2px;
-		text-align: center;
-	}
-
-	.grad {
-		background: rgba(53,193,170,1);
-		background: -moz-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,1)), color-stop(100%, rgba(73,165,191,1)));
-		background: -webkit-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-		background: -o-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-		background: -ms-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-		background: linear-gradient(to right, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
-		button.contactus {
-			border: 0;
-			width: 130px;
-			height: 40px;
-			display: block;
-			margin: 10px auto;
-			background: none;
-			border: 2px solid #fff;
-			color: #fff;
-			&:hover {
-				color: #000;
-				background-color: #fff;
-			}
-		}
-	}
-
-	.padleft {
-		padding-left: 5%;
-		padding-right: 5%;
-		@media only screen and (max-width: $mobile-width) {
-		   width: 100%;
-		   padding-left: 5%;
-		   padding-right: 5%;
-		}
-	}
-
-	#room {
-		background-image:url('/images/skinlaundry_room.jpg');
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		//min-height: 390px;
-		@media only screen and (max-width: $mobile-width) {
-			height: 180px;
-			min-height: 0;
-		}
-	}
-
-	h1 {
-	  font-family: 'Archer-LightItalic';
-      font-size: 50px;
-      font-weight: 400;
-      margin-bottom: .1em;
-	}
-
-	h2 {
-	  font-family: 'DIN';
-      font-size: 14px;
-      text-transform: uppercase;
-      font-weight: 400;
-      margin-bottom: 33px;
-      color: $laundry-green;
-	}
-
-	.head {
-		padding-top: 1em;
-		text-align: center;
-		width: 100%;
 	}
 
 }
