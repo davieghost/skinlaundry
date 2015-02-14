@@ -654,8 +654,11 @@ body {
   }
   #shop-nav{
     top: -50px!important;
-    //left: 240px!important;
-
+    
+    @media only screen and (max-width: $tablet-width) {
+      left: 240px!important;
+      top: -88px!important;
+    }
   }
   a {
     font-size: 11px;
