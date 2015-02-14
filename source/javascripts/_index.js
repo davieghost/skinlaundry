@@ -1,15 +1,3 @@
-// $(document).ready(function() {
-
-//   $("#slide-left").click(function() {
-//     console.log("sliding left");
-//   });
-
-//   $("#slide-right").click(function() {
-//     console.log("sliding right");
-//   });
-
-// });
-
 $(document).ready(function() {
   if ($("body").hasClass("index")) {
 
@@ -32,14 +20,11 @@ $(document).ready(function() {
     // left slide button
     $("#slide-left").click(function() {
       if (!sliding) {
-        sliding = true;
-
         nextSlide = curSlide - 1;
         if (nextSlide < 0)
           nextSlide = NUMSLIDES - 1;
 
         slideLeft(curSlide, nextSlide);
-
         curSlide = nextSlide;
       }
     });
@@ -47,18 +32,15 @@ $(document).ready(function() {
     // right slide button
     $("#slide-right").click(function() {
       if (!sliding) {
-        sliding = true;
-
         nextSlide = (curSlide + 1) % NUMSLIDES;
-
         slideRight(curSlide, nextSlide);
-
         curSlide = nextSlide;
       }
     });
 
+    // circle clicks (mobile only)
     $(".circle").click(function() {
-      if ($('body').width() <= MOBILE_WIDTH) {
+      if ($('body').width() <= MOBILE_WIDTH && !sliding) {
 
         nextSlide = $(this).index() - 1;
 
@@ -74,6 +56,8 @@ $(document).ready(function() {
   }
 
   function slideLeft(cur, next) {
+    sliding = true;
+
     $slides.eq(cur).animate({
       'left': '100%',
     }, ANIMATIONSPEED, EASING, function() {
@@ -93,6 +77,8 @@ $(document).ready(function() {
   }
 
   function slideRight(cur, next) {
+    sliding = true;
+
     $slides.eq(cur).animate({
       'left': '-100%'
     }, ANIMATIONSPEED, EASING, function() {
