@@ -346,10 +346,10 @@ input {
   a {
     text-decoration: none;
     color: $laundry-black;
-    // transition: color 500ms;
-    // // &:hover {
-    // //   color: $laundry-green;
-    // // }
+    transition: color 500ms ease-in-out;
+    &:hover {
+      color: $laundry-green;
+    }
   }
   #nav-wrapper {
     position: relative;

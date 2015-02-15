@@ -1,7 +1,9 @@
 //= require_tree .
 
 $(document).ready(function() {
+
   var MOBILE_WIDTH = 610;
+
   /////////////// NAV PAGE OPEN/CLOSE //////////////
 
   $("#nav-open").click(function(e) {
@@ -41,23 +43,23 @@ $(document).ready(function() {
 
   // ///////////// NAV PAGE LINK ROLLOVER /////////////
 
-  var rolloverAnimSpeed = 200;
-  var laundryBlack = "#53534A";
-  var laundryGreen = "#00b194";
+  // var rolloverAnimSpeed = 200;
+  // var laundryBlack = "#53534A";
+  // var laundryGreen = "#00b194";
 
-  $("#nav-page #main-menu a").hover(function() {
-    console.log("hovering on");
-    $(this).animate({opacity: '0'}, rolloverAnimSpeed, function() {
-      $(this).css('color', laundryGreen);
-      $(this).animate({opacity: '1'}, rolloverAnimSpeed);
-    });
-  }, function() {
-    console.log("hovering off");
-    $(this).animate({opacity: '0'}, rolloverAnimSpeed, function() {
-      $(this).css('color', laundryBlack);
-      $(this).animate({opacity: '1'}, rolloverAnimSpeed);
-    });  
-  });
+  // $("#nav-page #main-menu a").hover(function() {
+  //   console.log("hovering on");
+  //   $(this).animate({opacity: '0'}, rolloverAnimSpeed, function() {
+  //     $(this).css('color', laundryGreen);
+  //     $(this).animate({opacity: '1'}, rolloverAnimSpeed);
+  //   });
+  // }, function() {
+  //   console.log("hovering off");
+  //   $(this).animate({opacity: '0'}, rolloverAnimSpeed, function() {
+  //     $(this).css('color', laundryBlack);
+  //     $(this).animate({opacity: '1'}, rolloverAnimSpeed);
+  //   });  
+  // });
 
   //////////////////// HEADER //////////////////////
 
@@ -146,5 +148,29 @@ $(document).ready(function() {
   }).blur(function() {
     $(this).attr('placeholder', placeText);
   }).blur();
+
+  ////////////// GET INSTAGRAM IMAGES ////////////////
+
+  // instagram doesn't seem to return jsonp
+
+  // window.callback = function(data) {
+  //   console.log(data);
+  // }
+
+  // $.ajax({
+  //   type: 'GET',
+  //   dataType: 'jsonp',
+  //   url: "https://instagram.com/skinlaundry/media/",
+  //   cache: true,
+  //   jsonpCallback: 'jake_asked_to_be_called_but_jake',
+  //   contentType: 'text/javascript',
+  //   success: function(data) {
+  //     console.log(data);
+  //   },
+  //   error: function(jqxhr, status, error) {
+  //     console.log(status);
+  //     console.log(error);
+  //   }
+  // });
 
 });
