@@ -3,9 +3,7 @@
 
 // this constant should be the same as the MOBILE_WIDTH 
 // constant at the top of _lookbooks.js
-$mobile-width: 610px;   
-$tablet-width: 980px;   
-$tablet-width-two: 852px;  
+$mobile-width: 700px;   
 $background-height: 410px;  
 
 
@@ -17,7 +15,6 @@ body.treatment {
 		margin: 0 auto;
 		margin-top: 140px;
 		font-size: 15px;
-		line-height: 20px;
 		min-height: 100%;
 		color: #53534a;
 		@media only screen and (max-width: 604px) {
@@ -29,7 +26,6 @@ body.treatment {
 		#container {
 			background: white;
 			font-family: 'DIN';
-			margin-bottom: 18px;
 			h1 {
 			  font-family: 'Archer-LightItalic';
 		      font-size: 50px;
@@ -51,181 +47,134 @@ body.treatment {
 				text-align: center;
 				padding: 30px 50px;
 			}
-//i made this
-			.row {
-			  width: 100%;
+
+			.block {
+				vertical-align: top;
 			}
-			.regular {
+			.row1 {
 				height: 325px;
-				@media only screen and (max-width: $tablet-width) {
-					height: 100%;
+			}
+			.row2 {
+				height: 380px;
+				@media only screen and (max-width: $mobile-width) {
+					height: 180px;
 				}
 			}
-			.short {
-				height: 280px;
-				@media only screen and (max-width: $tablet-width) {
-					height: 100%;
-				}
+			.row3 {
+				height: 240px;
 			}
-			
-			.block01 {
-				width: 40%;
-				min-width: 392px;
-				height: 100%;
-				float: left;
-				display: inline-block;
+			.row4 {
+				height: 340px;
+
+			}
+
+			#treatment1 {
 				background-image: url('/images/treatment1.jpg');
 				background-size: 100% auto;
 				background-repeat: no-repeat;
-				background-position: center top;
-				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
-					width: 100%;
-					float: none;
-					display: block;
-					clear: both;
-					height: 238px;
-					min-width: 100%;
-				}
-			}
-			.block02 {
-				width: 60%;
-				display: inline-block;
-				float: left;
-				margin-top: 30px;
-				min-width: 295px;
-				padding-left: 20%;
-				padding-right: 50px;
-				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
-					width: 100%;
-					padding: 40px;
-					float: none;
-					display: block;
-					clear: both;
-				}
-			}
-			.block03 {
-				display: inline-block;
-				float: left;
-				width: 40%;
-				min-width: 392px;
-				padding: 40px 40px 0 40px;
-				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
-					width: 100%;
-					padding: 40px;
-					float: none;
-					display: block;
-					clear: both;
-				}
-			}
-			.block04 {
-				display: inline-block;
-				float: left;
-				height: 100%;
-				width: 60%;
-				background-image: url('/images/treatment2.jpg');
-				background-size: 100% auto;
-				background-repeat: no-repeat;
-				background-position: center;
-				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
-					width: 100%;
-					float: none;
-					display: block;
-					clear: both;
-					height: 238px;
-					min-width: 100%;
+				@media only screen and (max-width: $mobile-width) {
+					height: 340px;
+					min-height: 0;
 				}
 			}
 
-			.block05 {
-				display: inline-block;
-				float: left;
-				width: 40%;
-				height: 100%;
-				min-width: 392px;
+			#treatment2 {
+				background-image: url('/images/treatment2.jpg');
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				margin-top: -15px;
+				@media only screen and (max-width: $mobile-width) {
+					//height: 293px;
+					margin-top: 150px;
+				}
+			}
+
+			#booking {
 				background-image: url('/images/treatment3.jpg');
 				background-size: 100% auto;
 				background-repeat: no-repeat;
-				background-size: cover;
 				color: white;
 				text-align: center;
 				margin: 0 auto;
 				padding: 20px 80px 0 80px;
-				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
-					width: 100%;
-					float: none;
-					display: block;
-					clear: both;
-					height: 238px;
-					min-width: 100%;
-				}
-				h2 {
-					font-family: 'DIN';
-					font-size: 2em;
-					line-height: 1.3em;
-					@media only screen and(max-width: $tablet-width) {
-						font-size: 1.7em;
-					}
+				margin-top: -15px;
+				@media only screen and (max-width: $mobile-width) {
+					margin-top: 185px;
 				}
 				p {
 					border: 1px solid white;
 					padding: 20px;
 				}
 			}
-			.block06 {
-				width: 60%;
-				display: inline-block;
-				float: left;
-				margin-top: 30px;
-				min-width: 295px;
-				padding-left: 20%;
-				padding-right: 50px;
-				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
-					width: 100%;
-					padding: 40px;
-					float: none;
-					display: block;
-					clear: both;
-				}
-			}
-			.block07 {
-				display: inline-block;
-				float: left;
-				width: 40%;
-				min-width: 392px;
-				padding: 10px 40px 0 40px;
-				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
-					width: 100%;
-					float: none;
-					display: block;
-					clear: both;
-				}
-			}
 
-			.block08 {
-				display: inline-block;
-				float: left;
-				height: 100%;
-				width: 60%;
+			#treatment4 {
 				background-image: url('/images/treatment4.jpg');
 				background-size: 100% auto;
 				background-repeat: no-repeat;
 				margin: 0 auto;
-				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
-					width: 100%;
-					float: none;
-					display: block;
-					clear: both;
-					height: 238px;
-					min-width: 100%;
+				margin-top: -14px;
+				@media only screen and (max-width: $mobile-width) {
+					margin-top: 280px;
 				}
+			}
+
+			#results {
+				margin-top: -75px;
+				@media only screen and (max-width: $mobile-width) {
+					margin-top: -30px;
+					line-height: 22px;
+					margin-bottom: 68px;
+				}
+			}
+
+			#waiting-for {
+				font-family: 'DIN';
+				font-size: 1em;
+			}
+
+			.left {
+				width: 38%;
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				@media only screen and (max-width: $mobile-width) {
+					width: 100%;
+				}
+			}
+
+			.padleft {
+				padding-left: 5%;
+				padding-right: 5%;
+				@media only screen and (max-width: $mobile-width) {
+					width: 100%;
+					padding-left: 15%;
+					padding-right: 15%;
+				}
+			}
+
+			.right {
+				width: 61%;
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				@media only screen and (max-width: $mobile-width) {
+					width: 100%;
+				}
+			}
+
+			.padright {
+				padding-left: 20%;
+				padding-right: 10%;
+				line-height: 22px;
+				@media only screen and (max-width: $mobile-width) {
+					width: 100%;
+					padding-left: 15%;
+					//height: 415px;
+				}
+			}
+
+			.padtop {
+				padding-top: 3em !important;
 			}
 
 			#paragraph2 {

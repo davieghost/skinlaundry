@@ -65,8 +65,7 @@ input {
   right: 0;
   width: 100%;
   height: 110px;
-  padding-top: 50px;
-  padding: 50px 0 0 70px;
+  padding: 20px 0 0 70px;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -o-transition: all .2s;
@@ -110,7 +109,7 @@ input {
         text-decoration: none;
       }
       font-family: 'DIN';
-      font-size: 18px;
+      font-size: 17px;
       text-transform: uppercase;
   		display: inline-block;
       margin-right: 18px;
@@ -126,9 +125,10 @@ input {
   display: inline-block;
   position: absolute;
   right: 30px;
-  top: 66px;
+  //top: 66px;
+  top: 36px;
   @media only screen and (max-width: $mobile-width) {
-    top: 1px;
+    top: 1px!important;
     z-index: 8001;
     right: 0;
   }
@@ -212,7 +212,7 @@ input {
 	z-index: 8000;
 	display: inline-block;
 	left: 15px;
-	top: 55px;
+	top: 25px;
   width: 34px;
   height: 36px;
   color: white;
@@ -479,6 +479,7 @@ input {
           display: inline-block;
           margin: 0 10px;
           color: rgb(128,128,128);
+
         }
       }
       ul {
@@ -625,9 +626,12 @@ input {
         }
       }
       .social {
+        margin-top: -4px;
         float: right;
         .social-link {
+          font-size: 21px;
           margin: 0 10px;
+          margin-top: 21px;
         }
       }
     }
@@ -672,6 +676,7 @@ input {
   left: 20px!important;
 }
 .header-scrolled {
+  padding-top: 50px!important;
   height: 56px!important;
   background-color: white!important;
   z-index: 7998!important;
@@ -690,10 +695,10 @@ input {
     }
   }
   a {
-    font-size: 11px;
+    font-size: 12px;
   }
   #location-login {
-    top: 14px;
+    top: 13px ; 
     #location-nav {
       top: -4px;
     }
