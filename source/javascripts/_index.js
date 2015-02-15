@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     // circle clicks (mobile only)
     $(".circle").click(function() {
-      if ($('body').width() <= MOBILE_WIDTH && !sliding) {
+      //if ($('body').width() <= MOBILE_WIDTH && !sliding) {
 
         nextSlide = $(this).index() - 1;
 
@@ -53,7 +53,7 @@ $(document).ready(function() {
 
         curSlide = nextSlide;
 
-      }
+      //}
     });
   }
 
