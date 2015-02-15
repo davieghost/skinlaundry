@@ -77,18 +77,6 @@ body.book {
 			width: 55%;
 			font-size: 1em;
 			margin-bottom: 15px;
-
-			// border gradient
-			border: 2px transparent solid;
-	    -moz-border-image: -moz-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-      -webkit-border-image: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,1)), color-stop(100%, rgba(73,165,191,1)));
-      -webkit-border-image: -webkit-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-      -o-border-image: -o-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-      -ms-border-image: -ms-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-      border-image: linear-gradient(to right, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-      border-image-slice: 1;
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
-
 			@media only screen and (max-width: 1000px) {
 				width: 75%;
 				font-size: 1.2em;

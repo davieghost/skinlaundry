@@ -55,6 +55,17 @@ input {
   box-sizing: content-box;
 }
 
+.border-gradient {
+  border: 2px transparent solid;
+  -moz-border-image: -moz-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+  -webkit-border-image: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,1)), color-stop(100%, rgba(73,165,191,1)));
+  -webkit-border-image: -webkit-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+  -o-border-image: -o-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+  -ms-border-image: -ms-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+  border-image: linear-gradient(to right, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+  border-image-slice: 1;
+}
+
 ///////////////////////// HEADER ///////////////////////////
 
 #header {
@@ -445,7 +456,6 @@ input {
           text-align: left;
           padding: 5px 15px; 
           height: 32px;
-          border: 1px solid $laundry-green;  
           font-family: 'DIN';  
           transition: all 400ms ease-in;
           &:focus {
@@ -584,6 +594,7 @@ input {
           height: 32px; 
           font-family: 'DIN';  
           transition: all 400ms ease-in;
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
           @media only screen and (max-width: $mobile-width) {
             width: 260px;
           }
