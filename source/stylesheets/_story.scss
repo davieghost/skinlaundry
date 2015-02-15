@@ -208,7 +208,7 @@ body.story {
 			background-image:url('/images/surfing.jpg');
 			background-size: 100% auto;
 			background-repeat: no-repeat;
-			width: 158px;
+			width: 161px;
 			height: 212px;
 			@media only screen and (max-width: $mobile-width) {
 			   width: 100%;
@@ -291,6 +291,7 @@ body.story {
 		text-align: center;
 		padding-bottom: 80px;
 		a.links {
+			font-family: 'DIN';
 			display: block;
 			background: rgba(53,193,170,.5);
 			background: -moz-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
@@ -301,10 +302,10 @@ body.story {
 			background: linear-gradient(to right, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
 			height: 40px;
-			width: 32%;
+			width: 32.3333333333%;
 			display: inline-block;
 			margin: 3px;
-			padding-top: 15px;
+			padding-top: 10px;
 			color: white;
 			text-decoration: none;
 			&:hover{
