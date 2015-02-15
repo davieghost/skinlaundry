@@ -476,6 +476,7 @@ input {
           display: inline-block;
           margin: 0 10px;
           color: rgb(128,128,128);
+
         }
       }
       ul {
@@ -623,9 +624,12 @@ input {
         }
       }
       .social {
+        margin-top: -4px;
         float: right;
         .social-link {
+          font-size: 21px;
           margin: 0 10px;
+          margin-top: 21px;
         }
       }
     }
@@ -688,7 +692,7 @@ input {
     }
   }
   a {
-    font-size: 11px;
+    font-size: 12px;
   }
   #location-login {
     top: 14px;

@@ -130,7 +130,7 @@ body.index {
       overflow: auto;
       .box {
         display: inline-block;
-        width: 32%;
+        width: 32.3333%;
         .top-section {
           position: relative;
           padding-top: 74.5%;               // controls the aspect ratio of the images
@@ -141,7 +141,7 @@ body.index {
           width: 100%;
           text-transform: uppercase;
           font-family: 'DIN';
-          font-size: 11px;
+          font-size: 13px;
           padding: 12px 0;
           color: white;
         }
@@ -170,6 +170,7 @@ body.index {
                 margin-bottom: -25%;
                 color: $laundry-green;
                 margin-left: 3%;
+                text-transform: none;
               }
               h2 {
                 font-size: 3.0vw;
@@ -192,7 +193,7 @@ body.index {
             height: 100%;
             z-index: 2;
             background-image: image-url("index/box_01.jpg");
-            background-size: 87%;
+            background-size: cover;
             background-position: 100% 0;
             background-repeat: no-repeat;
             opacity: 0.4;
@@ -200,6 +201,13 @@ body.index {
         }   
         .bottom-section {
           background-color: transparentize($laundry-green, 0.5);
+          -webkit-transition: all .2s;
+          -moz-transition: all .2s;
+          -o-transition: all .2s;
+          transition: all .2s;
+          &:hover {
+            background-color: transparentize($laundry-green, 0.2);
+          }
         }     
       }
       #box-02 {
@@ -221,8 +229,15 @@ body.index {
           }
         }
         .bottom-section {
-          background-color: transparentize($laundry-green, 0.7);
-        }
+          background-color: transparentize($laundry-green, 0.5);
+          -webkit-transition: all .2s;
+          -moz-transition: all .2s;
+          -o-transition: all .2s;
+          transition: all .2s;
+          &:hover {
+            background-color: transparentize($laundry-green, 0.2);
+          }
+        }  
       }
       #box-03 {
         .top-section {
@@ -247,8 +262,15 @@ body.index {
           }
         }
         .bottom-section {
-          background-color: transparentize($laundry-green, 0.7);
-        }
+          background-color: transparentize($laundry-green, 0.5);
+          -webkit-transition: all .2s;
+          -moz-transition: all .2s;
+          -o-transition: all .2s;
+          transition: all .2s;
+          &:hover {
+            background-color: transparentize($laundry-green, 0.2);
+          }
+        }  
       }
       #box-04 {
         text-align: center; 
