@@ -46,23 +46,12 @@ body.laundrystory {
         }
         .head {
           font-family: 'Archer-LightItalic';
-          font-size: 4.0vw;
+          font-size: 40px;
           padding: 15px 5%;
           color: $laundry-black;
-          @media only screen and (max-width: $mobile-width) {
-            font-size: 8vw;
-          }
         }
         .yen-block {
           width: 95%;
-          background: rgba(53,193,170,1);
-          background: -moz-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-          background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,1)), color-stop(100%, rgba(73,165,191,1)));
-          background: -webkit-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-          background: -o-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-          background: -ms-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-          background: linear-gradient(to right, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
           float: right;
           @media only screen and (max-width: $mobile-width) {
             margin-right: 2.5%;
@@ -71,26 +60,20 @@ body.laundrystory {
             float: left;
             margin-left: 20px;
             font-family: 'Rollerscript-Smooth';
-            font-size: 5vw;
+            font-size: 40px;
             color: white;
-            margin-bottom: -2%;
-            margin-top: 3%;
-            @media only screen and (max-width: $mobile-width) {
-              font-size: 9vw;
-            }
+            margin: 14px 0 -26px 5px;
           }
           .founder {
             float: right;
-            width: 46%;
             font-family: 'DIN';
-            font-size: 1.1vw;
+            font-size: 11px;
             text-transform: uppercase;
             color: white;
             letter-spacing: 1.3px;
-            margin-top: 7%;
+            margin: 22px 5px 0 0;
             @media only screen and (max-width: $mobile-width) {
-              font-size: 2.5vw;
-              width: 55%;
+              font-size: 14px;
             }
             p {
               margin: 5px;
