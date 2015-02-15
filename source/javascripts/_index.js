@@ -40,10 +40,9 @@ $(document).ready(function() {
       }
     });
 
-    // circle clicks (mobile only)
+    // circle clicks
     $(".circle").click(function() {
-      //if ($('body').width() <= MOBILE_WIDTH && !sliding) {
-
+      if (!sliding) {
         nextSlide = $(this).index() - 1;
 
         if (curSlide < nextSlide) 
@@ -52,12 +51,11 @@ $(document).ready(function() {
           slideLeft(curSlide, nextSlide);
 
         curSlide = nextSlide;
-
-      //}
+      }
     });
   }
 
-  /// FUNCTIONS ///
+  /// SLIDE FUNCTIONS ///
 
   function slideLeft(cur, next) {
     sliding = true;
@@ -100,11 +98,13 @@ $(document).ready(function() {
     $indicators.eq(cur).removeClass("current");
     $indicators.eq(next).addClass("current");
   }
+
+  /// SLIDE TIMER ///
   
   var blurbTimer = null;
 
   function initAutoClick() {
-    // auto-switch slides every 6 seconds
+    // auto-switch slides every 12 seconds
     clearInterval(blurbTimer);
     blurbTimer = setInterval(function() {
       $('#slide-right').trigger('click');
@@ -119,6 +119,7 @@ $(document).ready(function() {
 
   ///////////////// BOX 4 ADJUSTMENT /////////////////////
 
+  // on mobile, adjusts box-04 to the height of box-03
   function adjustBox4 () {
     if ($('body').width() <= MOBILE_WIDTH) {
       $("#box-04").height($("#box-03").height());
