@@ -1,0 +1,151 @@
+@import 'variables';
+
+body.laundrystory {
+
+  #main {
+    width: 90%;
+    margin: 200px auto 0 auto;
+    position: relative;
+    @media only screen and (max-width: $mobile-width) {
+      margin: 20px auto 0 auto;
+    }
+    #top-box {
+      width: 100%;
+      background-color: white;
+      overflow: auto;
+      .tag {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        font-family: 'DIN';
+        text-transform: uppercase;
+        color: $laundry-black;
+        font-size: 14px;
+      }
+      .left-col {
+        float: left;
+        width: 47.25%;
+        padding-top: 63.75%;
+        background-image: image-url("yen_story.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 70% 0;
+        @media only screen and (max-width: $mobile-width) {
+          float: none;
+          width: 100%;
+          padding-top: 90%;
+        }
+      }
+      .right-col {
+        float: right;
+        width: 52.75%;
+        height: 100%;
+        @media only screen and (max-width: $mobile-width) {
+          float: none;
+          width: 100%;
+        }
+        .head {
+          font-family: 'Archer-LightItalic';
+          font-size: 4.0vw;
+          padding: 15px 5%;
+          color: $laundry-black;
+          @media only screen and (max-width: $mobile-width) {
+            font-size: 8vw;
+          }
+        }
+        .yen-block {
+          width: 95%;
+          background: rgba(53,193,170,1);
+          background: -moz-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+          background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,1)), color-stop(100%, rgba(73,165,191,1)));
+          background: -webkit-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+          background: -o-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+          background: -ms-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+          background: linear-gradient(to right, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
+          float: right;
+          @media only screen and (max-width: $mobile-width) {
+            margin-right: 2.5%;
+          }
+          .yen {
+            float: left;
+            margin-left: 20px;
+            font-family: 'Rollerscript-Smooth';
+            font-size: 5vw;
+            color: white;
+            margin-bottom: -2%;
+            margin-top: 3%;
+            @media only screen and (max-width: $mobile-width) {
+              font-size: 9vw;
+            }
+          }
+          .founder {
+            float: right;
+            width: 46%;
+            font-family: 'DIN';
+            font-size: 1.1vw;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 1.3px;
+            margin-top: 7%;
+            @media only screen and (max-width: $mobile-width) {
+              font-size: 2.5vw;
+              width: 55%;
+            }
+            p {
+              margin: 5px;
+            }
+          }
+
+        }
+        .bio {
+          float: right;
+          width: 100%;
+          padding: 10% 8%;
+          text-align: left;
+          font-family: 'Archer-LightItalic';
+          font-size: 2.0vw;
+          line-height: 3.3vw;
+          @media only screen and (max-width: $mobile-width) {
+            font-size: 4.0vw;
+            line-height: 6.5vw;
+          }
+        }
+      }
+    }
+
+    // these styles are the same as box-04 (desktop) on the home page
+    #box-04 {
+      text-align: center; 
+      display: block;
+      width: 100%;
+      margin-top: 65px;
+      .overlay-text {
+        margin: 0 auto;
+        width: 275px;
+        color: $laundry-black;
+        img {
+          width: 34%;
+          margin-bottom: -4%;
+        }
+        p {
+          font-family: 'Archer-LightItalic';
+          font-size: 18px;
+        }
+        #stars {
+          margin: 0 auto 13% auto;
+          p:first-child {
+            font-family: 'DINAlternate-Bold';
+            font-size: 16px;
+            color: $laundry-black;
+            margin-bottom: -4%;
+          }
+          p:last-child {
+            color: $laundry-green;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

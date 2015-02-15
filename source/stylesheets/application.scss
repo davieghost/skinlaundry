@@ -388,6 +388,9 @@ input {
       }
       a {
         color: $laundry-green;
+        &:hover {
+          color: $laundry-black;
+        }
       }
     }
     #main-menu {
@@ -481,10 +484,10 @@ input {
       ul {
         text-transform: uppercase;
         font-family: 'DIN';
-        font-size: 8px;
+        font-size: 9px;
         li {
           display: inline-block;
-          margin: 5px 8px;
+          margin: 5px 7px;
         }
       }
     }
@@ -519,7 +522,6 @@ input {
   bottom: 0;
   width: 100%;
   overflow: auto;
-  width: 100%;
   color: white;
   z-index: 2;
   a {
