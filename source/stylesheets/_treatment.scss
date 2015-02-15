@@ -99,7 +99,8 @@ body.treatment {
 				max-width: 100%;
 				@media only screen and (max-width: $tablet-width) {
 					width: 100%;
-					padding: 40px;
+					//padding: 40px;
+					padding: 40px 40px 0 20px;
 					float: none;
 					display: block;
 					clear: both;
@@ -114,7 +115,7 @@ body.treatment {
 				max-width: 100%;
 				@media only screen and (max-width: $tablet-width) {
 					width: 100%;
-					padding: 40px;
+					padding: 40px 40px 0 20px;
 					float: none;
 					display: block;
 					clear: both;
@@ -203,6 +204,7 @@ body.treatment {
 				@media only screen and (max-width: $tablet-width) {
 					width: 100%;
 					float: none;
+					padding: 40px 40px 0 40px;
 					display: block;
 					clear: both;
 				}
@@ -250,6 +252,10 @@ body.treatment {
 			background: none;
 			text-align: center;
 			font-size: .8em;
+			-webkit-transition: background .2s;
+		  -moz-transition: background .2s;
+		  -o-transition: background .2s;
+		  transition: background .2s;
 			a.links {
 				display: block;
 				background: rgba(53,193,170,.5);

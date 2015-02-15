@@ -1,5 +1,16 @@
 @import 'variables';
+$tablet-width: 980px;   
+.hide-mobile {
+  @media only screen and (max-width: $tablet-width) {
+    display: none!important;
+  }
+}
 
+.hide-desktop {
+  @media only screen and (min-width: $tablet-width) {
+    display: none!important;
+  }
+}
 body.firsttime {
 	#main {
 		position: relative;
@@ -34,29 +45,162 @@ body.firsttime {
 			width: 100%;
 		}
 
-		.block{
-			vertical-align: top;
+		//i made this
+		.row {
+		  width: 100%;
+		}
+		.regular {
+			height: 325px;
+			@media only screen and (max-width: $tablet-width) {
+				height: 100%;
+			}
+		}
+		.short {
+			height: 280px;
+			@media only screen and (max-width: $tablet-width) {
+				height: 100%;
+			}
 		}
 
-		.row1 {
-			height: 230px;
-		}
 
-		.row2 {
-			height: 330px;
-		}
-
-		.row3 {
-			height: 230px;
-		}
-
-		#product {
+		.block01 {
+			width: 40%;
+			min-width: 392px;
+			height: 100%;
+			float: left;
+			display: inline-block;
 			background-image:url('/images/first_time_product.jpg');
+			background-size: cover;
+			background-position: center top;
+			background-repeat: no-repeat;
+			@media only screen and (max-width: $tablet-width) {
+				width: 100%;
+				float: none;
+				display: block;
+				clear: both;
+				height: 238px;
+				min-width: 100%;
+			}
+		}
+		.block02 {
+			width: 60%;
+			display: inline-block;
+			float: left;
+			margin-top: 30px;
+			min-width: 295px;
+			padding-left: 20%;
+			padding-right: 50px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-width) {
+				width: 100%;
+				padding: 40px 40px 0 20px;
+				float: none;
+				display: block;
+				clear: both;
+			}
+		}
+		.block03 {
+			display: inline-block;
+			float: left;
+			width: 40%;
+			min-width: 392px;
+			padding: 40px 40px 0 40px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-width) {
+				width: 100%;
+				padding: 40px 40px 0 20px;
+				float: none;
+				display: block;
+				clear: both;
+			}
+		}
+		.block04 {
+			display: inline-block;
+			float: left;
+			height: 100%;
+			width: 60%;
+			background-image:url('/images/skinlaundry_room.jpg');
 			background-size: 100% auto;
 			background-repeat: no-repeat;
-			@media only screen and (max-width: $mobile-width) {
-				height: 110px;
-				min-height: 0;
+			background-position: center top;
+			@media only screen and (max-width: $tablet-width) {
+					width: 100%;
+					float: none;
+					display: block;
+					clear: both;
+					height: 238px;
+					min-width: 100%;
+					background-position: center;
+			}
+		}
+		.block05 {
+			display: inline-block;
+			float: left;
+			width: 40%;
+			min-width: 392px;
+			padding: 40px 40px 0 40px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-width) {
+				width: 100%;
+				padding: 40px 40px 0 20px;
+				float: none;
+				display: block;
+				clear: both;
+				min-width: 100%;
+			}
+		}
+		.block05 {
+			height: 100%;
+			background: rgba(53,193,170,1);
+			background: -moz-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,1)), color-stop(100%, rgba(73,165,191,1)));
+			background: -webkit-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			background: -o-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			background: -ms-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			background: linear-gradient(to right, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
+			button.contactus {
+				border: 0;
+				width: 130px;
+				height: 40px;
+				display: block;
+				margin: 10px auto;
+				background: none;
+				border: 2px solid #fff;
+				color: #fff;
+				-webkit-transition: all .2s;
+			  -moz-transition: all .2s;
+			  -o-transition: all .2s;
+			  transition: all .2s;
+				&:hover {
+					color: #000;
+					background-color: #fff;
+				}
+			}
+			
+		}
+		.block06 {
+			width: 60%;
+			display: inline-block;
+			float: left;
+			margin-top: 30px;
+			min-width: 295px;
+			padding-left: 20%;
+			padding-right: 50px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-width) {
+				width: 100%;
+				//padding: 40px;
+				padding: 40px 40px 0 20px;
+				float: none;
+				display: block;
+				clear: both;
+			}
+			a {
+				color: #000;
+				&:visited {
+					color: #000;
+				}
 			}
 		}
 
@@ -108,34 +252,7 @@ body.firsttime {
 			text-align: center;
 		}
 
-		.grad {
-			background: rgba(53,193,170,1);
-			background: -moz-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,1)), color-stop(100%, rgba(73,165,191,1)));
-			background: -webkit-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-			background: -o-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-			background: -ms-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-			background: linear-gradient(to right, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
-			button.contactus {
-				border: 0;
-				width: 130px;
-				height: 40px;
-				display: block;
-				margin: 10px auto;
-				background: none;
-				border: 2px solid #fff;
-				color: #fff;
-				-webkit-transition: all .2s;
-			  -moz-transition: all .2s;
-			  -o-transition: all .2s;
-			  transition: all .2s;
-				&:hover {
-					color: #000;
-					background-color: #fff;
-				}
-			}
-		}
+		
 
 		.padleft {
 			padding-left: 5%;
@@ -147,16 +264,7 @@ body.firsttime {
 			}
 		}
 
-		#room {
-			background-image:url('/images/skinlaundry_room.jpg');
-			background-size: 100% auto;
-			background-repeat: no-repeat;
-			//min-height: 390px;
-			@media only screen and (max-width: $mobile-width) {
-				height: 180px;
-				min-height: 0;
-			}
-		}
+		
 
 		@media only screen and (max-width: $mobile-width) {
 		    width: 90%;
