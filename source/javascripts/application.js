@@ -41,26 +41,6 @@ $(document).ready(function() {
     //e.preventDefault();
   });
 
-  // ///////////// NAV PAGE LINK ROLLOVER /////////////
-
-  // var rolloverAnimSpeed = 200;
-  // var laundryBlack = "#53534A";
-  // var laundryGreen = "#00b194";
-
-  // $("#nav-page #main-menu a").hover(function() {
-  //   console.log("hovering on");
-  //   $(this).animate({opacity: '0'}, rolloverAnimSpeed, function() {
-  //     $(this).css('color', laundryGreen);
-  //     $(this).animate({opacity: '1'}, rolloverAnimSpeed);
-  //   });
-  // }, function() {
-  //   console.log("hovering off");
-  //   $(this).animate({opacity: '0'}, rolloverAnimSpeed, function() {
-  //     $(this).css('color', laundryBlack);
-  //     $(this).animate({opacity: '1'}, rolloverAnimSpeed);
-  //   });  
-  // });
-
   //////////////////// HEADER //////////////////////
 
   $('#location-nav').hover(function(){
@@ -89,6 +69,7 @@ $(document).ready(function() {
   });
 
   $(window).scroll(function(){
+    //console.log("running scroll function");
     if ($(window).scrollTop() > 100 && $('body').width() > MOBILE_WIDTH) {
       $('#nav-open').addClass('nav-open-scrolled');
       $('#header').addClass('header-scrolled');
@@ -97,17 +78,17 @@ $(document).ready(function() {
       $('#header').removeClass('header-scrolled');
     }
   });
+
   $(window).resize(function(){
-    $(window).trigger('scroll', function(){
-      if ($('body').width() >= MOBILE_WIDTH) {
-        $('#nav-open').removeClass('nav-open-scrolled');
-        $('#header').removeClass('header-scrolled');
-      }else if($(window).scrollTop() > 100 && $('body').width() > MOBILE_WIDTH){
-        $('#nav-open').addClass('nav-open-scrolled');
-        $('#header').addClass('header-scrolled');
-      }
-    });
-    
+    $(window).trigger('scroll');//, function(){
+    //   if ($('body').width() >= MOBILE_WIDTH) {
+    //     $('#nav-open').removeClass('nav-open-scrolled');
+    //     $('#header').removeClass('header-scrolled');
+    //   }else if($(window).scrollTop() > 100 && $('body').width() > MOBILE_WIDTH){
+    //     $('#nav-open').addClass('nav-open-scrolled');
+    //     $('#header').addClass('header-scrolled');
+    //   }
+    // }); 
   });
 
   /////////////////// BACKGROUND VIDEO ///////////////

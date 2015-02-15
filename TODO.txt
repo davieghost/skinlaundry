@@ -1,5 +1,3 @@
-safari -- footer disappearing after nav is opened
-
 book page gradient stroke
 
 transitions on some of the buttons

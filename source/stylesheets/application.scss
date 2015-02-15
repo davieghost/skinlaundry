@@ -495,6 +495,8 @@ input {
   }
 }
 
+//////////////// BACKGROUND VIDEO ////////////////
+
 .videobg {
   min-height: 400px;
   width: 100%;
@@ -524,7 +526,9 @@ input {
   width: 100%;
   overflow: auto;
   color: white;
-  z-index: 2;
+  z-index: 3;
+  // fixes disappearing footer issue in safari
+  -webkit-transform:translate3d(0, 0, 0);
   a {
     text-decoration: none;
     color: white;
