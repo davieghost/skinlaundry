@@ -126,6 +126,10 @@ body.firsttime {
 				background: none;
 				border: 2px solid #fff;
 				color: #fff;
+				-webkit-transition: all .2s;
+			  -moz-transition: all .2s;
+			  -o-transition: all .2s;
+			  transition: all .2s;
 				&:hover {
 					color: #000;
 					background-color: #fff;
@@ -169,6 +173,7 @@ body.firsttime {
 		text-align: center;
 		padding-bottom: 80px;
 		a.links {
+			font-family: 'DIN';
 			display: block;
 			background: rgba(53,193,170,.5);
 			background: -moz-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
@@ -179,10 +184,10 @@ body.firsttime {
 			background: linear-gradient(to right, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
 			height: 40px;
-			width: 32%;
+			width: 32.3333333%;
 			display: inline-block;
 			margin: 3px;
-			padding-top: 15px;
+			padding-top: 10px;
 			color: white;
 			text-decoration: none;
 			&:hover{
