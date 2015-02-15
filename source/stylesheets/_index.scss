@@ -7,7 +7,7 @@ $tablet-width: 1095px;
 body.index {
   #main {
     width: 90%;
-    margin: 150px auto 0 auto;
+    margin: 130px auto 0 auto;
     position: relative;
     #slider {
       position: relative;
@@ -81,6 +81,14 @@ body.index {
             text-transform: uppercase;
             letter-spacing: 0.6px;
             text-decoration: none;
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+            &:hover {
+              color: white;
+              background-color: $laundry-black;
+            }
           }
         }
       }
@@ -131,6 +139,9 @@ body.index {
       .box {
         display: inline-block;
         width: 32.3333%;
+        @media only screen and (max-width: 980px) {
+          width: 32%;
+        }
         .top-section {
           position: relative;
           padding-top: 74.5%;               // controls the aspect ratio of the images

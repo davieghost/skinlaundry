@@ -100,6 +100,22 @@ $(document).ready(function() {
     $indicators.eq(cur).removeClass("current");
     $indicators.eq(next).addClass("current");
   }
+  
+  var blurbTimer = null;
+
+  function initAutoClick() {
+    // auto-switch slides every 6 seconds
+    clearInterval(blurbTimer);
+    blurbTimer = setInterval(function() {
+      $('#slide-right').trigger('click');
+    }, 12000);
+  }
+  // stop the timer whenever a link is clicked
+  $("a").hover(function() {
+    clearInterval(blurbTimer);
+  });
+  // start the auto-switch
+  initAutoClick();
 
   ///////////////// BOX 4 ADJUSTMENT /////////////////////
 
