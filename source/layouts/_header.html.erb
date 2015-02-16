@@ -1,8 +1,8 @@
-<div id="header" class="hide-mobile">
+<div id="header" class="hide-mobile-header">
   <% if page_classes.split(" ").first == "index" %>
     <%= image_tag "full_logo.png", :class => "logo " %>
   <% else %>
-    <a href="/" class="to-home"><%= image_tag "full_logo.png", :class => "logo hide-mobile" %></a> 
+    <a href="/" class="to-home"><%= image_tag "full_logo.png", :class => "logo hide-mobile-header" %></a> 
   <% end %>
   <ul id="shop-nav">
     <li><a href="">Book Now</a></li>
@@ -21,13 +21,13 @@
     </div>
   </div>
 </div>
-<div id="header" class="hide-desktop">
+<div id="header" class="hide-desktop-header">
   <div class="mobile-logolist">
     <% if page_classes.split(" ").first == "index" %>
       <%= image_tag "full_logo.png", :class => "logo " %>
     <% else %>
-      <a href="/" class="to-home"><%= image_tag "full_logo.png", :class => "logo hide-mobile" %></a> 
-      <a href="/" class="to-home"><%= image_tag "full_logo.png", :class => "logo hide-desktop" %></a> 
+      <a href="/" class="to-home"><%= image_tag "full_logo.png", :class => "logo hide-mobile-header" %></a> 
+      <a href="/" class="to-home"><%= image_tag "full_logo.png", :class => "logo hide-desktop-header" %></a> 
     <% end %>
     <ul id="shop-nav">
       <li><a href="">Book Now</a></li>
