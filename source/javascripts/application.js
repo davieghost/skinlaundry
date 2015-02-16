@@ -94,7 +94,7 @@ $(document).ready(function() {
   /////////////////// BACKGROUND VIDEO ///////////////
 
   // resize the video on document ready and window resize
-  function resizeVideo() {
+  /*function resizeVideo() {
     if (document.body.clientHeight) {
 
       var windowHeight = document.body.clientHeight;
@@ -116,7 +116,7 @@ $(document).ready(function() {
   }
 
   resizeVideo();
-  $(window).resize(resizeVideo);
+  $(window).resize(resizeVideo);*/
 
   //////// PLACEHOLDER TEXT DISAPPEARS ON FOCUS ///////
 

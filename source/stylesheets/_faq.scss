@@ -3,7 +3,6 @@ $mobile-width: 700px;
 $background-height: 410px;  
 $tablet-width: 980px;   
 body.faq {
-
 	#main {
 		position: relative;
 		max-width: 980px;
@@ -47,7 +46,6 @@ body.faq {
 			letter-spacing: 5px;
 			margin-top: -30px;
 		}
-
 		.row {
 			  width: 100%;
 			}
@@ -118,28 +116,6 @@ body.faq {
 				display: inline;
 			}
 		}
-		/* #contact-us {
-			line-height: 30px;
-		}
-		#paragraph3 {
-			float: right;
-			width: 60%;
-			padding-left: 5%;
-			padding-right: 5%;
-			a {
-				color: #53534a;
-				&:hover {
-					color: #53534a;
-				}
-				&:visited {
-					color: #53534a;
-				}
-			}
-			@media only screen and (max-width: $mobile-width) {
-				width: 100%;
-				float: none;
-			}
-		} */
 		.block04 {
 				display: inline-block;
 				float: left;
@@ -219,54 +195,12 @@ body.faq {
 				max-width: 100%;
 				@media only screen and (max-width: $tablet-width) {
 					width: 100%;
-					padding: 40px;
+					padding: 40px 0px 40px 12px;
 					float: none;
 					display: block;
 					clear: both;
 				}
 			}
-		/* #booking {
-			float: left;
-			background-image: url('/images/greenblue.jpg');
-			background-size: 100% auto;
-			background-repeat: no-repeat;
-			color: white;
-			margin: 0 auto;
-			padding-left: 5%;
-			padding-right: 5%;
-			width: 40%;
-			height: 281px;
-			@media only screen and (max-width: $mobile-width) {
-				width: 100%;
-				float: none;
-				//height: 284px;;
-			}
-			h3 {
-				margin-top: 40px;
-				font-size: 1em;
-				@media only screen and (max-width: $mobile-width) {
-					font-size: 1.5em;
-					padding: 5%;
-				}
-			}
-			p {
-				border: 1px solid white;
-				padding: 20px;
-				text-align: center;
-				width: 50%;
-				margin: 0 auto;
-				a {
-				color: white;
-				text-decoration: none;
-					&:hover {
-						color: white;
-					}
-					&:visited {
-						color: white;
-					}
-				}
-			}
-		} */
 		.question {
 			transition: all 300ms ease-out;
 			margin-bottom: -14px;
@@ -332,7 +266,8 @@ body.faq {
 				}
 			}
 		}
-		.hide-mobile {
+	}
+.hide-mobile {
   @media only screen and (max-width: $tablet-width) {
     display: none!important;
   }
@@ -342,5 +277,4 @@ body.faq {
   @media only screen and (min-width: $tablet-width + 1px) {
     display: none!important;
   }
-}
 }
