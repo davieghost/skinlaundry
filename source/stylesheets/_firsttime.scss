@@ -8,7 +8,7 @@ $tablet-portrait: 760px;
 }
 
 .hide-d {
-  @media only screen and (min-width: $tablet-portrait) {
+  @media only screen and (min-width: $tablet-portrait + 1px) {
     display: none!important;
   }
 }
@@ -322,6 +322,9 @@ body.firsttime {
 					background: linear-gradient(to right, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49a5bf', endColorstr='#35c1aa', GradientType=1 );
 				}
+				@media only screen and (min-width: $mobile-width) and (max-width: $tablet-portrait) {
+    				width: 32%;
+  				}
 				@media only screen and (max-width: $mobile-width) {
 			    	width: 60%;
 			    	margin: 3px;
