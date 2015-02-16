@@ -17,7 +17,7 @@ body.story {
 	      font-size: 50px;
 	      font-weight: 400;
 	      margin-bottom: .1em;
-	      @media only screen and (max-width: $mobile-width) {
+	      @media only screen and (max-width: $tablet-portrait) {
 			   font-size: 40px;
 			   margin-bottom: .5em;
 		  }
@@ -39,6 +39,10 @@ body.story {
 	      font-weight: 400;
 	      margin-bottom: .1em;
 	      line-height: 1.4em;
+	      @media only screen and (max-width: $tablet-width) {
+			   font-size: 20px;
+			   line-height: 1em;
+		  }
 		}
 
 		.it {
@@ -51,7 +55,7 @@ body.story {
 			text-align: center;
 			width: 100%;
 			margin-bottom: 4em;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   margin-bottom: auto;
 			}
 		}
@@ -85,7 +89,7 @@ body.story {
 			width: 62%;
 			margin: 0;
 			padding: 0;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   width: 100%;
 			}
 			a {
@@ -107,7 +111,7 @@ body.story {
 		.padright {
 			padding-left: 8%;
 			padding-right: 8%;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   width: 100%;
 			   padding-left: 5%;
 			   padding-right: 5%;
@@ -118,8 +122,12 @@ body.story {
 			background-image:url('/images/face.jpg');
 			background-size: 100% auto;
 			background-repeat: no-repeat;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   height: 220px;
+			}
+			@media only screen and (min-width: $mobile-width) and (max-width: 924px) {
+				//resize image larger to reach next row
+				background-size: 120% auto;
 			}
 		}
 
@@ -128,7 +136,7 @@ body.story {
 			position: absolute;
 			top: 0;
 			right: 0;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   width: 160px;
 			}
 		}
@@ -137,7 +145,7 @@ body.story {
 			background-image:url('/images/water.jpg');
 			background-size: 447px auto;
 			background-repeat: no-repeat;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   height: 120px;
 			}
 		}
@@ -156,9 +164,7 @@ body.story {
 		#flowers {
 			width: 185px;
 			height: 212px;
-			@media only screen and (max-width: $mobile-width) {
-			   width: 100%;
-			   height: auto;
+			@media only screen and (max-width: $tablet-width) {
 			   display: none;
 			}
 		}
@@ -167,7 +173,7 @@ body.story {
 			position: absolute;
 			bottom: 0;
 			width: 183px;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   		//width: 100%;
 			   		position: static;
 				}
@@ -181,12 +187,12 @@ body.story {
 				position: absolute;
 				bottom: 0;
 				left: 70px;
-				@media only screen and (max-width: $mobile-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 			   		width: 80%;
 			   		position: static;
 				}
 			}
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   width: 100%;
 			   height: auto;
 			}
@@ -199,7 +205,7 @@ body.story {
 	      margin-bottom: .1em;
 	      line-height: 1.4em;
 	      text-align: left;
-	      @media only screen and (max-width: $mobile-width) {
+	      @media only screen and (max-width: $tablet-portrait) {
 			   padding-left: 25px;
 		  }
 		}
@@ -210,7 +216,7 @@ body.story {
 			background-repeat: no-repeat;
 			width: 161px;
 			height: 212px;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   width: 100%;
 			   height: 180px;
 			   background-size: 34% auto;
@@ -226,14 +232,15 @@ body.story {
 			width: 38%;
 			margin: 0;
 			padding: 0;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   width: 100%;
 			}
 		}
 
 		#birds{
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   height: 140px;
+			   overflow: hidden;
 			}
 		}
 
@@ -241,14 +248,14 @@ body.story {
 			width: 100%;
 			position: absolute;
 			bottom: 0;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   position: static;
 			   bottom: none;
 			}
 		}
 
 		#wwd {
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   height: auto;
 			}
 		}
@@ -267,7 +274,7 @@ body.story {
 		.padleft {
 			padding-left: 5%;
 			padding-right: 5%;
-			@media only screen and (max-width: $mobile-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 			   width: 100%;
 			   padding-left: 5%;
 			   padding-right: 5%;
@@ -276,8 +283,8 @@ body.story {
 
 	    @media only screen and (max-width: $mobile-width) {
 		    width: 90%;
-		    margin-top: 0;
 		    line-height: normal;
+		    margin-top: 0;
 		}
 		
 	}
@@ -321,7 +328,7 @@ body.story {
 					background: linear-gradient(to right, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49a5bf', endColorstr='#35c1aa', GradientType=1 );
 				}
-				@media only screen and (max-width: $mobile-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 			    	width: 60%;
 			    	margin: 3px;
 				}
