@@ -1,6 +1,7 @@
+@import 'variables';
 $mobile-width: 700px;   
 $background-height: 410px;  
-
+$tablet-width: 980px;   
 body.faq {
 
 	#main {
@@ -47,54 +48,77 @@ body.faq {
 			margin-top: -30px;
 		}
 
-		.row1 {
-			height: 266px;
-		}
-		.row2 {
-			height: 300px;
-		}
-		.row3 {
-			height: 281px;
-			@media only screen and (max-width: $mobile-width) {
-				height: auto;
+		.row {
+			  width: 100%;
 			}
-		}
-
-		#image1 {
+			.regular {
+				height: 325px;
+				@media only screen and (max-width: $tablet-width) {
+					height: 100%;
+				}
+			}
+			.short {
+				height: 280px;
+				@media only screen and (max-width: $tablet-width) {
+					height: 100%;
+				}
+			}
+			
+			.block01 {
+				width: 40%;
+				min-width: 392px;
+				height: 100%;
+				float: left;
+				display: inline-block;
+				background-image: url('/images/ipadshare.jpg');
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center top;
+				max-width: 100%;
+				@media only screen and (max-width: $tablet-width) {
+					width: 100%;
+					float: none;
+					display: block;
+					clear: both;
+					height: 238px;
+					min-width: 100%;
+				}
+			}
+			.block02 {
+				width: 60%;
+				display: inline-block;
+				float: left;
+				min-width: 295px;
+				padding-left: 30px;
+				padding-right: 80px;
+				max-width: 100%;
+				@media only screen and (max-width: $tablet-width) {
+					width: 100%;
+					padding: 40px 40px 0 20px;
+					float: none;
+					display: block;
+					clear: both;
+				}
+			}
+		.block03 {
+			display: inline-block;
 			float: left;
-			background-image: url('/images/ipadshare.jpg');
-			background-size: 100% auto;
-			background-repeat: no-repeat;
-			height: 266px;
 			width: 40%;
-			@media only screen and (max-width: $mobile-width) {
+			min-width: 392px;
+			padding: 0px 40px 0 40px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-width) {
 				width: 100%;
+				padding: 40px 40px 0 20px;
 				float: none;
+				display: block;
+				clear: both;
+			}
+			p {
+				display: inline;
 			}
 		}
-		#paragraph1 {
-			float: left;
-			width: 60%;
-			padding-left: 8%;
-			padding-right: 5%;
-			line-height: 20px;
-			@media only screen and (max-width: $mobile-width) {
-				width: 100%;
-				float: none;
-				margin-bottom: 40px;
-			}
-		}
-		#paragraph2 {
-			float: left;
-			width: 40%;
-			padding-left: 5%;
-			padding-right: 5%;
-			@media only screen and (max-width: $mobile-width) {
-				width: 100%;
-				float: none;
-			}
-		}
-		#contact-us {
+		/* #contact-us {
 			line-height: 30px;
 		}
 		#paragraph3 {
@@ -115,20 +139,93 @@ body.faq {
 				width: 100%;
 				float: none;
 			}
-		}
-		#image2 {
-			float: left;
-			background-image: url('/images/treatment2.jpg');
-			background-size: 100% auto;
-			background-repeat: no-repeat;
-			height: 380px;
-			width: 60%;
-			@media only screen and (max-width: $mobile-width) {
-				width: 100%;
-				float: none;
+		} */
+		.block04 {
+				display: inline-block;
+				float: left;
+				height: 100%;
+				width: 60%;
+				background-image: url('/images/treatment2.jpg');
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				background-position: center;
+				max-width: 100%;
+				@media only screen and (max-width: $tablet-width) {
+					width: 100%;
+					float: none;
+					display: block;
+					clear: both;
+					height: 238px;
+					min-width: 100%;
+				}
 			}
-		}
-		#booking {
+			.block05 {
+				display: inline-block;
+				float: left;
+				width: 40%;
+				height: 100%;
+				background-image: url('/images/treatment3.jpg');
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				background-size: cover;
+				color: white;
+				text-align: center;
+				margin: 0 auto;
+				padding: 20px 40px 0 40px;
+				max-width: 100%;
+				@media only screen and (max-width: $tablet-width) {
+					width: 100%;
+					float: none;
+					display: block;
+					clear: both;
+					height: 238px;
+					min-width: 100%;
+				}
+				h2 {
+					font-family: 'DIN';
+					font-size: 2em;
+					line-height: 1.3em;
+					margin-bottom: 20px;
+					@media only screen and(max-width: $tablet-width) {
+						font-size: 1.7em;
+					}
+				}
+				a {
+					display: inline-block;
+					margin-top: 30px;
+					text-decoration: none;
+					color: white;
+					border: 1px solid white;
+					padding: 20px;
+					-webkit-transition: all .2s;
+				  -moz-transition: all .2s;
+				  -o-transition: all .2s;
+				  transition: all .2s;
+					&:hover {
+						color: $laundry-green;
+						background-color: white;
+
+					}
+				}
+			}
+			.block06 {
+				width: 60%;
+				display: inline-block;
+				float: left;
+				margin-top: -20px;
+				min-width: 295px;
+				padding-left: 2%;
+				padding-right: 50px;
+				max-width: 100%;
+				@media only screen and (max-width: $tablet-width) {
+					width: 100%;
+					padding: 40px;
+					float: none;
+					display: block;
+					clear: both;
+				}
+			}
+		/* #booking {
 			float: left;
 			background-image: url('/images/greenblue.jpg');
 			background-size: 100% auto;
@@ -169,9 +266,11 @@ body.faq {
 					}
 				}
 			}
-		}
+		} */
 		.question {
+			transition: all 300ms ease-out;
 			margin-bottom: -14px;
+			color: $laundry-black;
 			a {
 				text-decoration: none;
 				&:hover {
@@ -194,8 +293,14 @@ body.faq {
 			z-index: 1;
 			background: none;
 			text-align: center;
+			font-size: 1em;
+			font-family: 'DIN';
 			a.links {
 				display: block;
+				-webkit-transition: background 300ms ease-out;
+			  -moz-transition: background 300ms ease-out;
+			  -o-transition: background 300ms ease-out;
+			  transition: background 300ms ease-out;
 				background: rgba(53,193,170,.5);
 				background: -moz-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
 				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,.5)), color-stop(100%, rgba(73,165,191,.5)));
@@ -211,7 +316,15 @@ body.faq {
 				color: white;
 				text-decoration: none;
 				&:hover{
-					background-color: white;
+					//background-color: white;
+					background: rgba(53,193,170,.5);
+					background: -moz-linear-gradient(left, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
+					background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,165,191,.5)), color-stop(100%, rgba(53,193,170,.5)));
+					background: -webkit-linear-gradient(left, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
+					background: -o-linear-gradient(left, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
+					background: -ms-linear-gradient(left, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
+					background: linear-gradient(to right, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49a5bf', endColorstr='#35c1aa', GradientType=1 );
 				}
 				@media only screen and (max-width: $mobile-width) {
 			    	width: 60%;
@@ -219,4 +332,15 @@ body.faq {
 				}
 			}
 		}
+		.hide-mobile {
+  @media only screen and (max-width: $tablet-width) {
+    display: none!important;
+  }
+}
+
+.hide-desktop {
+  @media only screen and (min-width: $tablet-width + 1px) {
+    display: none!important;
+  }
+}
 }

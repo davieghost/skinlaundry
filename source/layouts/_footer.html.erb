@@ -3,25 +3,8 @@
     <h1>Instafeed</h1>
     <p>Show off your skin #justlaundered</p>
   </div>
-  <div class="image-grid">
-    <div>
-      <%= image_tag "http://lorempixel.com/120/120/" %>
-      <%= image_tag "http://lorempixel.com/120/120/" %>
-      <%= image_tag "http://lorempixel.com/120/120/" %>
-      <%= image_tag "http://lorempixel.com/120/120/" %>
-      <%= image_tag "http://lorempixel.com/120/120/", :class => "hide-mobile" %>
-      <%= image_tag "http://lorempixel.com/120/120/", :class => "hide-mobile" %>
-      <%= image_tag "http://lorempixel.com/120/120/", :class => "hide-mobile" %>
-    </div>
-    <div>
-      <%= image_tag "http://lorempixel.com/120/120/" %>
-      <%= image_tag "http://lorempixel.com/120/120/" %>
-      <%= image_tag "http://lorempixel.com/120/120/" %>
-      <%= image_tag "http://lorempixel.com/120/120/" %>
-      <%= image_tag "http://lorempixel.com/120/120/", :class => "hide-mobile" %>
-      <%= image_tag "http://lorempixel.com/120/120/", :class => "hide-mobile" %>
-      <%= image_tag "http://lorempixel.com/120/120/", :class => "hide-mobile" %>     
-    </div>
+  <div id="instafeed" class="image-grid">
+
   </div>  
   <div id="bottom-wrapper">
     <div class="join-list">
@@ -47,3 +30,12 @@
     </div>
   </div>
 </div>
+<script>
+      var userFeed = new Instafeed({
+        get: 'user',
+        userId: 320927027,
+        accessToken: '320927027.467ede5.fd21533b02ab48b293ffadb82e56cafc',
+        limit: 14
+    });
+    userFeed.run();
+</script>
