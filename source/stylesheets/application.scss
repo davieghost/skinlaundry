@@ -34,7 +34,16 @@ body {
     display: none!important;
   }
 }
-
+.hide-mobile-header {
+  @media only screen and (max-width: $mobile-width) {
+    display: none!important;
+  }
+}
+.hide-desktop-header {
+  @media only screen and (min-width: $mobile-width + 1px) {
+    display: none!important;
+  }
+}
 .hide-desktop {
   @media only screen and (min-width: $mobile-width + 1px) {
     display: none!important;
