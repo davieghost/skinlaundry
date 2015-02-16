@@ -1,0 +1,190 @@
+/* line 4, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+body.firsttime #main {
+  position: relative;
+  margin: 150px auto 0;
+  max-width: 980px;
+  z-index: 1;
+  background-color: #fff;
+  font-family: 'DIN';
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #53534a; }
+  /* line 15, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main h1 {
+    font-family: 'Archer-LightItalic';
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: .1em; }
+  /* line 22, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main h2 {
+    font-family: 'DIN';
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 33px;
+    color: #00b194; }
+  /* line 31, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .head {
+    padding-top: 1em;
+    text-align: center;
+    width: 100%; }
+  /* line 37, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .block {
+    vertical-align: top; }
+  /* line 41, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .row1 {
+    height: 230px; }
+  /* line 45, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .row2 {
+    height: 330px; }
+  /* line 49, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .row3 {
+    height: 230px; }
+  /* line 53, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main #product {
+    background-image: url("/images/first_time_product.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+    @media only screen and (max-width: 610px) {
+      /* line 53, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+      body.firsttime #main #product {
+        height: 110px;
+        min-height: 0; } }
+  /* line 63, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .right {
+    width: 62%;
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+    @media only screen and (max-width: 610px) {
+      /* line 63, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+      body.firsttime #main .right {
+        width: 100%; } }
+    /* line 71, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+    body.firsttime #main .right a {
+      color: #000; }
+      /* line 73, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+      body.firsttime #main .right a:visited {
+        color: #000; }
+  /* line 79, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .padright {
+    padding-left: 20%;
+    padding-right: 10%; }
+    @media only screen and (max-width: 610px) {
+      /* line 79, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+      body.firsttime #main .padright {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%; } }
+  /* line 89, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .padtop {
+    padding-top: 3em !important; }
+  /* line 93, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .left {
+    width: 38%;
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+    @media only screen and (max-width: 610px) {
+      /* line 93, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+      body.firsttime #main .left {
+        width: 100%; } }
+  /* line 103, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .whitetext {
+    color: #fff;
+    padding: 5% 3%;
+    line-height: 1.4em;
+    letter-spacing: 2px;
+    text-align: center; }
+  /* line 111, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .grad {
+    background: #35c1aa;
+    background: -moz-linear-gradient(left, #35c1aa 0%, #49a5bf 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #35c1aa), color-stop(100%, #49a5bf));
+    background: -webkit-linear-gradient(left, #35c1aa 0%, #49a5bf 100%);
+    background: -o-linear-gradient(left, #35c1aa 0%, #49a5bf 100%);
+    background: -ms-linear-gradient(left, #35c1aa 0%, #49a5bf 100%);
+    background: linear-gradient(to right, #35c1aa 0%, #49a5bf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 ); }
+    /* line 120, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+    body.firsttime #main .grad button.contactus {
+      border: 0;
+      width: 130px;
+      height: 40px;
+      display: block;
+      margin: 10px auto;
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s; }
+      /* line 133, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+      body.firsttime #main .grad button.contactus:hover {
+        color: #000;
+        background-color: #fff; }
+  /* line 140, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main .padleft {
+    padding-left: 5%;
+    padding-right: 5%; }
+    @media only screen and (max-width: 610px) {
+      /* line 140, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+      body.firsttime #main .padleft {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%; } }
+  /* line 150, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #main #room {
+    background-image: url("/images/skinlaundry_room.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+    @media only screen and (max-width: 610px) {
+      /* line 150, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+      body.firsttime #main #room {
+        height: 180px;
+        min-height: 0; } }
+  @media only screen and (max-width: 610px) {
+    /* line 4, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+    body.firsttime #main {
+      width: 90%;
+      margin-top: 0; } }
+/* line 167, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+body.firsttime #bottombar {
+  position: relative;
+  margin: 5px auto 0;
+  max-width: 980px;
+  z-index: 1;
+  background: none;
+  text-align: center;
+  padding-bottom: 80px; }
+  /* line 175, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+  body.firsttime #bottombar a.links {
+    font-family: 'DIN';
+    display: block;
+    background: rgba(53, 193, 170, 0.5);
+    background: -moz-linear-gradient(left, rgba(53, 193, 170, 0.5) 0%, rgba(73, 165, 191, 0.5) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53, 193, 170, 0.5)), color-stop(100%, rgba(73, 165, 191, 0.5)));
+    background: -webkit-linear-gradient(left, rgba(53, 193, 170, 0.5) 0%, rgba(73, 165, 191, 0.5) 100%);
+    background: -o-linear-gradient(left, rgba(53, 193, 170, 0.5) 0%, rgba(73, 165, 191, 0.5) 100%);
+    background: -ms-linear-gradient(left, rgba(53, 193, 170, 0.5) 0%, rgba(73, 165, 191, 0.5) 100%);
+    background: linear-gradient(to right, rgba(53, 193, 170, 0.5) 0%, rgba(73, 165, 191, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
+    height: 40px;
+    width: 32.3333333%;
+    display: inline-block;
+    margin: 3px;
+    padding-top: 10px;
+    color: white;
+    text-decoration: none; }
+    /* line 193, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+    body.firsttime #bottombar a.links:hover {
+      background-color: white; }
+    @media only screen and (max-width: 610px) {
+      /* line 175, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+      body.firsttime #bottombar a.links {
+        width: 60%; } }
+  @media only screen and (max-width: 610px) {
+    /* line 167, /Users/echan/Development/liftoff/skinlaundry-web2-html/source/stylesheets/old_firsttime.scss */
+    body.firsttime #bottombar {
+      padding-bottom: 30px; } }
