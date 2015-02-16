@@ -1,6 +1,5 @@
 @import 'variables';
 $tablet-width: 980px;
-$tablet-portrait: 760px;
 .hide-m {
   @media only screen and (max-width: $tablet-portrait) {
     display: none!important;
