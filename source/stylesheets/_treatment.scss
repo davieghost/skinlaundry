@@ -35,14 +35,14 @@ body.treatment {
 		      font-size: 50px;
 		      font-weight: 400;
 		      margin-bottom: .1em;
-		      @media only screen and (max-width: $mobile-width) {
+		      @media only screen and (max-width: $tablet-portrait) {
 		      	font-size: 2.5em;
 		      }
 			}
 
 			h2 {
 				font-family: 'Archer-LightItalic';
-				@media only screen and (max-width: $mobile-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					font-size: 2em;
 				}
 			}
@@ -58,20 +58,20 @@ body.treatment {
 			}
 			.regular {
 				height: 325px;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					height: 100%;
 				}
 			}
 			.short {
 				height: 280px;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					height: 100%;
 				}
 			}
 			
 			.block01 {
 				width: 40%;
-				min-width: 392px;
+				//min-width: 392px;
 				height: 100%;
 				float: left;
 				display: inline-block;
@@ -80,7 +80,7 @@ body.treatment {
 				background-repeat: no-repeat;
 				background-position: center top;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					display: block;
@@ -88,6 +88,10 @@ body.treatment {
 					height: 238px;
 					min-width: 100%;
 				}
+				@media only screen and (min-width: $tablet-portrait) and (max-width: $tablet-width) {
+					background-size: 140%;
+				}
+
 			}
 			.block02 {
 				width: 60%;
@@ -97,8 +101,8 @@ body.treatment {
 				min-width: 295px;
 				padding-left: 20%;
 				padding-right: 50px;
-				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				//max-width: 100%;
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					//padding: 40px;
 					padding: 40px 40px 0 20px;
@@ -106,20 +110,28 @@ body.treatment {
 					display: block;
 					clear: both;
 				}
+				@media only screen and (max-width: $tablet-width) {
+					margin-top: 0;
+					padding: 20px 20px 0 20px;
+				}
 			}
 			.block03 {
 				display: inline-block;
 				float: left;
 				width: 40%;
-				min-width: 392px;
+				//min-width: 392px;
 				padding: 40px 40px 0 40px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					padding: 40px 40px 0 20px;
 					float: none;
 					display: block;
 					clear: both;
+				}
+				@media only screen and (max-width: $tablet-width) {
+					margin-top: 0;
+					padding: 20px 20px 0 20px;
 				}
 			}
 			.block04 {
@@ -132,13 +144,16 @@ body.treatment {
 				background-repeat: no-repeat;
 				background-position: center;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					display: block;
 					clear: both;
 					height: 238px;
 					min-width: 100%;
+				}
+				@media only screen and (min-width: $tablet-portrait) and (max-width: $tablet-width) {
+					background-size: 110%;
 				}
 			}
 
@@ -147,7 +162,7 @@ body.treatment {
 				float: left;
 				width: 40%;
 				height: 100%;
-				min-width: 392px;
+				//min-width: 392px;
 				background-image: url('/images/treatment3.jpg');
 				background-size: 100% auto;
 				background-repeat: no-repeat;
@@ -157,7 +172,7 @@ body.treatment {
 				margin: 0 auto;
 				padding: 20px 80px 0 80px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					display: block;
@@ -169,7 +184,7 @@ body.treatment {
 					font-family: 'DIN';
 					font-size: 2em;
 					line-height: 1.3em;
-					@media only screen and(max-width: $tablet-width) {
+					@media only screen and(max-width: $tablet-portrait) {
 						font-size: 1.7em;
 					}
 				}
@@ -188,17 +203,20 @@ body.treatment {
 
 					}
 				}
+				@media only screen and (min-width: $tablet-portrait) and (max-width: $tablet-width) {
+					padding: 20px 0 20px 0;
+				}
 			}
 			.block06 {
 				width: 60%;
 				display: inline-block;
 				float: left;
 				margin-top: 30px;
-				min-width: 295px;
+				//min-width: 295px;
 				padding-left: 20%;
 				padding-right: 50px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					padding: 40px;
 					float: none;
@@ -210,15 +228,23 @@ body.treatment {
 				display: inline-block;
 				float: left;
 				width: 40%;
-				min-width: 392px;
+				//min-width: 392px;
 				padding: 10px 40px 0 40px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					padding: 40px 40px 0 40px;
 					display: block;
 					clear: both;
+				}
+				@media only screen and (max-width: $tablet-width) {
+					margin-top: 0;
+					padding: 20px 20px 0 20px;
+					p{
+						font-size: 14px;
+						line-height: 1.1em;
+					}
 				}
 			}
 
@@ -232,7 +258,7 @@ body.treatment {
 				background-repeat: no-repeat;
 				margin: 0 auto;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					display: block;
@@ -248,7 +274,7 @@ body.treatment {
 
 			#paragraph3 {
 				margin-top: -33px;
-				@media only screen and (max-width: $mobile-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					padding-top: 0;
 					margin-top: -133px;
 					margin-bottom: 40px;
@@ -295,7 +321,7 @@ body.treatment {
 					background: linear-gradient(to right, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49a5bf', endColorstr='#35c1aa', GradientType=1 );
 				}
-				@media only screen and (max-width: $mobile-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 			    	width: 60%;
 			    	margin: 3px;
 				}
