@@ -1,7 +1,5 @@
 @import 'variables';
-$mobile-width: 700px;   
-$background-height: 410px;  
-$tablet-width: 980px;   
+$background-height: 410px;    
 body.faq {
 	#main {
 		position: relative;
@@ -21,15 +19,17 @@ body.faq {
 	#container {
 		background: white;
 		font-family: 'DIN';
-		height: 1400px;
+		padding-bottom: 50px;
+		//height: 1400px;
+		display: table;
 		@media only screen and (max-width: 604px) {
-			margin-top: -60px;
-			display: table;
+			//margin-top: -60px;
 		}
 
 		#head {
 			text-align: center;
 			margin-bottom: 30px;
+			margin-top: -40px;
 		}
 		h1 {
 			padding-top: 30px;
@@ -42,6 +42,9 @@ body.faq {
 			font-size: 2.5em;
 			line-height: 40px;
 			font-weight: 100;
+			@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+				font-size: 1.5em;
+			}
 		}
 		#subheading {
 			color: #00b194;
@@ -54,20 +57,22 @@ body.faq {
 			}
 			.regular {
 				height: 325px;
-				@media only screen and (max-width: $tablet-width) {
-					height: 100%;
+				@media only screen and (max-width: $tablet-portrait) {
+					//height: 100%;
+					height: auto;
 				}
 			}
 			.short {
 				height: 280px;
-				@media only screen and (max-width: $tablet-width) {
-					height: 100%;
+				@media only screen and (max-width: $tablet-portrait) {
+					//height: 100%;
+					height: auto;
 				}
 			}
 			
 			.block01 {
 				width: 40%;
-				min-width: 392px;
+				//min-width: 392px;
 				height: 100%;
 				float: left;
 				display: inline-block;
@@ -76,7 +81,7 @@ body.faq {
 				background-repeat: no-repeat;
 				background-position: center top;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					display: block;
@@ -89,13 +94,13 @@ body.faq {
 				width: 60%;
 				display: inline-block;
 				float: left;
-				min-width: 295px;
+				//min-width: 295px;
 				padding-left: 30px;
 				padding-right: 80px;
 				max-width: 100%;
 				font-size: 15px;
 				line-height: 25px;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					padding: 40px 40px 0 20px;
 					float: none;
@@ -107,10 +112,10 @@ body.faq {
 				display: inline-block;
 				float: left;
 				width: 40%;
-				min-width: 392px;
+				//min-width: 392px;
 				padding: 0px 40px 0 40px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					padding: 40px 40px 0 20px;
 					float: none;
@@ -121,6 +126,10 @@ body.faq {
 					display: inline;
 					font-size: 15px;
 					line-height: 25px;
+					@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+						line-height: 1.5em;
+						font-size: 13px;
+					}
 				}
 				h2 {
 					margin-bottom: 0;
@@ -137,13 +146,16 @@ body.faq {
 					background-repeat: no-repeat;
 					background-position: center;
 					max-width: 100%;
-					@media only screen and (max-width: $tablet-width) {
+					@media only screen and (max-width: $tablet-portrait) {
 						width: 100%;
 						float: none;
 						display: block;
 						clear: both;
 						height: 238px;
 						min-width: 100%;
+					}
+					@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+						background-size: cover;
 					}
 				}
 			.block05 {
@@ -160,7 +172,7 @@ body.faq {
 				margin: 0 auto;
 				padding: 20px 40px 0 40px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					display: block;
@@ -173,7 +185,7 @@ body.faq {
 					font-size: 2em;
 					line-height: 1.3em;
 					margin-bottom: 20px;
-					@media only screen and(max-width: $tablet-width) {
+					@media only screen and(max-width: $tablet-portrait) {
 						font-size: 1.7em;
 					}
 				}
@@ -192,12 +204,15 @@ body.faq {
 						color: $laundry-green;
 						background-color: white;
 					}
-					@media only screen and(max-width: $tablet-width) {
+					@media only screen and(max-width: $tablet-portrait) {
 						margin-top: 0;
 					}
 				}
 				#contact-us {
 					line-height: 30px;
+					@media only screen and(max-width: $tablet-width) {
+						line-height: 1.4em;
+					}
 				}
 			}
 			.block06 {
@@ -205,15 +220,15 @@ body.faq {
 				display: inline-block;
 				float: left;
 				margin-top: -20px;
-				min-width: 295px;
+				//min-width: 295px;
 				padding-left: 2%;
 				padding-right: 50px;
 				max-width: 100%;
 				line-height: 25px;
 
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
-					padding: 40px 0px 40px 12px;
+					padding: 40px 20px 40px 20px;
 					float: none;
 					display: block;
 					clear: both;
@@ -222,6 +237,9 @@ body.faq {
 					transition: all 300ms ease-out;
 					margin-bottom: -14px;
 					color: $laundry-black;
+					@media only screen and(max-width: $tablet-portrait) {
+						font-size: 1.5em !important;
+					}
 
 					a {
 						text-decoration: none;

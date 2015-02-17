@@ -58,6 +58,7 @@
 </div>
 
 <script>
+    var lastQuestion = 0;
     window.onload = function(){
         var questionNum;
         var answerNum;
@@ -65,8 +66,12 @@
             e.preventDefault();
             questionNum = $(this).attr('id').slice(-1);
             answerNum = '#answer'+questionNum;
-            $('.show-class').slideUp();
-            $(answerNum).slideDown();
+            if(lastQuestion != questionNum)
+            {
+                $('.show-class').slideUp();
+                $(answerNum).slideDown();
+                lastQuestion = questionNum;
+            }
             //console.log(answerNum);
         })
     };
