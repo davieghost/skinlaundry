@@ -1,7 +1,5 @@
 @import 'variables';
-$mobile-width: 700px;   
-$background-height: 410px;  
-$tablet-width: 980px;   
+$background-height: 410px;    
 body.faq {
 	#main {
 		position: relative;
@@ -21,50 +19,60 @@ body.faq {
 	#container {
 		background: white;
 		font-family: 'DIN';
-		height: 1400px;
+		padding-bottom: 50px;
+		//height: 1400px;
+		display: table;
 		@media only screen and (max-width: 604px) {
-			margin-top: -60px;
-			display: table;
+			//margin-top: -60px;
 		}
 
 		#head {
 			text-align: center;
 			margin-bottom: 30px;
+			margin-top: -40px;
 		}
 		h1 {
 			padding-top: 30px;
 			font-family: 'Archer-LightItalic';
-			font-size: 60px;
+			font-size: 50px;
+			font-weight: 100;
 		}
 		h2 {
 			font-family: 'Archer-LightItalic';
 			font-size: 2.5em;
 			line-height: 40px;
+			font-weight: 100;
+			@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+				font-size: 1.5em;
+			}
 		}
 		#subheading {
 			color: #00b194;
-			letter-spacing: 5px;
-			margin-top: -30px;
+			margin-top: -37px;
+			font-size: 14px;
+			font-weight: 100;
 		}
 		.row {
 			  width: 100%;
 			}
 			.regular {
 				height: 325px;
-				@media only screen and (max-width: $tablet-width) {
-					height: 100%;
+				@media only screen and (max-width: $tablet-portrait) {
+					//height: 100%;
+					height: auto;
 				}
 			}
 			.short {
 				height: 280px;
-				@media only screen and (max-width: $tablet-width) {
-					height: 100%;
+				@media only screen and (max-width: $tablet-portrait) {
+					//height: 100%;
+					height: auto;
 				}
 			}
 			
 			.block01 {
 				width: 40%;
-				min-width: 392px;
+				//min-width: 392px;
 				height: 100%;
 				float: left;
 				display: inline-block;
@@ -73,7 +81,7 @@ body.faq {
 				background-repeat: no-repeat;
 				background-position: center top;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					display: block;
@@ -86,11 +94,13 @@ body.faq {
 				width: 60%;
 				display: inline-block;
 				float: left;
-				min-width: 295px;
+				//min-width: 295px;
 				padding-left: 30px;
 				padding-right: 80px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				font-size: 15px;
+				line-height: 25px;
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					padding: 40px 40px 0 20px;
 					float: none;
@@ -98,43 +108,56 @@ body.faq {
 					clear: both;
 				}
 			}
-		.block03 {
-			display: inline-block;
-			float: left;
-			width: 40%;
-			min-width: 392px;
-			padding: 0px 40px 0 40px;
-			max-width: 100%;
-			@media only screen and (max-width: $tablet-width) {
-				width: 100%;
-				padding: 40px 40px 0 20px;
-				float: none;
-				display: block;
-				clear: both;
-			}
-			p {
-				display: inline;
-			}
-		}
-		.block04 {
+			.block03 {
 				display: inline-block;
 				float: left;
-				height: 100%;
-				width: 60%;
-				background-image: url('/images/treatment2.jpg');
-				background-size: 100% auto;
-				background-repeat: no-repeat;
-				background-position: center;
+				width: 40%;
+				//min-width: 392px;
+				padding: 0px 40px 0 40px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
+					padding: 40px 40px 0 20px;
 					float: none;
 					display: block;
 					clear: both;
-					height: 238px;
-					min-width: 100%;
+				}
+				p {
+					display: inline;
+					font-size: 15px;
+					line-height: 25px;
+					@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+						line-height: 1.5em;
+						font-size: 13px;
+					}
+				}
+				h2 {
+					margin-bottom: 0;
+					margin-top: 5px;
 				}
 			}
+			.block04 {
+					display: inline-block;
+					float: left;
+					height: 132%;
+					width: 60%;
+					background-image: url('/images/treatment2.jpg');
+					background-size: 100% auto;
+					background-repeat: no-repeat;
+					background-position: center;
+					max-width: 100%;
+					@media only screen and (max-width: $tablet-portrait) {
+						width: 100%;
+						float: none;
+						display: block;
+						clear: both;
+						height: 238px;
+						min-width: 100%;
+					}
+					@media only screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+						background-size: cover;
+					}
+				}
 			.block05 {
 				display: inline-block;
 				float: left;
@@ -149,7 +172,7 @@ body.faq {
 				margin: 0 auto;
 				padding: 20px 40px 0 40px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					display: block;
@@ -162,7 +185,7 @@ body.faq {
 					font-size: 2em;
 					line-height: 1.3em;
 					margin-bottom: 20px;
-					@media only screen and(max-width: $tablet-width) {
+					@media only screen and(max-width: $tablet-portrait) {
 						font-size: 1.7em;
 					}
 				}
@@ -174,13 +197,21 @@ body.faq {
 					border: 1px solid white;
 					padding: 20px;
 					-webkit-transition: all .2s;
-				  -moz-transition: all .2s;
-				  -o-transition: all .2s;
-				  transition: all .2s;
+				    -moz-transition: all .2s;
+				    -o-transition: all .2s;
+				    transition: all .2s;
 					&:hover {
 						color: $laundry-green;
 						background-color: white;
-
+					}
+					@media only screen and(max-width: $tablet-portrait) {
+						margin-top: 0;
+					}
+				}
+				#contact-us {
+					line-height: 30px;
+					@media only screen and(max-width: $tablet-width) {
+						line-height: 1.4em;
 					}
 				}
 			}
@@ -189,36 +220,55 @@ body.faq {
 				display: inline-block;
 				float: left;
 				margin-top: -20px;
-				min-width: 295px;
+				//min-width: 295px;
 				padding-left: 2%;
 				padding-right: 50px;
 				max-width: 100%;
-				@media only screen and (max-width: $tablet-width) {
+				line-height: 25px;
+
+				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
-					padding: 40px 0px 40px 12px;
+					padding: 40px 20px 40px 20px;
 					float: none;
 					display: block;
 					clear: both;
 				}
-			}
-		.question {
-			transition: all 300ms ease-out;
-			margin-bottom: -14px;
-			color: $laundry-black;
-			a {
-				text-decoration: none;
-				&:hover {
-					color: #00b194;
-				}
-				&:visited {
-					color: #53534a;
-				}
-			}
-		}
+				.question {
+					transition: all 300ms ease-out;
+					margin-bottom: -14px;
+					color: $laundry-black;
+					@media only screen and(max-width: $tablet-portrait) {
+						font-size: 1.5em !important;
+					}
 
-		.show-class {
-			display: none;
-		}
+					a {
+						text-decoration: none;
+
+						&:hover {
+							color: #00b194 !important;
+
+						}
+						&:visited {
+							color: #53534a;
+						}
+					}
+				}
+
+				.show-class {
+					display: none;
+					p {
+						font-size: 14px;
+					}
+					a {
+						color: #53534a;
+						&:visited {
+							color: #53534a;
+						}
+					}
+				}
+			}
+
+
 	}
 	#bottombar {
 			position: relative;
@@ -232,9 +282,9 @@ body.faq {
 			a.links {
 				display: block;
 				-webkit-transition: background 300ms ease-out;
-			  -moz-transition: background 300ms ease-out;
-			  -o-transition: background 300ms ease-out;
-			  transition: background 300ms ease-out;
+			    -moz-transition: background 300ms ease-out;
+			    -o-transition: background 300ms ease-out;
+			    transition: background 300ms ease-out;
 				background: rgba(53,193,170,.5);
 				background: -moz-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
 				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,.5)), color-stop(100%, rgba(73,165,191,.5)));
@@ -268,7 +318,7 @@ body.faq {
 		}
 	}
 .hide-mobile {
-  @media only screen and (max-width: $tablet-width) {
+  @media only screen and (max-width: $mobile-width) {
     display: none!important;
   }
 }

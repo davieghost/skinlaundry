@@ -56,3 +56,23 @@
     </div>
 
 </div>
+
+<script>
+    var lastQuestion = 0;
+    window.onload = function(){
+        var questionNum;
+        var answerNum;
+        $('.question').on('click', function(e) {
+            e.preventDefault();
+            questionNum = $(this).attr('id').slice(-1);
+            answerNum = '#answer'+questionNum;
+            if(lastQuestion != questionNum)
+            {
+                $('.show-class').slideUp();
+                $(answerNum).slideDown();
+                lastQuestion = questionNum;
+            }
+            //console.log(answerNum);
+        })
+    };
+</script>

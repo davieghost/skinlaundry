@@ -1,13 +1,13 @@
 @import 'variables';
-$tablet-width: 980px;   
+$tablet-width: 980px;
 .hide-m {
-  @media only screen and (max-width: $tablet-width) {
+  @media only screen and (max-width: $tablet-portrait) {
     display: none!important;
   }
 }
 
 .hide-d {
-  @media only screen and (min-width: $tablet-width) {
+  @media only screen and (min-width: $tablet-portrait + 1px) {
     display: none!important;
   }
 }
@@ -51,13 +51,13 @@ body.firsttime {
 		}
 		.regular {
 			height: 325px;
-			@media only screen and (max-width: $tablet-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 				height: 100%;
 			}
 		}
 		.short {
 			height: 280px;
-			@media only screen and (max-width: $tablet-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 				height: 100%;
 			}
 		}
@@ -65,7 +65,7 @@ body.firsttime {
 
 		.block01 {
 			width: 40%;
-			min-width: 392px;
+			//min-width: 392px;
 			height: 100%;
 			float: left;
 			display: inline-block;
@@ -73,7 +73,7 @@ body.firsttime {
 			background-size: cover;
 			background-position: center top;
 			background-repeat: no-repeat;
-			@media only screen and (max-width: $tablet-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 				width: 100%;
 				float: none;
 				display: block;
@@ -87,11 +87,11 @@ body.firsttime {
 			display: inline-block;
 			float: left;
 			margin-top: 30px;
-			min-width: 295px;
+			//min-width: 295px;
 			padding-left: 20%;
 			padding-right: 50px;
 			max-width: 100%;
-			@media only screen and (max-width: $tablet-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 				width: 100%;
 				padding: 40px 40px 0 20px;
 				float: none;
@@ -103,15 +103,20 @@ body.firsttime {
 			display: inline-block;
 			float: left;
 			width: 40%;
-			min-width: 392px;
+			//min-width: 392px;
 			padding: 40px 40px 0 40px;
 			max-width: 100%;
-			@media only screen and (max-width: $tablet-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 				width: 100%;
 				padding: 40px 40px 0 20px;
 				float: none;
 				display: block;
 				clear: both;
+			}
+
+			@media only screen and (min-width: $mobile-width) and (max-width: 822px) {
+				//prevent text from blowing out row
+				padding: 10px 20px 0 30px;
 			}
 		}
 		.block04 {
@@ -123,7 +128,7 @@ body.firsttime {
 			background-size: 100% auto;
 			background-repeat: no-repeat;
 			background-position: center top;
-			@media only screen and (max-width: $tablet-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
 					display: block;
@@ -132,15 +137,20 @@ body.firsttime {
 					min-width: 100%;
 					background-position: center;
 			}
+			@media only screen and (min-width: $mobile-width) and (max-width: 822px) {
+				//resize image larger to reach next row
+				background-size: 110% auto;
+			}
+
 		}
 		.block05 {
 			display: inline-block;
 			float: left;
 			width: 40%;
-			min-width: 392px;
+			//min-width: 392px;
 			padding: 40px 40px 0 40px;
 			max-width: 100%;
-			@media only screen and (max-width: $tablet-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 				width: 100%;
 				padding: 40px 40px 0 20px;
 				float: none;
@@ -184,11 +194,11 @@ body.firsttime {
 			display: inline-block;
 			float: left;
 			margin-top: 30px;
-			min-width: 295px;
+			//min-width: 295px;
 			padding-left: 20%;
 			padding-right: 50px;
 			max-width: 100%;
-			@media only screen and (max-width: $tablet-width) {
+			@media only screen and (max-width: $tablet-portrait) {
 				width: 100%;
 				//padding: 40px;
 				padding: 40px 40px 0 20px;
@@ -311,6 +321,9 @@ body.firsttime {
 					background: linear-gradient(to right, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49a5bf', endColorstr='#35c1aa', GradientType=1 );
 				}
+				@media only screen and (min-width: $mobile-width) and (max-width: $tablet-portrait) {
+    				width: 32%;
+  				}
 				@media only screen and (max-width: $mobile-width) {
 			    	width: 60%;
 			    	margin: 3px;
