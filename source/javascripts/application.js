@@ -1,7 +1,24 @@
-//= require_tree .
+//= require _index
+
+
+$(window).load(function(){
+
+  /////////////// DELAY DOM SHOWING ////////////////
+  
+  var COOKIE_NAME = "dont-fade-agin"
+  $show = $.cookie(COOKIE_NAME);
+  
+  if ($show == null) {
+    $.cookie(COOKIE_NAME, 'test', {function: $('body').animate({opacity: '1'}, 1500)});
+  }else {
+    $('body').animate({opacity: '1'});
+  }
+});
+
+
 
 $(document).ready(function() {
-
+  
   var MOBILE_WIDTH = 610;
 
   /////////////// NAV PAGE OPEN/CLOSE //////////////
@@ -38,7 +55,6 @@ $(document).ready(function() {
   // but don't close it when the nav itself is clicked
   $("#nav-page").click(function(e) {
     e.stopPropagation();
-    //e.preventDefault();
   });
 
   //////////////////// HEADER //////////////////////
@@ -69,7 +85,6 @@ $(document).ready(function() {
   });
 
   $(window).scroll(function(){
-    //console.log("running scroll function");
     if ($(window).scrollTop() > 100 && $('body').width() > MOBILE_WIDTH) {
       $('#nav-open').addClass('nav-open-scrolled');
       $('#header').addClass('header-scrolled');
@@ -80,43 +95,8 @@ $(document).ready(function() {
   });
 
   $(window).resize(function(){
-    $(window).trigger('scroll');//, function(){
-    //   if ($('body').width() >= MOBILE_WIDTH) {
-    //     $('#nav-open').removeClass('nav-open-scrolled');
-    //     $('#header').removeClass('header-scrolled');
-    //   }else if($(window).scrollTop() > 100 && $('body').width() > MOBILE_WIDTH){
-    //     $('#nav-open').addClass('nav-open-scrolled');
-    //     $('#header').addClass('header-scrolled');
-    //   }
-    // }); 
+    $(window).trigger('scroll');
   });
-
-  /////////////////// BACKGROUND VIDEO ///////////////
-
-  // resize the video on document ready and window resize
-  /*function resizeVideo() {
-    if (document.body.clientHeight) {
-
-      var windowHeight = document.body.clientHeight;
-      var vidAspectRatio = 1280 / 720;
-      var windowAspectRatio = document.body.clientWidth / document.body.clientHeight;
-
-      // scale width to match full height of window
-      var newWidth = Math.round(document.body.clientHeight * vidAspectRatio);
-      //console.log(newWidth);
-
-      if (vidAspectRatio > windowAspectRatio) {
-        //console.log('window taller');
-        $('.videobg video').css('width', newWidth + 'px');
-      } else {
-        //console.log('video taller');
-        $('.videobg video').css('width', '100%');
-      }
-    }
-  }
-
-  resizeVideo();
-  $(window).resize(resizeVideo);*/
 
   //////// PLACEHOLDER TEXT DISAPPEARS ON FOCUS ///////
 
@@ -129,41 +109,5 @@ $(document).ready(function() {
   }).blur(function() {
     $(this).attr('placeholder', placeText);
   }).blur();
-
-
-
-
-
-
-
-
-
-
-
-
-
-  ////////////// GET INSTAGRAM IMAGES ////////////////
-
-  // instagram doesn't seem to return jsonp
-
-  // window.callback = function(data) {
-  //   console.log(data);
-  // }
-
-  // $.ajax({
-  //   type: 'GET',
-  //   dataType: 'jsonp',
-  //   url: "https://instagram.com/skinlaundry/media/",
-  //   cache: true,
-  //   jsonpCallback: 'jake_asked_to_be_called_but_jake',
-  //   contentType: 'text/javascript',
-  //   success: function(data) {
-  //     console.log(data);
-  //   },
-  //   error: function(jqxhr, status, error) {
-  //     console.log(status);
-  //     console.log(error);
-  //   }
-  // });
 
 });

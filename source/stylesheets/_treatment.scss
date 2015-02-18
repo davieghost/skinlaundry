@@ -52,8 +52,7 @@ body.treatment {
 				text-align: center;
 				padding: 30px 50px;
 			}
-//i made this
-//you made this?
+			//i made this part ⬇︎
 			.row {
 			  width: 100%;
 			}
@@ -72,7 +71,6 @@ body.treatment {
 			
 			.block01 {
 				width: 40%;
-				//min-width: 392px;
 				height: 100%;
 				float: left;
 				display: inline-block;
@@ -102,10 +100,8 @@ body.treatment {
 				min-width: 295px;
 				padding-left: 20%;
 				padding-right: 50px;
-				//max-width: 100%;
 				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
-					//padding: 40px;
 					padding: 40px 40px 0 20px;
 					float: none;
 					display: block;
@@ -120,7 +116,6 @@ body.treatment {
 				display: inline-block;
 				float: left;
 				width: 40%;
-				//min-width: 392px;
 				padding: 40px 40px 0 40px;
 				max-width: 100%;
 				@media only screen and (max-width: $tablet-portrait) {
@@ -163,7 +158,6 @@ body.treatment {
 				float: left;
 				width: 40%;
 				height: 100%;
-				//min-width: 392px;
 				background-image: url('/images/treatment3.jpg');
 				background-size: 100% auto;
 				background-repeat: no-repeat;
@@ -213,7 +207,6 @@ body.treatment {
 				display: inline-block;
 				float: left;
 				margin-top: 30px;
-				//min-width: 295px;
 				padding-left: 20%;
 				padding-right: 50px;
 				max-width: 100%;
@@ -229,7 +222,6 @@ body.treatment {
 				display: inline-block;
 				float: left;
 				width: 40%;
-				//min-width: 392px;
 				padding: 10px 40px 0 40px;
 				max-width: 100%;
 				@media only screen and (max-width: $tablet-portrait) {
@@ -430,7 +422,6 @@ body.treatment {
 				color: white;
 				text-decoration: none;
 				&:hover{
-					//background-color: white;
 					background: rgba(53,193,170,.5);
 					background: -moz-linear-gradient(left, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
 					background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,.5)), color-stop(100%, rgba(73,165,191,.5)));
