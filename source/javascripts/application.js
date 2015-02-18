@@ -1,7 +1,7 @@
 //= require _index
 
 $(document).ready(function() {
-
+  $('body').animate({opacity: '1'}), 3500;
   var MOBILE_WIDTH = 610;
 
   /////////////// NAV PAGE OPEN/CLOSE //////////////
