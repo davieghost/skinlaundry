@@ -1,0 +1,222 @@
+{
+	"current": {
+		"santa-monica":{
+			"name" 			: "Santa Monica",
+			"address1" 	: "1230 Montana Ave.",
+			"address2"	: "Suite 101",
+			"city_state": "Santa Monica, CA",
+			"zipcode" 	: "90403",
+			"contact"		: ["310-319-9400"],
+			"email"			: ["santamonica@skinlaundry.com"],
+			"geocode"		: [34.032085, -118.496072],
+			"timings"		: {
+				"Mon" : "9:30 AM – 2:00 PM<br />3:00 PM – 6:30 PM",
+				"Tue" : "9:30 AM – 2:00 PM<br />3:00 PM – 8:30 PM",
+				"Wed" : "9:30 AM – 2:00 PM<br />3:00 PM – 6:30 PM",
+				"Thu" : "9:30 AM – 2:00 PM<br />3:00 PM – 6:30 PM",
+				"Fri" : "9:30 AM – 2:00 PM<br />3:00 PM – 6:30 PM",
+				"Sat" : "9:30 AM – 1:00 PM<br />2:00 PM – 5:30 PM",
+				"Sun" : "closed"
+			},
+			"appointment_types"  : ["Walk in only"],
+			"booking"		:	{
+				"key" : "slsm", 
+				"to" : "310-740-7906"
+			},
+			"images":["/bootstrap/images/locations/santa-monica/santa-monica1.jpg","/bootstrap/images/locations/santa-monica/santa-monica2.jpg", "/bootstrap/images/locations/santa-monica/santa-monica3.jpg", "/bootstrap/images/locations/santa-monica/santa-monica4.jpg"],
+			"online_booking" :{
+				"url" : ""
+			},
+			"status": {
+				"isactive" : "yes",
+				"isbookingactive" : "yes",
+				"msg" : ""
+			}
+		},	
+		"newport-beach":{
+			"name" 		: "Newport Beach",
+			"address1" 	: "123 Newport Center Dr.",
+			"address2"	: "",
+			"city_state": "Newport Beach, CA",
+			"zipcode" 	: "92660",
+			"contact"		: ["949-706-7203"],
+			"email"			: ["newportbeach@skinlaundry.com"],
+			"geocode"		: [33.614928, -117.874727],
+			"timings"		: {
+				"Mon" : "8:00 AM – 9:00 PM",
+				"Tue" : "8:00 AM – 9:00 PM",
+				"Wed" : "8:00 AM – 9:00 PM",
+				"Thu" : "8:00 AM – 9:00 PM",
+				"Fri" : "8:00 AM – 9:00 PM",
+				"Sat" : "8:00 AM – 6:00 PM",
+				"Sun" : "10:00 AM – 6:00 PM"
+			},
+			"appointment_types"  : ["Online Appointment"],
+			"booking"		:	null,
+			"images":["/bootstrap/images/locations/newportBeach/newportBeach1.jpg","/bootstrap/images/locations/newportBeach/newportBeach2.jpg", "/bootstrap/images/locations/newportBeach/newportBeach3.jpg", "/bootstrap/images/locations/newportBeach/newportBeach4.jpg", "/bootstrap/images/locations/newportBeach/newportBeach5.jpg", "/bootstrap/images/locations/newportBeach/newportBeach6.jpg", "/bootstrap/images/locations/newportBeach/newportBeach7.jpg", "/bootstrap/images/locations/newportBeach/newportBeach8.jpg"],
+			"online_booking" :{
+				"url" : "http://www.secure-booker.com/Skinlaundry/BookOnlineStart.aspx"
+			},
+			"status": {
+				"isactive" : "yes",
+				"isbookingactive" : "yes",
+				"msg" : ""
+			}
+		},
+		"west-hollywood":{
+			"name" 			: "West Hollywood",
+			"address1" 	: "8789 Beverly Blvd.",
+			"address2"	: "",
+			"city_state": "Los Angeles, CA",
+			"zipcode" 	: "90048",
+			"contact"		: ["310-360-0791"],
+			"email"			: ["westhollywood@skinlaundry.com"],
+			"geocode"		: [34.077595,  -118.383558],
+			"timings"		: {
+				"Mon" : "9:30 am – 2:00 pm<br />3:00 pm – 6:30 pm", 
+				"Tue" : "9:30 am – 2:00 pm<br />3:00 pm – 8:30 pm",
+				"Wed" : "9:30 am – 2:00 pm<br />3:00 pm – 6:30 pm", 
+				"Thu" : "9:30 am – 2:00 pm<br />3:00 pm – 6:30 pm",
+				"Fri" : "9:30 am – 2:00 pm<br />3:00 pm – 6:30 pm",
+				"Sat" : "9:00 am – 1:00 pm<br />2:00 pm – 5:30 pm", 
+				"Sun" : "closed"
+			},
+			"appointment_types"  : ["Walk in only"],
+			"booking"		:	{"key" : "slsm", "to" : "310-740-7906"},
+			"images":["/bootstrap/images/locations/westHollywood/westHollywood1.jpg","/bootstrap/images/locations/westHollywood/westHollywood2.jpg", "/bootstrap/images/locations/westHollywood/westHollywood3.jpg", "/bootstrap/images/locations/westHollywood/westHollywood4.jpg"],
+			"online_booking" :{
+				"url" : ""
+			},
+			"status": {
+				"isactive" : "yes",
+				"isbookingactive" : "yes",
+				"msg" : ""
+			}
+		},
+		// "rosemead" : {
+		// 	"name" 		: "Rosemead",
+		// 	"address1" 	: "9428 Valley Blvd.",
+		// 	"address2"	: "Suite 201",
+		// 	"city_state": "Rosemead, CA",
+		// 	"zipcode" 	: "91770",
+		// 	"contact"		: ["626-416-4585"],
+		// 	"email"			:	["rosemead@skinlaundry.com"],
+		// 	"geocode"		:	[34.081362, -118.063945],
+		// 	"timings"		: {
+		// 		"Mon" : "9:00 AM – 5:00 PM",
+		// 		"Tue" : "9:00 AM – 5:00 PM",
+		// 		"Wed" : "9:00 AM – 5:00 PM",
+		// 		"Thu" : "9:00 AM – 5:00 PM",
+		// 		"Fri" : "9:00 AM – 5:00 PM",
+		// 		"Sat" : "closed",
+		// 		"Sun" : "closed"
+		// 	},
+		// 	"appointment_types"  : ["Online Appointment"],
+		// 	"booking"		:	null,
+		// 	"images":["/bootstrap/images/locations/rosemead/rosemead1.jpg","/bootstrap/images/locations/rosemead/rosemead2.jpg", "/bootstrap/images/locations/rosemead/rosemead3.jpg", "/bootstrap/images/locations/rosemead/rosemead4.jpg", "/bootstrap/images/locations/rosemead/rosemead5.jpg", "/bootstrap/images/locations/rosemead/rosemead6.jpg", "/bootstrap/images/locations/rosemead/rosemead7.jpg", "/bootstrap/images/locations/rosemead/rosemead8.jpg"],
+		// 	"online_booking" :{
+		// 		"url" : "http://www.secure-booker.com/skinlaundryrosemead/BookOnlineStart.aspx"
+		// 	},
+		// 	"status": {
+		// 		"isactive" : "yes",
+		// 		"isbookingactive" : "yes",
+		// 		"msg" : ""
+		// 	}
+		// },
+		"glendale" : {
+			"name" 		: "Glendale",
+			"address1" 	: "1309 Glendale Galleria",
+			"address2"	: "",
+			"city_state": "Glendale, CA",
+			"zipcode" 	: "91210",
+			"contact"	: ["818-649-5311"],
+			"email"		: ["rosemead@skinlaundry.com"],
+			"geocode"	: [34.145513, -118.259401],
+			"timings"	: {
+				"Mon" : "10:00 AM – 9:00 PM",
+				"Tue" : "10:00 AM – 9:00 PM",
+				"Wed" : "10:00 AM – 9:00 PM",
+				"Thu" : "10:00 AM – 9:00 PM",
+				"Fri" : "10:00 AM – 9:00 PM",
+				"Sat" : "10:00 AM – 9:00 PM",
+				"Sun" : "11:00 AM – 7:00 PM"
+			},
+			"appointment_types"  : ["Walk in only"],
+			"booking"		:	{"key" : "slgl", "to" : "310-740-7906"},
+			"images":["/bootstrap/images/locations/glendale/glendale1.jpg","/bootstrap/images/locations/glendale/glendale2.jpg", "/bootstrap/images/locations/glendale/glendale3.jpg", "/bootstrap/images/locations/glendale/glendale4.jpg"],
+			"online_booking" :{
+				"url" : ""
+			},
+			"status": {
+				"isactive" : "yes",
+				"isbookingactive" : "yes",
+				"msg" : ""
+			}
+		},
+		"scottsdale" : {
+			"name" 		: "Scottsdale, AZ",
+			"address1" 	: "15037 N Scottsdale Road",
+			"address2"	: "Suite 160",
+			"city_state": "Scottsdale, AZ",
+			"zipcode" 	: "85254",
+			"contact"	: ["480-300-7217"],
+			"geocode"	:	[33.625310, -111.925221],
+			"timings"	: {
+				"Mon" : "10:00 AM – 7:00 PM",
+				"Tue" : "10:00 AM – 7:00 PM",
+				"Wed" : "10:00 AM – 7:00 PM",
+				"Thu" : "10:00 AM – 7:00 PM",
+				"Fri" : "10:00 AM – 7:00 PM",
+				"Sat" : "9:00 AM – 6:00 PM",
+				"Sun" : "11:00 AM – 6:00 PM"
+			},
+			"booking"	:	null,
+			"images":["/bootstrap/images/locations/scottsdale/scottsdale1.jpg","/bootstrap/images/locations/scottsdale/scottsdale2.jpg", "/bootstrap/images/locations/scottsdale/scottsdale3.jpg", "/bootstrap/images/locations/scottsdale/scottsdale4.jpg"],
+			"online_booking" :{
+				"url" : ""
+			},
+			"status": {
+				"isactive" : "yes",
+				"isbookingactive" : "yes",
+				"msg" : "Coming October 2014"
+			}
+		},
+		"newyork" : {
+			"name" 		: "Flatiron, New York",
+			"address1" 	: "3 W 16th St.",
+			"address2"	: "",
+			"city_state": "New York",
+			"zipcode" 	: "10011",
+			"contact"	: [],
+			"geocode"	:	[40.738047, -73.993245],
+			"timings"	: {
+				"Mon" : "10:00 AM – 7:00 PM",
+				"Tue" : "10:00 AM – 7:00 PM",
+				"Wed" : "10:00 AM – 7:00 PM",
+				"Thu" : "10:00 AM – 7:00 PM",
+				"Fri" : "10:00 AM – 7:00 PM",
+				"Sat" : "9:00 AM – 6:00 PM",
+				"Sun" : "11:00 AM – 6:00 PM"
+			},
+			"booking"	:	null,
+			"images":["/bootstrap/images/locations/rosemead/rosemead1.jpg","/bootstrap/images/locations/rosemead/rosemead2.jpg", "/bootstrap/images/locations/rosemead/rosemead3.jpg", "/bootstrap/images/locations/rosemead/rosemead4.jpg", "/bootstrap/images/locations/rosemead/rosemead5.jpg", "/bootstrap/images/locations/rosemead/rosemead6.jpg", "/bootstrap/images/locations/rosemead/rosemead7.jpg", "/bootstrap/images/locations/rosemead/rosemead8.jpg"],
+			"online_booking" :{
+				"url" : ""
+			},
+			"status": {
+				"isactive" : "yes",
+				"isbookingactive" : "yes"
+			}
+		}
+	},
+	"opening_soon" : {
+		"glendale-galleria" : {
+		},
+		"scottsdale" : {
+		},
+		"manhattan" : {
+		},
+		"las-vegas" : {
+		}
+	}
+}

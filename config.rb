@@ -48,6 +48,18 @@
 #     "Helping"
 #   end
 # end
+def isEnvironment environment
+  ENV['RACK_ENV'] == environment
+end
+
+def isProduction 
+  isEnvironment "production"
+end
+
+ENVIRONMENT = ENV['RACK_ENV'] ||= 'development'
+$BOOKING_ENDPOINT = isProduction ? ENV['BOOKING_ENDPOINT'] : "http://sl-book.herokuapp.com/"
+$SHOPIFY_BASE_URL = isProduction ? ENV['SHOPIFY_BASE_URL'] : "http://shop.skinlaundry.com/"
+$LOCATIONS_LIST = JSON.parse(File.read(ENV["MM_ROOT"] + "/jsons/stores.json"))
 
 set :css_dir, 'stylesheets'
 
@@ -59,7 +71,7 @@ set :images_dir, 'images'
 configure :build do
 
   # optimize images
-  activate :imageoptim 
+  # activate :imageoptim 
   
   # For example, change the Compass output style for deployment
   # activate :minify_css
@@ -76,3 +88,10 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+#Proxying for all the LOCATIONS list
+$LOCATIONS_LIST["current"].each do |key, location|
+  proxy "/locations/#{key}.html", "/location.html", :locals => { :location => location, :location_key => key }
+  p "proxied url for #{key} location"
+end
+proxy "/hero.html", "/location.html", :locals => {}
