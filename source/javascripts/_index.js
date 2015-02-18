@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  if ($("body").hasClass("index")) {
+  if ($("body").hasClass("index") || $('body').hasClass('treatment')) {
+    console.log("This is the home page");
 
     /////////////////// SLIDER ////////////////////
 
