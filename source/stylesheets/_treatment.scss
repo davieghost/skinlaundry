@@ -1,13 +1,8 @@
-
-/*----------------------------- LOOKBOOKS PAGE -----------------------------*/
 @import 'variables';
-// this constant should be the same as the MOBILE_WIDTH 
-// constant at the top of _lookbooks.js
-$mobile-width: 610px;   
+
 $tablet-width: 980px;   
 $tablet-width-two: 852px;  
 $background-height: 410px;  
-$slide-control-color: rgb(125, 125, 125);
 
 
 body.treatment {
@@ -257,11 +252,11 @@ body.treatment {
 					min-width: 100%;
 				}
 
-				#slider {
+				.slider {
 			      position: relative;
 			      padding-top: 55.4%;
 			      overflow-x: hidden;
-			      #slide-control {
+			      .slide-control {
 			        position: absolute;
 			        bottom: 15%;
 			        left: 45%;
@@ -279,14 +274,14 @@ body.treatment {
 			            background-color: $slide-control-color;
 			          }
 			        }
-			        #slide-left {
+			        .slide-left {
 			          cursor: pointer;
 			          text-align: center;
 			          width: 16px;
 			          padding-top: 2px;
 			          color: $slide-control-color;
 			        }
-			        #slide-right {
+			        .slide-right {
 			          cursor: pointer;
 			          text-align: center;
 			          width: 16px;
