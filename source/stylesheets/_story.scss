@@ -44,7 +44,220 @@ body.story {
 			   line-height: 1em;
 		  }
 		}
+		//i made this part ⬇︎
+		.row {
+		  width: 100%;
+		}
+		.regular {
+			height: 325px;
+			@media only screen and (max-width: $tablet-portrait) {
+				height: 100%;
+			}
+		}
+		.short {
+			height: 280px;
+			@media only screen and (max-width: $tablet-portrait) {
+				height: 100%;
+			}
+		}
+		.short02 {
+			height: 240px;
+			@media only screen and (max-width: $tablet-portrait) {
+				height: 100%;
+			}
+		}
+		
+		.block01 {
+			width: 40%;
+			height: 100%;
+			float: left;
+			display: inline-block;
+			background-image: url('/images/birds.png');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				display: block;
+				clear: both;
+				height: 238px;
+				min-width: 100%;
+			}
+			@media only screen and (min-width: $tablet-portrait) and (max-width: $tablet-width) {
+				background-size: 140%;
+			}
 
+		}
+		.block02 {
+			width: 60%;
+			display: inline-block;
+			float: left;
+			margin-top: 30px;
+			min-width: 295px;
+			padding: 20px 20px 0 20px;
+			text-align: center;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				padding: 40px 40px 0 20px;
+				float: none;
+				display: block;
+				clear: both;
+			}
+			@media only screen and (max-width: $tablet-width) {
+				margin-top: 0;
+				padding: 20px 20px 0 20px;
+			}
+		}
+		.block03 {
+			display: inline-block;
+			float: left;
+			width: 40%;
+			padding: 40px 40px 0 40px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				padding: 40px 40px 0 20px;
+				float: none;
+				display: block;
+				clear: both;
+			}
+			@media only screen and (max-width: $tablet-width) {
+				margin-top: 0;
+				padding: 20px 20px 0 20px;
+			}
+		}
+		.block04 {
+			display: inline-block;
+			float: left;
+			height: 100%;
+			width: 60%;
+			background-image: url('/images/treatment2.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: center;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				display: block;
+				clear: both;
+				height: 238px;
+				min-width: 100%;
+			}
+			@media only screen and (min-width: $tablet-portrait) and (max-width: $tablet-width) {
+				background-size: 110%;
+			}
+		}
+
+		.block05 {
+			display: inline-block;
+			float: left;
+			width: 40%;
+			height: 100%;
+			background-image: url('/images/treatment3.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-size: cover;
+			color: white;
+			text-align: center;
+			margin: 0 auto;
+			padding: 20px 80px 0 80px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				display: block;
+				clear: both;
+				height: 238px;
+				min-width: 100%;
+			}
+			h2 {
+				font-family: 'DIN';
+				font-size: 2em;
+				line-height: 1.3em;
+				@media only screen and(max-width: $tablet-portrait) {
+					font-size: 1.7em;
+				}
+			}
+			a {
+				text-decoration: none;
+				color: white;
+				border: 1px solid white;
+				padding: 20px;
+				-webkit-transition: all .2s;
+			  -moz-transition: all .2s;
+			  -o-transition: all .2s;
+			  transition: all .2s;
+				&:hover {
+					color: $laundry-green;
+					background-color: white;
+
+				}
+			}
+			@media only screen and (min-width: $tablet-portrait) and (max-width: $tablet-width) {
+				padding: 20px 0 20px 0;
+			}
+		}
+		.block06 {
+			width: 60%;
+			display: inline-block;
+			float: left;
+			margin-top: 30px;
+			padding-left: 20%;
+			padding-right: 50px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				padding: 40px;
+				float: none;
+				display: block;
+				clear: both;
+			}
+		}
+		.block07 {
+			display: inline-block;
+			float: left;
+			width: 40%;
+			padding: 10px 40px 0 40px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				padding: 40px 40px 0 40px;
+				display: block;
+				clear: both;
+			}
+			@media only screen and (max-width: $tablet-width) {
+				margin-top: 0;
+				padding: 20px 20px 0 20px;
+				p{
+					font-size: 14px;
+					line-height: 1.1em;
+				}
+			}
+		}
+
+		.block08 {
+			display: inline-block;
+			float: left;
+			height: 100%;
+			width: 60%;
+			background-image: url('/images/treatment4.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				display: block;
+				clear: both;
+				height: 238px;
+				min-width: 100%;
+			}
+		}
 		.it {
 			font-family: 'Archer-LightItalic';
 	      font-size: 16px;
@@ -60,7 +273,7 @@ body.story {
 			}
 		}
 
-	    .block{
+	 /*    .block{
 			vertical-align: top;
 			display: inline-block;
 		}
@@ -84,7 +297,7 @@ body.story {
 		.row5 {
 			height: 212px;
 		}
-
+ */
 		.right {
 			width: 62%;
 			margin: 0;
