@@ -1,10 +1,23 @@
 //= require _index
 
-$(document).ready(function() {
-  
-  /////////////// DELAY DOM SHOWING ////////////////
 
-  $('body').animate({opacity: '1'}), 4500;
+$(window).load(function(){
+
+  /////////////// DELAY DOM SHOWING ////////////////
+  
+  var COOKIE_NAME = "dont-fade-agin"
+  $show = $.cookie(COOKIE_NAME);
+  
+  if ($show == null) {
+    $.cookie(COOKIE_NAME, 'test', {function: $('body').animate({opacity: '1'}, 1500)});
+  }else {
+    $('body').animate({opacity: '1'});
+  }
+});
+
+
+
+$(document).ready(function() {
   
   var MOBILE_WIDTH = 610;
 
