@@ -1,0 +1,231 @@
+@import "compass/css3";
+@import 'variables';
+$tablet-width: 980px;
+.hide-m {
+  @media only screen and (max-width: $tablet-portrait) {
+    display: none!important;
+  }
+}
+
+.hide-d {
+  @media only screen and (min-width: $tablet-portrait + 1px) {
+    display: none!important;
+  }
+}
+
+.offers {
+
+	.location-offer {
+
+		&:before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+
+			content: "";
+
+			background-color: rgba(255, 255, 255, .65);
+		}
+
+		position: relative;
+		z-index: 0;
+
+		padding: 40px 15px;
+
+		@media screen and (min-width: $tablet-portrait) {
+			padding: 40px;
+		}
+
+		background-image: url("../images/location-offer-bg.jpg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		@include background-size(cover);
+
+		.buy {
+			display: inline-block;
+
+			margin: 0;
+
+			color: rgba(67, 165, 125, .85);
+
+			font: 60px/1.0 'Rollerscript-Smooth', serif;
+
+			@include text-shadow(-8px 3px 0 rgba(157, 212, 192, .85));
+
+			@media screen and (min-width: $tablet-portrait) {
+				font-size: 200px;
+
+				@include transform(rotate(-20deg));
+
+			}
+		}
+
+		.treatments,
+		.price {
+			text-transform: uppercase;
+		}
+
+		.treatments {
+
+			color: #636466;
+
+			font: 36px "DIN-Medium",sans-serif;
+
+			@media screen and (min-width: $tablet-portrait) {
+				margin: -15px 0 0 125px;
+				
+				font-size: 75px;
+			}
+
+		}
+
+		.price {
+			margin-bottom: 0;
+
+			font: 30px "DIN-Medium",sans-serif;
+
+			color: $laundry-green;
+
+			background: -webkit-linear-gradient(left, #1bb094 0%, #1eb9ca 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			@media screen and (min-width: $tablet-portrait) {
+
+				font-size: 36px;
+				text-align: right;
+			}
+
+		}
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	.offer-form-container {
+		padding: 40px 15px;
+
+		@media screen and (min-width: $tablet-portrait) {
+			padding: 40px 100px
+		}
+
+		.description {
+			span {
+				color: $laundry-green;
+			}
+		}
+
+		.order-form {
+			.form-row {
+				margin: 15px auto;
+			}
+
+			input {
+				margin: 15px;
+
+				padding: 15px 30px;
+
+				//Placeholder color to #aaa
+				&::-webkit-input-placeholder { //Chrome
+				   	color: #aaa;
+
+				   	letter-spacing: 2px;
+				}
+
+				&:-moz-placeholder { //Firefox 18- 
+				   	color: #aaa;
+
+				   	letter-spacing: 2px;
+				}
+
+				&::-moz-placeholder {  //Firefox 19+
+				   	color: #aaa;
+
+				   	letter-spacing: 2px;
+				}
+
+				&:-ms-input-placeholder { //IE
+				   	color: #aaa;
+
+				   	letter-spacing: 2px;
+				}
+			}
+
+			label {
+				display: block;
+			}
+		}
+	}
+
+	
+
+	#main {
+		position: relative;
+		margin: 150px auto 0;
+		padding-bottom: 30px;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+		font-family: 'DIN';
+	    font-size: 15px;
+	    line-height: 1.4em;
+		color: #53534a;
+
+		.location-state {
+			margin: 50px 0 30px;
+
+			font: 34px 'Archer-LightItalic', serif;
+			text-align: center;
+			color: #53534a;
+		}
+
+		.location-title,
+		.phone-no,
+		.address-hours {
+			text-align: center;
+		}
+
+		.location-title {
+			margin: 10px 0;
+
+			font: 14px 'DIN', serif;
+			color: $laundry-green;
+		}
+
+		.phone-no,
+		.address-hours {
+			color: #53534a;
+
+			font: 12px 'DIN', serif;
+		}
+
+		.address-hours {
+			margin-bottom: 40px;
+
+			text-transform: uppercase;
+		}
+
+		.location {
+
+			border-top: 1px solid $laundry-green;
+			border-bottom: 1px solid $laundry-green;
+
+		}
+
+
+		.row {
+		  width: 100%;
+		}
+
+		
+
+		@media only screen and (max-width: $mobile-width) {
+		    width: 90%;
+		    margin-top: 0;
+		}
+	}
+}

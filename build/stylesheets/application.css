@@ -460,45 +460,79 @@ body {
   max-width: 100%;
   z-index: 1; }
 
+/* line 33, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+.clearfix:before, .clearfix:after {
+  display: block;
+  height: 0;
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  clear: both; }
+
+/* line 45, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+.img-responsive {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+/* line 55, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+.col-one-third {
+  width: 100%; }
+  @media screen and (min-width: 760px) {
+    /* line 55, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    .col-one-third {
+      width: 33.333333%;
+      float: left; } }
+
+/* line 65, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+.col-two-third {
+  width: 100%; }
+  @media screen and (min-width: 760px) {
+    /* line 65, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    .col-two-third {
+      width: 66.666667%;
+      float: left; } }
+
 @media only screen and (max-width: 610px) {
-  /* line 33, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 75, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   .hide-mobile {
     display: none !important; } }
 
 @media only screen and (max-width: 610px) {
-  /* line 38, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 80, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   .hide-mobile-header {
     display: none !important; } }
 
 @media only screen and (min-width: 611px) {
-  /* line 43, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 85, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   .hide-desktop-header {
     display: none !important; } }
 
 @media only screen and (min-width: 611px) {
-  /* line 48, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 90, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   .hide-desktop {
     display: none !important; } }
 
 @media only screen and (max-width: 760px) {
-  /* line 53, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 95, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   .hide-portrait {
     display: none !important; } }
 
-/* line 59, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 101, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 .cover {
   background: url("/images/SL_mobil_background.jpg");
   background-size: cover;
   width: 100%;
   height: 100%; }
 
-/* line 67, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 109, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 input {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
-/* line 73, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 115, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 .border-gradient {
   border: 2px transparent solid;
   -moz-border-image: -moz-linear-gradient(left, #35c1aa 0%, #49a5bf 100%);
@@ -510,7 +544,7 @@ input {
   border-image-slice: 1;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 ); }
 
-/* line 85, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 127, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 .background-gradient {
   background: #35c1aa;
   background: -moz-linear-gradient(left, #35c1aa 0%, #49a5bf 100%);
@@ -521,7 +555,7 @@ input {
   background: linear-gradient(to right, #35c1aa 0%, #49a5bf 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 ); }
 
-/* line 98, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 140, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 #header {
   background-color: rgba(255, 255, 255, 0);
   position: fixed;
@@ -537,18 +571,18 @@ input {
   transition: all .2s;
   z-index: 2; }
   @media only screen and (max-width: 610px) {
-    /* line 98, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 140, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #header {
       position: relative;
       padding: 0;
       margin-top: 60px; } }
-  /* line 117, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 159, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #header .mobile-logolist {
     text-align: center; }
-  /* line 120, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 162, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #header img {
     display: inline-block; }
-  /* line 123, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 165, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #header .logo {
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
@@ -557,52 +591,52 @@ input {
     display: inline-block;
     position: relative; }
     @media only screen and (max-width: 610px) {
-      /* line 123, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 165, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #header .logo {
         width: 190px;
         display: block;
         margin: 0 auto; } }
-  /* line 136, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 178, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #header #shop-nav {
     position: relative;
     top: -20px;
     display: inline-block; }
     @media only screen and (max-width: 1095px) {
-      /* line 136, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 178, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #header #shop-nav {
         display: block;
         padding: 0; } }
-    /* line 144, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 186, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #header #shop-nav li {
       font-family: 'DIN';
       font-size: 17px;
       text-transform: uppercase;
       display: inline-block;
       margin-right: 18px; }
-      /* line 145, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 187, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #header #shop-nav li a {
         color: #54534a;
         text-decoration: none; }
       @media only screen and (max-width: 610px) {
-        /* line 144, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 186, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #header #shop-nav li {
           font-size: 10px;
           margin-top: 20px;
           margin-right: 12px; } }
 
-/* line 162, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 204, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 #location-login {
   display: inline-block;
   position: absolute;
   right: 30px;
   top: 36px; }
   @media only screen and (max-width: 610px) {
-    /* line 162, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 204, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #location-login {
       top: 1px !important;
       z-index: 8001;
       right: 0; } }
-  /* line 172, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 214, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #location-login #location-nav {
     display: inline-block;
     font-family: 'DIN';
@@ -620,11 +654,11 @@ input {
     height: 50px;
     cursor: crosshair; }
     @media only screen and (max-width: 610px) {
-      /* line 172, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 214, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #location-login #location-nav {
         color: white;
         background-image: url("/images/down_arrow_white.svg"); } }
-    /* line 192, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 234, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #location-login #location-nav li:first-child {
       display: inline-block;
       float: left;
@@ -634,10 +668,10 @@ input {
       width: 116px;
       text-align: left; }
       @media only screen and (max-width: 610px) {
-        /* line 192, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 234, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #location-login #location-nav li:first-child {
           border-bottom: none; } }
-    /* line 204, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 246, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #location-login #location-nav .hidden-list {
       display: none;
       opacity: 0;
@@ -650,30 +684,30 @@ input {
       padding-top: 8px;
       padding-left: 6px;
       background-color: rgba(255, 255, 255, 0.7); }
-      /* line 216, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 258, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #location-login #location-nav .hidden-list a {
         text-decoration: none;
         color: #54534a; }
-        /* line 219, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 261, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #location-login #location-nav .hidden-list a:hover {
           color: #00b194; }
-    /* line 224, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 266, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #location-login #location-nav li:last-child {
       border-bottom: #00b194 solid 1px; }
-  /* line 228, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 270, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #location-login #login {
     display: inline-block; }
-    /* line 230, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 272, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #location-login #login .shopping-bag {
       position: absolute;
       top: 0;
       margin-left: -30px; }
       @media only screen and (max-width: 610px) {
-        /* line 230, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 272, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #location-login #login .shopping-bag {
           top: 5px; } }
 
-/* line 243, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 285, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 #nav-open {
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
@@ -690,7 +724,7 @@ input {
   background-color: #00b194;
   cursor: pointer; }
   @media only screen and (max-width: 610px) {
-    /* line 243, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 285, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #nav-open {
       top: 0;
       left: 0;
@@ -702,7 +736,7 @@ input {
       background: -ms-linear-gradient(left, rgba(53, 193, 170, 0.5) 0%, rgba(73, 165, 191, 0.5) 100%);
       background: linear-gradient(to right, rgba(53, 193, 170, 0.5) 0%, rgba(73, 165, 191, 0.5) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 ); } }
-  /* line 270, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 312, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open .line {
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
@@ -711,22 +745,22 @@ input {
     height: 2px;
     background-color: white;
     position: absolute; }
-  /* line 279, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 321, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open .line-one {
     width: 22px;
     top: 10px;
     left: 6px; }
-  /* line 284, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 326, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open .line-two {
     width: 22px;
     top: 17px;
     left: 6px; }
-  /* line 289, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 331, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open .line-three {
     width: 22px;
     top: 24px;
     left: 6px; }
-  /* line 294, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 336, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open:not(.close):hover .line-one {
     -webkit-animation: BUBBLE .2s 1;
     /* Safari 4+ */
@@ -736,7 +770,7 @@ input {
     /* Opera 12+ */
     animation: BUBBLE .2s 1;
     /* IE 10+ */ }
-  /* line 300, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 342, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open:not(.close):hover .line-two {
     -webkit-animation: BUBBLE .2s 1;
     -moz-animation: BUBBLE .2s 1;
@@ -744,7 +778,7 @@ input {
     animation: BUBBLE .2s 1;
     -webkit-animation-delay: .05s;
     animation-delay: .05s; }
-  /* line 308, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 350, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open:not(.close):hover .line-three {
     -webkit-animation: BUBBLE .2s 1;
     -moz-animation: BUBBLE .2s 1;
@@ -777,11 +811,11 @@ input {
     opacity: 0; }
   100% {
     opacity: 1; } }
-  /* line 342, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 384, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open.close .line {
     height: 2px;
     background-color: #FFF; }
-  /* line 346, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 388, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open.close .line-one {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -789,10 +823,10 @@ input {
     transform: rotate(45deg);
     transform-origin: center;
     top: 18px; }
-  /* line 354, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 396, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open.close .line-two {
     opacity: 0; }
-  /* line 357, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 399, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-open.close .line-three {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
@@ -801,7 +835,7 @@ input {
     transform-origin: center;
     top: 18px; }
 
-/* line 370, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 412, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 #nav-page {
   position: fixed;
   top: 0;
@@ -815,42 +849,42 @@ input {
   cursor: default;
   background-color: white;
   transition: all 300ms; }
-  /* line 383, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 425, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-page.open {
     left: 0; }
-  /* line 386, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 428, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-page ul {
     list-style-type: none;
     padding: 0; }
-  /* line 390, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 432, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-page a {
     text-decoration: none;
     color: #53534A;
     transition: color 500ms ease-in-out; }
-    /* line 394, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 436, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #nav-page a:hover {
       color: #00b194; }
-  /* line 398, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 440, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #nav-page #nav-wrapper {
     position: relative;
     height: 100%;
     min-height: 870px;
     color: #53534A; }
     @media only screen and (max-width: 610px) {
-      /* line 398, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 440, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper {
         padding-top: 40px;
         min-height: 910px; } }
-    /* line 407, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 449, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #nav-page #nav-wrapper .small-logo {
       width: 100px;
       margin: 15px 0; }
-    /* line 411, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 453, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #nav-page #nav-wrapper .logo {
       width: 200px;
       display: block;
       margin: 0 auto 46px auto; }
-    /* line 416, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 458, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #nav-page #nav-wrapper #first-time {
       font-family: 'Archer-LightItalic';
       font-size: 24px;
@@ -859,66 +893,66 @@ input {
       margin-left: 36%;
       margin-bottom: 33px; }
       @media only screen and (max-width: 610px) {
-        /* line 416, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 458, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #nav-page #nav-wrapper #first-time {
           margin-left: 30%; } }
-      /* line 426, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 468, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper #first-time a {
         color: #00b194; }
-        /* line 428, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 470, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #nav-page #nav-wrapper #first-time a:hover {
           color: #53534A; }
-    /* line 433, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 475, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #nav-page #nav-wrapper #main-menu {
       text-transform: uppercase;
       margin-bottom: 70px; }
-      /* line 436, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 478, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper #main-menu ul {
         text-align: left;
         margin-left: 36%; }
         @media only screen and (max-width: 610px) {
-          /* line 436, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+          /* line 478, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
           #nav-page #nav-wrapper #main-menu ul {
             margin-left: 30%; } }
-      /* line 443, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 485, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper #main-menu .nav-heading {
         letter-spacing: 2px;
         line-height: 21px;
         margin: 26px 0 5px 0;
         font-family: 'DINAlternate-Bold';
         font-size: 13px; }
-      /* line 450, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 492, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper #main-menu li:not(.nav-heading) {
         font-size: 11px;
         font-weight: 100;
         line-height: 20px;
         letter-spacing: 2px;
         font-family: 'DIN'; }
-    /* line 458, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 500, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #nav-page #nav-wrapper .join-list {
       color: #00b194;
       width: 80%;
       margin: 0 auto; }
-      /* line 462, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 504, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper .join-list h1 {
         font-family: 'Archer-LightItalic';
         font-size: 24px;
         margin-bottom: -6px;
         font-weight: 400; }
-      /* line 468, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 510, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper .join-list p {
         text-transform: uppercase;
         font-family: 'DIN';
         font-size: 9px;
         margin-bottom: 8px; }
-      /* line 474, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 516, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper .join-list #input-and-button {
         position: relative;
         width: 270px;
         text-transform: uppercase;
         font-size: 11px;
         margin: 0 auto; }
-        /* line 480, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 522, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #nav-page #nav-wrapper .join-list #input-and-button .email-input {
           width: 240px;
           margin: 8px auto 0 auto;
@@ -927,10 +961,10 @@ input {
           height: 32px;
           font-family: 'DIN';
           transition: all 400ms ease-in; }
-          /* line 488, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+          /* line 530, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
           #nav-page #nav-wrapper .join-list #input-and-button .email-input:focus {
             outline: none; }
-        /* line 492, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 534, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #nav-page #nav-wrapper .join-list #input-and-button button {
           position: absolute;
           right: 10px;
@@ -940,34 +974,34 @@ input {
           text-transform: uppercase;
           font-family: 'DINAlternate-Bold';
           color: #53534A; }
-          /* line 501, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+          /* line 543, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
           #nav-page #nav-wrapper .join-list #input-and-button button:focus {
             outline: none; }
-    /* line 507, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 549, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #nav-page #nav-wrapper #nav-footer {
       position: absolute;
       bottom: 0;
       height: 80px;
       width: 100%; }
-      /* line 512, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 554, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper #nav-footer .social {
         margin-bottom: 20px; }
-        /* line 514, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 556, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #nav-page #nav-wrapper #nav-footer .social .social-link {
           display: inline-block;
           margin: 0 10px;
           color: gray; }
-      /* line 521, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 563, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #nav-page #nav-wrapper #nav-footer ul {
         text-transform: uppercase;
         font-family: 'DIN';
         font-size: 9px; }
-        /* line 525, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 567, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #nav-page #nav-wrapper #nav-footer ul li {
           display: inline-block;
           margin: 5px 7px; }
 
-/* line 536, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 578, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 .videobg {
   min-height: 400px;
   width: 100%;
@@ -980,7 +1014,7 @@ input {
   background: url("/images/SL_mobil_background.jpg") no-repeat;
   background-size: cover; }
 
-/* line 548, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 590, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 video {
   /* z-index: 0;
   width: 100%;
@@ -999,18 +1033,18 @@ video {
   background: url("/images/SL_mobil_background.jpg") no-repeat;
   background-size: cover; }
   @media only screen and (max-width: 1095px) {
-    /* line 548, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 590, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     video {
       display: none; } }
 
-/* line 570, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 612, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 #watermark {
   position: absolute;
   right: 10%;
   bottom: 5%;
   width: 400px; }
 
-/* line 579, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 621, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 #footer {
   position: relative;
   bottom: 0;
@@ -1019,48 +1053,48 @@ video {
   color: white;
   z-index: 3;
   -webkit-transform: translate3d(0, 0, 0); }
-  /* line 588, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 630, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #footer a {
     text-decoration: none;
     color: white; }
-  /* line 592, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 634, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #footer ul {
     list-style-type: none; }
-  /* line 595, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 637, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #footer h1 {
     font-family: 'Archer-LightItalic';
     font-size: 28px;
     margin-bottom: -6px;
     font-weight: 400; }
-  /* line 601, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 643, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #footer p {
     text-transform: uppercase;
     font-family: 'DIN';
     font-size: 12px;
     letter-spacing: 1.5px;
     margin-bottom: 8px; }
-  /* line 608, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 650, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #footer .instafeed {
     text-align: center;
     padding-bottom: 10px;
     color: #53534A; }
-  /* line 613, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 655, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #footer .image-grid {
     overflow: auto; }
-    /* line 615, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 657, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #footer .image-grid img {
       float: left;
       width: 14.28571%; }
-  /* line 620, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 662, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   #footer #bottom-wrapper {
     background-color: rgba(0, 177, 148, 0.55);
     overflow: hidden;
     padding-bottom: 20px; }
-    /* line 624, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 666, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #footer #bottom-wrapper .join-list {
       margin: 25px 0;
       text-align: center; }
-      /* line 627, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 669, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #footer #bottom-wrapper .join-list #input-and-button {
         position: relative;
         text-transform: uppercase;
@@ -1068,10 +1102,10 @@ video {
         font-size: 11px;
         width: 470px; }
         @media only screen and (max-width: 610px) {
-          /* line 627, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+          /* line 669, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
           #footer #bottom-wrapper .join-list #input-and-button {
             width: 290px; } }
-        /* line 636, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 678, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #footer #bottom-wrapper .join-list #input-and-button .email-input {
           width: 440px;
           margin-top: 8px;
@@ -1081,13 +1115,13 @@ video {
           font-family: 'DIN';
           transition: all 400ms ease-in; }
           @media only screen and (max-width: 610px) {
-            /* line 636, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+            /* line 678, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
             #footer #bottom-wrapper .join-list #input-and-button .email-input {
               width: 260px; } }
-          /* line 647, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+          /* line 689, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
           #footer #bottom-wrapper .join-list #input-and-button .email-input:focus {
             outline: none; }
-        /* line 651, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 693, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #footer #bottom-wrapper .join-list #input-and-button button {
           position: absolute;
           right: 10px;
@@ -1097,10 +1131,10 @@ video {
           text-transform: uppercase;
           font-family: 'DINAlternate-Bold';
           color: #53534A; }
-          /* line 660, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+          /* line 702, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
           #footer #bottom-wrapper .join-list #input-and-button button:focus {
             outline: none; }
-    /* line 666, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 708, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #footer #bottom-wrapper .footer-links {
       width: 95%;
       max-width: 800px;
@@ -1111,92 +1145,101 @@ video {
       border-top: 1px solid white;
       margin: 0 auto;
       padding-top: 15px; }
-      /* line 676, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 718, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #footer #bottom-wrapper .footer-links ul {
         float: left;
         padding: 0;
         margin: 0; }
-        /* line 680, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 722, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #footer #bottom-wrapper .footer-links ul li {
           display: inline-block;
           margin: 0 10px; }
-        /* line 684, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 726, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #footer #bottom-wrapper .footer-links ul li:first-child {
           margin-left: 5px; }
-      /* line 688, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 730, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #footer #bottom-wrapper .footer-links .social {
         margin-top: -4px;
         float: right; }
-        /* line 691, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 733, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #footer #bottom-wrapper .footer-links .social .social-link {
           font-size: 21px;
           margin: 0 10px;
           margin-top: 21px; }
+    /* line 741, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    #footer #bottom-wrapper .copyright {
+      color: #53534a;
+      font-size: 12px;
+      text-transform: none; }
+      @media only screen and (min-width: 760px) {
+        /* line 741, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        #footer #bottom-wrapper .copyright {
+          text-align: left; } }
   @media only screen and (max-width: 610px) {
-    /* line 701, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 754, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #footer .image-grid img {
       width: 25%; }
-    /* line 706, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 759, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #footer #bottom-wrapper .join-list {
       margin: 40px 20px; }
-      /* line 708, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 761, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #footer #bottom-wrapper .join-list h1 {
         font-size: 30px; }
-      /* line 711, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 764, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #footer #bottom-wrapper .join-list p {
         font-size: 11px; }
-    /* line 715, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 768, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     #footer #bottom-wrapper .footer-links {
       font-size: 11px;
       border-top: none; }
-      /* line 718, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 771, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #footer #bottom-wrapper .footer-links ul {
         float: none;
         margin-bottom: 32px; }
-        /* line 721, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+        /* line 774, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
         #footer #bottom-wrapper .footer-links ul li {
           margin: 5px 7px; }
-      /* line 725, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 778, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       #footer #bottom-wrapper .footer-links .social {
         float: initial;
         font-size: 26px; } }
 
-/* line 734, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 787, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 .nav-open-scrolled {
   top: 10px !important;
   left: 20px !important; }
 
-/* line 738, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+/* line 791, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
 .header-scrolled {
   padding-top: 50px !important;
   height: 56px !important;
   background-color: white !important;
   z-index: 7998 !important; }
-  /* line 743, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 796, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   .header-scrolled .logo {
     height: 36px;
     top: -36px;
     position: relative;
     left: -2px; }
-  /* line 749, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 802, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   .header-scrolled #shop-nav {
     top: -50px !important; }
     @media only screen and (max-width: 1095px) {
-      /* line 749, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 802, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       .header-scrolled #shop-nav {
         left: 240px !important;
         top: -88px !important; } }
     @media only screen and (max-width: 834px) {
-      /* line 749, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+      /* line 802, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
       .header-scrolled #shop-nav {
         display: none !important; } }
-  /* line 761, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 814, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   .header-scrolled a {
     font-size: 12px; }
-  /* line 764, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+  /* line 817, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
   .header-scrolled #location-login {
     top: 13px; }
-    /* line 766, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
+    /* line 819, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/application.scss */
     .header-scrolled #location-login #location-nav {
       top: -4px; }
 /* line 4, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_book.scss */
@@ -2866,24 +2909,17 @@ $tablet-width: 1095px; */
           color: #00b194;
           font-size: 20px; }
 @media only screen and (max-width: 760px) {
-  /* line 4, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 4, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
   .hide-m {
     display: none !important; } }
 
 @media only screen and (min-width: 761px) {
-  /* line 10, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 10, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
   .hide-d {
     display: none !important; } }
 
-/* line 15, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
-.img-responsive {
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle; }
-
-/* line 25, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
-.locations #main {
+/* line 17, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+.location-single #main {
   position: relative;
   margin: 150px auto 0;
   max-width: 980px;
@@ -2893,48 +2929,195 @@ $tablet-width: 1095px; */
   font-size: 15px;
   line-height: 1.4em;
   color: #53534a; }
-  /* line 36, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 28, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main h1 {
+    font-family: 'Archer-LightItalic';
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: .1em; }
+  /* line 35, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main h2 {
+    font-family: 'DIN';
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 33px;
+    color: #00b194; }
+  /* line 43, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .box-left,
+  .location-single #main .box-right {
+    width: 100%; }
+    @media screen and (min-width: 760px) {
+      /* line 43, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+      .location-single #main .box-left,
+      .location-single #main .box-right {
+        float: left; } }
+  @media screen and (min-width: 760px) {
+    /* line 52, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+    .location-single #main .box-left {
+      width: 60%; } }
+  @media screen and (min-width: 760px) {
+    /* line 58, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+    .location-single #main .box-right {
+      width: 40%; } }
+  /* line 64, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .branch-photo {
+    display: none; }
+    @media screen and (min-width: 760px) {
+      /* line 64, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+      .location-single #main .branch-photo {
+        display: block; } }
+  /* line 73, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .branch-details {
+    padding: 50px;
+    text-align: center; }
+  /* line 79, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .title {
+    margin: 10px 0;
+    color: #53534a;
+    font: 34px 'Archer-LightItalic', serif; }
+    @media screen and (min-width: 760px) {
+      /* line 79, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+      .location-single #main .title {
+        margin: 30px 0; } }
+  /* line 93, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .address {
+    font: 18px/1.6 'DIN', serif;
+    text-transform: uppercase; }
+  /* line 99, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .google-maps-container {
+    position: relative;
+    height: 0;
+    padding-top: 25px;
+    padding-bottom: 56.25%;
+    /* 16:9 */ }
+  /* line 107, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .google-maps-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+  /* line 115, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main h3 {
+    color: #00b194;
+    font: 14px 'DIN', serif;
+    text-align: center; }
+  /* line 123, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .office-timings {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    text-transform: uppercase; }
+  /* line 132, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .office-hours {
+    display: table-row; }
+    /* line 135, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+    .location-single #main .office-hours .day,
+    .location-single #main .office-hours .hours {
+      display: table-cell;
+      padding: 10px;
+      vertical-align: top; }
+  /* line 146, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .head {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    text-align: center; }
+  /* line 156, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+  .location-single #main .row {
+    width: 100%; }
+  @media only screen and (max-width: 610px) {
+    /* line 17, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_location-single.scss */
+    .location-single #main {
+      width: 90%;
+      margin-top: 0; } }
+@media only screen and (max-width: 760px) {
+  /* line 4, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  .hide-m {
+    display: none !important; } }
+
+@media only screen and (min-width: 761px) {
+  /* line 10, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  .hide-d {
+    display: none !important; } }
+
+/* line 17, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+.locations #main {
+  position: relative;
+  margin: 150px auto 0;
+  padding-bottom: 30px;
+  max-width: 980px;
+  z-index: 1;
+  background-color: #fff;
+  font-family: 'DIN';
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #53534a; }
+  /* line 29, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main h1 {
     font-family: 'Archer-LightItalic';
     font-size: 50px;
     font-weight: 400;
     margin-bottom: .1em; }
-  /* line 43, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 36, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main h2 {
     font-family: 'DIN';
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 33px;
     color: #00b194; }
-  /* line 51, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
-  .locations #main .location-title {
-    margin-bottom: 33px;
-    font: 400 30px 'DIN', serif;
-    color: #00b194; }
+  /* line 44, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  .locations #main .location-state {
+    margin: 50px 0 30px;
+    font: 34px 'Archer-LightItalic', serif;
+    text-align: center;
+    color: #53534a; }
+  /* line 52, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  .locations #main .location-title,
+  .locations #main .phone-no,
+  .locations #main .address-hours {
+    text-align: center; }
   /* line 58, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  .locations #main .location-title {
+    margin: 10px 0;
+    font: 14px 'DIN', serif;
+    color: #00b194; }
+  /* line 65, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  .locations #main .phone-no,
+  .locations #main .address-hours {
+    color: #53534a;
+    font: 12px 'DIN', serif; }
+  /* line 72, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  .locations #main .address-hours {
+    margin-bottom: 40px;
+    text-transform: uppercase; }
+  /* line 78, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  .locations #main .location {
+    border-top: 1px solid #00b194;
+    border-bottom: 1px solid #00b194; }
+  /* line 86, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .head {
     width: 100%;
     padding-top: 1em;
     padding-bottom: 2em;
     text-align: center; }
-  /* line 68, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 96, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .row {
     width: 100%; }
-  /* line 71, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 99, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .regular {
     height: 325px; }
     @media only screen and (max-width: 760px) {
-      /* line 71, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 99, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .regular {
         height: 100%; } }
-  /* line 77, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 105, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .short {
     height: 280px; }
     @media only screen and (max-width: 760px) {
-      /* line 77, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 105, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .short {
         height: 100%; } }
-  /* line 85, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 113, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .block01 {
     width: 40%;
     height: 100%;
@@ -2945,7 +3128,7 @@ $tablet-width: 1095px; */
     background-position: center top;
     background-repeat: no-repeat; }
     @media only screen and (max-width: 760px) {
-      /* line 85, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 113, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block01 {
         width: 100%;
         float: none;
@@ -2953,7 +3136,7 @@ $tablet-width: 1095px; */
         clear: both;
         height: 238px;
         min-width: 100%; } }
-  /* line 104, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 132, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .block02 {
     width: 60%;
     display: inline-block;
@@ -2963,14 +3146,14 @@ $tablet-width: 1095px; */
     padding-right: 50px;
     max-width: 100%; }
     @media only screen and (max-width: 760px) {
-      /* line 104, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 132, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block02 {
         width: 100%;
         padding: 40px 40px 0 20px;
         float: none;
         display: block;
         clear: both; } }
-  /* line 121, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 149, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .block03 {
     display: inline-block;
     float: left;
@@ -2978,7 +3161,7 @@ $tablet-width: 1095px; */
     padding: 40px 40px 0 40px;
     max-width: 100%; }
     @media only screen and (max-width: 760px) {
-      /* line 121, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 149, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block03 {
         width: 100%;
         padding: 40px 40px 0 20px;
@@ -2986,10 +3169,10 @@ $tablet-width: 1095px; */
         display: block;
         clear: both; } }
     @media only screen and (min-width: 610px) and (max-width: 822px) {
-      /* line 121, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 149, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block03 {
         padding: 10px 20px 0 30px; } }
-  /* line 141, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 169, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .block04 {
     display: inline-block;
     float: left;
@@ -3000,7 +3183,7 @@ $tablet-width: 1095px; */
     background-repeat: no-repeat;
     background-position: center top; }
     @media only screen and (max-width: 760px) {
-      /* line 141, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 169, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block04 {
         width: 100%;
         float: none;
@@ -3010,10 +3193,10 @@ $tablet-width: 1095px; */
         min-width: 100%;
         background-position: center; } }
     @media only screen and (min-width: 610px) and (max-width: 822px) {
-      /* line 141, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 169, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block04 {
         background-size: 110% auto; } }
-  /* line 165, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 193, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .block05 {
     display: inline-block;
     float: left;
@@ -3021,7 +3204,7 @@ $tablet-width: 1095px; */
     padding: 40px 40px 0 40px;
     max-width: 100%; }
     @media only screen and (max-width: 760px) {
-      /* line 165, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 193, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block05 {
         width: 100%;
         padding: 40px 40px 0 20px;
@@ -3029,7 +3212,7 @@ $tablet-width: 1095px; */
         display: block;
         clear: both;
         min-width: 100%; } }
-  /* line 181, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 209, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .block05 {
     height: 100%;
     background: #35c1aa;
@@ -3040,7 +3223,7 @@ $tablet-width: 1095px; */
     background: -ms-linear-gradient(left, #35c1aa 0%, #49a5bf 100%);
     background: linear-gradient(to right, #35c1aa 0%, #49a5bf 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 ); }
-    /* line 191, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+    /* line 219, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
     .locations #main .block05 button.contactus {
       border: 0;
       width: 130px;
@@ -3054,11 +3237,11 @@ $tablet-width: 1095px; */
       -moz-transition: all .2s;
       -o-transition: all .2s;
       transition: all .2s; }
-      /* line 204, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 232, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block05 button.contactus:hover {
         color: #000;
         background-color: #fff; }
-  /* line 211, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 239, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .block06 {
     width: 60%;
     display: inline-block;
@@ -3068,81 +3251,81 @@ $tablet-width: 1095px; */
     padding-right: 50px;
     max-width: 100%; }
     @media only screen and (max-width: 760px) {
-      /* line 211, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 239, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block06 {
         width: 100%;
         padding: 40px 40px 0 20px;
         float: none;
         display: block;
         clear: both; } }
-    /* line 228, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+    /* line 256, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
     .locations #main .block06 a {
       color: #000; }
-      /* line 230, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 258, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .block06 a:visited {
         color: #000; }
-  /* line 236, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 264, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .right {
     width: 62%;
     display: inline-block;
     margin: 0;
     padding: 0; }
     @media only screen and (max-width: 610px) {
-      /* line 236, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 264, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .right {
         width: 100%; } }
-    /* line 244, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+    /* line 272, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
     .locations #main .right a {
       color: #000; }
-      /* line 246, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 274, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .right a:visited {
         color: #000; }
-  /* line 252, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 280, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .padright {
     padding-left: 20%;
     padding-right: 10%; }
     @media only screen and (max-width: 610px) {
-      /* line 252, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 280, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .padright {
         width: 100%;
         padding-left: 5%;
         padding-right: 5%; } }
-  /* line 262, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 290, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .padtop {
     padding-top: 3em !important; }
-  /* line 266, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 294, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .left {
     width: 38%;
     display: inline-block;
     margin: 0;
     padding: 0; }
     @media only screen and (max-width: 610px) {
-      /* line 266, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 294, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .left {
         width: 100%; } }
-  /* line 276, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 304, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .whitetext {
     color: #fff;
     padding: 5% 3%;
     line-height: 1.4em;
     letter-spacing: 2px;
     text-align: center; }
-  /* line 286, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 314, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #main .padleft {
     padding-left: 5%;
     padding-right: 5%; }
     @media only screen and (max-width: 610px) {
-      /* line 286, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 314, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #main .padleft {
         width: 100%;
         padding-left: 5%;
         padding-right: 5%; } }
   @media only screen and (max-width: 610px) {
-    /* line 25, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+    /* line 17, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
     .locations #main {
       width: 90%;
       margin-top: 0; } }
-/* line 304, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+/* line 332, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
 .locations #bottombar {
   position: relative;
   margin: 5px auto 0;
@@ -3151,7 +3334,7 @@ $tablet-width: 1095px; */
   background: none;
   text-align: center;
   font-size: .8em; }
-  /* line 312, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+  /* line 340, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
   .locations #bottombar a.links {
     display: block;
     -webkit-transition: all 300ms ease-out;
@@ -3172,7 +3355,7 @@ $tablet-width: 1095px; */
     padding-top: 17px;
     color: white;
     text-decoration: none; }
-    /* line 332, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+    /* line 360, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
     .locations #bottombar a.links:hover {
       background: rgba(53, 193, 170, 0.5);
       background: -moz-linear-gradient(left, rgba(73, 165, 191, 0.5) 0%, rgba(53, 193, 170, 0.5) 100%);
@@ -3183,14 +3366,102 @@ $tablet-width: 1095px; */
       background: linear-gradient(to right, rgba(73, 165, 191, 0.5) 0%, rgba(53, 193, 170, 0.5) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49a5bf', endColorstr='#35c1aa', GradientType=1 ); }
     @media only screen and (min-width: 610px) and (max-width: 760px) {
-      /* line 312, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 340, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #bottombar a.links {
         width: 32%; } }
     @media only screen and (max-width: 610px) {
-      /* line 312, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
+      /* line 340, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_locations.scss */
       .locations #bottombar a.links {
         width: 60%;
         margin: 3px; } }
+@media only screen and (max-width: 760px) {
+  /* line 4, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .hide-m {
+    display: none !important; } }
+
+@media only screen and (min-width: 761px) {
+  /* line 10, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .hide-d {
+    display: none !important; } }
+
+/* line 18, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+.offers .location-offer {
+  background-image: url("../images/location-offer.jpg");
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover; }
+/* line 24, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+.offers #main {
+  position: relative;
+  margin: 150px auto 0;
+  padding-bottom: 30px;
+  max-width: 980px;
+  z-index: 1;
+  background-color: #fff;
+  font-family: 'DIN';
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #53534a; }
+  /* line 36, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main .location-offer {
+    background-image: url("../images/location-offer-bg.jpg");
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  /* line 42, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main h1 {
+    font-family: 'Archer-LightItalic';
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: .1em; }
+  /* line 49, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main h2 {
+    font-family: 'DIN';
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 33px;
+    color: #00b194; }
+  /* line 57, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main .location-state {
+    margin: 50px 0 30px;
+    font: 34px 'Archer-LightItalic', serif;
+    text-align: center;
+    color: #53534a; }
+  /* line 65, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main .location-title,
+  .offers #main .phone-no,
+  .offers #main .address-hours {
+    text-align: center; }
+  /* line 71, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main .location-title {
+    margin: 10px 0;
+    font: 14px 'DIN', serif;
+    color: #00b194; }
+  /* line 78, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main .phone-no,
+  .offers #main .address-hours {
+    color: #53534a;
+    font: 12px 'DIN', serif; }
+  /* line 85, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main .address-hours {
+    margin-bottom: 40px;
+    text-transform: uppercase; }
+  /* line 91, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main .location {
+    border-top: 1px solid #00b194;
+    border-bottom: 1px solid #00b194; }
+  /* line 99, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+  .offers #main .row {
+    width: 100%; }
+  @media only screen and (max-width: 610px) {
+    /* line 24, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_offers.scss */
+    .offers #main {
+      width: 90%;
+      margin-top: 0; } }
 /* line 4, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_story.scss */
 .story #main {
   position: relative;
@@ -3503,6 +3774,68 @@ $tablet-width: 1095px; */
       .story #bottombar a.links {
         width: 60%;
         margin: 3px; } }
+@media only screen and (max-width: 760px) {
+  /* line 4, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+  .hide-m {
+    display: none !important; } }
+
+@media only screen and (min-width: 761px) {
+  /* line 10, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+  .hide-d {
+    display: none !important; } }
+
+/* line 17, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+.terms #main {
+  position: relative;
+  margin: 150px auto 0;
+  padding-bottom: 30px;
+  max-width: 980px;
+  z-index: 1;
+  background-color: #fff;
+  font-family: 'DIN';
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #53534a; }
+  /* line 29, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+  .terms #main h1 {
+    margin-bottom: .1em;
+    font: 400 50px/1.2 'Archer-LightItalic'; }
+  /* line 35, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+  .terms #main h2 {
+    font-family: 'DIN';
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 33px;
+    color: #00b194; }
+  /* line 43, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+  .terms #main .title {
+    margin: 10px 0;
+    color: #00b194;
+    font: 400 16px 'DIN', serif;
+    text-transform: uppercase; }
+  /* line 52, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+  .terms #main .col-one-third {
+    padding-right: 20px;
+    padding-left: 20px; }
+  /* line 57, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+  .terms #main p {
+    color: #53534a;
+    font: 300 14px/1.5 'DIN', sans-serif;
+    text-align: justify; }
+  /* line 64, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+  .terms #main .head {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    text-align: center; }
+  /* line 74, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+  .terms #main .row {
+    width: 100%; }
+  @media only screen and (max-width: 610px) {
+    /* line 17, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_terms.scss */
+    .terms #main {
+      width: 90%;
+      margin-top: 0; } }
 /*----------------------------- LOOKBOOKS PAGE -----------------------------*/
 /* line 15, /Users/abhishek1/Projects/skinlaundry-web/source/stylesheets/_treatment.scss */
 .treatment #main {
