@@ -1,0 +1,166 @@
+@import "compass";
+@import 'variables';
+$tablet-width: 980px;
+.hide-m {
+  @media only screen and (max-width: $tablet-portrait) {
+    display: none!important;
+  }
+}
+
+.hide-d {
+  @media only screen and (min-width: $tablet-portrait + 1px) {
+    display: none!important;
+  }
+}
+
+.location-single{
+	#main {
+		position: relative;
+		margin: 150px auto 0;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+		font-family: 'DIN';
+	    font-size: 15px;
+	    line-height: 1.4em;
+		color: #53534a;
+
+		h1 {
+		  font-family: 'Archer-LightItalic';
+	      font-size: 50px;
+	      font-weight: 400;
+	      margin-bottom: .1em;
+		}
+
+		h2 {
+		  font-family: 'DIN';
+	      font-size: 14px;
+	      font-weight: 400;
+	      margin-bottom: 33px;
+	      color: $laundry-green;
+		}
+
+		.box-left,
+		.box-right {
+			width: 100%;
+
+			@media screen and (min-width: $tablet-portrait) {
+				float: left;
+			}
+		}
+
+		.box-left {
+			@media screen and (min-width: $tablet-portrait) {
+				width: 60%;
+			}
+		}
+
+		.box-right {
+			@media screen and (min-width: $tablet-portrait) {
+				width: 40%;
+			}
+		}
+
+		.branch-photo {
+			display: none;
+			
+			@media screen and (min-width: $tablet-portrait) {
+				display: block;
+			}
+
+		}
+
+		.branch-details {
+			padding: 50px;
+
+			text-align: center;
+		}
+
+		.title {
+			margin: 10px 0;
+
+			color: #53534a;
+
+			font: 34px 'Archer-LightItalic', serif;
+
+			@media screen and (min-width: $tablet-portrait) {
+				margin: 30px 0;
+			}
+
+			
+		}
+
+		.address {
+			font: 18px/1.6 'DIN', serif;
+
+			text-transform: uppercase;
+		}
+
+		.google-maps-container {
+      position: relative;
+
+      height: 0;
+
+      padding-top: 25px;
+      padding-bottom: 56.25%; /* 16:9 */
+		}
+		.google-maps-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+		}
+
+		h3 {
+			color: $laundry-green;
+
+			font: 14px 'DIN', serif;
+
+			text-align: center;
+		}
+
+		.office-timings {
+			display: table;
+
+			margin-right: auto;
+			margin-left: auto;
+
+			text-transform: uppercase;
+		}
+
+		.office-hours {
+			display: table-row;
+
+			.day,
+			.hours {
+				display: table-cell;
+				padding: 10px;
+				vertical-align: top;
+			}
+
+			.hours {
+			}
+		}
+
+		.head {
+			width: 100%;
+
+			padding-top: 1em;
+			padding-bottom: 2em;
+
+			text-align: center;
+		}
+
+		//i made this
+		.row {
+		  width: 100%;
+		}
+
+		@media only screen and (max-width: $mobile-width) {
+		    width: 90%;
+		    margin-top: 0;
+		}
+	}
+
+}

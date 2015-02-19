@@ -12,14 +12,6 @@ $tablet-width: 980px;
     display: none!important;
   }
 }
-.img-responsive {
-	display: inline-block;
-
-	max-width: 100%;
-	height: auto;
-
-	vertical-align: middle;
-}
 
 .locations {
 	#main {
@@ -55,28 +47,6 @@ $tablet-width: 980px;
 			font: 34px 'Archer-LightItalic', serif;
 			text-align: center;
 			color: #53534a;
-		}
-
-		.col-3 {
-			width: 100%;
-
-			@media screen and (min-width: $tablet-portrait) {
-				width: 33.333333%;
-
-				float: left;
-			}
-			
-			&:first-child {
-				&:before {
-					clear: both;
-				}
-			}
-
-			&:last-child {
-				&:after {
-					clear: both;
-				}
-			}
 		}
 
 		.location-title,
