@@ -25,6 +25,7 @@ $tablet-width: 980px;
 	#main {
 		position: relative;
 		margin: 150px auto 0;
+		padding-bottom: 30px;
 		max-width: 980px;
 		z-index: 1;
 		background-color: #fff;
@@ -100,9 +101,17 @@ $tablet-width: 980px;
 
 		.address-hours {
 			margin-bottom: 40px;
+
+			text-transform: uppercase;
 		}
 
-		
+		.location {
+
+			border-top: 1px solid $laundry-green;
+			border-bottom: 1px solid $laundry-green;
+
+		}
+
 
 		.head {
 			width: 100%;

@@ -28,6 +28,16 @@ body {
   max-width: 100%;
   z-index: 1;
 }
+.clearfix {
+  &:after {
+    display: block;
+    height: 0;
+
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    clear: both;
+  }
+}
 
 .hide-mobile {
   @media only screen and (max-width: $mobile-width) {
