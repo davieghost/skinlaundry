@@ -182,13 +182,16 @@ SLWebApp.factory("cookiemgr", [function(){
 	};
 }]);
 
-SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', 'customError', '$rootScope', function($scope, localCache, cookiemgr, customError, $rootScope){	
+SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootScope', 'location', '$timeout', function($scope, localCache, cookiemgr, $rootScope, location, $timeout){	
 	var self = this;
 	var init = function(){
 		$(".till-ng-loaded").removeClass("till-ng-loaded");
-		if(global.booking_customer){
-			localCache.set("booking_customer", global.booking_customer);
-		}
+		location.getSortedStores(function(data){
+			$timeout(function(){self.sorted_stores = data;},0);
+			location.getDefaultLocation(function(store){
+				self.default_location = store;
+			});
+		})
 	};
 
 	this.parseJSON = function(str){
@@ -197,9 +200,6 @@ SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', 'customEr
 		}catch(e){
 			return {"error" : "Bad JSON"};
 		}
-	};
-	this.isError = function(obj, type){
-		return customError.isError(obj, type);
 	};
 	this.initializeLocation = function(params){
 		return localCache.set("location", params);
@@ -222,3 +222,40 @@ SLWebApp.factory("localCache", function(){
 		}
 	};
 });
+
+SLWebApp.factory('location', ['cookiemgr', function(cookiemgr){
+	
+	var stores_sorted_by_distance = [];
+	var def_cookie_key = 'defstore';
+	var test_origin = [34.109787, -117.710664];
+	if(!geocoder)
+		console.warn("Geocoder not defined. Must resolve this dependency");
+
+	var locationfactory =  {
+		getDefaultLocation : function(callback){
+			var default_location = cookiemgr.getCookie(def_cookie_key);
+			
+			if(default_location){
+				callback(default_location);
+			}else{
+				locationfactory.getSortedStores(function(stores){
+					default_location = stores[0].name;
+					cookiemgr.setCookie(default_location);
+					callback(default_location);
+				});
+			}
+		},
+		getSortedStores : function(callback){
+			if(stores_sorted_by_distance.length)
+				callback(stores_sorted_by_distance);
+			else
+				geocoder.getNearestDestination(test_origin, stores, function(sorted_stores){
+						stores_sorted_by_distance = sorted_stores;
+						callback(sorted_stores);
+				});
+		}	
+	};
+
+	return locationfactory;
+
+}])

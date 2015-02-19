@@ -12,8 +12,7 @@
   <div id="location-login">
     <ul id="location-nav">
       <li id="nearest">Nearest Laundry</li>
-      <li class="hidden-list"><a href="">location example</a></li>
-      <li class="hidden-list"><a href="">location example</a></li>
+      <li class="hidden-list" ng-repeat = "store in base.sorted_stores"><a ng-href="/locations/{{store.key}}.html" ng-bind = "store.name"></a></li>
     </ul>
     <div id="login">
       <a href=""></a>

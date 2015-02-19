@@ -56,6 +56,7 @@ def isProduction
   isEnvironment "production"
 end
 
+$GOOGLE_API_KEY = 'AIzaSyCRlB_IGbIXk3WEEreLjAbYYOaq5SGHTC8'
 ENVIRONMENT = ENV['RACK_ENV'] ||= 'development'
 $BOOKING_ENDPOINT = isProduction ? ENV['BOOKING_ENDPOINT'] : "http://sl-book.herokuapp.com/"
 $SHOPIFY_BASE_URL = isProduction ? ENV['SHOPIFY_BASE_URL'] : "http://shop.skinlaundry.com/"
@@ -94,4 +95,3 @@ $LOCATIONS_LIST["current"].each do |key, location|
   proxy "/locations/#{key}.html", "/location.html", :locals => { :location => location, :location_key => key }
   p "proxied url for #{key} location"
 end
-proxy "/hero.html", "/location.html", :locals => {}
