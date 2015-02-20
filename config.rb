@@ -60,6 +60,7 @@ $GOOGLE_API_KEY = 'AIzaSyCRlB_IGbIXk3WEEreLjAbYYOaq5SGHTC8'
 ENVIRONMENT = ENV['RACK_ENV'] ||= 'development'
 $BOOKING_ENDPOINT = isProduction ? ENV['BOOKING_ENDPOINT'] : "http://sl-book.herokuapp.com/"
 $SHOPIFY_BASE_URL = isProduction ? ENV['SHOPIFY_BASE_URL'] : "http://shop.skinlaundry.com/"
+$COOKIE_DOMAIN = isProduction ? ENV['COOKIE_DOMAIN'] : ""
 $LOCATIONS_LIST = JSON.parse(File.read(ENV["MM_ROOT"] + "/jsons/stores.json"))
 
 set :css_dir, 'stylesheets'

@@ -156,6 +156,9 @@ SLWebApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $ht
 
 SLWebApp.factory("cookiemgr", [function(){
 	var config = {expires : 365, path: '/'};
+	if(globalvar.cookie_domain){
+		config.domain = globalvar.cookie_domain;
+	}
 	var _set_cookie = function(key, value, conf){
 		conf = conf ? conf : config;
 		conf.path = "/";

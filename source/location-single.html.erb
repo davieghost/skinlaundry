@@ -20,36 +20,12 @@
 			<h3>HOURS</h3>
 
 			<div class="office-timings">
-
+				<% location["timings"].each do |day, timing |%>
 				<div class="office-hours">
-					<p class="day">Tue</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
+					<p class="day"><%= day %></p>
+					<p class="hours"><%= timing %></p>
 				</div>
-
-				<div class="office-hours">
-					<p class="day">Wed</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
-				</div>
-
-				<div class="office-hours">
-					<p class="day">Thu</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
-				</div>
-
-				<div class="office-hours">
-					<p class="day">Fri</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
-				</div>
-
-				<div class="office-hours">
-					<p class="day">Sat</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
-				</div>
-
-				<div class="office-hours">
-					<p class="day">Sun</p>
-					<p class="hours">Closed</p>
-				</div>
+				<%end%>
 			</div>
 			
 		</div>
