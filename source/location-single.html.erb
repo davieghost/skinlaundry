@@ -5,13 +5,13 @@
 
 	<div class="row clearfix">
 		<div class="box-left branch-photo">
-			<img src="images/west-hollywood-branch.jpg" alt="West Hollywood Branch" class="img-responsive">
+			<img src="<%= location["images"].first %>" alt="West Hollywood Branch" class="img-responsive" style="height:465px">
 		</div>
 
 		<div class="box-right branch-details">
-			<h2 class="title">West Hollywood</h2>
-			<p class="address">8789 BEVERLY BLVD.<br> LOS ANGELES, CA 90048<br> 310-360-0791</p>
-      		<button href="#" class="book-online">Book Online</button>
+			<h2 class="title"><%= location["name"] %></h2>
+			<p class="address"><%= location["address1"] + ", " + location["address2"] %><br><%= location['city_state'] + ' ' + location['zipcode'] %><br><%= location["contact"].first %></p>
+			<button href="<%= $BOOKING_ENDPOINT %>" class="book-online">Book Online</button>
 		</div>
 	</div>
 
@@ -21,40 +21,12 @@
 			<h3 class="hours-title">HOURS</h3>
 
 			<div class="office-timings">
+				<% location["timings"].each do |day, timing |%>
 				<div class="office-hours">
-					<p class="day">Mon</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
+					<p class="day"><%= day %></p>
+					<p class="hours"><%= timing %></p>
 				</div>
-
-				<div class="office-hours">
-					<p class="day">Tue</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
-				</div>
-
-				<div class="office-hours">
-					<p class="day">Wed</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
-				</div>
-
-				<div class="office-hours">
-					<p class="day">Thu</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
-				</div>
-
-				<div class="office-hours">
-					<p class="day">Fri</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
-				</div>
-
-				<div class="office-hours">
-					<p class="day">Sat</p>
-					<p class="hours">9:30 AM - 2:00 PM<br>3:00 PM - 6:30 PM</p>
-				</div>
-
-				<div class="office-hours">
-					<p class="day">Sun</p>
-					<p class="hours">Closed</p>
-				</div>
+				<%end%>
 			</div>
 
 			<h3 class="map-title">MAP</h3>
@@ -62,12 +34,29 @@
 		</div>
 
 		<div class="box-right">
-			<div class="google-maps-container">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3304.6933083082517!2d-118.38334729999998!3d34.07737540000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2beadba5dc87b%3A0x773fc3c7df70a92d!2s8789+Beverly+Blvd%2C+Los+Angeles%2C+CA+90048%2C+USA!5e0!3m2!1sen!2sin!4v1424321327605" width="600" height="453" frameborder="0" style="border:0"></iframe>
-			</div>
+			<div class="google-maps-container" id = "map-canvas" style = "height:450px"></div>
 		</div>
 	</div>
-
-
 </div>
-
+<script type="text/javascript">
+	document.getElementsByTagName("body")[0].className += " location-single";
+  function initialize() {
+    var center = new google.maps.LatLng(<%= location['geocode'][0] %>,<%= location['geocode'][1] %>)
+    var mapOptions = {
+      navigationControl: false,
+      mapTypeControl: false,
+      scaleControl: false,
+      draggable: false,
+      scrollwheel: false,
+      center: center,
+      zoom: 14
+    };
+    var map     = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var marker  = new google.maps.Marker({
+      position: center,
+      map: map,
+      title: '<%= location["name"]%>'
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+ </script>

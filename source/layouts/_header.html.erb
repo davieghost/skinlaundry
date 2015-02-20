@@ -5,20 +5,14 @@
     <a href="/" class="to-home"><%= image_tag "full_logo.png", :class => "logo hide-mobile-header" %></a> 
   <% end %>
   <ul id="shop-nav">
-    <li><a href="http://booking.skinlaundry.com">Book Now</a></li>
+    <li><a href="<%= $BOOKING_ENDPOINT%>">Book Now</a></li>
     <li><a href="">Shop Treatments</a></li>
     <li><a href="">Shop Products</a></li>
   </ul>
   <div id="location-login">
     <ul id="location-nav">
       <li id="nearest">Nearest Laundry</li>
-      <li class="hidden-list"><a href="javascript: void(0);">Santa Monica</a></li>
-      <li class="hidden-list"><a href="javascript: void(0);">Newport Beach</a></li>
-      <li class="hidden-list"><a href="javascript: void(0);">West Hollywood</a></li>
-      <li class="hidden-list"><a href="javascript: void(0);">Rosemad</a></li>
-      <li class="hidden-list"><a href="javascript: void(0);">Glendale</a></li>
-      <li class="hidden-list"><a href="javascript: void(0);">Flatiron</a></li>
-      <li class="hidden-list"><a href="javascript: void(0);">Scotssdale</a></li>
+      <li class="hidden-list" ng-repeat = "store in base.sorted_stores"><a ng-href="/locations/{{store.key}}.html" ng-bind = "store.name"></a></li>
     </ul>
     <div id="login">
       <a href=""></a>
