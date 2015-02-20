@@ -1,0 +1,67 @@
+@import "compass";
+@import 'variables';
+$tablet-width: 980px;
+
+.shop-treatments-default {
+	#main {
+		position: relative;
+		margin: 150px auto 0;
+		padding-bottom: 30px;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+		font-family: 'DIN';
+	    font-size: 15px;
+	    line-height: 1.4em;
+		color: #53534a;
+
+
+		.treatments {
+			padding: 40px 20px;
+		}
+
+		.title {
+			color: $laundry-black;
+
+			font: 18px 'DIN-Medium', sans-serif;
+			text-transform: uppercase;
+		}
+
+		.location-btn {
+			margin: 15px auto;
+
+			padding: 15px 70px;
+
+			background-color: #fff;
+			color: $laundry-green;
+
+			font-size: 15px;
+			text-transform: uppercase;
+
+			@include transition(all .3s ease);
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: $laundry-black;
+				color: white;
+			}
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+
+		//i made this
+		.row {
+		  width: 100%;
+		}
+
+
+		@media only screen and (max-width: $mobile-width) {
+		    width: 90%;
+		    margin-top: 0;
+		}
+	}
+}

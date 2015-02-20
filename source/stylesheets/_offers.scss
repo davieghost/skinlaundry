@@ -100,6 +100,8 @@ $tablet-width: 980px;
 			}
 
 		}
+
+		
 	}
 
 	.text-center {
@@ -157,6 +159,47 @@ $tablet-width: 980px;
 
 			label {
 				display: block;
+			}
+
+			.store-location {
+				margin-top: 20px;
+				margin-bottom: 20px;
+
+				padding: 10px 40px;
+
+
+				color: #aaa;
+
+				text-transform: uppercase;
+				letter-spacing: 1px;
+
+				&:-moz-focusring {
+				    color: transparent;
+				    @include text-shadow(0 0 0 #aaa);
+				}
+
+				option {
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+
+			}
+
+			.join-btn {
+				padding: 10px 40px;
+
+				background-color: white;
+				color: $laundry-green;
+
+				@include transition(all .3s ease);
+
+
+				&:active,
+				&:focus,
+				&:hover {
+					background-color: $laundry-black;
+					color: white;
+				}
 			}
 		}
 	}

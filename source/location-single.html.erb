@@ -11,13 +11,14 @@
 		<div class="box-right branch-details">
 			<h2 class="title"><%= location["name"] %></h2>
 			<p class="address"><%= location["address1"] + ", " + location["address2"] %><br><%= location['city_state'] + ' ' + location['zipcode'] %><br><%= location["contact"].first %></p>
+			<button href="<%= $BOOKING_ENDPOINT %>" class="book-online">Book Online</button>
 		</div>
 	</div>
 
 	
 	<div class="row clearfix">
-		<div class="box-left">
-			<h3>HOURS</h3>
+		<div class="box-left office-timing-details">
+			<h3 class="hours-title">HOURS</h3>
 
 			<div class="office-timings">
 				<% location["timings"].each do |day, timing |%>
@@ -27,6 +28,8 @@
 				</div>
 				<%end%>
 			</div>
+
+			<h3 class="map-title">MAP</h3>
 			
 		</div>
 

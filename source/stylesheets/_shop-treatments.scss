@@ -1,0 +1,189 @@
+@import "compass";
+@import 'variables';
+$tablet-width: 980px;
+.hide-m {
+  @media only screen and (max-width: $tablet-portrait) {
+    display: none!important;
+  }
+}
+
+.hide-d {
+  @media only screen and (min-width: $tablet-portrait + 1px) {
+    display: none!important;
+  }
+}
+
+.shop-treatments {
+	#main {
+		position: relative;
+		margin: 150px auto 0;
+		padding-bottom: 30px;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+		font-family: 'DIN';
+	    font-size: 15px;
+	    line-height: 1.4em;
+		color: #53534a;
+
+		h1 {
+		  font-family: 'Archer-LightItalic';
+	      font-size: 50px;
+	      font-weight: 400;
+	      margin-bottom: .1em;
+		}
+
+		h2 {
+		  font-family: 'DIN';
+	      font-size: 14px;
+	      font-weight: 400;
+	      margin-bottom: 33px;
+	      color: $laundry-green;
+		}
+
+		.featured-image {
+			&:before {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+
+				content: "";
+
+				background-color: rgba(255, 255, 255, .4);
+			}
+
+			position: relative;
+			z-index: 0;
+
+			height: 150px;
+
+			background-image: url("../images/location-offer-bg.jpg");
+			background-repeat: no-repeat;
+			background-position: center top;
+			@include background-size(cover);
+		}
+
+		.treatments {
+			border-bottom: 1px solid #ccc;
+
+			padding: 40px 20px;
+		}
+
+		.buy-now-btn {
+			margin: 15px auto;
+
+			border: 2px solid $laundry-green;
+
+			padding: 10px 30px;
+
+			background-color: #fff;
+			color: $laundry-green;
+
+			font-size: 15px;
+			text-transform: uppercase;
+
+			@include transition(all .3s ease);
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: $laundry-black;
+				color: white;
+			}
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+
+		.offer-title {
+			margin: 20px 0;
+
+			font: 36px 'Archer-LightItalic', serif;
+			color: $laundry-black;
+
+			text-align: center;
+		}
+
+		.treatment-plan {
+			color: $laundry-green;
+
+			text-transform: uppercase;
+		}
+
+		.treatments-price {
+			margin-bottom: 10px;
+
+			font-family: 'DIN-Medium', sans-serif;
+		}
+
+		.additional {
+			margin-top: 0;
+			font: 13px 'DIN', sans-serif;
+		}
+
+		.expiry {
+			margin-top: 0;
+			font: 12px 'DIN', sans-serif;
+		}
+
+		.col-one-fourth {
+			width: 100%;
+
+			@media screen and (min-width: $tablet-portrait) {
+				width: 25%;
+
+				float: left;
+			}
+		}
+
+		.gift-card {
+			margin-top: 20px;
+
+			border-top: 1px solid #dedede;
+
+			padding: 30px 20px;
+
+			.title {
+				margin: 30px 0 40px;
+
+				font: 36px 'Archer-LightItalic', serif;
+				color: $laundry-black;
+			}
+
+			img {
+
+				@media screen and (min-width: $tablet-portrait) {
+					max-width: 400px;
+
+					margin: 0 auto;
+				}
+				
+			}
+		}
+
+		.head {
+			width: 100%;
+
+			padding-top: 1em;
+			padding-bottom: 2em;
+
+			text-align: center;
+		}
+
+		//i made this
+		.row {
+		  width: 100%;
+		}
+
+
+		@media only screen and (max-width: $mobile-width) {
+		    width: 90%;
+		    margin-top: 0;
+		}
+	}
+}
