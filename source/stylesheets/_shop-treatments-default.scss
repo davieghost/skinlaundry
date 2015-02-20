@@ -1,17 +1,6 @@
 @import "compass";
 @import 'variables';
 $tablet-width: 980px;
-.hide-m {
-  @media only screen and (max-width: $tablet-portrait) {
-    display: none!important;
-  }
-}
-
-.hide-d {
-  @media only screen and (min-width: $tablet-portrait + 1px) {
-    display: none!important;
-  }
-}
 
 .shop-treatments-default {
 	#main {
@@ -26,20 +15,6 @@ $tablet-width: 980px;
 	    line-height: 1.4em;
 		color: #53534a;
 
-		h1 {
-		  font-family: 'Archer-LightItalic';
-	      font-size: 50px;
-	      font-weight: 400;
-	      margin-bottom: .1em;
-		}
-
-		h2 {
-		  font-family: 'DIN';
-	      font-size: 14px;
-	      font-weight: 400;
-	      margin-bottom: 33px;
-	      color: $laundry-green;
-		}
 
 		.treatments {
 			padding: 40px 20px;
