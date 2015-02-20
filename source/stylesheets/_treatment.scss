@@ -1,9 +1,5 @@
-
-/*----------------------------- LOOKBOOKS PAGE -----------------------------*/
 @import 'variables';
-// this constant should be the same as the MOBILE_WIDTH 
-// constant at the top of _lookbooks.js
-$mobile-width: 610px;   
+
 $tablet-width: 980px;   
 $tablet-width-two: 852px;  
 $background-height: 410px;  
@@ -51,8 +47,8 @@ body.treatment {
 				text-align: center;
 				padding: 30px 50px;
 			}
-//i made this
-//you made this?
+
+			//i made this part ⬇︎
 			.row {
 			  width: 100%;
 			}
@@ -71,7 +67,6 @@ body.treatment {
 			
 			.block01 {
 				width: 40%;
-				//min-width: 392px;
 				height: 100%;
 				float: left;
 				display: inline-block;
@@ -101,10 +96,8 @@ body.treatment {
 				min-width: 295px;
 				padding-left: 20%;
 				padding-right: 50px;
-				//max-width: 100%;
 				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
-					//padding: 40px;
 					padding: 40px 40px 0 20px;
 					float: none;
 					display: block;
@@ -119,7 +112,6 @@ body.treatment {
 				display: inline-block;
 				float: left;
 				width: 40%;
-				//min-width: 392px;
 				padding: 40px 40px 0 40px;
 				max-width: 100%;
 				@media only screen and (max-width: $tablet-portrait) {
@@ -162,7 +154,6 @@ body.treatment {
 				float: left;
 				width: 40%;
 				height: 100%;
-				//min-width: 392px;
 				background-image: url('/images/treatment3.jpg');
 				background-size: 100% auto;
 				background-repeat: no-repeat;
@@ -212,7 +203,6 @@ body.treatment {
 				display: inline-block;
 				float: left;
 				margin-top: 30px;
-				//min-width: 295px;
 				padding-left: 20%;
 				padding-right: 50px;
 				max-width: 100%;
@@ -228,7 +218,6 @@ body.treatment {
 				display: inline-block;
 				float: left;
 				width: 40%;
-				//min-width: 392px;
 				padding: 10px 40px 0 40px;
 				max-width: 100%;
 				@media only screen and (max-width: $tablet-portrait) {
@@ -253,9 +242,6 @@ body.treatment {
 				float: left;
 				height: 100%;
 				width: 60%;
-				background-image: url('/images/treatment4.jpg');
-				background-size: 100% auto;
-				background-repeat: no-repeat;
 				margin: 0 auto;
 				max-width: 100%;
 				@media only screen and (max-width: $tablet-portrait) {
@@ -266,6 +252,124 @@ body.treatment {
 					height: 238px;
 					min-width: 100%;
 				}
+
+				.slider {
+			      position: relative;
+			      padding-top: 55.4%;
+			      overflow-x: hidden;
+			      .slide-control {
+			        position: absolute;
+			        bottom: 15%;
+			        left: 45%;
+			        z-index: 5;
+			        & > * {
+			          float: left;
+			        }
+			        .circle {
+			          width: 8px;
+			          height: 8px;
+			          margin: 6px;
+			          border-radius: 5px;
+			          border: 1px $slide-control-color solid;
+			          &.current {
+			            background-color: $slide-control-color;
+			          }
+			        }
+			        .slide-left {
+			          cursor: pointer;
+			          text-align: center;
+			          width: 16px;
+			          padding-top: 2px;
+			          color: $slide-control-color;
+			        }
+			        .slide-right {
+			          cursor: pointer;
+			          text-align: center;
+			          width: 16px;
+			          padding-top: 2px;
+			          color: $slide-control-color;
+			        }
+			      }
+				  .slide {
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				    height: 100%;
+				    background-size: cover;
+				    background-repeat: no-repeat;
+				    display: none;
+				    .overlay-text {
+				      position: absolute;
+				      text-align: left;
+				      color: $laundry-black;
+				      h1 {
+				        font-family: 'Archer-LightItalic';
+				        font-size: 3.0vw;
+				        margin-bottom: -6px;
+				        font-weight: 400;   
+				      }
+				      p {
+				        font-family: 'DIN';
+				        font-size: 1vw;
+				        color: #00b194;
+				        margin-bottom: 15px;
+				      }
+				      .text-box {
+				        display: inline-block;
+				        border: 1px $laundry-black solid;
+				        color: $laundry-black;
+				        text-align: center;
+				        font-family: 'DINAlternate-Bold';
+				        font-size: 1.3vw;
+				        padding: 10px 15px 7px 15px;
+				        text-transform: uppercase;
+				        letter-spacing: 0.6px;
+				        text-decoration: none;
+				        -webkit-transition: all .2s;
+				        -moz-transition: all .2s;
+				        -o-transition: all .2s;
+				        transition: all .2s;
+				        &:hover {
+				          color: white;
+				          background-color: $laundry-black;
+				        }
+				      }
+				    }
+				  }
+			      #slide-01 {
+			        background-image: image-url("place1.jpg");
+			        opacity: .25;
+			        display: block;
+			        .overlay-text {
+			          font-size: 20px;
+			          .text-box {
+			            margin: 2% 0 0 30%;        
+			          }
+			        }
+			      }
+			      #slide-02 {
+			        background-image: image-url("place2.jpg");
+			        opacity: .25;
+			        
+			        .overlay-text {
+			          font-size: 20px;
+			          .text-box {
+			            margin: 2% 0 0 30%;        
+			          }
+			        }
+			      }
+			      #slide-03 {
+			        background-image: image-url("place3.jpg");
+			        opacity: .25;
+			        .overlay-text {
+			          
+			          .text-box {
+			            margin-top: 10%;
+			          }
+			        }
+			      }
+			    }
 			}
 
 			#paragraph2 {
@@ -311,7 +415,6 @@ body.treatment {
 				color: white;
 				text-decoration: none;
 				&:hover{
-					//background-color: white;
 					background: rgba(53,193,170,.5);
 					background: -moz-linear-gradient(left, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
 					background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,.5)), color-stop(100%, rgba(73,165,191,.5)));

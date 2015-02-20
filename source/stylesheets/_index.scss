@@ -1,19 +1,15 @@
 @import 'variables';
 
-$slide-control-color: rgb(125, 125, 125);
-/* $mobile-width: 610px;
-$tablet-width: 1095px; */
-
 body.index {
   #main {
     width: 90%;
     margin: 130px auto 0 auto;
     position: relative;
-    #slider {
+    .slider {
       position: relative;
       padding-top: 62.2%;
       overflow-x: hidden;
-      #slide-control {
+      .slide-control {
         position: absolute;
         bottom: 10px;
         right: 20px;
@@ -31,14 +27,14 @@ body.index {
             background-color: $slide-control-color;
           }
         }
-        #slide-left {
+        .slide-left {
           cursor: pointer;
           text-align: center;
           width: 16px;
           padding-top: 2px;
           color: $slide-control-color;
         }
-        #slide-right {
+        .slide-right {
           cursor: pointer;
           text-align: center;
           width: 16px;
@@ -321,16 +317,16 @@ body.index {
     #main {
       margin-top: -10px;
       width: 100%;
-      #slider {
+      .slider {
         margin-bottom: 80px;
         overflow: visible;
-        #slide-control {
+        .slide-control {
           width: 73px;
           top: 106%;
           left: 0;
           right: 0;
           margin: 0 auto;
-          #slide-left, #slide-right {
+          .slide-left, .slide-right {
             display: none;
           }
           .circle {
