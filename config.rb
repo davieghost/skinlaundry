@@ -1,6 +1,4 @@
-###
-# Compass
-###
+require 'net/http'
 
 # activate :directory_indexes
 
@@ -65,6 +63,18 @@ def initializeShopify
   ShopifyAPI::Base.site = shop_url
 end
 
+def getRecentMedia user_id, access_token
+      url = "https://api.instagram.com/v1/users/#{user_id}/media/recent/?access_token=#{access_token}&count=14"
+      uri = URI.parse(url)
+      request = Net::HTTP::Get.new(uri.request_uri)
+      request.initialize_http_header({"Content-Type" => "application/json"})
+
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = (uri.port == 443 or uri.port == 4443)
+      response =  http.request(request)
+      response.body
+end
+
 $GOOGLE_API_KEY = 'AIzaSyCRlB_IGbIXk3WEEreLjAbYYOaq5SGHTC8'
 ENVIRONMENT = ENV['RACK_ENV'] ||= 'development'
 $BOOKING_ENDPOINT = isProduction? ? ENV['BOOKING_ENDPOINT'] : "http://sl-book.herokuapp.com/"
@@ -76,13 +86,21 @@ $SHOPIFY_API_SHOP_NAME = isProduction? ? ENV['SHOPIFY_API_SHOP_NAME'] : 'skinlau
 $SHOPIFY_BASE_URL = isProduction? ? ENV['SHOPIFY_BASE_URL'] : "http://shop.skinlaundry.com/"
 $SHOPIFY_COLLECTIONS = {"shop" => 30578547, "featured_product" => 31145839, "4-step-system" => 31190943}
 
+#Instagram credentials
+$INSTAGRAM_CLIENT_ID = "a3c66eef02da48839c769383e50dca76"
+$INSTAGRAM_CLIENT_SECRET = "0c3b270324be46b3accfcabfeb3737df"
+$INSTAGRAM_ACCESS_TOKEN  = "356178582.a3c66ee.357c8838a9dc444bb8802a6acbff693a"
+$INSTAGRAM_SL_USER_ID = 320927027
+
 $COOKIE_DOMAIN = isProduction? ? ENV['COOKIE_DOMAIN'] : ""
 $LOCATIONS_LIST = JSON.parse(File.read(ENV["MM_ROOT"] + "/jsons/stores.json"))
 
 initializeShopify()
+$INSTAFEED = JSON.parse getRecentMedia $INSTAGRAM_SL_USER_ID, $INSTAGRAM_ACCESS_TOKEN
 $SHOPIFY_PRODUCTS = {}
 $SHOPIFY_PRODUCTS["shop"] = getShopifyProductByCollection($SHOPIFY_COLLECTIONS['shop'])
 $SHOPIFY_PRODUCTS["featured"] = getShopifyProductByCollection($SHOPIFY_COLLECTIONS['featured_product'])
+
 
 set :css_dir, 'stylesheets'
 
