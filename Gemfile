@@ -16,3 +16,7 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 # for optimizing images
 gem 'image_optim'
 gem 'middleman-imageoptim'
+
+
+# for re-writing URLs
+# gem 'rack-rewrite'

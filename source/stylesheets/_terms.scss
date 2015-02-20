@@ -1,0 +1,84 @@
+@import "compass";
+@import 'variables';
+$tablet-width: 980px;
+.hide-m {
+  @media only screen and (max-width: $tablet-portrait) {
+    display: none!important;
+  }
+}
+
+.hide-d {
+  @media only screen and (min-width: $tablet-portrait + 1px) {
+    display: none!important;
+  }
+}
+
+.terms {
+	#main {
+		position: relative;
+		margin: 150px auto 0;
+		padding-bottom: 30px;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+		font-family: 'DIN';
+    font-size: 15px;
+    line-height: 1.4em;
+		color: #53534a;
+
+		h1 {
+      margin-bottom: .1em;
+
+			font: 400 50px/1.2 'Archer-LightItalic';
+		}
+
+		h2 {
+		  	font-family: 'DIN';
+	      font-size: 14px;
+	      font-weight: 400;
+	      margin-bottom: 33px;
+	      color: $laundry-green;
+		}
+
+		.title {
+			margin: 10px 0;
+
+			color: $laundry-green;
+
+			font: 400 16px 'DIN', serif;
+			text-transform: uppercase;
+		}
+
+		.col-one-third {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+
+		p {
+			color: #53534a;
+			font: 300 14px/1.5 'DIN', sans-serif;
+
+			text-align: justify;
+		}
+
+		.head {
+			width: 100%;
+
+			padding-top: 1em;
+			padding-bottom: 2em;
+
+			text-align: center;
+		}
+
+		//i made this
+		.row {
+		  width: 100%;
+		}
+
+		@media only screen and (max-width: $mobile-width) {
+		    width: 90%;
+		    margin-top: 0;
+		}
+	}
+
+}

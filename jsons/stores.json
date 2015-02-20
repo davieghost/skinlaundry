@@ -7,6 +7,7 @@
 			"city_state": "Santa Monica, CA",
 			"zipcode" 	: "90403",
 			"contact"		: ["310-319-9400"],
+			"zone"			: "california",
 			"email"			: ["santamonica@skinlaundry.com"],
 			"geocode"		: [34.032085, -118.496072],
 			"timings"		: {
@@ -23,7 +24,7 @@
 				"key" : "slsm", 
 				"to" : "310-740-7906"
 			},
-			"images":["/bootstrap/images/locations/santa-monica/santa-monica1.jpg","/bootstrap/images/locations/santa-monica/santa-monica2.jpg", "/bootstrap/images/locations/santa-monica/santa-monica3.jpg", "/bootstrap/images/locations/santa-monica/santa-monica4.jpg"],
+			"images":["/images/locations/santa-monica/santa-monica1.jpg","/images/locations/santa-monica/santa-monica2.jpg", "/images/locations/santa-monica/santa-monica3.jpg", "/images/locations/santa-monica/santa-monica4.jpg"],
 			"online_booking" :{
 				"url" : ""
 			},
@@ -39,6 +40,7 @@
 			"address2"	: "",
 			"city_state": "Newport Beach, CA",
 			"zipcode" 	: "92660",
+			"zone"			: "california",
 			"contact"		: ["949-706-7203"],
 			"email"			: ["newportbeach@skinlaundry.com"],
 			"geocode"		: [33.614928, -117.874727],
@@ -53,7 +55,7 @@
 			},
 			"appointment_types"  : ["Online Appointment"],
 			"booking"		:	null,
-			"images":["/bootstrap/images/locations/newportBeach/newportBeach1.jpg","/bootstrap/images/locations/newportBeach/newportBeach2.jpg", "/bootstrap/images/locations/newportBeach/newportBeach3.jpg", "/bootstrap/images/locations/newportBeach/newportBeach4.jpg", "/bootstrap/images/locations/newportBeach/newportBeach5.jpg", "/bootstrap/images/locations/newportBeach/newportBeach6.jpg", "/bootstrap/images/locations/newportBeach/newportBeach7.jpg", "/bootstrap/images/locations/newportBeach/newportBeach8.jpg"],
+			"images":["/images/locations/newportBeach/newportBeach1.jpg","/images/locations/newportBeach/newportBeach2.jpg", "/images/locations/newportBeach/newportBeach3.jpg", "/images/locations/newportBeach/newportBeach4.jpg", "/images/locations/newportBeach/newportBeach5.jpg", "/images/locations/newportBeach/newportBeach6.jpg", "/images/locations/newportBeach/newportBeach7.jpg", "/images/locations/newportBeach/newportBeach8.jpg"],
 			"online_booking" :{
 				"url" : "http://www.secure-booker.com/Skinlaundry/BookOnlineStart.aspx"
 			},
@@ -69,6 +71,7 @@
 			"address2"	: "",
 			"city_state": "Los Angeles, CA",
 			"zipcode" 	: "90048",
+			"zone"			: "california",
 			"contact"		: ["310-360-0791"],
 			"email"			: ["westhollywood@skinlaundry.com"],
 			"geocode"		: [34.077595,  -118.383558],
@@ -83,7 +86,7 @@
 			},
 			"appointment_types"  : ["Walk in only"],
 			"booking"		:	{"key" : "slsm", "to" : "310-740-7906"},
-			"images":["/bootstrap/images/locations/westHollywood/westHollywood1.jpg","/bootstrap/images/locations/westHollywood/westHollywood2.jpg", "/bootstrap/images/locations/westHollywood/westHollywood3.jpg", "/bootstrap/images/locations/westHollywood/westHollywood4.jpg"],
+			"images":["/images/locations/westHollywood/westHollywood1.jpg","/images/locations/westHollywood/westHollywood2.jpg", "/images/locations/westHollywood/westHollywood3.jpg", "/images/locations/westHollywood/westHollywood4.jpg"],
 			"online_booking" :{
 				"url" : ""
 			},
@@ -113,7 +116,7 @@
 		// 	},
 		// 	"appointment_types"  : ["Online Appointment"],
 		// 	"booking"		:	null,
-		// 	"images":["/bootstrap/images/locations/rosemead/rosemead1.jpg","/bootstrap/images/locations/rosemead/rosemead2.jpg", "/bootstrap/images/locations/rosemead/rosemead3.jpg", "/bootstrap/images/locations/rosemead/rosemead4.jpg", "/bootstrap/images/locations/rosemead/rosemead5.jpg", "/bootstrap/images/locations/rosemead/rosemead6.jpg", "/bootstrap/images/locations/rosemead/rosemead7.jpg", "/bootstrap/images/locations/rosemead/rosemead8.jpg"],
+		// 	"images":["/images/locations/rosemead/rosemead1.jpg","/images/locations/rosemead/rosemead2.jpg", "/images/locations/rosemead/rosemead3.jpg", "/images/locations/rosemead/rosemead4.jpg", "/images/locations/rosemead/rosemead5.jpg", "/images/locations/rosemead/rosemead6.jpg", "/images/locations/rosemead/rosemead7.jpg", "/images/locations/rosemead/rosemead8.jpg"],
 		// 	"online_booking" :{
 		// 		"url" : "http://www.secure-booker.com/skinlaundryrosemead/BookOnlineStart.aspx"
 		// 	},
@@ -129,6 +132,7 @@
 			"address2"	: "",
 			"city_state": "Glendale, CA",
 			"zipcode" 	: "91210",
+			"zone"			: "california",
 			"contact"	: ["818-649-5311"],
 			"email"		: ["rosemead@skinlaundry.com"],
 			"geocode"	: [34.145513, -118.259401],
@@ -143,7 +147,7 @@
 			},
 			"appointment_types"  : ["Walk in only"],
 			"booking"		:	{"key" : "slgl", "to" : "310-740-7906"},
-			"images":["/bootstrap/images/locations/glendale/glendale1.jpg","/bootstrap/images/locations/glendale/glendale2.jpg", "/bootstrap/images/locations/glendale/glendale3.jpg", "/bootstrap/images/locations/glendale/glendale4.jpg"],
+			"images":["/images/locations/glendale/glendale1.jpg","/images/locations/glendale/glendale2.jpg", "/images/locations/glendale/glendale3.jpg", "/images/locations/glendale/glendale4.jpg"],
 			"online_booking" :{
 				"url" : ""
 			},
@@ -159,6 +163,7 @@
 			"address2"	: "Suite 160",
 			"city_state": "Scottsdale, AZ",
 			"zipcode" 	: "85254",
+			"zone"			: "arizona",
 			"contact"	: ["480-300-7217"],
 			"geocode"	:	[33.625310, -111.925221],
 			"timings"	: {
@@ -171,7 +176,7 @@
 				"Sun" : "11:00 AM – 6:00 PM"
 			},
 			"booking"	:	null,
-			"images":["/bootstrap/images/locations/scottsdale/scottsdale1.jpg","/bootstrap/images/locations/scottsdale/scottsdale2.jpg", "/bootstrap/images/locations/scottsdale/scottsdale3.jpg", "/bootstrap/images/locations/scottsdale/scottsdale4.jpg"],
+			"images":["/images/locations/scottsdale/scottsdale1.jpg","/images/locations/scottsdale/scottsdale2.jpg", "/images/locations/scottsdale/scottsdale3.jpg", "/images/locations/scottsdale/scottsdale4.jpg"],
 			"online_booking" :{
 				"url" : ""
 			},
@@ -187,6 +192,7 @@
 			"address2"	: "",
 			"city_state": "New York",
 			"zipcode" 	: "10011",
+			"zone"			: "new york",
 			"contact"	: [],
 			"geocode"	:	[40.738047, -73.993245],
 			"timings"	: {
@@ -199,7 +205,7 @@
 				"Sun" : "11:00 AM – 6:00 PM"
 			},
 			"booking"	:	null,
-			"images":["/bootstrap/images/locations/rosemead/rosemead1.jpg","/bootstrap/images/locations/rosemead/rosemead2.jpg", "/bootstrap/images/locations/rosemead/rosemead3.jpg", "/bootstrap/images/locations/rosemead/rosemead4.jpg", "/bootstrap/images/locations/rosemead/rosemead5.jpg", "/bootstrap/images/locations/rosemead/rosemead6.jpg", "/bootstrap/images/locations/rosemead/rosemead7.jpg", "/bootstrap/images/locations/rosemead/rosemead8.jpg"],
+			"images":["/images/locations/rosemead/rosemead1.jpg","/images/locations/rosemead/rosemead2.jpg", "/images/locations/rosemead/rosemead3.jpg", "/images/locations/rosemead/rosemead4.jpg", "/images/locations/rosemead/rosemead5.jpg", "/images/locations/rosemead/rosemead6.jpg", "/images/locations/rosemead/rosemead7.jpg", "/images/locations/rosemead/rosemead8.jpg"],
 			"online_booking" :{
 				"url" : ""
 			},

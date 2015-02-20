@@ -92,6 +92,6 @@ end
 
 #Proxying for all the LOCATIONS list
 $LOCATIONS_LIST["current"].each do |key, location|
-  proxy "/locations/#{key}.html", "/location.html", :locals => { :location => location, :location_key => key }
+  proxy "/locations/#{key}.html", "/location-single.html", :locals => { :location => location, :location_key => key }
   p "proxied url for #{key} location"
 end

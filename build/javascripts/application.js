@@ -136,6 +136,230 @@ $(document).ready(function() {
 (function(){var e,t;e=function(){function e(e,t){var n,r;this.options={target:"instafeed",get:"popular",resolution:"thumbnail",sortBy:"none",links:!0,mock:!1,useHttp:!1};if(typeof e=="object")for(n in e)r=e[n],this.options[n]=r;this.context=t!=null?t:this,this.unique=this._genKey()}return e.prototype.hasNext=function(){return typeof this.context.nextUrl=="string"&&this.context.nextUrl.length>0},e.prototype.next=function(){return this.hasNext()?this.run(this.context.nextUrl):!1},e.prototype.run=function(t){var n,r,i;if(typeof this.options.clientId!="string"&&typeof this.options.accessToken!="string")throw new Error("Missing clientId or accessToken.");if(typeof this.options.accessToken!="string"&&typeof this.options.clientId!="string")throw new Error("Missing clientId or accessToken.");return this.options.before!=null&&typeof this.options.before=="function"&&this.options.before.call(this),typeof document!="undefined"&&document!==null&&(i=document.createElement("script"),i.id="instafeed-fetcher",i.src=t||this._buildUrl(),n=document.getElementsByTagName("head"),n[0].appendChild(i),r="instafeedCache"+this.unique,window[r]=new e(this.options,this),window[r].unique=this.unique),!0},e.prototype.parse=function(e){var t,n,r,i,s,o,u,a,f,l,c,h,p,d,v,m,g,y,b,w,E,S;if(typeof e!="object"){if(this.options.error!=null&&typeof this.options.error=="function")return this.options.error.call(this,"Invalid JSON data"),!1;throw new Error("Invalid JSON response")}if(e.meta.code!==200){if(this.options.error!=null&&typeof this.options.error=="function")return this.options.error.call(this,e.meta.error_message),!1;throw new Error("Error from Instagram: "+e.meta.error_message)}if(e.data.length===0){if(this.options.error!=null&&typeof this.options.error=="function")return this.options.error.call(this,"No images were returned from Instagram"),!1;throw new Error("No images were returned from Instagram")}this.options.success!=null&&typeof this.options.success=="function"&&this.options.success.call(this,e),this.context.nextUrl="",e.pagination!=null&&(this.context.nextUrl=e.pagination.next_url);if(this.options.sortBy!=="none"){this.options.sortBy==="random"?d=["","random"]:d=this.options.sortBy.split("-"),p=d[0]==="least"?!0:!1;switch(d[1]){case"random":e.data.sort(function(){return.5-Math.random()});break;case"recent":e.data=this._sortBy(e.data,"created_time",p);break;case"liked":e.data=this._sortBy(e.data,"likes.count",p);break;case"commented":e.data=this._sortBy(e.data,"comments.count",p);break;default:throw new Error("Invalid option for sortBy: '"+this.options.sortBy+"'.")}}if(typeof document!="undefined"&&document!==null&&this.options.mock===!1){a=e.data,this.options.limit!=null&&a.length>this.options.limit&&(a=a.slice(0,this.options.limit+1||9e9)),n=document.createDocumentFragment(),this.options.filter!=null&&typeof this.options.filter=="function"&&(a=this._filter(a,this.options.filter));if(this.options.template!=null&&typeof this.options.template=="string"){i="",o="",l="",v=document.createElement("div");for(m=0,b=a.length;m<b;m++)s=a[m],u=s.images[this.options.resolution].url,this.options.useHttp||(u=u.replace("http://","//")),o=this._makeTemplate(this.options.template,{model:s,id:s.id,link:s.link,image:u,caption:this._getObjectProperty(s,"caption.text"),likes:s.likes.count,comments:s.comments.count,location:this._getObjectProperty(s,"location.name")}),i+=o;v.innerHTML=i,S=[].slice.call(v.childNodes);for(g=0,w=S.length;g<w;g++)h=S[g],n.appendChild(h)}else for(y=0,E=a.length;y<E;y++)s=a[y],f=document.createElement("img"),u=s.images[this.options.resolution].url,this.options.useHttp||(u=u.replace("http://","//")),f.src=u,this.options.links===!0?(t=document.createElement("a"),t.href=s.link,t.appendChild(f),n.appendChild(t)):n.appendChild(f);document.getElementById(this.options.target).appendChild(n),r=document.getElementsByTagName("head")[0],r.removeChild(document.getElementById("instafeed-fetcher")),c="instafeedCache"+this.unique,window[c]=void 0;try{delete window[c]}catch(x){}}return this.options.after!=null&&typeof this.options.after=="function"&&this.options.after.call(this),!0},e.prototype._buildUrl=function(){var e,t,n;e="https://api.instagram.com/v1";switch(this.options.get){case"popular":t="media/popular";break;case"tagged":if(typeof this.options.tagName!="string")throw new Error("No tag name specified. Use the 'tagName' option.");t="tags/"+this.options.tagName+"/media/recent";break;case"location":if(typeof this.options.locationId!="number")throw new Error("No location specified. Use the 'locationId' option.");t="locations/"+this.options.locationId+"/media/recent";break;case"user":if(typeof this.options.userId!="number")throw new Error("No user specified. Use the 'userId' option.");if(typeof this.options.accessToken!="string")throw new Error("No access token. Use the 'accessToken' option.");t="users/"+this.options.userId+"/media/recent";break;default:throw new Error("Invalid option for get: '"+this.options.get+"'.")}return n=""+e+"/"+t,this.options.accessToken!=null?n+="?access_token="+this.options.accessToken:n+="?client_id="+this.options.clientId,this.options.limit!=null&&(n+="&count="+this.options.limit),n+="&callback=instafeedCache"+this.unique+".parse",n},e.prototype._genKey=function(){var e;return e=function(){return((1+Math.random())*65536|0).toString(16).substring(1)},""+e()+e()+e()+e()},e.prototype._makeTemplate=function(e,t){var n,r,i,s,o;r=/(?:\{{2})([\w\[\]\.]+)(?:\}{2})/,n=e;while(r.test(n))i=n.match(r)[1],s=(o=this._getObjectProperty(t,i))!=null?o:"",n=n.replace(r,""+s);return n},e.prototype._getObjectProperty=function(e,t){var n,r;t=t.replace(/\[(\w+)\]/g,".$1"),r=t.split(".");while(r.length){n=r.shift();if(!(e!=null&&n in e))return null;e=e[n]}return e},e.prototype._sortBy=function(e,t,n){var r;return r=function(e,r){var i,s;return i=this._getObjectProperty(e,t),s=this._getObjectProperty(r,t),n?i>s?1:-1:i<s?1:-1},e.sort(r.bind(this)),e},e.prototype._filter=function(e,t){var n,r,i,s,o;n=[],i=function(e){if(t(e))return n.push(e)};for(s=0,o=e.length;s<o;s++)r=e[s],i(r);return n},e}(),t=typeof exports!="undefined"&&exports!==null?exports:window,t.Instafeed=e}).call(this);
 // Generated by CoffeeScript 1.3.3
 (function(){var e,t;e=function(){function e(e,t){var n,r;this.options={target:"instafeed",get:"popular",resolution:"thumbnail",sortBy:"none",links:!0,mock:!1,useHttp:!1};if(typeof e=="object")for(n in e)r=e[n],this.options[n]=r;this.context=t!=null?t:this,this.unique=this._genKey()}return e.prototype.hasNext=function(){return typeof this.context.nextUrl=="string"&&this.context.nextUrl.length>0},e.prototype.next=function(){return this.hasNext()?this.run(this.context.nextUrl):!1},e.prototype.run=function(t){var n,r,i;if(typeof this.options.clientId!="string"&&typeof this.options.accessToken!="string")throw new Error("Missing clientId or accessToken.");if(typeof this.options.accessToken!="string"&&typeof this.options.clientId!="string")throw new Error("Missing clientId or accessToken.");return this.options.before!=null&&typeof this.options.before=="function"&&this.options.before.call(this),typeof document!="undefined"&&document!==null&&(i=document.createElement("script"),i.id="instafeed-fetcher",i.src=t||this._buildUrl(),n=document.getElementsByTagName("head"),n[0].appendChild(i),r="instafeedCache"+this.unique,window[r]=new e(this.options,this),window[r].unique=this.unique),!0},e.prototype.parse=function(e){var t,n,r,i,s,o,u,a,f,l,c,h,p,d,v,m,g,y,b,w,E,S;if(typeof e!="object"){if(this.options.error!=null&&typeof this.options.error=="function")return this.options.error.call(this,"Invalid JSON data"),!1;throw new Error("Invalid JSON response")}if(e.meta.code!==200){if(this.options.error!=null&&typeof this.options.error=="function")return this.options.error.call(this,e.meta.error_message),!1;throw new Error("Error from Instagram: "+e.meta.error_message)}if(e.data.length===0){if(this.options.error!=null&&typeof this.options.error=="function")return this.options.error.call(this,"No images were returned from Instagram"),!1;throw new Error("No images were returned from Instagram")}this.options.success!=null&&typeof this.options.success=="function"&&this.options.success.call(this,e),this.context.nextUrl="",e.pagination!=null&&(this.context.nextUrl=e.pagination.next_url);if(this.options.sortBy!=="none"){this.options.sortBy==="random"?d=["","random"]:d=this.options.sortBy.split("-"),p=d[0]==="least"?!0:!1;switch(d[1]){case"random":e.data.sort(function(){return.5-Math.random()});break;case"recent":e.data=this._sortBy(e.data,"created_time",p);break;case"liked":e.data=this._sortBy(e.data,"likes.count",p);break;case"commented":e.data=this._sortBy(e.data,"comments.count",p);break;default:throw new Error("Invalid option for sortBy: '"+this.options.sortBy+"'.")}}if(typeof document!="undefined"&&document!==null&&this.options.mock===!1){a=e.data,this.options.limit!=null&&a.length>this.options.limit&&(a=a.slice(0,this.options.limit+1||9e9)),n=document.createDocumentFragment(),this.options.filter!=null&&typeof this.options.filter=="function"&&(a=this._filter(a,this.options.filter));if(this.options.template!=null&&typeof this.options.template=="string"){i="",o="",l="",v=document.createElement("div");for(m=0,b=a.length;m<b;m++)s=a[m],u=s.images[this.options.resolution].url,this.options.useHttp||(u=u.replace("http://","//")),o=this._makeTemplate(this.options.template,{model:s,id:s.id,link:s.link,image:u,caption:this._getObjectProperty(s,"caption.text"),likes:s.likes.count,comments:s.comments.count,location:this._getObjectProperty(s,"location.name")}),i+=o;v.innerHTML=i,S=[].slice.call(v.childNodes);for(g=0,w=S.length;g<w;g++)h=S[g],n.appendChild(h)}else for(y=0,E=a.length;y<E;y++)s=a[y],f=document.createElement("img"),u=s.images[this.options.resolution].url,this.options.useHttp||(u=u.replace("http://","//")),f.src=u,this.options.links===!0?(t=document.createElement("a"),t.href=s.link,t.appendChild(f),n.appendChild(t)):n.appendChild(f);document.getElementById(this.options.target).appendChild(n),r=document.getElementsByTagName("head")[0],r.removeChild(document.getElementById("instafeed-fetcher")),c="instafeedCache"+this.unique,window[c]=void 0;try{delete window[c]}catch(x){}}return this.options.after!=null&&typeof this.options.after=="function"&&this.options.after.call(this),!0},e.prototype._buildUrl=function(){var e,t,n;e="https://api.instagram.com/v1";switch(this.options.get){case"popular":t="media/popular";break;case"tagged":if(typeof this.options.tagName!="string")throw new Error("No tag name specified. Use the 'tagName' option.");t="tags/"+this.options.tagName+"/media/recent";break;case"location":if(typeof this.options.locationId!="number")throw new Error("No location specified. Use the 'locationId' option.");t="locations/"+this.options.locationId+"/media/recent";break;case"user":if(typeof this.options.userId!="number")throw new Error("No user specified. Use the 'userId' option.");if(typeof this.options.accessToken!="string")throw new Error("No access token. Use the 'accessToken' option.");t="users/"+this.options.userId+"/media/recent";break;default:throw new Error("Invalid option for get: '"+this.options.get+"'.")}return n=""+e+"/"+t,this.options.accessToken!=null?n+="?access_token="+this.options.accessToken:n+="?client_id="+this.options.clientId,this.options.limit!=null&&(n+="&count="+this.options.limit),n+="&callback=instafeedCache"+this.unique+".parse",n},e.prototype._genKey=function(){var e;return e=function(){return((1+Math.random())*65536|0).toString(16).substring(1)},""+e()+e()+e()+e()},e.prototype._makeTemplate=function(e,t){var n,r,i,s,o;r=/(?:\{{2})([\w\[\]\.]+)(?:\}{2})/,n=e;while(r.test(n))i=n.match(r)[1],s=(o=this._getObjectProperty(t,i))!=null?o:"",n=n.replace(r,""+s);return n},e.prototype._getObjectProperty=function(e,t){var n,r;t=t.replace(/\[(\w+)\]/g,".$1"),r=t.split(".");while(r.length){n=r.shift();if(!(e!=null&&n in e))return null;e=e[n]}return e},e.prototype._sortBy=function(e,t,n){var r;return r=function(e,r){var i,s;return i=this._getObjectProperty(e,t),s=this._getObjectProperty(r,t),n?i>s?1:-1:i<s?1:-1},e.sort(r.bind(this)),e},e.prototype._filter=function(e,t){var n,r,i,s,o;n=[],i=function(e){if(t(e))return n.push(e)};for(s=0,o=e.length;s<o;s++)r=e[s],i(r);return n},e}(),t=typeof exports!="undefined"&&exports!==null?exports:window,t.Instafeed=e}).call(this);
+'use strict'
+
+/*
+	utility objects
+
+*/
+var sl_ga = (function() {
+
+	var extract_event = function() {
+
+		var category = $(this).data("ev-cat");
+		if (!(category && category.length))
+			return;
+
+		var action = $(this).data("ev-act");
+		if (!(action && action.length))
+			return;
+
+		var value = parseInt($(this).data("ev-val"));
+		value = isNaN(value) ? 0 : value;
+
+		var labels = $(this).data("ev-lbls");
+
+		return {
+			'hitType': 'event', // Required.
+			'eventCategory': category, // Required.
+			'eventAction': action, // Required.
+			'eventLabel': labels,
+			'eventValue': value
+		}
+	};
+
+	var utility = {
+		extract_event: extract_event
+	};
+	return utility;
+
+})(this);
+
+$(document).ready(function() {
+
+/*
+	You can define google analytics on events in this format:
+	<a data-ga-ev data-ev-cat = "Leads" data-ev-act = "Call" data-ev-val = "5" data-ev-lbls = "Call - First Visit page" href = "tel:877-754-6832" class="greenHighight2">877-skin-team</a>
+	where above attributes intepret following:
+	1. data-ev-cat -> Data Event Category
+	2. data-ev-act -> Data Event Action
+	3. data-ev-val -> Data Event value
+	4. data-ev-lbls -> Data Event Labels
+*/
+$("*[data-ga-ev]").on("click", function(event) {
+	if (!ga)
+		return;
+	var event_obj = sl_ga.extract_event.call(this);
+	ga('send', event_obj);
+	return true;
+});
+
+// form on submit 
+if ($('#subscriptionform').length) {
+	$('#subscriptionform').on("submit", function(event) {
+		event.preventDefault();
+		var self = $(this);
+		var ga_element = $("*[data-ga-ajx-success]", this);
+
+		var xhr_req = $.post(self.attr("action"), self.serialize(), function(data) {
+			if (data.status == "success") {
+
+				var event_obj = extract_event.call(self);
+				ga('send', event_obj);
+
+				$(self).hide();
+				$("#thanksDiv").show();
+			} else
+				alert("Sorry. Failed to subscribe. Please try again");
+		}, "json");
+		xhr_req.fail(function() {
+			alert("failed to subscribe");
+		});
+		return false;
+	});
+	$('#invokeSubmit').on("keypress", function(event) {
+		if (event.keyCode == 13) {
+			$('#subscriptionform').submit();
+		}
+	});
+}
+// if the submission happens successful 
+if ($("#close-thanksDiv").length)
+	$("#close-thanksDiv").on("click", function() {
+		$("#thanksDiv").hide();
+		$("#subscriptionform").show().find("input[type='text'], input[type='email'], input[type = 'tel']").val("")
+	});
+});
+
+
+//Angular snippets:
+var SLWebApp = angular.module("SLWeb", ['ngResource', 'ngRoute', 'ngAnimate']).factory('requestInterceptor',[ '$q', '$rootScope',function ($q, $rootScope){
+    $rootScope.loadingRequests = {global : 0};
+    var incrementCount = function(loaderflag){
+      $rootScope.loadingRequests.global++;
+      typeof $rootScope.loadingRequests[loaderflag] != "undefined" ? $rootScope.loadingRequests[loaderflag]++ : ($rootScope.loadingRequests[loaderflag] = 1)
+    };
+    var decrementCount = function(loaderflag){
+      $rootScope.loadingRequests.global--;
+      typeof $rootScope.loadingRequests[loaderflag] != "undefined" ? $rootScope.loadingRequests[loaderflag]-- : ($rootScope.loadingRequests[loaderflag] = 1)
+    };
+    return {
+         'request': function (config) {
+                config.headers && config.headers.loaderflag ? incrementCount(config.headers.loaderflag) : '';
+                return config || $q.when(config);
+            },
+
+          'requestError': function(rejection) {
+              rejection.config.headers && rejection.config.headers.loaderflag ? decrementCount(rejection.config.headers.loaderflag) : '';
+              return $q.reject(rejection);
+          },
+
+          'response': function(response) {
+              response.config.headers && response.config.headers.loaderflag ? decrementCount(response.config.headers.loaderflag) : '';
+              return response || $q.when(response);
+          },
+
+          'responseError': function(rejection) {
+              rejection.config.headers && rejection.config.headers.loaderflag ? decrementCount(rejection.config.headers.loaderflag) : '';
+              return $q.reject(rejection);
+          }
+        }
+}]).directive("listenXhr",['$rootScope','$compile', '$timeout', function($rootScope, $compile, $timeout){
+  //Keep listening for $rootScope.pendingRequests
+  return{
+    restrict : 'A',
+    scope : {flag : '=', loaderType : '@'
+    },
+    link : function(scope, elem, attr){
+      if (scope.loaderType == 'small'){
+        $(elem).after($compile('<div class="new-loader" ng-show="flag > 0"><img src="images/ajax-loader-small.gif"></div>')(scope));
+      } else {
+        $(elem).after($compile("<div class='fc1 center1' ng-show='flag > 0'><img class='imgloader' src='/kiosk/images/ajax-loading-img.gif' style='padding-top: 12px' class = 'goright comPad'/></div>")(scope));
+      }
+      scope.$watch('flag', function(new_value, old_value){
+        if(scope.flag > 0)
+          $(elem).hide();
+        else
+          $(elem).show();
+        $timeout(function(){scope.$apply();},0);
+      });
+    }
+  };
+}]);
+
+SLWebApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
+      delete $httpProvider.defaults.headers.common['X-Requested-With'];
+      $httpProvider.interceptors.push('requestInterceptor');
+}]);
+
+SLWebApp.factory("cookiemgr", [function(){
+	var config = {expires : 365, path: '/'};
+	var _set_cookie = function(key, value, conf){
+		conf = conf ? conf : config;
+		conf.path = "/";
+		return $.cookie(key, value, conf);
+	};
+	var _get_cookie = function(key){
+		return key ? $.cookie(key) : null;
+	};
+	var _remove_cookie = function(key, conf){
+		//return $.cookie(key, null, {expires : -1, path : '/'});
+		return $.removeCookie(key, {path : '/'});
+	};
+
+	return{
+		getCookie : function(key){
+			return _get_cookie(key);
+		},
+		setCookie : function(key, value){
+			return _set_cookie(key, value);
+		},
+		removeCookie : function(key){
+			return _remove_cookie(key);
+		}
+	};
+}]);
+
+SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', 'customError', '$rootScope', function($scope, localCache, cookiemgr, customError, $rootScope){	
+	var self = this;
+	var init = function(){
+		$(".till-ng-loaded").removeClass("till-ng-loaded");
+		if(global.booking_customer){
+			localCache.set("booking_customer", global.booking_customer);
+		}
+	};
+
+	this.parseJSON = function(str){
+		try{
+			return JSON.parse(str);
+		}catch(e){
+			return {"error" : "Bad JSON"};
+		}
+	};
+	this.isError = function(obj, type){
+		return customError.isError(obj, type);
+	};
+	this.initializeLocation = function(params){
+		return localCache.set("location", params);
+	};
+	this.isAjaxProgress = function(flag){
+		return $rootScope.loadingRequests[flag];
+	};
+	init();
+}]);
+
+SLWebApp.factory("localCache", function(){
+	var cache = {};
+	return {
+		get : function(key){
+			return cache[key];
+		},
+		set : function(key, value){
+			cache[key] = value;
+			return this;
+		}
+	};
+});
 
 $(document).ready(function() {
 

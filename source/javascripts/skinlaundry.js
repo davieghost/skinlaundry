@@ -227,7 +227,7 @@ SLWebApp.factory('location', ['cookiemgr', function(cookiemgr){
 	
 	var stores_sorted_by_distance = [];
 	var def_cookie_key = 'defstore';
-	var test_origin = [34.109787, -117.710664];
+	var test_origin = [34.130352, -117.708338];
 	if(!geocoder)
 		console.warn("Geocoder not defined. Must resolve this dependency");
 
