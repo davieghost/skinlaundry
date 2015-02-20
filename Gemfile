@@ -17,6 +17,8 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 gem 'image_optim'
 gem 'middleman-imageoptim'
 
+gem 'shopify_api'
+
 
 # for re-writing URLs
 # gem 'rack-rewrite'

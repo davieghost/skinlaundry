@@ -52,16 +52,37 @@ def isEnvironment environment
   ENV['RACK_ENV'] == environment
 end
 
-def isProduction 
+def isProduction? 
   isEnvironment "production"
+end
+
+def getShopifyProductByCollection collection_id
+  ShopifyAPI::Product.find(:all, :params => {:collection_id => collection_id})
+end
+
+def initializeShopify 
+  shop_url = "https://#{$SHOPIFY_API_KEY}:#{$SHOPIFY_API_PASSWORD}@#{$SHOPIFY_API_SHOP_NAME}.myshopify.com/admin"
+  ShopifyAPI::Base.site = shop_url
 end
 
 $GOOGLE_API_KEY = 'AIzaSyCRlB_IGbIXk3WEEreLjAbYYOaq5SGHTC8'
 ENVIRONMENT = ENV['RACK_ENV'] ||= 'development'
-$BOOKING_ENDPOINT = isProduction ? ENV['BOOKING_ENDPOINT'] : "http://sl-book.herokuapp.com/"
-$SHOPIFY_BASE_URL = isProduction ? ENV['SHOPIFY_BASE_URL'] : "http://shop.skinlaundry.com/"
-$COOKIE_DOMAIN = isProduction ? ENV['COOKIE_DOMAIN'] : ""
+$BOOKING_ENDPOINT = isProduction? ? ENV['BOOKING_ENDPOINT'] : "http://sl-book.herokuapp.com/"
+
+#shopify configurations
+$SHOPIFY_API_KEY = isProduction? ? ENV['SHOPIFY_API_KEY'] : 'b5f953b408fcb211151d5ade657474aa'
+$SHOPIFY_API_PASSWORD = isProduction? ? ENV['SHOPIFY_API_PASSWORD'] : '97a936e0bacda9064f2d400e63cd960e'
+$SHOPIFY_API_SHOP_NAME = isProduction? ? ENV['SHOPIFY_API_SHOP_NAME'] : 'skinlaundry'
+$SHOPIFY_BASE_URL = isProduction? ? ENV['SHOPIFY_BASE_URL'] : "http://shop.skinlaundry.com/"
+$SHOPIFY_COLLECTIONS = {"shop" => 30578547, "featured_product" => 31145839, "4-step-system" => 31190943}
+
+$COOKIE_DOMAIN = isProduction? ? ENV['COOKIE_DOMAIN'] : ""
 $LOCATIONS_LIST = JSON.parse(File.read(ENV["MM_ROOT"] + "/jsons/stores.json"))
+
+initializeShopify()
+$SHOPIFY_PRODUCTS = {}
+$SHOPIFY_PRODUCTS["shop"] = getShopifyProductByCollection($SHOPIFY_COLLECTIONS['shop'])
+$SHOPIFY_PRODUCTS["featured"] = getShopifyProductByCollection($SHOPIFY_COLLECTIONS['featured_product'])
 
 set :css_dir, 'stylesheets'
 

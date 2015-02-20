@@ -190,10 +190,16 @@ SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootSco
 	var init = function(){
 		$(".till-ng-loaded").removeClass("till-ng-loaded");
 		location.getSortedStores(function(data){
-			$timeout(function(){self.sorted_stores = data;},0);
-			location.getDefaultLocation(function(store){
-				self.default_location = store;
-			});
+			$timeout(function(){
+				self.sorted_stores = data;
+				location.getDefault(function(store){
+					if(store && store.length)
+						self.default_location = store;
+					else{
+						self.sorted_stores.length && self.sorted_stores[0].distance_details.status == "OK" ? location.setDefault(self.sorted_stores[0].name) : '';
+					}
+				});
+			},0);
 		})
 	};
 
@@ -204,9 +210,11 @@ SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootSco
 			return {"error" : "Bad JSON"};
 		}
 	};
-	this.initializeLocation = function(params){
-		return localCache.set("location", params);
+
+	this.setDefaultLocation = function(location_name){
+		location.setDefault(location_name);
 	};
+
 	this.isAjaxProgress = function(flag){
 		return $rootScope.loadingRequests[flag];
 	};
@@ -235,27 +243,21 @@ SLWebApp.factory('location', ['cookiemgr', function(cookiemgr){
 		console.warn("Geocoder not defined. Must resolve this dependency");
 
 	var locationfactory =  {
-		getDefaultLocation : function(callback){
+		getDefault : function(callback){
 			var default_location = cookiemgr.getCookie(def_cookie_key);
-			
-			if(default_location){
-				callback(default_location);
-			}else{
-				locationfactory.getSortedStores(function(stores){
-					default_location = stores[0].name;
-					cookiemgr.setCookie(default_location);
-					callback(default_location);
-				});
-			}
+			callback(default_location);
 		},
 		getSortedStores : function(callback){
 			if(stores_sorted_by_distance.length)
 				callback(stores_sorted_by_distance);
 			else
-				geocoder.getNearestDestination(test_origin, stores, function(sorted_stores){
+				geocoder.getNearestDestination(null, stores, function(sorted_stores){
 						stores_sorted_by_distance = sorted_stores;
 						callback(sorted_stores);
 				});
+		},
+		setDefault : function(location_name){
+			location_name ? cookiemgr.setCookie(def_cookie_key, location_name) : '';
 		}	
 	};
 
