@@ -1,0 +1,92 @@
+@import "compass";
+@import 'variables';
+$tablet-width: 980px;
+.hide-m {
+  @media only screen and (max-width: $tablet-portrait) {
+    display: none!important;
+  }
+}
+
+.hide-d {
+  @media only screen and (min-width: $tablet-portrait + 1px) {
+    display: none!important;
+  }
+}
+
+.shop-treatments-default {
+	#main {
+		position: relative;
+		margin: 150px auto 0;
+		padding-bottom: 30px;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+		font-family: 'DIN';
+	    font-size: 15px;
+	    line-height: 1.4em;
+		color: #53534a;
+
+		h1 {
+		  font-family: 'Archer-LightItalic';
+	      font-size: 50px;
+	      font-weight: 400;
+	      margin-bottom: .1em;
+		}
+
+		h2 {
+		  font-family: 'DIN';
+	      font-size: 14px;
+	      font-weight: 400;
+	      margin-bottom: 33px;
+	      color: $laundry-green;
+		}
+
+		.treatments {
+			padding: 40px 20px;
+		}
+
+		.title {
+			color: $laundry-black;
+
+			font: 18px 'DIN-Medium', sans-serif;
+			text-transform: uppercase;
+		}
+
+		.location-btn {
+			margin: 15px auto;
+
+			padding: 15px 70px;
+
+			background-color: #fff;
+			color: $laundry-green;
+
+			font-size: 15px;
+			text-transform: uppercase;
+
+			@include transition(all .3s ease);
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: $laundry-black;
+				color: white;
+			}
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+
+		//i made this
+		.row {
+		  width: 100%;
+		}
+
+
+		@media only screen and (max-width: $mobile-width) {
+		    width: 90%;
+		    margin-top: 0;
+		}
+	}
+}
