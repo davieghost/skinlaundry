@@ -1,17 +1,6 @@
 @import "compass";
 @import 'variables';
 $tablet-width: 980px;
-.hide-m {
-  @media only screen and (max-width: $tablet-portrait) {
-    display: none!important;
-  }
-}
-
-.hide-d {
-  @media only screen and (min-width: $tablet-portrait + 1px) {
-    display: none!important;
-  }
-}
 
 .contact-us{
 	#main {
@@ -29,7 +18,7 @@ $tablet-width: 980px;
 		  font-family: 'Archer-LightItalic';
 	      font-size: 50px;
 	      font-weight: 400;
-	      margin-bottom: .3em;
+	      margin: 50px 0 40px;
 		}
 
 		.box-left,
@@ -54,32 +43,40 @@ $tablet-width: 980px;
 		}
 
 		.hq-details {
-			padding: 50px;
+			padding: 25px;
 
 			text-align: center;
+
+			@media screen and (min-width: $tablet-portrait) {
+				padding: 75px 50px;
+			}
 		}
 
-		.title {
+		.hq-title {
 			margin: 10px 0;
 
 			@media screen and (min-width: $tablet-portrait) {
-				margin: 30px 0;
+				margin: 30px 0 20px;
 			}
 			
 		}
 
 		.address {
-			font: 14px 'DIN', serif;
-
 			text-transform: uppercase;
 		}
 
 		.contact-info {
-			padding: 50px 20px 100px;
+			padding: 20px;
+
+			@media screen and (min-width: $tablet-portrait) {
+				padding: 50px 20px;
+			}
 
 			text-align: center;
 
 			h2 {
+				margin: 10px auto 30px;
+
 				font: 40px 'Archer-LightItalic', sans-serif;
 			}
 
@@ -107,24 +104,40 @@ $tablet-width: 980px;
 				color: $laundry-black;
 
 				text-decoration: none;
+
+				&:active,
+				&:focus,
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 
 		.google-maps-container {
-	      position: relative;
+			position: relative;
 
-	      height: 0;
+			height: 0;
 
-	      padding-top: 25px;
-	      padding-bottom: 56.25%; /* 16:9 */
+			padding-top: 25px;
+			padding-bottom: 56.25%; /* 16:9 */
 		}
 
 		.google-maps-container iframe {
-	      position: absolute;
-	      top: 0;
-	      left: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
 
-	      width: 100%;
+			width: 100%;
+
+			height: 362px;
+
+			.gm-style {
+				.place-card-medium {
+					display: none !important;
+				}
+			}
 		}
 
 		h3 {

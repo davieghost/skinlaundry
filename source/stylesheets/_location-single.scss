@@ -1,19 +1,8 @@
 @import "compass";
 @import 'variables';
 $tablet-width: 980px;
-.hide-m {
-  @media only screen and (max-width: $tablet-portrait) {
-    display: none!important;
-  }
-}
 
-.hide-d {
-  @media only screen and (min-width: $tablet-portrait + 1px) {
-    display: none!important;
-  }
-}
-
-.location-single{
+.location-single {
 	#main {
 		position: relative;
 		margin: 150px auto 0;
@@ -29,7 +18,7 @@ $tablet-width: 980px;
 		  font-family: 'Archer-LightItalic';
 	      font-size: 50px;
 	      font-weight: 400;
-	      margin-bottom: .1em;
+	      margin-bottom: .5em;
 		}
 
 		h2 {
@@ -50,6 +39,8 @@ $tablet-width: 980px;
 		}
 
 		.box-left {
+			position: relative;
+
 			@media screen and (min-width: $tablet-portrait) {
 				width: 60%;
 			}
@@ -71,9 +62,13 @@ $tablet-width: 980px;
 		}
 
 		.branch-details {
-			padding: 50px;
+			padding: 10px;
 
 			text-align: center;
+
+			@media screen and (min-width: $tablet-width) {
+				padding: 40px 50px;
+			}
 		}
 
 		.title {
@@ -86,8 +81,6 @@ $tablet-width: 980px;
 			@media screen and (min-width: $tablet-portrait) {
 				margin: 30px 0;
 			}
-
-			
 		}
 
 		.address {
@@ -98,7 +91,8 @@ $tablet-width: 980px;
 
 		.book-online {
 			margin: 15px auto;
-			padding: 10px 40px;
+			border: 2px solid $laundry-green;
+			padding: 10px 30px;
 
 			background-color: #fff;
 			color: $laundry-green;
@@ -116,22 +110,10 @@ $tablet-width: 980px;
 			}
 		}
 
-		.google-maps-container {
-	      position: relative;
-
-	      height: 0;
-
-	      padding-top: 25px;
-	      padding-bottom: 56.25%; /* 16:9 */
+		.office-timing-details {
+			padding: 20px;
 		}
 
-		.google-maps-container iframe {
-	      position: absolute;
-	      top: 0;
-	      left: 0;
-
-	      width: 100%;
-		}
 
 		h3 {
 			color: $laundry-green;
@@ -139,6 +121,29 @@ $tablet-width: 980px;
 			font: 14px 'DIN', serif;
 
 			text-align: center;
+		}
+
+		.hours-title {
+			@media only screen and (min-width: $tablet-portrait) {
+				position: absolute;
+
+				top: 20px;
+				left: 50px;
+			}
+
+			@media only screen and (min-width: $tablet-width) {
+				left: 120px;
+			}
+
+		}
+
+		.map-title {
+			@media only screen and (min-width: $tablet-portrait) {
+				position: absolute;
+
+				top: 20px;
+				right: 20px;
+			}
 		}
 
 		.office-timings {
@@ -159,10 +164,26 @@ $tablet-width: 980px;
 				padding: 10px;
 				vertical-align: top;
 			}
-
-			.hours {
-			}
 		}
+
+		.google-maps-container {
+	      position: relative;
+
+	      height: 0;
+
+	      padding-top: 25px;
+	      padding-bottom: 56.25%; /* 16:9 */
+		}
+
+		.google-maps-container iframe {
+	      position: absolute;
+	      top: 0;
+	      left: 0;
+
+	      width: 100%;
+		}
+
+
 
 		.head {
 			width: 100%;
