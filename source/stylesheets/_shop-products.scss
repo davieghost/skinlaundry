@@ -1,0 +1,118 @@
+@import "compass";
+@import 'variables';
+$tablet-width: 980px;
+.hide-m {
+  @media only screen and (max-width: $tablet-portrait) {
+    display: none!important;
+  }
+}
+
+.hide-d {
+  @media only screen and (min-width: $tablet-portrait + 1px) {
+    display: none!important;
+  }
+}
+
+.shop-products {
+	#main {
+		position: relative;
+		margin: 150px auto 0;
+		padding-bottom: 30px;
+		max-width: 980px;
+		z-index: 1;
+		background-color: #fff;
+		font-family: 'DIN';
+	    font-size: 15px;
+	    line-height: 1.4em;
+		color: #53534a;
+
+		h1 {
+		  font-family: 'Archer-LightItalic';
+	      font-size: 50px;
+	      font-weight: 400;
+		}
+
+		h2 {
+		  font-family: 'DIN';
+	      font-size: 14px;
+	      font-weight: 400;
+	      margin-bottom: 33px;
+	      color: $laundry-green;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.title {
+			margin: 30px 0 10px;
+
+			font: 36px 'Archer-LightItalic', serif;
+			color: $laundry-black;
+
+			text-align: center;
+		}
+
+		.subtitle {
+			margin-top: 0;
+
+			color: #1bb0a5;
+
+			font: 18px 'DIN', sans-serif;
+		}
+
+
+		.product-title {
+			margin: 20px 0;
+
+			padding-right: 20px;
+			padding-left: 20px;
+
+			font: 14px/1.8 'DIN', serif;
+			color: $laundry-black;
+
+			text-align: center;
+		}
+
+		.product-price {
+			margin-bottom: 10px;
+
+			font-family: 'DIN-Medium', sans-serif;
+		}
+
+		.col-one-fourth {
+			width: 100%;
+
+			@media screen and (min-width: $tablet-portrait) {
+				width: 25%;
+
+				float: left;
+			}
+		}
+
+		.gap {
+			height: 100px;
+		}
+
+
+		.head {
+			width: 100%;
+
+			padding-top: 1em;
+			padding-bottom: 2em;
+
+			text-align: center;
+		}
+
+		//i made this
+		.row {
+		  width: 100%;
+		}
+
+
+		@media only screen and (max-width: $mobile-width) {
+		    width: 90%;
+		    margin-top: 0;
+		}
+	}
+}
