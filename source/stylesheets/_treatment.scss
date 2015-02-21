@@ -259,11 +259,15 @@ $background-height: 410px;
 			      overflow-x: hidden;
 			      .slide-control {
 			        position: absolute;
-			        bottom: 15%;
-			        left: 45%;
+			        bottom: 7%;
+			        left: 41%;
 			        z-index: 5;
 			        & > * {
 			          float: left;
+			        }
+			        @media only screen and (max-width: 480px) {
+			        	bottom: 4%;
+			        	left: 39%;
 			        }
 			        .circle {
 			          width: 8px;
@@ -279,14 +283,16 @@ $background-height: 410px;
 			          cursor: pointer;
 			          text-align: center;
 			          width: 16px;
-			          padding-top: 2px;
+			          margin-top: -2px;
+			          margin-right: 2px;
 			          color: $slide-control-color;
 			        }
 			        .slide-right {
 			          cursor: pointer;
 			          text-align: center;
 			          width: 16px;
-			          padding-top: 2px;
+			          margin-top: -2px;
+			          margin-left: 2px;
 			          color: $slide-control-color;
 			        }
 			      }
@@ -338,8 +344,7 @@ $background-height: 410px;
 				    }
 				  }
 			      #slide-01 {
-			        background-image: image-url("place1.jpg");
-			        opacity: .25;
+			        background-image: image-url("Before_After_1.jpg");
 			        display: block;
 			        .overlay-text {
 			          font-size: 20px;
@@ -349,9 +354,7 @@ $background-height: 410px;
 			        }
 			      }
 			      #slide-02 {
-			        background-image: image-url("place2.jpg");
-			        opacity: .25;
-			        
+			        background-image: image-url("Before_After_2.jpg");
 			        .overlay-text {
 			          font-size: 20px;
 			          .text-box {
@@ -360,10 +363,8 @@ $background-height: 410px;
 			        }
 			      }
 			      #slide-03 {
-			        background-image: image-url("place3.jpg");
-			        opacity: .25;
-			        .overlay-text {
-			          
+			        background-image: image-url("Before_After_3.jpg");
+			        .overlay-text {			          
 			          .text-box {
 			            margin-top: 10%;
 			          }
