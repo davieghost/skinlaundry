@@ -14,7 +14,7 @@
 
 		h1 {
 		  font-family: 'Archer-LightItalic';
-	      font-size: 50px;
+	      font-size: 60px;
 	      font-weight: 400;
 	      margin-bottom: .1em;
 	      @media only screen and (max-width: $tablet-portrait) {
@@ -45,11 +45,305 @@
 		  }
 		}
 
-		.it {
-			font-family: 'Archer-LightItalic';
-	      font-size: 16px;
+		//i made this part ⬇︎
+		.row {
+		  width: 100%;
+		  clear: both;
+		}
+		.regular {
+			height: 325px;
+				@media only screen and (max-width: $tablet-width) { 
+					margin-top: 0px;
+				}
+				@media only screen and (max-width: $tablet-portrait) {
+					height: 100%;
+					margin-top: 0px;
+				}
+		}
+		.short {
+			height: 280px;
+			@media only screen and (max-width: $tablet-portrait) {
+				height: 100%;
+			}
+		}
+		.short02 {
+			height: 240px;
+			@media only screen and (max-width: $tablet-portrait) {
+				height: 100%;
+			}
+		}
+		.short03 {
+			height: 240px;
+			@media only screen and (max-width: $mobile-width) {
+				height: 190px;
+				position: relative;
+				top: -70px;
+			}
+		}
+		
+		.block01 {
+			width: 40%;
+			height: 100%;
+			float: left;
+			display: inline-block;
+			background-image: url('/images/birds.png');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				display: block;
+				clear: both;
+				height: 238px;
+				min-width: 100%;
+			}
+			@media only screen and (min-width: $tablet-portrait) and (max-width: $tablet-width) {
+				background-size: 140%;
+			}
+
+		}
+		.block02 {
+			width: 60%;
+			display: inline-block;
+			float: left;
+			margin-top: 30px;
+			min-width: 295px;
+			padding: 20px 20px 0 20px;
+			text-align: center;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				padding: 40px 40px 0 20px;
+				float: none;
+				display: block;
+				clear: both;
+			}
+			@media only screen and (max-width: $tablet-width) {
+				margin-top: 0;
+				padding: 20px 20px 0 20px;
+			}
+		}
+		.block03 {
+			display: inline-block;
+			float: left;
+			width: 40%;
+			padding: 40px 40px 0 30px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				padding: 40px 40px 0 20px;
+				float: none;
+				display: block;
+				clear: both;
+			}
+			@media only screen and (max-width: $tablet-width) {
+				margin-top: 0;
+				padding: 20px 20px 0 20px;
+			}
+		}
+		.block04 {
+			display: inline-block;
+			float: left;
+			height: 100%;
+			width: 60%;
+			background-image: url('/images/face.jpg');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: center;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				display: block;
+				clear: both;
+				height: 238px;
+				min-width: 100%;
+			}
+			@media only screen and (min-width: $tablet-portrait) and (max-width: $tablet-width) {
+				background-size: 110%;
+			}
 		}
 
+		.block05 {
+			display: inline-block;
+			float: left;
+			width: 40%;
+			height: 100%;
+			background-image: url("/images/palmtree.jpg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			color: black;
+			text-align: center;
+			margin: 0 auto;
+			padding: 20px 80px 0 80px;
+			max-width: 100%;
+			background-position: right;
+			.mobile-wwd {
+				position: relative;
+				right: -110px;
+				width: 85%;
+				h3 {
+					font-size: 16px;
+				}
+				p {
+					font-size: 12px;
+				}
+			}
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				display: block;
+				clear: both;
+				height: 238px;
+				min-width: 100%;
+				background-position: left;
+			}
+			h2 {
+				font-family: 'DIN';
+				font-size: 2em;
+				line-height: 1.3em;
+				@media only screen and(max-width: $tablet-portrait) {
+					font-size: 1.7em;
+				}
+			}
+			a {
+				text-decoration: none;
+				color: white;
+				border: 1px solid white;
+				padding: 20px;
+				-webkit-transition: all .2s;
+			  -moz-transition: all .2s;
+			  -o-transition: all .2s;
+			  transition: all .2s;
+				&:hover {
+					color: $laundry-green;
+					background-color: white;
+
+				}
+			}
+			@media only screen and (min-width: $tablet-portrait) and (max-width: $tablet-width) {
+				padding: 20px 0 20px 0;
+			}
+		}
+		.block06 {
+			width: 60%;
+			display: inline-block;
+			float: left;
+			margin-top: 30px;
+			padding-left: 20%;
+			padding-right: 50px;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				padding: 40px;
+				float: none;
+				display: block;
+				clear: both;
+			}
+		}
+		.block07 {
+			display: inline-block;
+			float: left;
+			width: 40%;
+			padding: 10px 40px 0 40px;
+			p{
+				font-family: 'Archer-LightItalic';
+	    	font-size: 16px;
+			}
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				padding: 40px 40px 0 40px;
+				display: block;
+				clear: both;
+			}
+			@media only screen and (max-width: $tablet-width) {
+				margin-top: 0;
+				padding: 20px 20px 0 20px;
+				p{
+					font-size: 14px;
+					line-height: 1.1em;
+				}
+			}
+			@media only screen and (max-width: $mobile-width) {
+				width: 50%;
+				text-align: center;
+			}
+		}
+
+		.block08 {
+			display: inline-block;
+			float: left;
+			height: 100%;
+			width: 60%;
+			background-image: url('/images/water.jpg');
+			background-size: 67% 100%;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			max-width: 100%;
+			@media only screen and (max-width: $tablet-portrait) {
+				width: 100%;
+				float: none;
+				display: block;
+				clear: both;
+				height: 238px;
+				min-width: 100%;
+			}
+			@media only screen and (max-width: $mobile-width) {
+				height: 158px;
+				background-size: cover;
+			}
+		}
+		.block09 {
+			background-image:url('/images/flowers.jpg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position:bottom;
+			height: 100%;
+			display: inline-block;
+			float: left;
+			width: 20%;
+		}
+		.block10 {
+			background-image:url('/images/as_seen_in.jpg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position:center 60px;
+			height: 100%;
+			display: inline-block;
+			float: left;
+			width: 60%;
+			@media only screen and (max-width: $mobile-width) {
+				width: 100%;
+			}
+			p {
+				font-family: 'Archer-LightItalic';
+	      font-size: 25px;
+	      font-weight: 400;
+	      margin-bottom: .1em;
+	      line-height: 1.4em;
+	      text-align: left;
+			}
+		}
+		.block11 {
+			background-image:url('/images/surfing.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			height: 100%;
+			display: inline-block;
+			float: left;
+			width: 20%;
+			@media only screen and (max-width: $mobile-width) {
+				width: 184px;
+				height: 350px;
+				float: right;
+				background-position: right top;
+				position: relative;
+				top: -90px;
+			}
+		}
 		.head {
 			padding-top: 1em;
 			text-align: center;
@@ -59,234 +353,12 @@
 			   margin-bottom: auto;
 			}
 		}
-
-	    .block{
-			vertical-align: top;
-			display: inline-block;
-		}
-
-		.row1 {
-			height: 230px;
-		}
-
-		.row2 {
-			height: 310px;
-		}
-
-		.row3 {
-			height: 238px;
-		}
-
-		.row4 {
-			height: 250px;
-		}
-
-		.row5 {
-			height: 212px;
-		}
-
-		.right {
-			width: 62%;
-			margin: 0;
-			padding: 0;
-			@media only screen and (max-width: $tablet-portrait) {
-			   width: 100%;
-			}
-			a {
-				color: #000;
-				&:visited {
-					color: #000;
-				}
-			}
-		}
-
-		.center {
-			text-align: center;
-		}
-
-		.rel {
-			position: relative;
-		}
-
-		.padright {
-			padding-left: 8%;
-			padding-right: 8%;
-			@media only screen and (max-width: $tablet-portrait) {
-			   width: 100%;
-			   padding-left: 5%;
-			   padding-right: 5%;
-			}
-		}
-
-		#face {
-			background-image:url('/images/face.jpg');
-			background-size: 100% auto;
-			background-repeat: no-repeat;
-			@media only screen and (max-width: $tablet-portrait) {
-			   height: 220px;
-			}
-			@media only screen and (min-width: $mobile-width) and (max-width: 924px) {
-				//resize image larger to reach next row
-				background-size: 120% auto;
-			}
-		}
-
-		#palmtree {
-			width: 185px;
-			position: absolute;
-			top: 0;
-			right: 0;
-			@media only screen and (max-width: $tablet-portrait) {
-			   width: 160px;
-			}
-		}
-
-		#water {
-			background-image:url('/images/water.jpg');
-			background-size: 447px auto;
-			background-repeat: no-repeat;
-			@media only screen and (max-width: $tablet-portrait) {
-			   height: 120px;
-			}
-		}
-
-		#yenreis {
-			display: inline-block;
-			margin-left: 30px;
-			vertical-align: text-bottom;
-		}
-
-		#founder {
-			display: inline-block;
-			margin-top: -15px;
-		}
-
-		#flowers {
-			width: 185px;
-			height: 212px;
-			@media only screen and (max-width: $tablet-width) {
-			   display: none;
-			}
-		}
-
-		#imgflowers {
-			position: absolute;
-			bottom: 0;
-			width: 183px;
-			@media only screen and (max-width: $tablet-portrait) {
-			   		//width: 100%;
-			   		position: static;
-				}
-		}
-
-		#logos {
-			width: 634px;
-			height: 212px;
-			img#imglogos {
-				width: 500px;
-				position: absolute;
-				bottom: 0;
-				left: 70px;
-				@media only screen and (max-width: $tablet-portrait) {
-			   		width: 80%;
-			   		position: static;
-				}
-			}
-			@media only screen and (max-width: $tablet-portrait) {
-			   width: 100%;
-			   height: auto;
-			}
-		}
-
-		#asseenin {
-		  font-family: 'Archer-LightItalic';
-	      font-size: 25px;
-	      font-weight: 400;
-	      margin-bottom: .1em;
-	      line-height: 1.4em;
-	      text-align: left;
-	      @media only screen and (max-width: $tablet-portrait) {
-			   padding-left: 25px;
-		  }
-		}
-
-		#surfing {
-			background-image:url('/images/surfing.jpg');
-			background-size: 100% auto;
-			background-repeat: no-repeat;
-			width: 161px;
-			height: 212px;
-			@media only screen and (max-width: $tablet-portrait) {
-			   width: 100%;
-			   height: 180px;
-			   background-size: 34% auto;
-			   background-position: right top;
-			}
-		}
-
-		.padtop {
-			padding-top: 3em !important;
-		}
-
-		.left {
-			width: 38%;
-			margin: 0;
-			padding: 0;
-			@media only screen and (max-width: $tablet-portrait) {
-			   width: 100%;
-			}
-		}
-
-		#birds{
-			@media only screen and (max-width: $tablet-portrait) {
-			   height: 140px;
-			   overflow: hidden;
-			}
-		}
-
-		#imgbirds {
-			width: 100%;
-			position: absolute;
-			bottom: 0;
-			@media only screen and (max-width: $tablet-portrait) {
-			   position: static;
-			   bottom: none;
-			}
-		}
-
-		#wwd {
-			@media only screen and (max-width: $tablet-portrait) {
-			   height: auto;
-			}
-		}
-		#imgwwd {
+		.imgwwd {
 			margin: 0 auto;
-		}
-
-		.whitetext{
-			color: #fff;
-			padding: 5% 3%;
-			line-height: 1.4em;
-			letter-spacing: 2px;
-			text-align: center;
-		}
-
-		.padleft {
-			padding-left: 5%;
-			padding-right: 5%;
-			@media only screen and (max-width: $tablet-portrait) {
-			   width: 100%;
-			   padding-left: 5%;
-			   padding-right: 5%;
+			@media only screen and (max-width: $mobile-width) {
+				width: 110px;
 			}
 		}
-
-	    @media only screen and (max-width: $mobile-width) {
-		    width: 90%;
-		    line-height: normal;
-		    margin-top: 0;
-		}
-		
 	}
 
 	#bottombar {
@@ -318,7 +390,6 @@
 				color: white;
 				text-decoration: none;
 				&:hover{
-					//background-color: white;
 					background: rgba(53,193,170,.5);
 					background: -moz-linear-gradient(left, rgba(73,165,191,.5) 0%, rgba(53,193,170,.5) 100%);
 					background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,.5)), color-stop(100%, rgba(73,165,191,.5)));
