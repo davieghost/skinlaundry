@@ -177,6 +177,7 @@ SLWebApp.factory("cookiemgr", [function(){
 			return _get_cookie(key);
 		},
 		setCookie : function(key, value){
+			this.removeCookie(key); //Firstly remove the cookie and then set
 			return _set_cookie(key, value);
 		},
 		removeCookie : function(key){
@@ -192,13 +193,13 @@ SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootSco
 		location.getSortedStores(function(data){
 			$timeout(function(){
 				self.sorted_stores = data;
-				location.getDefault(function(store){
-					if(store && store.length)
-						self.default_location = store;
-					else{
-						self.sorted_stores.length && self.sorted_stores[0].distance_details.status == "OK" ? location.setDefault(self.sorted_stores[0].name) : '';
-					}
-				});
+				self.default_location = location.getDefault();
+				//If user doesn't already have a chosen location. Try to locate the nearest store as default for him
+				if(!(self.default_location && self.default_location.length)){
+					var default_store = self.default_location = self.sorted_stores.length && self.sorted_stores[0].distance_details.status == "OK" ? self.sorted_stores[0] : null;
+					default_store ? location.setDefault(default_store.name) : '';
+				}
+				self.default_zone = location.getDefaultZone();
 			},0);
 		})
 	};
@@ -238,15 +239,20 @@ SLWebApp.factory('location', ['cookiemgr', function(cookiemgr){
 	
 	var stores_sorted_by_distance = [];
 	var def_cookie_key = 'defstore';
+	var def_store_cookie_key = 'defzone';
 	var test_origin = [34.130352, -117.708338];
 	if(!geocoder)
 		console.warn("Geocoder not defined. Must resolve this dependency");
 
+	var getByLocationName = function(location_name){
+		return  _.find(stores, function(store){return store.name == location_name});
+	}
+
 	var locationfactory =  {
-		getDefault : function(callback){
-			var default_location = cookiemgr.getCookie(def_cookie_key);
-			callback(default_location);
+		getDefault : function(){
+			return cookiemgr.getCookie(def_cookie_key);
 		},
+
 		getSortedStores : function(callback){
 			if(stores_sorted_by_distance.length)
 				callback(stores_sorted_by_distance);
@@ -257,10 +263,27 @@ SLWebApp.factory('location', ['cookiemgr', function(cookiemgr){
 				});
 		},
 		setDefault : function(location_name){
-			location_name ? cookiemgr.setCookie(def_cookie_key, location_name) : '';
+			if(!(location_name && location_name.length))
+				return null;
+			var location = getByLocationName(location_name);
+			if(!location)
+				return null;
+			cookiemgr.setCookie(def_cookie_key, location.name);
+			cookiemgr.setCookie(def_store_cookie_key, location.zone);
+			return true;
+		},
+		getDefaultZone : function(){
+			return cookiemgr.getCookie(def_store_cookie_key);
 		}	
 	};
 
 	return locationfactory;
 
-}])
+}]);
+
+SLWebApp.factory('treatments', [function(){
+	var treatmentsfactory = {
+		
+	};
+	return treatmentsfactory;
+}]);

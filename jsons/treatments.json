@@ -1,0 +1,201 @@
+{
+	"treatments" : {
+			"introductory-plan-3-treatments" : {
+				"title" 					: "",
+				"sub_header" 			: "",
+				"additional_note" : "",
+				"category" : "Introductory Offers",
+				"zonal_specific_details" : {
+					"california" : {
+						"price" 					: "$100",
+						"sale_price" 			: "$100",
+						"title" 					: "3 Treatments for $100"
+					},
+					"arizona" : {
+						"price" 					: "$100",
+						"sale_price" 			: "$100",
+						"title" 					: "3 Treatments for $100"
+					},
+					"new york" : {
+						"price" 					: "100",
+						"sale_price" 			: "100",
+						"title" 					: "3 Treatments for $100"
+					}
+				}
+			},
+			"monthly-plan-basic" : {
+				"title" 					: "Basic",
+				"sub_header" 			: "",
+				"additional_note" : "",
+				"category" : "Monthly Membership",
+				"zonal_specific_details" : {
+					"california" : {
+						"price" 					: "50",
+						"sale_price" 			: "50",
+						"sub_header" 			: "1 for $50",
+						"additional_note" : "(additional $50)"
+					},
+					"arizona" : {
+						"price" 					: "50",
+						"sale_price" 			: "50",
+						"sub_header" 			: "1 for $50",
+						"additional_note" : "(additional $50)"
+					},
+					"new york" : {
+						"price" 					: "50",
+						"sale_price" 			: "50",
+						"sub_header" 			: "1 for $50",
+						"additional_note" : "(additional $50)"
+					}
+				}
+
+			},
+			"monthly-plan-silver" : {
+				"title" 					: "Silver",
+				"sub_header" 			: "4 for $160",
+				"additional_note" : "",
+				"category" : "Monthly Membership",
+				"zonal_specific_details" : {
+					"california" : {
+						"price" 					: "160",
+						"sale_price" 			: "160",
+						"sub_header" 			: "4 for $160",
+						"additional_note" : "(additional $35)"
+					},
+					"arizona" : {
+						"price" 					: "160",
+						"sale_price" 			: "160",
+						"sub_header" 			: "4 for $160",
+						"additional_note" : "(additional $35)"
+					},
+					"new york" : {
+						"price" 					: "160",
+						"sale_price" 			: "160",
+						"sub_header" 			: "4 for $160",
+						"additional_note" : "(additional $35)"
+					}
+				}
+			},
+			"monthly-plan-gold" : {
+				"title" 					: "Gold",
+				"sub_header" 			: "",
+				"additional_note" : "",
+				"category" : "Monthly Membership",
+				"zonal_specific_details" : {
+					"california" : {
+						"price" 					: "$250",
+						"sale_price" 			: "$250",
+						"sub_header" 			: "8 for $250",
+						"additional_note" : "(additional $35)"
+					},
+					"arizona" : {
+						"price" 					: "$250",
+						"sale_price" 			: "$250",
+						"sub_header" 			: "8 for $250",
+						"additional_note" : "(additional $35)"
+					},
+					"new york" : {
+						"price" 					: "$250",
+						"sale_price" 			: "$250",
+						"sub_header" 			: "8 for $250",
+						"additional_note" : "(additional $35)"
+					}
+				}
+			},
+			"monthly-plan-platinum": {
+				"title" 					: "Platinum",
+				"sub_header" 			: "",
+				"additional_note" : "",
+				"category" : "Monthly Membership",
+				"zonal_specific_details" : {
+					"california" : {
+						"price" 					: "$325",
+						"sale_price" 			: "$325",
+						"sub_header" 			: "15 for $325"
+					},
+					"arizona" : {
+						"price" 					: "$325",
+						"sale_price" 			: "$325",
+						"sub_header" 			: "15 for $325"
+					},
+					"new york" : {
+						"price" 					: "$325",
+						"sale_price" 			: "$325",
+						"sub_header" 			: "15 for $325"
+					}
+				}
+			},
+			"single-treatment-package" : {
+				"title" 					: "Single Treatment",
+				"sub_header" 			: "",
+				"category" : "Treatment Packages",
+				"zonal_specific_details" : {
+					"california" : {
+						"price" 					: "$50",
+						"sale_price" 			: "$50",
+						"sub_header" 			: "1 for $50"
+					},
+					"arizona" : {
+						"price" 					: "$50",
+						"sale_price" 			: "$50",
+						"sub_header" 			: "1 for $50"
+					},
+					"new york" : {
+						"price" 					: "$50",
+						"sale_price" 			: "$50",
+						"sub_header" 			: "1 for $50"
+					}
+				}
+			},
+			"3-treatments-package" : {
+				"title" 					: "3 Teatments",
+				"category" : "Treatment Packages",
+				"zonal_specific_details" : {
+					"california" : {
+						"price" 					: "$165",
+						"sale_price" 			: "$165",
+						"sub_header" 			: "2 for $165",
+						"additional_note" : "(3 month expiry)"
+					},
+					"arizona" : {
+						"price" 					: "$165",
+						"sale_price" 			: "$165",
+						"sub_header" 			: "2 for $165",
+						"additional_note" : "(3 month expiry)"
+					},
+					"new york" : {
+						"price" 					: "$165",
+						"sale_price" 			: "$165",
+						"sub_header" 			: "2 for $165",
+						"additional_note" : "(3 month expiry)"
+					}
+				}
+			},
+			"10-treatments-package":{
+				"title" 					: "10 Treatments",
+				"category" : "Treatment Packages",
+				"zonal_specific_details" : {
+					"california" : {
+						"price" 					: "$400",
+						"sale_price" 			: "$400",
+						"sub_header" 			: "10 for $400",
+						"additional_note" : "(3 month expiry)"
+					},
+					"arizona" : {
+						"price" 					: "$400",
+						"sale_price" 			: "$400",
+						"sub_header" 			: "10 for $400",
+						"additional_note" : "(3 month expiry)"
+					},
+					"new york" : {
+						"price" 					: "$400",
+						"sale_price" 			: "$400",
+						"sub_header" 			: "10 for $400",
+						"additional_note" : "(3 month expiry)"
+					}
+				}
+			}
+
+	},
+	"default" : "introductory-plan-3-treatments"
+}
