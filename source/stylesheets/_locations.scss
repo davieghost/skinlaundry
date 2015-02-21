@@ -17,9 +17,9 @@ $tablet-width: 980px;
 
 		h1 {
 		  font-family: 'Archer-LightItalic';
-	      font-size: 50px;
+	      font-size: 60px;
 	      font-weight: 400;
-	      margin-bottom: .1em;
+	      margin-bottom: .3em;
 		}
 
 		h2 {
@@ -31,7 +31,7 @@ $tablet-width: 980px;
 		}
 
 		.location-state {
-			margin: 50px 0 30px;
+			margin: 50px 0 40px;
 
 			font: 34px 'Archer-LightItalic', serif;
 			text-align: center;
@@ -55,10 +55,16 @@ $tablet-width: 980px;
 		.address-hours {
 			color: #53534a;
 
-			font: 12px 'DIN', serif;
+			font: 11px 'DIN-Medium', serif;
+		}
+
+		.phone-no {
+			margin-top: 20px;
+			margin-bottom: 5px;
 		}
 
 		.address-hours {
+			margin-top: 0;
 			margin-bottom: 40px;
 
 			text-transform: uppercase;
@@ -68,6 +74,8 @@ $tablet-width: 980px;
 
 			border-top: 1px solid transparent;
 			border-bottom: 1px solid transparent;
+
+			padding-bottom: 25px;
 			
 			-moz-border-image: -moz-linear-gradient(left, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
 			-webkit-border-image: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,1)), color-stop(100%, rgba(73,165,191,1)));

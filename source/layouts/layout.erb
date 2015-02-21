@@ -13,6 +13,9 @@
     <script>
       var globalvar = {cookie_domain : '<%= $COOKIE_DOMAIN %>'};
     </script>
+
+    <%= javascript_include_tag "instafeed" %>
+
   </head>
   <body class="<%= page_classes %>" ng-app = "SLWeb" ng-controller = "BaseCtrl as base">
     <div class="videobg">
@@ -49,6 +52,7 @@
     <script type = "text/javascript" src = "https://code.angularjs.org/1.2.28/angular-animate.js"></script>
     <script type = "text/javascript" src = "https://code.angularjs.org/1.2.26/angular-route.min.js"></script>
     <script type = "text/javascript" src = "https://code.angularjs.org/1.2.26/angular-resource.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <%= javascript_include_tag "geocode" %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "skinlaundry" %>
