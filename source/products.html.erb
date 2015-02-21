@@ -5,13 +5,15 @@
 	</div>
 
 	<div class="row treatments text-center clearfix">
-		<div class="col-one-fourth">
-			<img src="images/product-1.jpg" alt="">
-			<h3 class="product-title">NOURISHING CLEANSING OIL</h3>
-			<p class="product-price">$21.95</p>
-		</div>
+		<% $SHOPIFY_PRODUCTS['cleansing_essentials'].each do |product| %>
+		<a href = "<%= $SHOPIFY_BASE_URL + 'products/' + product['handle'] %>" target = "_blank"><div class="col-one-fourth">
+			<img src="<%= product["image"]["src"] %>" alt="" style = "max-width:184px;">
+			<h3 class="product-title"><%= product["title"]%></h3>
+			<p class="product-price"><%= '$'+product['variants'][0]['price']%></p>
+		</div></a>
+		<%end %>
 
-		<div class="col-one-fourth">
+		<!-- <div class="col-one-fourth">
 			<img src="images/product-1.jpg" alt="">
 			<h3 class="product-title">SKIN PURIFYING CREAM CLEANSER</h3>
 			<p class="product-price">$21.95</p>
@@ -27,7 +29,7 @@
 			<img src="images/product-1.jpg" alt="">
 			<h3 class="product-title">GENTLE FOAMING WASH</h3>
 			<p class="product-price">$21.95</p>
-		</div>
+		</div> -->
 	</div>
 
 	<div class="gap"></div>
@@ -36,7 +38,7 @@
 		<h3 class="subtitle">WHO NEEDS MAKEUP WHEN YOU HAVE SKIN LAUNDRY</h3>
 		<h1 class="title">Everyday Essentials</h1>
 
-		<div class="col-one-third">
+		<!-- <div class="col-one-third">
 			<img src="images/product-1.jpg" alt="">
 		
 			<h3 class="product-title">HYDRATING RADIANCE FACIAL TREATMENT MASK - 5 PACK</h3>
@@ -48,17 +50,20 @@
 		
 			<h3 class="product-title">RESTORING NIGHT SERUM</h3>
 			<p class="product-price">$48.00</p>
-		</div>
-
+		</div> -->
+		<% $SHOPIFY_PRODUCTS['everyday_essentials'].each do |product_ev| %>
+		<a href = "<%= $SHOPIFY_BASE_URL + 'products/' + product_ev['handle'] %>" target = "_blank">
 		<div class="col-one-third">
-			<img src="images/product-1.jpg" alt="">
+			<img src="<%= product_ev["images"].count > 0 ?  product_ev["images"][0]["src"] : 'images/product-1.jpg'%>" alt="" style = "max-width:223px;max-height:471px;">
 		
-			<h3 class="product-title">DEEP CLEANSE FOAMING FACE WASH</h3>
-			<p class="product-price">$48.00</p>
+			<h3 class="product-title"><%= product_ev["title"]%></h3>
+			<p class="product-price"><%= '$'+product_ev['variants'][0]['price']%></p>
 		</div>
+		</a>
+		<%end %>
 	</div>
 
-	<div class="row treatments text-center clearfix">
+	<!-- <div class="row treatments text-center clearfix">
 		<div class="col-one-third">
 			<img src="images/product-1.jpg" alt="">
 		
@@ -79,7 +84,7 @@
 			<h3 class="product-title">NIGHT RENEW TREATMENT</h3>
 			<p class="product-price">$29.95</p>
 		</div>
-	</div>
+	</div> -->
 
 
 </div>

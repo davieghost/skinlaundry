@@ -56,7 +56,7 @@ def isProduction?
 end
 
 def getShopifyProductByCollection collection_id
-  ShopifyAPI::Product.find(:all, :params => {:collection_id => collection_id})
+  JSON.parse ShopifyAPI::Product.find(:all, :params => {:collection_id => collection_id}).to_json
 end
 
 def initializeShopify 
@@ -76,6 +76,10 @@ def getRecentMedia user_id, access_token
       response.body
 end
 
+def generate_shopify_prod_url product
+    return $SHOPIFY_BASE_URL + "products/#{product['handle']}"
+end
+
 $GOOGLE_API_KEY = 'AIzaSyCRlB_IGbIXk3WEEreLjAbYYOaq5SGHTC8'
 ENVIRONMENT = ENV['RACK_ENV'] ||= 'development'
 $BOOKING_ENDPOINT = isProduction? ? ENV['BOOKING_ENDPOINT'] : "http://sl-book.herokuapp.com/"
@@ -85,7 +89,7 @@ $SHOPIFY_API_KEY = isProduction? ? ENV['SHOPIFY_API_KEY'] : 'b5f953b408fcb211151
 $SHOPIFY_API_PASSWORD = isProduction? ? ENV['SHOPIFY_API_PASSWORD'] : '97a936e0bacda9064f2d400e63cd960e'
 $SHOPIFY_API_SHOP_NAME = isProduction? ? ENV['SHOPIFY_API_SHOP_NAME'] : 'skinlaundry'
 $SHOPIFY_BASE_URL = isProduction? ? ENV['SHOPIFY_BASE_URL'] : "http://shop.skinlaundry.com/"
-$SHOPIFY_COLLECTIONS = {"shop" => 30578547, "featured_product" => 31145839, "4-step-system" => 31190943}
+$SHOPIFY_COLLECTIONS = {"shop" => 30578547, "featured_product" => 31145839, "4-step-system" => 31190943, "everyday_essentials" => 32533079, "cleansing_essentials" => 32533075}
 
 #Instagram credentials
 $INSTAGRAM_CLIENT_ID = "a3c66eef02da48839c769383e50dca76"
@@ -101,8 +105,8 @@ $ZONES = ["california", "arizona", "new-york"]
 initializeShopify()
 $INSTAFEED = JSON.parse getRecentMedia $INSTAGRAM_SL_USER_ID, $INSTAGRAM_ACCESS_TOKEN
 $SHOPIFY_PRODUCTS = {}
-$SHOPIFY_PRODUCTS["shop"] = getShopifyProductByCollection($SHOPIFY_COLLECTIONS['shop'])
-$SHOPIFY_PRODUCTS["featured"] = getShopifyProductByCollection($SHOPIFY_COLLECTIONS['featured_product'])
+$SHOPIFY_PRODUCTS["everyday_essentials"] = getShopifyProductByCollection($SHOPIFY_COLLECTIONS['everyday_essentials'])
+$SHOPIFY_PRODUCTS["cleansing_essentials"] = getShopifyProductByCollection($SHOPIFY_COLLECTIONS['cleansing_essentials'])
 
 
 set :css_dir, 'stylesheets'
