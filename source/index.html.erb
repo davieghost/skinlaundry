@@ -27,6 +27,7 @@
     </div>
   </div>
   <div id="box-set">
+    <a ng-href = "{{base.default_zone.length ? '/' + base.default_zone + '/treatments.html' : '/shop-treatments-default.html'}}">
     <div id="box-01" class="box">
       <div class="top-section">
         <div class="front-layer">
@@ -38,8 +39,9 @@
         </div>
         <div class="back-layer"></div>
       </div>
-      <div class="bottom-section"><a ng-href = "/{{base.default_zone}}/treatments.html">Try Us On</a></div>
+      <div class="bottom-section">Try Us On</div>
     </div>
+    </a>
     <a ng-href = "{{base.default_location_key.length ? '/locations/' + base.default_location_key + '.html' : '/locations.html'}}">
     <div id="box-02" class="box">
       <div class="top-section">
