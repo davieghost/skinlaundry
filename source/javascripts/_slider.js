@@ -106,7 +106,7 @@ $(document).ready(function() {
       clearInterval(timer);
       timer = setInterval(function() {
         $slideRight.trigger('click');
-      }, 12000);
+      }, 8000);
     }
     // stop the timer whenever a link is clicked
     $("a").hover(function() {
