@@ -20,15 +20,16 @@
 		}
 		h1 {
 			font-family: 'Archer-LightItalic';
-    	font-size: 3em;
+    	font-size: 60px;
     	font-weight: 400;
-    	margin-bottom: .1em;
+    	margin-bottom: 1em;
     	@media only screen and (max-width: $mobile-width) {
     		font-size: 2em;
     	}
 		}
 		h3 {
 			text-align: center;
+			margin: 0 0 50px;
 		}
 		.head {
 			padding-top: 1em;
@@ -85,8 +86,36 @@
 				outline: none;
 			}
 		}
+
 		input, button {
 			padding: 0 10px;
+		}
+
+		input {
+			//Placeholder color to #aaa
+				&::-webkit-input-placeholder { //Chrome
+				   	color: #aaa;
+
+				   	letter-spacing: 2px;
+				}
+
+				&:-moz-placeholder { //Firefox 18- 
+				   	color: #aaa;
+
+				   	letter-spacing: 2px;
+				}
+
+				&::-moz-placeholder {  //Firefox 19+
+				   	color: #aaa;
+
+				   	letter-spacing: 2px;
+				}
+
+				&:-ms-input-placeholder { //IE
+				   	color: #aaa;
+
+				   	letter-spacing: 2px;
+				}
 		}
 		button {
 			background-color: white;

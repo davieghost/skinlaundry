@@ -26,11 +26,12 @@ $background-height: 410px;
 			background: white;
 			font-family: 'DIN';
 			margin-bottom: 18px;
+			
 			h1 {
 			  font-family: 'Archer-LightItalic';
-		      font-size: 50px;
+		      font-size: 60px;
 		      font-weight: 400;
-		      margin-bottom: .1em;
+		      margin-bottom: .5em;
 		      @media only screen and (max-width: $tablet-portrait) {
 		      	font-size: 2.5em;
 		      }
