@@ -3,23 +3,25 @@
 			"introductory-plan-3-treatments" : {
 				"title" 					: "",
 				"sub_header" 			: "",
-				"additional_note" : "",
 				"category" : "Introductory Offers",
 				"zonal_specific_details" : {
 					"california" : {
 						"price" 					: "$100",
 						"sale_price" 			: "$100",
-						"title" 					: "3 Treatments for $100"
+						"title" 					: "3 Treatments for $100",
+						"additional_note" : "(additional $30)"
 					},
 					"arizona" : {
 						"price" 					: "$100",
 						"sale_price" 			: "$100",
-						"title" 					: "3 Treatments for $100"
+						"title" 					: "3 Treatments for $100",
+						"additional_note" : "(additional $30)"
 					},
 					"new-york" : {
 						"price" 					: "100",
 						"sale_price" 			: "100",
-						"title" 					: "3 Treatments for $100"
+						"title" 					: "3 Treatments for $100",
+						"additional_note" : "(additional $30)"
 					}
 				}
 			},
@@ -105,7 +107,6 @@
 			"monthly-plan-platinum": {
 				"title" 					: "Platinum",
 				"sub_header" 			: "",
-				"additional_note" : "",
 				"category" : "Monthly Membership",
 				"zonal_specific_details" : {
 					"california" : {
