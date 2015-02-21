@@ -4,7 +4,9 @@
     <p>Show off your skin #justlaundered</p>
   </div>
   <div id="instafeed" class="image-grid">
-
+    <% $INSTAFEED["data"].each do |feed|%>
+    <a target = "_tab" href = "<%= feed['link'] %>"><img src = "<%= feed['images']['low_resolution']['url']%>" /></a>
+    <% end %>
   </div>  
   <div id="bottom-wrapper">
     <div class="join-list">
@@ -17,11 +19,11 @@
     </div>
     <div class="footer-links">
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">The Treatment</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Book</a></li>
-        <li><a href="#">Laundry Locations</a></li>
+        <li><a href="/story.html">Our Story</a></li>
+        <li><a href="the-treatment.html">The Treatment</a></li>
+        <li><a href="/products.html">Shop</a></li>
+        <li><a href="<%= $BOOKING_ENDPOINT%>">Book</a></li>
+        <li><a href="/locations.html">Laundry Locations</a></li>
       </ul>
       <div class="social">
         <a class="social-link" href="https://www.facebook.com/skinlaundry"><i class="fa fa-facebook"></i></a>
@@ -34,11 +36,11 @@
   </div>
 </div>
 <script>
-    var userFeed = new Instafeed({
-        get: 'user',
-        userId: 320927027,
-        accessToken: '320927027.467ede5.fd21533b02ab48b293ffadb82e56cafc',
-        limit: 14
-    });
-    userFeed.run();
+    //   var userFeed = new Instafeed({
+    //     get: 'user',
+    //     userId: 320927027,
+    //     accessToken: '356178582.a3c66ee.357c8838a9dc444bb8802a6acbff693a',
+    //     limit: 14
+    // });
+    // userFeed.run();
 </script>

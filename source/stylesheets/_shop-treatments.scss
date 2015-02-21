@@ -30,7 +30,7 @@ $tablet-width: 980px;
 		  font-family: 'Archer-LightItalic';
 	      font-size: 50px;
 	      font-weight: 400;
-	      margin-bottom: .1em;
+	      margin-bottom: .5em;
 		}
 
 		h2 {
@@ -58,7 +58,7 @@ $tablet-width: 980px;
 			position: relative;
 			z-index: 0;
 
-			height: 150px;
+			height: 175px;
 
 			background-image: url("../images/location-offer-bg.jpg");
 			background-repeat: no-repeat;
@@ -101,7 +101,7 @@ $tablet-width: 980px;
 
 
 		.offer-title {
-			margin: 20px 0;
+			margin: 20px 0 30px;
 
 			font: 36px 'Archer-LightItalic', serif;
 			color: $laundry-black;
@@ -110,20 +110,26 @@ $tablet-width: 980px;
 		}
 
 		.treatment-plan {
+
 			color: $laundry-green;
 
+			font: 14px 'DIN-Medium', sans-serif;
 			text-transform: uppercase;
 		}
 
-		.treatments-price {
+		.treatment-price {
 			margin-bottom: 10px;
 
-			font-family: 'DIN-Medium', sans-serif;
+			font: 14px 'DIN-Medium', sans-serif;
 		}
 
 		.additional {
 			margin-top: 0;
-			font: 13px 'DIN', sans-serif;
+			font: 12px 'DIN', sans-serif;
+
+			&.hidden {
+				@include opacity(0);
+			}
 		}
 
 		.expiry {
@@ -142,7 +148,7 @@ $tablet-width: 980px;
 		}
 
 		.gift-card {
-			margin-top: 20px;
+			margin-top: 10px;
 
 			border-top: 1px solid #dedede;
 
