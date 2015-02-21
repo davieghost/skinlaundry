@@ -16,7 +16,7 @@
 						"sale_price" 			: "$100",
 						"title" 					: "3 Treatments for $100"
 					},
-					"new york" : {
+					"new-york" : {
 						"price" 					: "100",
 						"sale_price" 			: "100",
 						"title" 					: "3 Treatments for $100"
@@ -41,7 +41,7 @@
 						"sub_header" 			: "1 for $50",
 						"additional_note" : "(additional $50)"
 					},
-					"new york" : {
+					"new-york" : {
 						"price" 					: "50",
 						"sale_price" 			: "50",
 						"sub_header" 			: "1 for $50",
@@ -68,7 +68,7 @@
 						"sub_header" 			: "4 for $160",
 						"additional_note" : "(additional $35)"
 					},
-					"new york" : {
+					"new-york" : {
 						"price" 					: "160",
 						"sale_price" 			: "160",
 						"sub_header" 			: "4 for $160",
@@ -94,7 +94,7 @@
 						"sub_header" 			: "8 for $250",
 						"additional_note" : "(additional $35)"
 					},
-					"new york" : {
+					"new-york" : {
 						"price" 					: "$250",
 						"sale_price" 			: "$250",
 						"sub_header" 			: "8 for $250",
@@ -118,7 +118,7 @@
 						"sale_price" 			: "$325",
 						"sub_header" 			: "15 for $325"
 					},
-					"new york" : {
+					"new-york" : {
 						"price" 					: "$325",
 						"sale_price" 			: "$325",
 						"sub_header" 			: "15 for $325"
@@ -140,7 +140,7 @@
 						"sale_price" 			: "$50",
 						"sub_header" 			: "1 for $50"
 					},
-					"new york" : {
+					"new-york" : {
 						"price" 					: "$50",
 						"sale_price" 			: "$50",
 						"sub_header" 			: "1 for $50"
@@ -163,7 +163,7 @@
 						"sub_header" 			: "2 for $165",
 						"additional_note" : "(3 month expiry)"
 					},
-					"new york" : {
+					"new-york" : {
 						"price" 					: "$165",
 						"sale_price" 			: "$165",
 						"sub_header" 			: "2 for $165",
@@ -187,7 +187,7 @@
 						"sub_header" 			: "10 for $400",
 						"additional_note" : "(3 month expiry)"
 					},
-					"new york" : {
+					"new-york" : {
 						"price" 					: "$400",
 						"sale_price" 			: "$400",
 						"sub_header" 			: "10 for $400",

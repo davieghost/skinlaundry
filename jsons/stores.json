@@ -192,7 +192,7 @@
 			"address2"	: "",
 			"city_state": "New York",
 			"zipcode" 	: "10011",
-			"zone"			: "new york",
+			"zone"			: "new-york",
 			"contact"	: [],
 			"geocode"	:	[40.738047, -73.993245],
 			"timings"	: {

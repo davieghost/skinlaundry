@@ -95,8 +95,8 @@ $INSTAGRAM_SL_USER_ID = 320927027
 
 $COOKIE_DOMAIN = isProduction? ? ENV['COOKIE_DOMAIN'] : ""
 $LOCATIONS_LIST = JSON.parse(File.read(ENV["MM_ROOT"] + "/jsons/stores.json"))
-
 $TREATMENTS_LIST = JSON.parse(File.read(ENV["MM_ROOT"] + "/jsons/treatments.json"))
+$ZONES = ["california", "arizona", "new-york"]
 
 initializeShopify()
 $INSTAFEED = JSON.parse getRecentMedia $INSTAGRAM_SL_USER_ID, $INSTAGRAM_ACCESS_TOKEN
@@ -137,4 +137,9 @@ end
 $LOCATIONS_LIST["current"].each do |key, location|
   proxy "/locations/#{key}.html", "/location-single.html", :locals => { :location => location, :location_key => key }
   p "proxied url for #{key} location"
+end
+
+$ZONES.each do |zone|
+  proxy "/#{zone}/treatments.html", "/shop-treatments.html", :locals => {:zone => zone}
+  p "proxied url for #{zone} zone treatments"
 end

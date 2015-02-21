@@ -186,7 +186,7 @@ SLWebApp.factory("cookiemgr", [function(){
 	};
 }]);
 
-SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootScope', 'location', '$timeout', function($scope, localCache, cookiemgr, $rootScope, location, $timeout){	
+SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootScope', 'location', '$timeout', 'treatmentfactory', function($scope, localCache, cookiemgr, $rootScope, location, $timeout, treatmentfactory){	
 	var self = this;
 	var init = function(){
 		$(".till-ng-loaded").removeClass("till-ng-loaded");
@@ -200,6 +200,7 @@ SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootSco
 					default_store ? location.setDefault(default_store.name) : '';
 				}
 				self.default_zone = location.getDefaultZone();
+				self.default_treatment = treatmentfactory.getDefaultTreatment(self.default_zone);
 			},0);
 		})
 	};
@@ -210,6 +211,10 @@ SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootSco
 		}catch(e){
 			return {"error" : "Bad JSON"};
 		}
+	};
+
+	this.loadTreatments = function(zone, group_by_category){
+		self.treatments = treatmentfactory.getTreatments(zone, group_by_category);
 	};
 
 	this.setDefaultLocation = function(location_name){
@@ -281,9 +286,54 @@ SLWebApp.factory('location', ['cookiemgr', function(cookiemgr){
 
 }]);
 
-SLWebApp.factory('treatments', [function(){
-	var treatmentsfactory = {
-		
+SLWebApp.factory('treatmentfactory', [function(){
+	
+
+	var processTreatment = function(treatment, zone){
+		var temp = {};
+		temp = angular.copy(treatment);
+		temp = _.extend(temp, temp.zonal_specific_details[zone]);
+		delete temp.zonal_specific_details;
+		return temp;
 	};
-	return treatmentsfactory;
+
+	var processTreatments = function(treatments, zone, group_by_category){
+		var temp = {};
+		for(var treatment_key in treatments){
+			if(!treatments.hasOwnProperty(treatment_key))
+				continue;
+			var treatment = processTreatment(treatments[treatment_key], zone);
+
+			if(group_by_category){
+				var category = treatments[treatment_key].category;
+				temp[category] ? temp[category].push(treatment) : (temp[category] = [treatment]);
+			}
+			else
+				temp[treatment_key] = processTreatment(treatments[treatment_key], zone);
+		}
+		return temp;
+	};
+
+	var treatmentfactory = {
+		getTreatments : function(zone, group_by_category){
+			if(!zone){
+				console.error("Cannot process request without zone");
+				return false;
+			}
+			return processTreatments(treatments["treatments"], zone, group_by_category);
+		},
+		getDefaultTreatment : function(zone){
+			if(!zone){
+				console.error("Cannot process request without zone");
+				return false;
+			}
+			var treatment = treatments["treatments"][treatments["default"]];
+			if(!treatment){
+				console.error("Could not location default treatment");
+				return false;
+			}
+			return processTreatment(treatment, zone);
+		}	
+	};
+	return treatmentfactory;
 }]);

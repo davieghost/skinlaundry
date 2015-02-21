@@ -1,4 +1,4 @@
-<div id="main">
+<div id="main" ng-init = "base.loadTreatments('<%= zone %>')">
 	<div class="head">
 		<h1>Treatments</h1>
 	</div>
@@ -75,10 +75,12 @@
 	<div class="row gift-card text-center clearfix">
 		<h2 class="title">Skin Laundry Gift Card</h2>
 
-		<img src="images/sl-gift-card.jpg" alt="Skin Laundry Gift Card" class="img-responsive">
+		<img src="/images/sl-gift-card.jpg" alt="Skin Laundry Gift Card" class="img-responsive">
 		
 	</div>
 
 
 </div>
-
+<script>
+	document.getElementsByTagName("body")[0].className += " shop-treatments";
+</script>
