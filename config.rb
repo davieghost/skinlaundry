@@ -95,6 +95,8 @@ $INSTAGRAM_SL_USER_ID = 320927027
 $COOKIE_DOMAIN = isProduction? ? ENV['COOKIE_DOMAIN'] : ""
 $LOCATIONS_LIST = JSON.parse(File.read(ENV["MM_ROOT"] + "/jsons/stores.json"))
 
+$TREATMENTS_LIST = JSON.parse(File.read(ENV["MM_ROOT"] + "/jsons/treatments.json"))
+
 initializeShopify()
 $INSTAFEED = JSON.parse getRecentMedia $INSTAGRAM_SL_USER_ID, $INSTAGRAM_ACCESS_TOKEN
 $SHOPIFY_PRODUCTS = {}
