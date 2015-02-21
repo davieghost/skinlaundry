@@ -196,9 +196,11 @@ SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootSco
 				self.default_location = location.getDefault();
 				//If user doesn't already have a chosen location. Try to locate the nearest store as default for him
 				if(!(self.default_location && self.default_location.length)){
-					var default_store = self.default_location = self.sorted_stores.length && self.sorted_stores[0].distance_details.status == "OK" ? self.sorted_stores[0] : null;
-					default_store ? location.setDefault(default_store.name) : '';
+					var default_store =  self.sorted_stores.length && self.sorted_stores[0].distance_details.status == "OK" ? self.sorted_stores[0] : null;
+					default_store ? (location.setDefault(default_store.name) && (self.default_location = default_store)) : '';
 				}
+				var loc_object = location.getLocationObj(self.default_location);
+				self.default_location_key = loc_object.key;
 				self.default_zone = location.getDefaultZone();
 				self.default_treatment = treatmentfactory.getDefaultTreatment(self.default_zone);
 			},0);
@@ -220,6 +222,14 @@ SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootSco
 	this.setDefaultLocation = function(location_name){
 		location.setDefault(location_name);
 	};
+
+	this.setDefaultZone = function(zone, should_redirect){
+		location.setDefaultZone(zone);
+		if(should_redirect){
+			window.location.href = "/" + zone + "/treatments.html";
+		}
+		return true;
+	}
 
 	this.isAjaxProgress = function(flag){
 		return $rootScope.loadingRequests[flag];
@@ -274,11 +284,20 @@ SLWebApp.factory('location', ['cookiemgr', function(cookiemgr){
 			if(!location)
 				return null;
 			cookiemgr.setCookie(def_cookie_key, location.name);
-			cookiemgr.setCookie(def_store_cookie_key, location.zone);
+			this.setDefaultZone(location.zone);
+			return true;
+		},
+		setDefaultZone : function(zone){
+			cookiemgr.setCookie(def_store_cookie_key, zone);
 			return true;
 		},
 		getDefaultZone : function(){
 			return cookiemgr.getCookie(def_store_cookie_key);
+		},
+		getLocationObj : function(loc_name){
+			if(!loc_name)
+				return false;
+			return getByLocationName(loc_name);
 		}	
 	};
 
