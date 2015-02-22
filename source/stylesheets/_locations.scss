@@ -42,6 +42,10 @@ $tablet-width: 980px;
 		.phone-no,
 		.address-hours {
 			text-align: center;
+
+			a {
+				text-decoration: none;
+			}
 		}
 
 		.location-title {
@@ -85,6 +89,9 @@ $tablet-width: 980px;
 			border-image: linear-gradient(to right, rgba(53,193,170,1) 0%, rgba(73,165,191,1) 100%);
 			border-image-slice: 1;
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
+
+			border-left: 0;
+			border-right: 0;
 		}
 
 
