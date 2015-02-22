@@ -56,9 +56,34 @@ $("*[data-ga-ev]").on("click", function(event) {
 	return true;
 });
 
+//For GA
+var extract_event = function(){
+		
+		var category		=	$(this).data("ev-cat");
+		if(!(category && category.length))
+			return;
+
+		var action = $(this).data("ev-act");
+		if(!(action && action.length))
+			return;
+
+		var value 			=	parseInt($(this).data("ev-val"));
+		value = isNaN(value) ? 0 : value;
+
+		var labels 			=	$(this).data("ev-lbls");
+
+		return {
+		  'hitType': 'event',          // Required.
+		  'eventCategory': category,   // Required.
+		  'eventAction': action,      // Required.
+		  'eventLabel': labels,
+		  'eventValue': value
+		}
+	};
+
 // form on submit 
-if ($('#subscriptionform').length) {
-	$('#subscriptionform').on("submit", function(event) {
+if ($('form.subscriptionform').length) {
+	$('form.subscriptionform').on("submit", function(event) {
 		event.preventDefault();
 		var self = $(this);
 		var ga_element = $("*[data-ga-ajx-success]", this);
@@ -67,7 +92,7 @@ if ($('#subscriptionform').length) {
 			if (data.status == "success") {
 
 				var event_obj = extract_event.call(self);
-				ga('send', event_obj);
+				typeof ga != "undefined" ? ga('send', event_obj) : '';
 
 				$(self).hide();
 				$("#thanksDiv").show();
@@ -81,7 +106,7 @@ if ($('#subscriptionform').length) {
 	});
 	$('#invokeSubmit').on("keypress", function(event) {
 		if (event.keyCode == 13) {
-			$('#subscriptionform').submit();
+			$('form.subscriptionform').submit();
 		}
 	});
 }
@@ -89,7 +114,7 @@ if ($('#subscriptionform').length) {
 if ($("#close-thanksDiv").length)
 	$("#close-thanksDiv").on("click", function() {
 		$("#thanksDiv").hide();
-		$("#subscriptionform").show().find("input[type='text'], input[type='email'], input[type = 'tel']").val("")
+		$("form.subscriptionform").show().find("input[type='text'], input[type='email'], input[type = 'tel']").val("")
 	});
 });
 
