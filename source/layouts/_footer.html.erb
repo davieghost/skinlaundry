@@ -5,22 +5,22 @@
   </div>
   <div id="instafeed" class="image-grid">
     <% $INSTAFEED["data"].each do |feed|%>
-    <a target = "_tab" href = "<%= feed['link'] %>"><img src = "<%= feed['images']['low_resolution']['url']%>" /></a>
+    <a target="_tab" href="<%= feed['link'] %>"><img src="<%= feed['images']['low_resolution']['url']%>" /></a>
     <% end %>
   </div>  
   <div id="bottom-wrapper">
     <div class="join-list">
       <h1>Join the Laundry List</h1>
       <p>Be in the know about new locations, <br class="hide-desktop"> products &amp; exclusive offers.</p>
-      <form action = "<%= $BOOKING_ENDPOINT%>subscribe" method = "post" class = "subscriptionform" data-ev-cat = "Leads" data-ev-act = "Subscribe" data-ev-lbls = "Subscribe <%= (!(@location.nil? || @location['name'].blank?) ? @location['name'] : '') %>">
+      <form action="<%= $BOOKING_ENDPOINT%>subscribe" method="post" class="subscriptionform" data-ev-cat="Leads" data-ev-act="Subscribe" data-ev-lbls="Subscribe <%= (!(@location.nil? || @location['name'].blank?) ? @location['name'] : '') %>">
       <div id="input-and-button">
-        <input type="text" placeholder="ENTER YOUR EMAIL HERE" name = "EMAIL" class="email-input focus-hide border-gradient">
-        <button type = "submit">| go</button>
+        <input type="text" placeholder="ENTER YOUR EMAIL HERE" name="EMAIL" class="email-input focus-hide border-gradient">
+        <button type="submit">| go</button>
         <div style="position: absolute; left: -5000px;"><input type="text" name="b_f239ffc6f2d639917ba8f0775_80e3a160ba" tabindex="-1" value=""></div>
-        <input type = "hidden" name = "list" value = "discounts" />
+        <input type="hidden" name="list" value="discounts" />
       </div>
       </form>
-      <p id = "thanksDiv" style = "display:none;">Thanks for signing up. We look forward to serving you and helping you get cleaner, brighter and more beautiful skin. You will be receiving an introductory discount coupon code in the email shortly.</p>
+      <p id="thanksDiv" style="display:none;">Thanks for signing up. We look forward to serving you and helping you get cleaner, brighter and more beautiful skin. You will be receiving an introductory discount coupon code in the email shortly.</p>
     </div>
     <div class="footer-links">
       <ul>
@@ -54,7 +54,7 @@
 </div> -->
 
 <script>
-    //   var userFeed = new Instafeed({
+    //   var userFeed=new Instafeed({
     //     get: 'user',
     //     userId: 320927027,
     //     accessToken: '356178582.a3c66ee.357c8838a9dc444bb8802a6acbff693a',
