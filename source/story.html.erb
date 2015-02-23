@@ -55,8 +55,9 @@
 		<div class="block11 hide-mobile"></div>
 	</div>
 </div>
+
 <div id="bottombar">
-	<a class="links" href="#">TRY US ON</a>
-	<a class="links" href="#">FIND A LAUNDRY NEAR YOU</a>
-	<a class="links" href="#">SHOP OUR CLEANSERS</a>
+	<a class="links" ng-href = "{{base.default_zone.length ? '/' + base.default_zone + '/treatments.html' : '/shop-treatments-default.html'}}">TRY US ON</a>
+	<a class="links" ng-href = "{{base.default_location_key.length ? '/locations/' + base.default_location_key + '.html' : '/locations.html'}}">FIND A LAUNDRY NEAR YOU</a>
+	<a class="links" href="/products.html">SHOP OUR CLEANSERS</a>
 </div>

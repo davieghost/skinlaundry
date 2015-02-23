@@ -5,7 +5,7 @@
   </div>
   <div id="instafeed" class="image-grid">
     <% $INSTAFEED["data"].each do |feed|%>
-    <a target = "_tab" href = "<%= feed['link'] %>"><img src = "<%= feed['images']['low_resolution']['url']%>" /></a>
+    <img src = "<%= feed['images']['low_resolution']['url']%>" />
     <% end %>
   </div>  
   <div id="bottom-wrapper">
