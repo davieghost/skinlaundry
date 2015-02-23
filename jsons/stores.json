@@ -211,7 +211,7 @@
 			},
 			"status": {
 				"isactive" : "yes",
-				"isbookingactive" : "yes"
+				"isbookingactive" : "no"
 			}
 		}
 	},
