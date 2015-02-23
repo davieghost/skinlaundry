@@ -22,19 +22,11 @@
 						"additional_note" : "(additional $30)"
 					},
 					"new-york" : {
-<<<<<<< HEAD
-						"price" 					: "100",
-						"sale_price" 			: "100",
-						"value_text"			:	"A $210 value",
-						"title" 					: "3 Treatments for $100",
-						"title_formatted" : "3 Treatments<br>For <span>$100</span>",
-=======
 						"price" 					: "150",
 						"sale_price" 			: "150",
 						"value_text"			:	"A $210 value",
 						"title" 					: "3 Treatments for $150",
 						"title_formatted" : "3 Treatments<br>For <span>$150</span>",
->>>>>>> pj/migration
 						"additional_note" : "(additional $30)"
 					}
 				}
@@ -163,26 +155,23 @@
 				}
 			},
 			"3-treatments-package" : {
-				"title" 					: "3 Teatments",
+				"title" 					: "3 Treatments",
 				"category" : "Treatment Packages",
 				"zonal_specific_details" : {
 					"california" : {
 						"price" 					: "$165",
 						"sale_price" 			: "$165",
-						"sub_header" 			: "3 for $165",
-						"additional_note" : "(3 month expiry)"
+						"sub_header" 			: "3 for $165"
 					},
 					"arizona" : {
 						"price" 					: "$165",
 						"sale_price" 			: "$165",
-						"sub_header" 			: "3 for $165",
-						"additional_note" : "(3 month expiry)"
+						"sub_header" 			: "3 for $165"
 					},
 					"new-york" : {
 						"price" 					: "$210",
 						"sale_price" 			: "$210",
-						"sub_header" 			: "3 for $210",
-						"additional_note" : "(3 month expiry)"
+						"sub_header" 			: "3 for $210"
 					}
 				}
 			},
@@ -193,20 +182,17 @@
 					"california" : {
 						"price" 					: "$400",
 						"sale_price" 			: "$400",
-						"sub_header" 			: "10 for $400",
-						"additional_note" : "(3 month expiry)"
+						"sub_header" 			: "10 for $400"
 					},
 					"arizona" : {
 						"price" 					: "$400",
 						"sale_price" 			: "$400",
-						"sub_header" 			: "10 for $400",
-						"additional_note" : "(3 month expiry)"
+						"sub_header" 			: "10 for $400"
 					},
 					"new-york" : {
 						"price" 					: "$500",
 						"sale_price" 			: "$500",
-						"sub_header" 			: "10 for $500",
-						"additional_note" : "(3 month expiry)"
+						"sub_header" 			: "10 for $500"
 					}
 				}
 			}
