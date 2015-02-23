@@ -32,10 +32,12 @@ $(document).ready(function() {
       $(this).removeClass('close');
       $('body').css('overflow', 'auto');
       $('.body-mask').animate({'opacity': '0'}, 'fast');
+      $('.body-mask').css({'display': 'none'});
     } else {
     	$np.addClass('open');
       $(this).addClass('close');
       $('body').css('overflow', 'hidden');
+      $('.body-mask').css({'display': 'block'});
       $('.body-mask').animate({'opacity': '0.85'}, 'fast');
     }
 
