@@ -8,7 +8,8 @@
     <title>Skin Laundry</title>
     
     <%= stylesheet_link_tag "application" %>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">  
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= $GOOGLE_API_KEY %>"></script>
     <script>
       var globalvar = {cookie_domain : '<%= $COOKIE_DOMAIN %>'};
@@ -20,8 +21,8 @@
   <body class="<%= page_classes %>" ng-app = "SLWeb" ng-controller = "BaseCtrl as base">
     <div class="videobg">
       <video autoplay loop muted poster="/images/SL_mobil_background.jpg" class="hide-mobile">
-      <source src="/video/02.mp4" type="video/mp4">
-      <source src="/video/02.webm" type="video/mp4">
+        <source src="/video/02.mp4" type="video/mp4">
+        <source src="/video/02.webm" type="video/mp4">
       </video>
       <div class="hide-desktop cover"></div>
       <img src="/images/SL_Watermark.png" id="watermark"/>
