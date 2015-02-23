@@ -155,7 +155,7 @@
 				}
 			},
 			"3-treatments-package" : {
-				"title" 					: "3 Teatments",
+				"title" 					: "3 Treatments",
 				"category" : "Treatment Packages",
 				"zonal_specific_details" : {
 					"california" : {
