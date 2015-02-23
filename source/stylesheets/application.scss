@@ -8,7 +8,14 @@
 @import 'variables';
 
 ///////////////////// GLOBAL STYLES /////////////////////
-
+.body-mask {
+  background-color: white;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
