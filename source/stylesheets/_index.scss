@@ -91,6 +91,35 @@ body.index {
       #slide-01 {
         background-image: image-url("index/slide_01.jpg");
         display: block;
+        .founder {
+          position: absolute;
+          bottom: -10px;
+          left: 20px;
+
+          font: 12px 'DIN', sans-serif;
+
+          color: #fff;
+
+          @media screen and (min-width: $tablet-portrait) {
+            bottom: -15px;
+            
+            font-size: 16px;
+          }
+
+          @media screen and (min-width: $tablet-width) {
+            left: 50px;
+          }
+
+          span {
+            padding-right: 10px;
+
+            font: 20px 'Rollerscript-Smooth', sans-serif;
+
+            @media screen and (min-width: $tablet-portrait) {
+              font-size: 36px;
+            }
+          }
+        }
         .overlay-text {
           top: 20%;
           right: 2%;
