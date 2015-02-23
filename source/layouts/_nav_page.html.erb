@@ -5,8 +5,7 @@
   <div id="location-login" class="hide-desktop">
     <ul id="location-nav" class="location-mobile">
       <li id="nearest">Nearest Laundry</li>
-      <li class="hidden-list"><a href="">location example</a></li>
-      <li class="hidden-list"><a href="">location example</a></li>
+      <li class="hidden-list" ng-repeat = "store in base.sorted_stores"><a ng-href="/locations/{{store.key}}.html" ng-bind = "store.name"></a></li>
     </ul>
     <div id="login">
       <a href=""></a>
@@ -19,7 +18,7 @@
     <a href="/"><%= image_tag "sl_seal.png", :class => "small-logo" %></a>
 		<%= image_tag "full_logo.png", :class => "logo" %>
     <div id="first-time">
-      <a href="firsttime.html">First Time?</a>
+      <a href="/firsttime.html">First Time?</a>
     </div>
     <div id="main-menu">
       <ul>
