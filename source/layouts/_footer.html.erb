@@ -12,7 +12,7 @@
     <div class="join-list">
       <h1>Join the Laundry List</h1>
       <p>Be in the know about new locations, <br class="hide-desktop"> products &amp; exclusive offers.</p>
-      <form action = "<%= $BOOKING_ENDPOINT%>subscribe" method = "post" class = "subscriptionform" data-ev-cat = "Leads" data-ev-act = "Subscribe" data-ev-lbls = "Subscribe <%= (!(@location.nil? || @location['name'].blank?) ? @location['name'] : '') %>">
+      <form action = "<%= $BOOKING_ENDPOINT%>subscribe" method = "post" class = "subscriptionform" data-ev-cat = "Leads" data-ev-act = "Subscribe" data-ev-lbls = "Subscribe - Footer section">
       <div id="input-and-button">
         <input type="text" placeholder="ENTER YOUR EMAIL HERE" name = "EMAIL" class="email-input focus-hide border-gradient">
         <button type = "submit">| go</button>
