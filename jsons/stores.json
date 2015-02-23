@@ -187,7 +187,7 @@
 			}
 		},
 		"newyork" : {
-			"name" 		: "Flatiron, New York",
+			"name" 		: "Flatiron, NY",
 			"address1" 	: "3 W 16th St.",
 			"address2"	: "",
 			"city_state": "New York",
