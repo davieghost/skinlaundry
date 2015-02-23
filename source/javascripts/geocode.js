@@ -11,6 +11,7 @@ Dependencies:
 1. Must load jQuery before loading the script: it uses $.ajax for calls
 2. Must load google api script before using any methods that uses distance calculation
 sample script: <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<% YOUR_GOOGLE_API_KEY %>"></script>
+3. Must include $.cookie - I understand, this is a prototype, later we will move to native js to handle cookies than using jQuery
 
 Note: Make sure you have activated location services from the google API console before you start to use its services
 
@@ -29,31 +30,69 @@ Note: Make sure you have activated location services from the google API console
 	};
 	//Configurations holder
 	var config = {
-		ip_endpoint: 'http://ip-api.com/json'
+		ip_endpoint: 'http://ip-api.com/json',
+		def_cookie_key : 'geocode-data'
 	};
 	init.call(config, {
 		verbose: true
 	});
 
+	var getCookie = function(key){
+		return $.cookie(key);
+	};
+	var setCookie = function(key, value, options){
+		options = options ? options : def_options;
+		return $.cookie(key, value, options);
+	};
+	var removeCookie = function(key, options){
+		return $.removeCookie(key);
+	};
+
 	//Attempts to get by navigator.get
-	var getLocationByGeo = function(callback) {
+	var getLocationByGeo = function(callback, options) {
+
+		var cached_geo = getCookie(config.def_cookie_key);
+		if(cached_geo)
+			return callback(JSON.parse(cached_geo));
+
+		var def_options = {timeout: 10000};
+		options = options ? options : def_options;
+		var auto_fail = setTimeout(function(){callback(false)}, def_options.timeout);
+
 		if (!(navigator && navigator.geolocation))
-			config.log("Geo location denied") && callback(false);
+			config.log("Geo location not supported on browser") && callback(false) && clearTimeout(auto_fail);
 		navigator.geolocation.getCurrentPosition(function(data) {
-			callback([data.coords.latitude, data.coords.longitude]);
+			clearTimeout(auto_fail);
+			config.log("Geo tracking data: ", data);
+			var formatted_data = [data.coords.latitude, data.coords.longitude];
+			removeCookie(config.def_cookie_key);
+			setCookie(config.def_cookie_key, JSON.stringify(formatted_data), {path : '/', expires : 30});
+			callback(formatted_data);
 		}, function(err) {
-			callback(false)
-		});
+			clearTimeout(auto_fail);
+			config.log("Geo tracking denied: ", err);
+			callback(false);
+		}, options);
 	};
 
 	var getLocationByIP = function(callback) {
+		
+		var cached_geo = getCookie(config.def_cookie_key);
+		if(cached_geo)
+			return callback(JSON.parse(cached_geo));
+
+		config.log("Invoked geolocation by IP");
 		$.ajax({
 			url: config.ip_endpoint,
 			dataType: 'json',
 			success: function(data) {
-				if (data.success != "success")
-					callback(false);
-				callback([data.lat, data.lon]);
+				config.log("Recieved response from geo: ", data);
+				if (data.status != "success")
+					return callback(false);
+				var formatted_data = [data.lat, data.lon];
+				removeCookie(config.def_cookie_key);
+				setCookie(config.def_cookie_key, JSON.stringify(formatted_data), {path : '/', expires : 30});
+				callback(formatted_data);
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrow) {
 				config.log("Error happened in fetching location from IP: ", errorThrow) && callback(false);
@@ -116,6 +155,9 @@ Note: Make sure you have activated location services from the google API console
 		Sample output format: [12.9833, 77.5833]
 		*/
 		getLocation: function(callback) {
+			if($.cookie){
+
+			}
 			getLocationByGeo(function(data) {
 				if (!data)
 					getLocationByIP(callback);
