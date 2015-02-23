@@ -244,8 +244,9 @@ SLWebApp.controller("BaseCtrl", [ '$scope', 'localCache', 'cookiemgr', '$rootSco
 		self.treatments = treatmentfactory.getTreatments(zone, group_by_category);
 	};
 
-	this.setDefaultLocation = function(location_name){
+	this.setDefaultLocation = function(location_name, reloadPage){
 		location.setDefault(location_name);
+		reloadPage ? window.location.reload() : '';
 	};
 
 	this.setDefaultZone = function(zone, should_redirect){

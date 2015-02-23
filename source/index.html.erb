@@ -33,19 +33,31 @@
     </div>
   </div>
   <div id="box-set">
-    <a ng-href = "{{base.default_zone.length ? '/' + base.default_zone + '/treatments.html' : '/shop-treatments-default.html'}}">
+    <a ng-href = "{{base.default_zone.length ? '/' + base.default_zone + '/treatments.html' : '/shop-treatments-default.html'}}" ng-show = "base.default_zone.length">
     <div id="box-01" class="box">
       <div class="top-section">
         <div class="front-layer">
           <div class="overlay-text">
             <h1>Buy</h1>
-            <h2 ng-bind = "base.default_treatment.title"></h1>
-            <h3>A $225 Value</h2>
+            <h2 ng-bind = "base.default_treatment.title"></h2>
+            <h3>A $225 Value</h3>
           </div>
         </div>
         <div class="back-layer"></div>
       </div>
       <div class="bottom-section">Try Us On</div>
+    </div>
+    </a>
+    <a href = "http://shop.skinlaundry.com/products/renewing-eye-cream" ng-show = "!base.default_zone.length">
+    <div id="box-01" class="box">
+      <div class="top-section">
+        <div class="front-layer" style="background-color:transparent">
+          <div class="overlay-text">
+          </div>
+        </div>
+        <div class="back-layer" style="background-image:url(/images/cream-eye-home.jpg);opacity:1"></div>
+      </div>
+      <div class="bottom-section">Buy now</div>
     </div>
     </a>
     <a ng-href = "{{base.default_location_key.length ? '/locations/' + base.default_location_key + '.html' : '/locations.html'}}">
