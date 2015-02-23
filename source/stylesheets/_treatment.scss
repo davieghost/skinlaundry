@@ -205,6 +205,10 @@ body.treatment {
 				padding-left: 20%;
 				padding-right: 50px;
 				max-width: 100%;
+				ul {
+					list-style: circle;
+					margin-left: -8%;
+				}
 				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					padding: 40px;
