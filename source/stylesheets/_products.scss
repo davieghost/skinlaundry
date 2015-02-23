@@ -72,6 +72,17 @@ $tablet-width: 980px;
 			color: $laundry-black;
 
 			text-align: center;
+			text-transform: uppercase;
+
+			@media screen and (min-width: $tablet-portrait) {
+				padding-right: 30px;
+				padding-left: 30px;
+			}
+
+			@media screen and (min-width: $tablet-width) {
+				padding-right: 45px;
+				padding-left: 45px;
+			}
 		}
 
 		.product-price {
@@ -90,10 +101,13 @@ $tablet-width: 980px;
 			}
 		}
 
-		.gap {
-			height: 100px;
+		.gap-50 {
+			height: 50px;
 		}
 
+		.gap-75 {
+			height: 75px;
+		}
 
 		.head {
 			width: 100%;

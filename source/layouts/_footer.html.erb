@@ -5,7 +5,7 @@
   </div>
   <div id="instafeed" class="image-grid">
     <% $INSTAFEED["data"].each do |feed|%>
-    <a target = "_tab" href = "<%= feed['link'] %>"><img src = "<%= feed['images']['low_resolution']['url']%>" /></a>
+    <img src = "<%= feed['images']['low_resolution']['url']%>" />
     <% end %>
   </div>  
   <div id="bottom-wrapper">
@@ -31,8 +31,8 @@
         <li><a href="/locations.html">Laundry Locations</a></li>
       </ul>
       <div class="social">
-        <a class="social-link" href="https://www.facebook.com/skinlaundry"><i class="fa fa-facebook"></i></a>
-        <a class="social-link" href="https://instagram.com/skinlaundry/"><i class="fa fa-instagram"></i></a>
+        <a class="social-link" href="https://www.facebook.com/skinlaundry" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a class="social-link" href="https://instagram.com/skinlaundry/" target="_blank"><i class="fa fa-instagram"></i></a>
       </div>
       <div class="row clearfix">
         <p class="copyright">© Skin Laundry 2015, All Rights Reserved</p>
@@ -40,6 +40,19 @@
     </div>
   </div>
 </div>
+
+<!-- <div class="thank-you-popup">
+  <div class="thank-you-content">
+    <div class="close-btn">
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <img src="images/full_logo.png" alt="Skin Laundry">
+    <p class="thank-you-text">Thank you for joining the Laundry List</p>
+  </div>
+</div> -->
+
 <script>
     //   var userFeed = new Instafeed({
     //     get: 'user',

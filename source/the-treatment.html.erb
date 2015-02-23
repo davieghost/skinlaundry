@@ -59,7 +59,7 @@
             </div>
             <div class="block05">
                 <h2>WHAT ARE YOU WAITING FOR?</h2>
-                <a href="">BOOK A TREATMENT</a>
+                <a href="<%= $BOOKING_ENDPOINT%>">BOOK A TREATMENT</a>
             </div>
             <div class="block06 hide-mobile">
                 <h2>Immediate Benefits</h2>
@@ -112,9 +112,9 @@
     </div>
 
     <div id="bottombar">
-        <a class="links" href="#">TRY US ON</a>
-        <a class="links" href="#">FIND A LAUNDRY NEAR YOU</a>
-        <a class="links" href="#">SHOP OUR CLEANSERS</a>
+      <a class="links" ng-href = "{{base.default_zone.length ? '/' + base.default_zone + '/treatments.html' : '/shop-treatments-default.html'}}">TRY US ON</a>
+      <a class="links" ng-href = "{{base.default_location_key.length ? '/locations/' + base.default_location_key + '.html' : '/locations.html'}}">FIND A LAUNDRY NEAR YOU</a>
+      <a class="links" href="/products.html">SHOP OUR CLEANSERS</a>
     </div>
 
 </div>

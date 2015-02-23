@@ -80,6 +80,12 @@ $tablet-width: 980px;
 				font-size: 75px;
 			}
 
+			span {
+				background-image: url("../images/price-highlight.png");
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+
 		}
 
 		.price {
@@ -176,6 +182,10 @@ $tablet-width: 980px;
 				&:-moz-focusring {
 				    color: transparent;
 				    @include text-shadow(0 0 0 #aaa);
+				}
+
+				@media screen and (min-width: $mobile-width) {
+					width: 456px;
 				}
 
 				option {
