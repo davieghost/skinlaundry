@@ -9,18 +9,21 @@
 						"price" 					: "$100",
 						"sale_price" 			: "$100",
 						"title" 					: "3 Treatments for $100",
+						"title_formatted" : "3 Treatments<br>For <span>$100</span>",
 						"additional_note" : "(additional $30)"
 					},
 					"arizona" : {
 						"price" 					: "$100",
 						"sale_price" 			: "$100",
 						"title" 					: "3 Treatments for $100",
+						"title_formatted" : "3 Treatments<br>For <span>$100</span>",
 						"additional_note" : "(additional $30)"
 					},
 					"new-york" : {
 						"price" 					: "100",
 						"sale_price" 			: "100",
 						"title" 					: "3 Treatments for $100",
+						"title_formatted" : "3 Treatments<br>For <span>$100</span>",
 						"additional_note" : "(additional $30)"
 					}
 				}

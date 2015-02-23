@@ -80,6 +80,10 @@ def generate_shopify_prod_url product
     return $SHOPIFY_BASE_URL + "products/#{product['handle']}"
 end
 
+def generateTreatmentObject(treatment,zone)
+  treatment.merge treatment["zonal_specific_details"][zone]
+end
+
 $GOOGLE_API_KEY = 'AIzaSyCRlB_IGbIXk3WEEreLjAbYYOaq5SGHTC8'
 ENVIRONMENT = ENV['RACK_ENV'] ||= 'development'
 $BOOKING_ENDPOINT = isProduction? ? ENV['BOOKING_ENDPOINT'] : "http://sl-book.herokuapp.com/"
@@ -145,5 +149,6 @@ end
 
 $ZONES.each do |zone|
   proxy "/#{zone}/treatments.html", "/shop-treatments.html", :locals => {:zone => zone}
+  proxy "/#{zone}/offers.html", "/offers.html", :locals => {:zone => zone,  :treatment_offer => generateTreatmentObject($TREATMENTS_LIST["treatments"][$TREATMENTS_LIST["default"]], zone)}
   p "proxied url for #{zone} zone treatments"
 end
