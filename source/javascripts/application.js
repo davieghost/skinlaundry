@@ -1,5 +1,8 @@
-//= require _index
+//= require_self
+//= require _slider
 
+
+var MOBILE_WIDTH = 610;
 
 $(window).load(function(){
 
@@ -16,10 +19,7 @@ $(window).load(function(){
 });
 
 
-
 $(document).ready(function() {
-  
-  var MOBILE_WIDTH = 610;
 
   /////////////// NAV PAGE OPEN/CLOSE //////////////
 
@@ -31,10 +31,12 @@ $(document).ready(function() {
     	$np.removeClass('open');
       $(this).removeClass('close');
       $('body').css('overflow', 'auto');
+      $('.body-mask').animate({'opacity': '0'}, 'fast');
     } else {
     	$np.addClass('open');
       $(this).addClass('close');
       $('body').css('overflow', 'hidden');
+      $('.body-mask').animate({'opacity': '0.85'});
     }
 
   });
@@ -109,5 +111,21 @@ $(document).ready(function() {
   }).blur(function() {
     $(this).attr('placeholder', placeText);
   }).blur();
+
+  ///////////////// BOX 4 ADJUSTMENT ON INDEX PAGE /////////////////////
+
+  if ($("body").hasClass("index")) {
+    // on mobile, adjusts box-04 to the height of box-03
+    function adjustBox4 () {
+      if ($('body').width() <= MOBILE_WIDTH) {
+        $("#box-04").height($("#box-03").height());
+      } else {
+        $("#box-04").css('height', 'auto');
+      }
+    }
+
+    adjustBox4();
+    $(window).resize(adjustBox4);
+  }
 
 });

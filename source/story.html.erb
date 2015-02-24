@@ -4,71 +4,59 @@
 	</div>
 	<div class="row short02">
 		<div class="block01"></div>
+		<div class="block03 hide-desktop">
+			<h3>Revolutionizing the way people clean and care for their skin</h3>
+			<p>We treat clogged, dirty, damaged skin through affordable laser &amp; light treatments delivered in an inviting and comfortable setting, staffed with certified healthcare professionals highly trained on proven SL methods and overseen by a team of medical advisors.</p>
+		</div>
+		<div class="block04 hide-desktop"></div>
 		<div class="block02">
-			<img src="/images/wwd.png" id="imgwwd" />
-			<h3>Skin Laundry Opens in Manhattan</h3>
-			<p class="it">"The 1,500-square-foot clinic, which includes four rooms and is designed to look like a beach house with its open, airy California vibe in New York's Flatiron District."</p>
+			<div class="hide-mobile">
+				<img src="/images/wwd.png" class="imgwwd" />
+				<h3>Skin Laundry Opens in Manhattan</h3>
+				<p>"The 1,500-square-foot clinic, which includes four rooms and is designed to look like a beach house with its open, airy California vibe in New York's Flatiron District."</p>
+			</div>
 		</div>
 	</div>
 	<div class="row regular">
-		<div class="block03"></div>
-		<div class="block04"></div>
+		<div class="block03 hide-mobile">
+			<h3>Revolutionizing the way people clean and care for their skin</h3>
+			<p>We treat clogged, dirty, damaged skin through affordable laser &amp; light treatments delivered in an inviting and comfortable setting, staffed with certified healthcare professionals highly trained on proven SL methods and overseen by a team of medical advisors.</p>
+		</div>
+		<div class="block04 hide-mobile"></div>
 	</div>
-
-<!-- 
-	<div class="row1 block left rel" id="birds">
-		<img src="/images/birds.png" id="imgbirds" />
+	<div class="row short">
+		<div class="block05">
+			<div class="mobile-wwd hide-desktop">
+				<img src="/images/wwd.png" class="imgwwd" />
+				<h3>Skin Laundry Opens in Manhattan</h3>
+				<p>"The 1,500-square-foot clinic, which includes four rooms and is designed to look like a beach house with its open, airy California vibe in New York's Flatiron District."</p>
+			</div>
+		</div>
+		<div class="block06">
+			<h3>The Skin Laundry Philsophy</h3>
+			<p>We believe healthy skin starts with clean skin... really deep down clean. The type of clean that you can only get by tapping into modern technology and using advanced non-invasive lasers and light therapy to vaporize the dirt and toxins on the surface of the skin and to reach pore deep for completely clean skin. We eliminate the small problems to achieve big improvements. </p>
+		</div>
+		<div class="block08 hide-desktop"></div>
 	</div>
-  <div class="row1 block right padright center" id="wwd">
-		<img src="/images/wwd.png" id="imgwwd" />
-		<h3>Skin Laundry Opens in Manhattan</h3>
-		<p class="it">"The 1,500-square-foot clinic, which includes four rooms and is designed to look like a beach house with its open, airy California vibe in New York's Flatiron District."</p>
+	<div class="row short02">
+		<div class="block07">
+			<p class="it">"We're not reinventing the wheel. We're saying don't do too much, just do enough, but let's bring it on a milder level. If you're looking for a quick fix, that's not going to be us. We're about working with you and maintaining your skin overtime."</p>
+			<img src="/images/yen_reis.png"/>
+			<div>Founder</div>
+		</div>
+		<div class="block11 hide-desktop"></div>
+		<div class="block08 hide-mobile"></div>
 	</div>
-	<div class="row2 block left padleft" id="revolutionizing">
-		<h3>Revolutionizing the way people clean and care for their skin</h3>
-		<p>We treat clogged, dirty, damaged skin through affordable laser &amp; light treatments delivered in an inviting and comfortable setting, staffed with certified healthcare professionals highly trained on proven SL methods and overseen by a team of medical advisors.</p>
+	<div class="row short03">
+		<div class="block09 hide-mobile"></div>
+		<div class="block10">
+			<p>As seen in...</p>
+		</div>
+		<div class="block11 hide-mobile"></div>
 	</div>
-  <div class="row2 block right" id="face">
-	</div>
-	<div class="row3 block left rel">
-		<img src="/images/palmtree.jpg" id="palmtree" />
-	</div>
- <div class="row3 block right padright" id="philosophy">
-		<h3>The Skin Laundry Philsophy</h3>
-		<p>We believe healthy skin starts with clean skin... really deep down clean. The type of clean that you can only get by tapping into modern technology and using advanced non-invasive lasers and light therapy to vaporize the dirt and toxins on the surface of the skin and to reach pore deep for completely clean skin. We eliminate the small problems to achieve big improvements. </p>
-	</div>
-	<div class="row4 block left padleft center">
-		<p class="it">"We're not reinventing the wheel. We're saying don't do too much, just do enough, but let's bring it on a milder level. If you're looking for a quick fix, that's not going to be us. We're about working with you and maintaining your skin overtime."</p>
-		<img src="/images/yen_reis.png" id="yenreis"/>
-		<div id="founder">Founder</div>
-	</div>
- <div class="row4 block right" id="water">
-	</div>
- <div class="row5 block rel" id="flowers">
- 		<img src="/images/flowers.jpg" id="imgflowers" />
-	</div>
- <div class="row5 block center rel" id="logos">
- 		<div id="asseenin">As seen in...</div>
-		<img src="/images/as_seen_in.jpg" id="imglogos" />
-	</div>
- <div class="row5 block" id="surfing">
-	</div>
-</div> -->
+</div>
 <div id="bottombar">
-	<a class="links" href="#">TRY US ON</a>
+	<a class="links" href="#">TRY US</a>
 	<a class="links" href="#">FIND A LAUNDRY NEAR YOU</a>
 	<a class="links" href="#">SHOP OUR CLEANSERS</a>
 </div>
-
-<script>
-window.onload = function(){
-	if(document.body.clientWidth && document.body.clientWidth < 760)
-	{
-		//reorder for mobile
-		$('#revolutionizing').insertBefore('#wwd');
-		$('#face').insertAfter('#revolutionizing');
-		$('#water').insertAfter('#philosophy');
-		$('#surfing').insertBefore('#logos');
-	}
-};
-</script>

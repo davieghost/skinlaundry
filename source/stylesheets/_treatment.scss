@@ -1,13 +1,8 @@
-
-/*----------------------------- LOOKBOOKS PAGE -----------------------------*/
 @import 'variables';
-// this constant should be the same as the MOBILE_WIDTH 
-// constant at the top of _lookbooks.js
-$mobile-width: 610px;   
+
 $tablet-width: 980px;   
 $tablet-width-two: 852px;  
 $background-height: 410px;  
-$slide-control-color: rgb(125, 125, 125);
 
 
 body.treatment {
@@ -126,7 +121,7 @@ body.treatment {
 					clear: both;
 				}
 				@media only screen and (max-width: $tablet-width) {
-					margin-top: 0;
+					margin-top: 22px;
 					padding: 20px 20px 0 20px;
 				}
 			}
@@ -210,6 +205,10 @@ body.treatment {
 				padding-left: 20%;
 				padding-right: 50px;
 				max-width: 100%;
+				ul {
+					list-style: circle;
+					margin-left: -8%;
+				}
 				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					padding: 40px;
@@ -224,6 +223,17 @@ body.treatment {
 				width: 40%;
 				padding: 10px 40px 0 40px;
 				max-width: 100%;
+				ul {
+					list-style: circle;
+					line-height: 17px;
+					margin-left: -8%;
+
+				}
+				@media only screen and (max-width: $tablet-width-two) {
+					ul {
+						font-size: 12.5px;
+					}
+				}
 				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
@@ -234,7 +244,7 @@ body.treatment {
 				@media only screen and (max-width: $tablet-width) {
 					margin-top: 0;
 					padding: 20px 20px 0 20px;
-					p{
+					p {
 						font-size: 14px;
 						line-height: 1.1em;
 					}
@@ -257,17 +267,21 @@ body.treatment {
 					min-width: 100%;
 				}
 
-				#slider {
+				.slider {
 			      position: relative;
 			      padding-top: 55.4%;
 			      overflow-x: hidden;
-			      #slide-control {
+			      .slide-control {
 			        position: absolute;
-			        bottom: 15%;
-			        left: 45%;
+			        bottom: 7%;
+			        left: 41%;
 			        z-index: 5;
 			        & > * {
 			          float: left;
+			        }
+			        @media only screen and (max-width: 480px) {
+			        	bottom: 4%;
+			        	left: 39%;
 			        }
 			        .circle {
 			          width: 8px;
@@ -279,18 +293,20 @@ body.treatment {
 			            background-color: $slide-control-color;
 			          }
 			        }
-			        #slide-left {
+			        .slide-left {
 			          cursor: pointer;
 			          text-align: center;
 			          width: 16px;
-			          padding-top: 2px;
+			          margin-top: -2px;
+			          margin-right: 2px;
 			          color: $slide-control-color;
 			        }
-			        #slide-right {
+			        .slide-right {
 			          cursor: pointer;
 			          text-align: center;
 			          width: 16px;
-			          padding-top: 2px;
+			          margin-top: -2px;
+			          margin-left: 2px;
 			          color: $slide-control-color;
 			        }
 			      }
@@ -342,8 +358,7 @@ body.treatment {
 				    }
 				  }
 			      #slide-01 {
-			        background-image: image-url("place1.jpg");
-			        opacity: .25;
+			        background-image: image-url("Before_After_1.jpg");
 			        display: block;
 			        .overlay-text {
 			          font-size: 20px;
@@ -353,9 +368,7 @@ body.treatment {
 			        }
 			      }
 			      #slide-02 {
-			        background-image: image-url("place2.jpg");
-			        opacity: .25;
-			        
+			        background-image: image-url("Before_After_2.jpg");
 			        .overlay-text {
 			          font-size: 20px;
 			          .text-box {
@@ -364,10 +377,8 @@ body.treatment {
 			        }
 			      }
 			      #slide-03 {
-			        background-image: image-url("place3.jpg");
-			        opacity: .25;
-			        .overlay-text {
-			          
+			        background-image: image-url("Before_After_3.jpg");
+			        .overlay-text {			          
 			          .text-box {
 			            margin-top: 10%;
 			          }
@@ -398,6 +409,13 @@ body.treatment {
 			background: none;
 			text-align: center;
 			font-size: .8em;
+			@media only screen and (max-width: 760px) {
+				margin-top: 23%;
+			}
+
+			@media only screen and (max-width: 610px) {
+				margin-top: auto;
+			}
 			a.links {
 				display: block;
 				-webkit-transition: all 300ms ease-out;

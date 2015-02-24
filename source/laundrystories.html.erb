@@ -2,64 +2,69 @@
 	<div class="head">
 		<h1>Laudry Stories</h1>
 	</div>
-
-	<div class="block left row1" id="yen">
-	</div><!--
- --><div class="block right row1 rel" id="whoneedsmakeup">
-		<div class="bottomright">
-		<span class="smalltext">10 Treatments / 6 Months</span><br/>
-		<span class="quotetext">"Who needs makeup?"</span>
+	<div class="row short02">
+		<div class="block01"></div>
+		<div class="block02">
+			<div class="text-container hide-mobile">
+				<p class="smalltext">10 Treatments / 6 Months</p>
+				<p class="quotetext">"Who needs makeup?"</p>
+			</div>
 		</div>
 	</div>
-	<div class="block left row2" id="yenquote">
-		<span class="smalltext">Founder<br/>
-		10 Treatments / 6 Months</span><br/>
-		<span class="quotetext">"My makeup and stylist say my skin has never looked better."</span>
-	</div><!--
- --><div class="block right row2" id="rebecca">
+	<div class="row regular">
+		<div class="block03">
+			<div class="text-container">
+				<p class="smalltext">Founder<br>10 Treatments / 6 Months</p>
+				<p class="quotetext">"My makeup and stylist say my skin has never looked better."</p>
+			</div>
+		</div>
+		<div class="block04"></div>
+		<div class="block02 hide-desktop">
+			<div class="text-container">
+				<p class="smalltext">10 Treatments / 6 Months</p>
+				<p class="quotetext">"Who needs makeup?"</p>
+			</div>
+		</div>
 	</div>
-	<div class="left block">
-		<div class="block grad whitetext treatment">
+	<div class="row short">
+		<div class="block05">
 			<p>PUT YOUR BEST FACE FORWARD.</p>
 			<button class="contactus">BOOK A TREATMENT</button>
 		</div>
-		<div class="block leftquote rel" id="realyou">
-			<div class="bottomleft">
-				<span class="smalltext">10 Treatments / 6 Months</span><br/>
-				<span class="quotetext">"Wear the real you!"</span>
+		<div class="block06">
+			<div class="text-container">
+				<p class="smalltext">10 Treatments / 6 Months</p>
+				<p class="quotetext">"I can honestly say I don’t mind going out without any foundation or powder"</p>
 			</div>
 		</div>
-	</div><!--
- --><div class="right block bigbox rel">
-		<div class="block right rightquote">
-			<span class="smalltext">10 Treatments / 6 Months</span><br/>
-				<span class="quotetext">"I can honestly say I don’t mind going out without any foundation or powder"</span>
+	</div>
+	<div class="row short02">
+		<div class="block07">
+			<div class="text-container">
+				<p class="smalltext">10 Treatments / 6 Months</p>
+				<p class="quotetext">"Wear the real you!"</p>
+			</div>
+		</div>
+		<div class="block08"></div>
+	</div>
+	<div class="row regular special">
+		<div class="block09"></div>
+		<div class="block10">
+			<img src="/images/lips.png" class="lips"/>
+		</div>
+		<div class="block11">
+			<div class="text-container">
+				<p class="smalltext">10 Treatments / 6 Months</p>
+	 			<img src="/images/jen_sig.png" width="120" />
+ 			</div>
 		</div>
 	</div>
-	<div class="block left row4" id="sarah">
-	</div><!--
- --><div class="block right row4 rel" id="jen">
- 		<img src="/images/lips.png" id="lips"/>
- 		<div id="jenquote">
- 			<span class="smalltext">10 Treatments / 6 Months</span><br/>
- 			<img src="/images/jen_sig.png" width="120" />
-		</div>
+	<div class="row short02 special02">
+		
 	</div>
-</div><!--/main-->
+</div>
 <div id="bottombar">
-	<a class="links" href="#">TRY US ON</a>
+	<a class="links" href="#">TRY US</a>
 	<a class="links" href="#">FIND A LAUNDRY NEAR YOU</a>
 	<a class="links" href="#">SHOP OUR CLEANSERS</a>
 </div>
-<script>
-window.onload = function(){
-	if(document.body.clientWidth && document.body.clientWidth < 610)
-	{
-	//reorder for mobile
-		$('#yenquote').insertAfter('#yen');
-		$('#rebecca').insertAfter('#yenquote');
-		$('.bigbox').insertAfter('.whitetext');
-		$('#sarah').insertAfter('.bigbox');
-	}
-};
-</script>
