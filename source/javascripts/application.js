@@ -12,7 +12,7 @@ $(window).load(function(){
   $show = $.cookie(COOKIE_NAME);
   
   if ($show == null) {
-    $.cookie(COOKIE_NAME, 'test', {function: $('body').animate({opacity: '1'}, 1500)});
+    $.cookie(COOKIE_NAME, 'cookieMonster', {function: $('body').animate({opacity: '1'}, 1500)});
   }else {
     $('body').animate({opacity: '1'});
   }
@@ -66,13 +66,13 @@ $(document).ready(function() {
   $('#location-nav').hover(function(){
     var $hl = $(".hidden-list");
 
-    if ($hl.css('display') == 'none') {
+    if ($hl.css('display') === 'none') {
       $hl.css('display', 'block').animate({'opacity': '1'});
-    } else {
+    } else if ($hl.css('display') !== 'none'){
       $hl.animate({'opacity': '0'}, function() {
         $hl.css('display', 'none');
       });
-    }
+    } else {}
   });
 
   $('.location-mobile').click(function(e){
