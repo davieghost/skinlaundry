@@ -976,7 +976,7 @@ video {
 
 #instafeed/* image-grid */ {
   @media only screen and (max-width: $mobile-width) {
-    img:nth-child(1n + 9) {
+    img:nth-child(n + 13) {
       display: none;
     }
   }
