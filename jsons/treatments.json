@@ -8,21 +8,21 @@
 					"california" : {
 						"price" 					: "$100",
 						"sale_price" 			: "$100",
-						"value_text"			:	"A $165 value",
+						"value_text"			:	"A $225 value",
 						"title" 					: "3 Treatments for $100",
 						"title_formatted" : "3 Treatments<br>For <span>$100</span>"
 					},
 					"arizona" : {
 						"price" 					: "$100",
 						"sale_price" 			: "$100",
-						"value_text"			:	"A $165 value",
+						"value_text"			:	"A $225 value",
 						"title" 					: "3 Treatments for $100",
 						"title_formatted" : "3 Treatments<br>For <span>$100</span>"
 					},
 					"new-york" : {
 						"price" 					: "150",
 						"sale_price" 			: "150",
-						"value_text"			:	"A $210 value",
+						"value_text"			:	"A $300 value",
 						"title" 					: "3 Treatments for $150",
 						"title_formatted" : "3 Treatments<br>For <span>$150</span>"
 					}
