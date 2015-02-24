@@ -61,9 +61,14 @@ Note: Make sure you have activated location services from the google API console
 
 		if (!(navigator && navigator.geolocation))
 			config.log("Geo location not supported on browser") && callback(false) && clearTimeout(auto_fail);
+		setTimeout(function(){
 		navigator.geolocation.getCurrentPosition(function(data) {
 			clearTimeout(auto_fail);
 			config.log("Geo tracking data: ", data);
+			if(!(data && data.coords)){
+				config.log("Geo tracking null");
+				callback(false);
+			}
 			var formatted_data = [data.coords.latitude, data.coords.longitude];
 			removeCookie(config.def_cookie_key);
 			setCookie(config.def_cookie_key, JSON.stringify(formatted_data), {path : '/', expires : 30});
@@ -73,6 +78,7 @@ Note: Make sure you have activated location services from the google API console
 			config.log("Geo tracking denied: ", err);
 			callback(false);
 		}, options);
+	}, 300);
 	};
 
 	var getLocationByIP = function(callback) {

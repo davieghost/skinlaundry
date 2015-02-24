@@ -265,10 +265,10 @@ input {
     }
     li:first-child {
       display: inline-block;
-      float: left;
+      /*float: left;*/
       margin-left: -41px;
       border-bottom: $laundry-green solid 1px;
-      padding-bottom: 12px;
+      padding-bottom: 17px;
       width: 116px;
       text-align: left;
       @media only screen and (max-width: $mobile-width) {
@@ -974,4 +974,14 @@ video {
       display: none;
     }
   }
+}
+
+.default-laundry {
+  color: #00b194;
+  font-family: "DIN-Medium", "sans-serif";
+  list-style: none;
+  margin-top: -14px;
+  margin-left: -41px;
+  margin-bottom: 10px;
+  text-align: left;
 }

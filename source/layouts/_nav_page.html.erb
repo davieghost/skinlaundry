@@ -5,11 +5,11 @@
   <div id="location-login" class="hide-desktop">
     <ul id="location-nav" class="location-mobile">
       <li id="nearest">Nearest Laundry</li>
-      <li class="hidden-list" ng-repeat = "store in base.sorted_stores"><a ng-href="/locations/{{store.key}}.html" ng-bind = "store.name"></a></li>
+      <li class="hidden-list" ng-repeat = "store in base.sorted_stores"><a class="active-anchor" ng-href="/locations/{{store.key}}.html" ng-bind = "store.name"></a></li>
     </ul>
     <div id="login">
-      <a href="http://shop.skinlaundry.com/cart"></a>
-      <%= image_tag "shopping_bag.png", class: "shopping-bag" %>
+      <a href="http://shop.skinlaundry.com/cart" class ="active-anchor">
+      <%= image_tag "shopping_bag.png", class: "shopping-bag" %></a>
     </div>
   </div>
 </div>
