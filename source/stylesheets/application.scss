@@ -963,3 +963,11 @@ video {
     }
   }
 }
+
+.image-grid {
+  @media only screen and (max-width: $mobile-width) {
+    a:nth-child(1n + 9) {
+      display: none;
+    }
+  }
+}
