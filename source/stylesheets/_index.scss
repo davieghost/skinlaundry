@@ -63,7 +63,7 @@ body.index {
           }
           p {
             font-family: 'DIN';
-            font-size: 1.9vw;
+            font-size: 1.3vw;
             margin-bottom: 15px;
           }
           .text-box {
@@ -183,6 +183,14 @@ body.index {
           font-size: 13px;
           padding: 12px 0;
           color: white;
+          cursor: pointer;
+          background: -moz-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+          background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,193,170,.5)), color-stop(100%, rgba(73,165,191,.5)));
+          background: -webkit-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+          background: -o-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+          background: -ms-linear-gradient(left, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+          background: linear-gradient(to right, rgba(53,193,170,.5) 0%, rgba(73,165,191,.5) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35c1aa', endColorstr='#49a5bf', GradientType=1 );
         }
       }
       #box-01 {
@@ -222,6 +230,20 @@ body.index {
                 color: $laundry-green;
                 font-family: 'DINAlternate-Bold';
               }
+
+              .renew-you {
+                margin: 67% 0 0;
+                font: 50px 'Rollerscript-Smooth', sans-serif;
+              }
+
+              .try-eye-cream {
+                margin: 0;
+
+                color: $laundry-black;
+
+                font: 25px 'Archer-LightItalic', sans-serif;
+                text-transform: none;
+              }
             }
           }
           .back-layer {
@@ -246,6 +268,10 @@ body.index {
           transition: all .2s;
           &:hover {
             background-color: transparentize($laundry-green, 0.2);
+          }
+
+          @media screen and (max-width: 480px) {
+            font-size: 11px;
           }
         }     
       }
@@ -275,6 +301,10 @@ body.index {
           transition: all .2s;
           &:hover {
             background-color: transparentize($laundry-green, 0.2);
+          }
+
+          @media screen and (max-width: 480px) {
+            font-size: 11px;
           }
         }  
       }
@@ -308,6 +338,10 @@ body.index {
           transition: all .2s;
           &:hover {
             background-color: transparentize($laundry-green, 0.2);
+          }
+
+          @media screen and (max-width: 480px) {
+            font-size: 11px;
           }
         }  
       }

@@ -8,7 +8,16 @@
 @import 'variables';
 
 ///////////////////// GLOBAL STYLES /////////////////////
-
+.body-mask {
+  background-color: white;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 900px;
+  z-index: 3;
+  display: none;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -217,7 +226,7 @@ input {
   		display: inline-block;
       margin-right: 18px;
       @media only screen and (max-width: $mobile-width) {
-        font-size: 10px;
+        font-size: 14px;
         margin-top: 20px;
         margin-right: 12px;
       }
@@ -292,9 +301,13 @@ input {
   }
   #login {
     display: inline-block;
+
     .shopping-bag {
       position: absolute;
       top: 0;
+
+      z-index: 8002;
+
       margin-left: -30px;
       @media only screen and (max-width: $mobile-width) {
         top: 5px;
@@ -491,6 +504,7 @@ input {
       margin-bottom: 33px;
       @media only screen and (max-width: $mobile-width) {
         margin-left: 30%;
+        font-size: 27px;
       }
       a {
         color: $laundry-green;
@@ -507,6 +521,7 @@ input {
         margin-left: 36%;
         @media only screen and (max-width: $mobile-width) {
           margin-left: 30%;
+          font-size: 40px;
         }
       }
       .nav-heading {
@@ -515,6 +530,9 @@ input {
         margin: 26px 0 5px 0;
         font-family: 'DINAlternate-Bold';
         font-size: 13px;
+        @media only screen and (max-width: $mobile-width) {
+          font-size: 16px;
+        }
       }
       li:not(.nav-heading) {
         font-size: 11px;
@@ -522,6 +540,9 @@ input {
         line-height: 20px;
         letter-spacing: 2px;
         font-family: 'DIN';
+        @media only screen and (max-width: $mobile-width) {
+          font-size: 14px;
+        }
       }
     }
     .join-list {
@@ -582,6 +603,9 @@ input {
       width: 100%;
       .social {
         margin-bottom: 20px;
+        @media only screen and (max-width: $mobile-width) {
+          margin-top: 30px;
+        }
         .social-link {
           display: inline-block;
           margin: 0 10px;
@@ -674,6 +698,12 @@ video {
     text-align: center;
     padding-bottom: 10px;
     color: $laundry-black;
+    a {
+      color: $laundry-black;
+      &:hover {
+        color: white;
+      }
+    }
   }
   .image-grid {
     overflow: auto;
@@ -934,6 +964,14 @@ video {
         padding: 0 90px;
       }
 
+    }
+  }
+}
+
+#instafeed/* image-grid */ {
+  @media only screen and (max-width: $mobile-width) {
+    img:nth-child(1n + 9) {
+      display: none;
     }
   }
 }
