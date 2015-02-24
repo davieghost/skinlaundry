@@ -12,7 +12,7 @@ $(window).load(function(){
   $show = $.cookie(COOKIE_NAME);
   
   if ($show == null) {
-    $.cookie(COOKIE_NAME, 'cookieMonster', {function: $('body').animate({opacity: '1'}, 1500)});
+    $.cookie(COOKIE_NAME, 'test', {function: $('body').animate({opacity: '1'}, 1500)});
   }else {
     $('body').animate({opacity: '1'});
   }
@@ -31,14 +31,10 @@ $(document).ready(function() {
     	$np.removeClass('open');
       $(this).removeClass('close');
       $('body').css('overflow', 'auto');
-      $('.body-mask').animate({'opacity': '0'}, 'fast');
-      $('.body-mask').css({'display': 'none'});
     } else {
     	$np.addClass('open');
       $(this).addClass('close');
       $('body').css('overflow', 'hidden');
-      $('.body-mask').css({'display': 'block'});
-      $('.body-mask').animate({'opacity': '0.85'}, 'fast');
     }
 
   });
@@ -51,9 +47,9 @@ $(document).ready(function() {
       $('body').css('overflow', 'auto');
     }
 
-    $(".hidden-list").animate({'opacity': '0'}, function() {
-      $(".hidden-list").css('display', 'none');
-    });
+    // $(".hidden-list").animate({'opacity': '0'}, function() {
+    //   $(".hidden-list").css('display', 'none');
+    // });
   });
 
   // but don't close it when the nav itself is clicked
@@ -63,30 +59,30 @@ $(document).ready(function() {
 
   //////////////////// HEADER //////////////////////
 
-  $('#location-nav').hover(function(){
-    var $hl = $(".hidden-list");
+  // $('#location-nav').hover(function(){
+  //   var $hl = $(".hidden-list");
 
-    if ($hl.css('display') === 'none') {
-      $hl.css('display', 'block').animate({'opacity': '1'});
-    } else if ($hl.css('display') !== 'none'){
-      $hl.animate({'opacity': '0'}, function() {
-        $hl.css('display', 'none');
-      });
-    } else {}
-  });
+  //   if ($hl.css('display') == 'none') {
+  //     $hl.css('display', 'block').animate({'opacity': '1'});
+  //   } else {
+  //     $hl.animate({'opacity': '0'}, function() {
+  //       $hl.css('display', 'none');
+  //     });
+  //   }
+  // });
 
-  $('.location-mobile').click(function(e){
-    e.stopPropagation();
-    var $hl = $(".hidden-list");
+  // $('.location-mobile').click(function(e){
+  //   e.stopPropagation();
+  //   // var $hl = $(".hidden-list");
 
-    if ($hl.css('display') == 'none') {
-      $hl.css('display', 'block').animate({'opacity': '1'});
-    } else {
-      $hl.animate({'opacity': '0'}, function() {
-        $hl.css('display', 'none');
-      });
-    }
-  });
+  //   // if ($hl.css('display') == 'none') {
+  //   //   $hl.css('display', 'block').animate({'opacity': '1'});
+  //   // } else {
+  //   //   $hl.animate({'opacity': '0'}, function() {
+  //   //     $hl.css('display', 'none');
+  //   //   });
+  //   // }
+  // });
 
   $(window).scroll(function(){
     if ($(window).scrollTop() > 100 && $('body').width() > MOBILE_WIDTH) {
