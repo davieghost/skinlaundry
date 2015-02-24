@@ -76,11 +76,11 @@
 			"email"			: ["westhollywood@skinlaundry.com"],
 			"geocode"		: [34.077595,  -118.383558],
 			"timings"		: {
-				"Mon" : "9:30 am – 2:00 pm<br />3:00 pm – 6:30 pm", 
-				"Tue" : "9:30 am – 2:00 pm<br />3:00 pm – 8:30 pm",
-				"Wed" : "9:30 am – 2:00 pm<br />3:00 pm – 6:30 pm", 
-				"Thu" : "9:30 am – 2:00 pm<br />3:00 pm – 6:30 pm",
-				"Fri" : "9:30 am – 2:00 pm<br />3:00 pm – 6:30 pm",
+				"Mon" : "8:00 am – 2:00 pm<br />3:00 pm – 8:00 pm", 
+				"Tue" : "8:00 am – 2:00 pm<br />3:00 pm – 8:00 pm",
+				"Wed" : "8:00 am – 2:00 pm<br />3:00 pm – 8:00 pm", 
+				"Thu" : "8:00 am – 2:00 pm<br />3:00 pm – 8:00 pm",
+				"Fri" : "8:00 am – 2:00 pm<br />3:00 pm – 8:00 pm",
 				"Sat" : "9:00 am – 1:00 pm<br />2:00 pm – 5:30 pm", 
 				"Sun" : "closed"
 			},
