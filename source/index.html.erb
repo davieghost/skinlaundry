@@ -33,14 +33,14 @@
     </div>
   </div>
   <div id="box-set">
-    <a ng-href = "{{base.default_zone.length ? '/' + base.default_zone + '/offers.html' : '/shop-treatments-default.html'}}" ng-show = "base.default_zone.length">
+    <a ng-href="{{base.default_zone.length ? '/' + base.default_zone + '/offers.html' : '/shop-treatments-default.html'}}" ng-show="base.default_zone.length">
     <div id="box-01" class="box">
       <div class="top-section">
         <div class="front-layer">
           <div class="overlay-text">
             <h1>Buy</h1>
-            <h2 ng-bind = "base.default_treatment.title"></h2>
-            <h3 ng-bind = "base.default_treatment.value_text"></h3>
+            <h2 ng-bind="base.default_treatment.title"></h2>
+            <h3 ng-bind="base.default_treatment.value_text"></h3>
           </div>
         </div>
         <div class="back-layer"></div>
@@ -48,19 +48,21 @@
       <div class="bottom-section">TRY US</div>
     </div>
     </a>
-    <a href = "http://shop.skinlaundry.com/products/renewing-eye-cream" ng-show = "!base.default_zone.length">
-    <div id="box-01" class="box">
-      <div class="top-section">
-        <div class="front-layer" style="background-color:transparent">
-          <div class="overlay-text">
+    <a href="http://shop.skinlaundry.com/products/renewing-eye-cream" ng-show="!base.default_zone.length">
+      <div id="box-01" class="box">
+        <div class="top-section">
+          <div class="front-layer" style="background-color:transparent">
+            <div class="overlay-text">
+              <h1 class="renew-you">renew you</h1>
+              <h3 class="try-eye-cream" ng-bind="base.default_treatment.value_text">try our new eye cream</h3>
+            </div>
           </div>
+          <div class="back-layer" style="background-image:url(/images/renew-eye-cream.jpg);opacity:1"></div>
         </div>
-        <div class="back-layer" style="background-image:url(/images/cream-eye-home.jpg);opacity:1"></div>
+        <div class="bottom-section">SHOP</div>
       </div>
-      <div class="bottom-section">Buy now</div>
-    </div>
     </a>
-    <a ng-href = "{{base.default_location_key.length ? '/locations/' + base.default_location_key + '.html' : '/locations.html'}}">
+    <a ng-href="{{base.default_location_key.length ? '/locations/' + base.default_location_key + '.html' : '/locations.html'}}">
     <div id="box-02" class="box">
       <div class="top-section">
         <div class="overlay-text">Visit your local laundry</div>
