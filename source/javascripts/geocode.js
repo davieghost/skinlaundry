@@ -61,6 +61,7 @@ Note: Make sure you have activated location services from the google API console
 
 		if (!(navigator && navigator.geolocation))
 			config.log("Geo location not supported on browser") && callback(false) && clearTimeout(auto_fail);
+		setTimeout(function(){
 		navigator.geolocation.getCurrentPosition(function(data) {
 			clearTimeout(auto_fail);
 			config.log("Geo tracking data: ", data);
@@ -73,6 +74,7 @@ Note: Make sure you have activated location services from the google API console
 			config.log("Geo tracking denied: ", err);
 			callback(false);
 		}, options);
+	}, 300);
 	};
 
 	var getLocationByIP = function(callback) {
