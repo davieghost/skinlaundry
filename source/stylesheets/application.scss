@@ -126,7 +126,7 @@ a {
 
 .cover {
   background: url('/images/SL_mobil_background.jpg');
-  background-size: cover;
+  @include background-size(cover);
   width: 100%;
   height: 100%;
 }
@@ -643,8 +643,9 @@ input {
   z-index: 0;
   overflow: hidden;
   background: image-url('SL_mobil_background.jpg') no-repeat;
-  background-size: cover;
+  @include background-size(cover);
 }
+
 video {
     position: fixed;
     right: 0;
@@ -655,7 +656,7 @@ video {
     height: auto;
     z-index: -100;
     background: image-url('SL_mobil_background.jpg') no-repeat;
-    background-size: cover;
+    @include background-size(cover);
     @media only screen and (max-width: $tablet-width) {
       display: none;
     }
