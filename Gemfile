@@ -19,6 +19,9 @@ gem 'image_optim'
 gem 'middleman-imageoptim'
 
 gem 'shopify_api'
+gem 'foreman'
+gem 'puma'
+gem 'rake'
 
 
 # for re-writing URLs
