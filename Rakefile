@@ -1,4 +1,4 @@
-namespace :slweb do
+namespace :assets do
   task :precompile do
   	begin
     	sh 'middleman build --verbose'
