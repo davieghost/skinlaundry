@@ -72,7 +72,7 @@ $(document).ready(function() {
   //     });
   //   }
   // });
-  $('.location-mobile .hidden-list').on("click", function(e){
+  $('a.active-anchor').on("click", function(e){
     window.location.href = $(this).attr("href");
     return false;
   });

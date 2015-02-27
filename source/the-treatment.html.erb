@@ -123,7 +123,7 @@
     </div>
 
     <div id="bottombar">
-      <a class="links" ng-href = "{{base.default_zone.length ? '/' + base.default_zone + '/treatments.html' : '/shop-treatments-default.html'}}">TRY US</a>
+      <a class="links" ng-href = "{{base.default_zone.length ? '/' + base.default_zone + '/offers.html' : '/shop-treatments-default.html'}}" ng-bind = "base.default_zone.length ? 'TRY US' : 'LEARN MORE'"></a>
       <a class="links" ng-href = "{{base.default_location_key.length ? '/locations/' + base.default_location_key + '.html' : '/locations.html'}}">FIND A LAUNDRY NEAR YOU</a>
       <a class="links" href="/products.html">SHOP OUR CLEANSERS</a>
     </div>
