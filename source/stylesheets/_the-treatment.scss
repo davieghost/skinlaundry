@@ -211,6 +211,7 @@ $background-height: 410px;
 				ul {
 					line-height: 17px;
 					margin-left: -8%;
+					list-style: circle;
 
 				}
 				@media only screen and (max-width: $tablet-width-two) {
@@ -238,10 +239,22 @@ $background-height: 410px;
 				@media only screen and (max-width: $tablet-width-two) {
 					ul {
 						font-size: 12.5px;
+						list-style-position: inside;
 					}
 				}
 				padding: 5px 40px 0 40px;
 				max-width: 100%;
+				ul {
+					list-style: circle;
+					line-height: 17px;
+					margin-left: -8%;
+
+				}
+				@media only screen and (max-width: $tablet-width-two) {
+					ul {
+						font-size: 12.5px;
+					}
+				}
 				@media only screen and (max-width: $tablet-portrait) {
 					width: 100%;
 					float: none;
@@ -252,7 +265,7 @@ $background-height: 410px;
 				@media only screen and (max-width: $tablet-width) {
 					margin-top: 0;
 					padding: 20px 20px 0 20px;
-					p{
+					p {
 						font-size: 14px;
 						line-height: 1.1em;
 					}
@@ -420,6 +433,7 @@ $background-height: 410px;
 			@media only screen and (max-width: 760px) {
 				margin-top: 23%;
 			}
+
 			@media only screen and (max-width: 610px) {
 				margin-top: auto;
 			}
