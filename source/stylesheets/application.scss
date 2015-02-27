@@ -126,12 +126,10 @@ a {
 
 .cover {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: url('/images/SL_mobil_background_small.jpg');
-  background-size: cover;
-=======
   background: url('/images/SL_mobil_background.jpg');
   @include background-size(cover);
->>>>>>> origin/qa
   width: 100%;
   height: 100%;
 }
@@ -647,13 +645,8 @@ input {
   position: fixed;
   z-index: 0;
   overflow: hidden;
-<<<<<<< HEAD
   background: image-url('SL_mobil_background_small.jpg') no-repeat;
-  background-size: cover;
-=======
-  background: image-url('SL_mobil_background.jpg') no-repeat;
   @include background-size(cover);
->>>>>>> origin/qa
 }
 
 video {
@@ -665,13 +658,8 @@ video {
     width: auto;
     height: auto;
     z-index: -100;
-<<<<<<< HEAD
     background: image-url('SL_mobil_background_small.jpg') no-repeat;
-    background-size: cover;
-=======
-    background: image-url('SL_mobil_background.jpg') no-repeat;
     @include background-size(cover);
->>>>>>> origin/qa
     @media only screen and (max-width: $tablet-width) {
       display: none;
     }
