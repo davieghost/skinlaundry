@@ -91,7 +91,6 @@
                         <li>History of skin cancer on the face or light induced seizures</li>
                     </ul>
                 </div>
-                
             </div>
             <div class="block05 hide-desktop">
                 <h3 id="contact-us">OUR HIGHLY TRAINED STAFF AND HEALTH CARE PROFESSIONALS WILL BE HAPPY TO ANSWER ANY ADDITIONAL QUESTIONS YOU HAVE. PLEASE CALL 877-SKINTEAM NOW.</h3>
@@ -115,15 +114,14 @@
         var answerNum;
         $('.question').on('click', function(e) {
             e.preventDefault();
-            questionNum = $(this).attr('id').slice(-1);
-            answerNum = '#answer'+questionNum;
+            questionNum = $(this).attr('id').slice(-2);
+            answerNum = '.answer'+questionNum;
             if(lastQuestion != questionNum)
             {
                 $('.show-class').slideUp();
                 $(answerNum).slideDown();
                 lastQuestion = questionNum;
             }
-            //console.log(answerNum);
         })
     };
 </script>

@@ -31,10 +31,12 @@ $(document).ready(function() {
     	$np.removeClass('open');
       $(this).removeClass('close');
       $('body').css('overflow', 'auto');
+      $('.body-mask').animate({'opacity': '0'}, 'fast');
     } else {
     	$np.addClass('open');
       $(this).addClass('close');
       $('body').css('overflow', 'hidden');
+      $('.body-mask').animate({'opacity': '0.85'});
     }
 
   });
