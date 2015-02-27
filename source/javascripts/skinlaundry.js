@@ -382,3 +382,18 @@ SLWebApp.factory('treatmentfactory', [function(){
 	};
 	return treatmentfactory;
 }]);
+
+SLWebApp.directive('slideToggle', function(){
+	return{
+		scope : {target : '@', hide : '@'},
+		link : function(scope, elem, attr){
+			elem.on("click", function(event){
+				$(scope.hide).not(scope.target).slideUp('fast', function(){
+				});
+				$(scope.target).slideToggle('fast');
+				return false;
+			});
+
+		}
+	}
+})
