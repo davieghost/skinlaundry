@@ -643,7 +643,7 @@ input {
   position: fixed;
   z-index: 0;
   overflow: hidden;
-  background: url('SL_mobil_background_small.jpg') no-repeat;
+  background: url('/images/SL_mobil_background_small.jpg') no-repeat;
   @include background-size(cover);
 }
 
@@ -656,7 +656,7 @@ video {
     width: auto;
     height: auto;
     z-index: -100;
-    background: url('SL_mobil_background_small.jpg') no-repeat;
+    background: url('/images/SL_mobil_background_small.jpg') no-repeat;
 
     @include background-size(cover);
     /*
