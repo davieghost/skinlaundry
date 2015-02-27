@@ -36,7 +36,7 @@ $(document).ready(function() {
     	$np.addClass('open');
       $(this).addClass('close');
       $('body').css('overflow', 'hidden');
-      $('.body-mask').animate({'opacity': '0.85'});
+      $('.body-mask').animate({'opacity': '0.85'}, 'fast');
     }
 
   });

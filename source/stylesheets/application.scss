@@ -17,6 +17,7 @@
   min-height: 900px;
   z-index: 3;
   display: none;
+
 }
 * {
   -webkit-box-sizing: border-box;
@@ -643,7 +644,6 @@ input {
   z-index: 0;
   overflow: hidden;
   background: url('SL_mobil_background_small.jpg') no-repeat;
-
   @include background-size(cover);
 }
 
