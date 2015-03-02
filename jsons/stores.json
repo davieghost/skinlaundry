@@ -195,6 +195,7 @@
 			"zone"			: "new-york",
 			"contact"	: ["646-760-9298"],
 			"geocode"	:	[40.738047, -73.993245],
+			"additive_text" : "Susan C Fox, MD, PC<br />Board Certified Internist",
 			"timings"	: {
 				"Mon" : "7:00 AM – 8:00 PM",
 				"Tue" : "7:00 AM – 8:00 PM",
