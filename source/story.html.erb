@@ -1,8 +1,9 @@
+<script src="/javascripts/scrollReveal.js"></script>
 <div id="main">
 	<div class="head">
 		<h1>Our Story</h1>
 	</div>
-	<div class="row short02">
+	<div class="row short02" data-sr>
 		<div class="block01"></div>
 		<div class="block03 hide-desktop">
 			<h3>Revolutionizing the way people clean and care for their skin</h3>
@@ -17,14 +18,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="row regular">
+	<div class="row regular" data-sr>
 		<div class="block03 hide-mobile">
 			<h3>Revolutionizing the way people clean and care for their skin</h3>
 			<p>We treat clogged, dirty, damaged skin through affordable laser &amp; light treatments delivered in an inviting and comfortable setting, staffed with certified healthcare professionals highly trained on proven SL methods and overseen by a team of medical advisors.</p>
 		</div>
 		<div class="block04 hide-mobile"></div>
 	</div>
-	<div class="row short">
+	<div class="row short" data-sr>
 		<div class="block05">
 			<div class="mobile-wwd hide-desktop">
 				<img src="/images/wwd.png" class="imgwwd" />
@@ -38,7 +39,7 @@
 		</div>
 		<div class="block08 hide-desktop"></div>
 	</div>
-	<div class="row short02">
+	<div class="row short02" data-sr>
 		<div class="block07">
 			<p class="it">"We're not reinventing the wheel. We're saying don't do too much, just do enough, but let's bring it on a milder level. If you're looking for a quick fix, that's not going to be us. We're about working with you and maintaining your skin overtime."</p>
 			<img src="/images/yen_reis.png"/>
@@ -47,7 +48,7 @@
 		<div class="block11 hide-desktop"></div>
 		<div class="block08 hide-mobile"></div>
 	</div>
-	<div class="row short03">
+	<div class="row short03" data-sr>
 		<div class="block09 hide-mobile"></div>
 		<div class="block10">
 			<p>As seen in...</p>
@@ -60,3 +61,11 @@
 	<a class="links" href="#">FIND A LAUNDRY NEAR YOU</a>
 	<a class="links" href="#">SHOP OUR CLEANSERS</a>
 </div>
+<script>
+var config = {
+				enter: 'bottom',
+				scale:    { direction: 'up', power: '5%' },
+				move: '100px',
+			 }
+	window.sr = new scrollReveal(config);
+</script>
