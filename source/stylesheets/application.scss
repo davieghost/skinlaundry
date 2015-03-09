@@ -569,7 +569,7 @@ input {
   position: fixed;
   z-index: 0;
   overflow: hidden;
-  background: image-url('SL_mobil_background_small.jpg') no-repeat;
+//  background: image-url('SL_mobil_background_small.jpg') no-repeat;
   background-size: cover;
 }
 video {
@@ -581,8 +581,9 @@ video {
     width: auto;
     height: auto;
     z-index: -100;
-    background: image-url('SL_mobil_background_small.jpg') no-repeat;
-    background-size: cover;
+    background-color: white;
+  //  background: image-url('SL_mobil_background_small.jpg') no-repeat;
+  //  background-size: cover;
     @media only screen and (max-width: $tablet-width) {
       display: none;
     }
