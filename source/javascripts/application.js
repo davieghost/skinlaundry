@@ -3,22 +3,28 @@
 
 
 var MOBILE_WIDTH = 610;
-$(window).on('beforeunload', function(){
+/*$(window).on('beforeunload', function(){
+  console.log("window unloading");
   $(".video-bg-loader").css('display','block');
   $('video').css({opacity: '0'});
   $('body').css({opacity: '0'});
+  $('html').css({opacity: '0'});
   
   
 });
 $(window).load(function() {
   console.log("window loaded");
-  $('body').animate({opacity: '1'});
-  $('video').animate({opacity: '1'});
+  $('video').css({opacity: '1'});
+  $('body').css({opacity: '1'});
+  $('html').css({opacity: '1'});
   $(".video-bg-loader").css('display','none');
   $('a').click(function(){
-    $('video').animate({opacity: '0'});
+    $(".video-bg-loader").css('display','block');
+    $('video').css({opacity: '0'});
+    $('body').css({opacity: '0'});
+    $('html').css({opacity: '0'});
   });
-});
+});*/
 
 $(document).ready(function() {
 

@@ -1,6 +1,15 @@
 <!doctype html>
 <html>
   <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script FOR="window">
+  $(window).on('beforeunload', function(){
+  console.log("window unloading");
+  $(".video-bg-loader").css('display','block');
+  $('video').css({opacity: '0'});
+  $('body').css({opacity: '0'});
+  $('html').css({opacity: '0'});
+});</script>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -38,22 +47,20 @@
 
 
     <script FOR="window">
-        $(window).on('beforeunload', function(e){
-            e.stopPropagation();
-          $('body').css({opacity: '0'});
-          $('video').css({opacity: '0'});
-          $(".video-bg-loader").css('display','block');
-        });
-        $(window).load(function() {
-          console.log("window loaded");
-          $('body').animate({opacity: '1'}, 500);
-          $('video').animate({opacity: '1'}, 500);
-          $(".video-bg-loader").css('display','none');
-          $('a').click(function(){
-            $('video').animate({opacity: '0'}, 500);
-          });
-        });
 
+$(window).load(function() {
+  console.log("window loaded");
+  $('video').css({opacity: '1'});
+  $('body').css({opacity: '1'});
+  $('html').css({opacity: '1'});
+  $(".video-bg-loader").css('display','none');
+  $('a').click(function(){
+    $(".video-bg-loader").css('display','block');
+    $('video').css({opacity: '0'});
+    $('body').css({opacity: '0'});
+    $('html').css({opacity: '0'});
+  });
+});
     </script>
   </body>
 </html>
