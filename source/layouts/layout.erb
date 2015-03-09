@@ -15,14 +15,14 @@
   <div class="body-mask"></div>
 
     <img class="video-bg-loader" src="/images/SL_mobil_background_small.jpg">
-    <div class="videobg">
+    <!-- <div class="videobg"> -->
       <video autoplay loop muted class="hide-mobile">
         <source src="/video/02.mp4" type="video/mp4">
         <source src="/video/02.webm" type="video/mp4">
       </video>
       <div class="hide-desktop cover"></div>
       <img src="/images/SL_Watermark.png" id="watermark"/>
-    </div>
+    <!-- </div> -->
     
     <%= partial "layouts/header" %>
     <%= partial "layouts/nav_page" %>
@@ -35,5 +35,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <%= javascript_include_tag  "application" %>
+
+
+    <script FOR="window">
+        $(window).on('beforeunload', function(e){
+            e.stopPropagation();
+          $('body').css({opacity: '0'});
+          $('video').css({opacity: '0'});
+          $(".video-bg-loader").css('display','block');
+        });
+        $(window).load(function() {
+          console.log("window loaded");
+          $('body').animate({opacity: '1'}, 500);
+          $('video').animate({opacity: '1'}, 500);
+          $(".video-bg-loader").css('display','none');
+          $('a').click(function(){
+            $('video').animate({opacity: '0'}, 500);
+          });
+        });
+
+    </script>
   </body>
 </html>

@@ -3,26 +3,23 @@
 
 
 var MOBILE_WIDTH = 610;
-
+$(window).on('beforeunload', function(){
+  $('body').css({opacity: '0'});
+  $('video').css({opacity: '0'});
+  $(".video-bg-loader").css('display','block');
+});
 $(window).load(function() {
   console.log("window loaded");
-  $(".video-bg-loader").remove();
-  $(".videobg").css('background-image', 'url(/images/SL_mobil_background_small.jpg)');
-  $('body').animate({opacity: '1'});
-  
-  /////////////// DELAY DOM SHOWING ////////////////
-  
-  // var COOKIE_NAME = "dont-fade-agin"
-  // $show = $.cookie(COOKIE_NAME);
-  
-  // if ($show == null) {
-  //   $.cookie(COOKIE_NAME, 'test', {function: $('body').animate({opacity: '1'}, 1500)});
-  // } else {
-  //   $('body').animate({opacity: '1'});
-  // }
+  $('body').animate({opacity: '1'}, 500);
+  $('video').animate({opacity: '1'}, 500);
+  $(".video-bg-loader").css('display','none');
+  $('a').click(function(){
+    $('video').animate({opacity: '0'}, 500);
+  });
 });
 
 $(document).ready(function() {
+
 
   /////////////// NAV PAGE OPEN/CLOSE //////////////
 
