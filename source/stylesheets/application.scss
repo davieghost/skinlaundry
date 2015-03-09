@@ -572,7 +572,7 @@ input {
   background: image-url('SL_mobil_background_small.jpg') no-repeat;
   background-size: cover;
 }
-video {
+.video {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -581,11 +581,12 @@ video {
     width: auto;
     height: auto;
     z-index: -100;
-    background: image-url('SL_mobil_background_small.jpg') no-repeat;
     background-size: cover;
+    /*
     @media only screen and (max-width: $tablet-width) {
       display: none;
     }
+    */
   }
 
 #watermark {

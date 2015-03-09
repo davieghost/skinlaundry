@@ -20,7 +20,7 @@ $(window).load(function(){
 
 
 $(document).ready(function() {
-
+  $('.video').css('background-image',"url('/video/02.gif')").css('background-repeat', 'no-repeat');
   /////////////// NAV PAGE OPEN/CLOSE //////////////
 
   $("#nav-open").click(function(e) {
