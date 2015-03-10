@@ -4,15 +4,23 @@
 
 var MOBILE_WIDTH = 610;
 
-/*$(window).load(function() {
+$(window).load(function() {
   $('body').animate({'opacity': '1'});
-});*/
+});
 
-$(".videobg video")[0].oncanplay = function() {
-  console.log("video can play so it's being unhidden");
-  //$(this).removeClass('hidden');
-  $(this).css('display','block')
+
+////////////// safari video bug fix ////////////////
+
+$(window).on('beforeunload', function() {
+  $(".videobg video").addClass('hidden');
+});
+
+$(".videobg video")[0].onplaying = function() {
+  $(this).removeClass('hidden');
 }
+
+////////////////////////////////////////////////////
+
 
 $(document).ready(function() {
 
