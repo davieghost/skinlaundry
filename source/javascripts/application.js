@@ -3,31 +3,18 @@
 
 
 var MOBILE_WIDTH = 610;
-/*$(window).on('beforeunload', function(){
-  console.log("window unloading");
-  $(".video-bg-loader").css('display','block');
-  $('video').css({opacity: '0'});
-  $('body').css({opacity: '0'});
-  $('html').css({opacity: '0'});
-  
-  
-});
-$(window).load(function() {
-  console.log("window loaded");
-  $('video').css({opacity: '1'});
-  $('body').css({opacity: '1'});
-  $('html').css({opacity: '1'});
-  $(".video-bg-loader").css('display','none');
-  $('a').click(function(){
-    $(".video-bg-loader").css('display','block');
-    $('video').css({opacity: '0'});
-    $('body').css({opacity: '0'});
-    $('html').css({opacity: '0'});
-  });
+
+/*$(window).load(function() {
+  $('body').animate({'opacity': '1'});
 });*/
 
-$(document).ready(function() {
+$(".videobg video")[0].oncanplay = function() {
+  console.log("video can play so it's being unhidden");
+  //$(this).removeClass('hidden');
+  $(this).css('display','block')
+}
 
+$(document).ready(function() {
 
   /////////////// NAV PAGE OPEN/CLOSE //////////////
 
@@ -36,12 +23,12 @@ $(document).ready(function() {
     e.stopPropagation();
     
     if($np.hasClass('open')) {
-    	$np.removeClass('open');
+      $np.removeClass('open');
       $(this).removeClass('close');
       $('body').css('overflow', 'auto');
       $('.body-mask').animate({'opacity': '0'}, 'fast');
     } else {
-    	$np.addClass('open');
+      $np.addClass('open');
       $(this).addClass('close');
       $('body').css('overflow', 'hidden');
       $('.body-mask').animate({'opacity': '0.85'});
