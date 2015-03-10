@@ -3,31 +3,17 @@
 
 
 var MOBILE_WIDTH = 610;
-/*$(window).on('beforeunload', function(){
-  console.log("window unloading");
-  $(".video-bg-loader").css('display','block');
-  $('video').css({opacity: '0'});
-  $('body').css({opacity: '0'});
-  $('html').css({opacity: '0'});
-  
-  
-});
+
 $(window).load(function() {
-  console.log("window loaded");
-  $('video').css({opacity: '1'});
-  $('body').css({opacity: '1'});
-  $('html').css({opacity: '1'});
-  $(".video-bg-loader").css('display','none');
-  $('a').click(function(){
-    $(".video-bg-loader").css('display','block');
-    $('video').css({opacity: '0'});
-    $('body').css({opacity: '0'});
-    $('html').css({opacity: '0'});
-  });
-});*/
+  $('body').animate({'opacity': '1'});
+});
+
+$(".videobg video")[0].oncanplay = function() {
+  console.log("video can play so it's being unhidden");
+  $(this).removeClass('hidden');
+}
 
 $(document).ready(function() {
-
 
   /////////////// NAV PAGE OPEN/CLOSE //////////////
 
