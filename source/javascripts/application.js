@@ -8,8 +8,8 @@ $(window).load(function() {
   $('body').animate({'opacity': '1'});
 });
 
-$(".videobg video")[0].oncanplay = function() {
-  console.log("video can play so it's being unhidden");
+$(".videobg video")[0].onplaying = function() {
+  console.log("video is playing so it's being unhidden");
   $(this).removeClass('hidden');
 }
 
