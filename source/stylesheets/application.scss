@@ -104,7 +104,7 @@ input {
 
 #header {
   background-color: rgba(255,255,255,0);
-	position: fixed;
+  position: fixed;
   top: 0px;
   left: 0;
   right: 0;
@@ -125,14 +125,14 @@ input {
     text-align: center;
   }
   img {
-  	display: inline-block;
+    display: inline-block;
   }
   .logo {
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
     -o-transition: all .2s;
     transition: all .2s;
-  	display: inline-block;
+    display: inline-block;
     position: relative;
     @media only screen and (max-width: $mobile-width) {
       width: 190px;
@@ -143,12 +143,12 @@ input {
   #shop-nav {
     position: relative;
     top: -20px;
-  	display: inline-block;
+    display: inline-block;
     @media only screen and (max-width: $tablet-width) {
       display: block;
       padding: 0;
     }
-  	li {
+    li {
       a {
         color: rgb(84,83,74);
         text-decoration: none;
@@ -162,14 +162,14 @@ input {
       font-family: 'DIN';
       font-size: 17px;
       text-transform: uppercase;
-  		display: inline-block;
+      display: inline-block;
       margin-right: 18px;
       @media only screen and (max-width: $mobile-width) {
         font-size: 14px;
         margin-top: 20px;
         margin-right: 12px;
       }
-  	}
+    }
   }
 }
 #location-login {
@@ -258,11 +258,11 @@ input {
   -moz-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
-	position: fixed;
-	z-index: 8000;
-	display: inline-block;
-	left: 15px;
-	top: 25px;
+  position: fixed;
+  z-index: 8000;
+  display: inline-block;
+  left: 15px;
+  top: 25px;
   width: 34px;
   height: 36px;
   color: white;
@@ -381,7 +381,7 @@ input {
 ///////////////////////// NAV PAGE ///////////////////////////
 
 #nav-page {
-	position: fixed;
+  position: fixed;
   top: 0;
   height: 100%;
   left: -100%;

@@ -34,12 +34,12 @@ $(document).ready(function() {
     e.stopPropagation();
     
     if($np.hasClass('open')) {
-    	$np.removeClass('open');
+      $np.removeClass('open');
       $(this).removeClass('close');
       $('body').css('overflow', 'auto');
       $('.body-mask').animate({'opacity': '0'}, 'fast');
     } else {
-    	$np.addClass('open');
+      $np.addClass('open');
       $(this).addClass('close');
       $('body').css('overflow', 'hidden');
       $('.body-mask').animate({'opacity': '0.85'});
