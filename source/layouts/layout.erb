@@ -49,21 +49,20 @@
 
 
     <script FOR="window">
-
-$(window).load(function() {
-  console.log("window loaded");
-  $('video').css({opacity: '1'});
-  $('body').css({opacity: '1'});
-  $('html').css({opacity: '1'});
-  $(".video-bg-loader").css('display','none');
-  $('video').css('display', 'block');
-  $('a').click(function(){
-    $(".video-bg-loader").css('display','block');
-    $('video').css({opacity: '0'});
-    $('body').css({opacity: '0'});
-    $('html').css({opacity: '0'});
-  });
-});
+      $(window).load(function() {
+        console.log("window loaded");
+        $('video').css({opacity: '1'});
+        $('body').css({opacity: '1'});
+        $('html').css({opacity: '1'});
+        $(".video-bg-loader").css('display','none');
+        $('video').css('display', 'block');
+        $('a').click(function(){
+          $(".video-bg-loader").css('display','block');
+          $('video').css({opacity: '0'});
+          $('body').css({opacity: '0'});
+          $('html').css({opacity: '0'});
+        });
+      });
     </script>
   </body>
 </html>
