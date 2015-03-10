@@ -4,6 +4,11 @@
 
 var MOBILE_WIDTH = 610;
 
+var vid = document.getElementById("vid");
+  vid.onloadedmetadata = function() {
+      $('video').css('right', 0);
+  };
+
 $(window).load(function(){
 
   /////////////// DELAY DOM SHOWING ////////////////
@@ -16,6 +21,7 @@ $(window).load(function(){
   }else {
     $('body').animate({opacity: '1'});
   }
+
 });
 
 
