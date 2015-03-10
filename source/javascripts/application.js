@@ -16,11 +16,16 @@ $(window).load(function(){
   }else {
     $('body').animate({opacity: '1'});
   }
+  var bgImage = new Image();
+  bgImage.src = "/video/02.gif";
+  bgImage.onload = function(){
+   console.log('loaded bgImage');
+   $('.video').css('background-image',"url('/video/02.gif')").css('background-repeat', 'no-repeat');
+  }
 });
 
 
 $(document).ready(function() {
-  $('.video').css('background-image',"url('/video/02.gif')").css('background-repeat', 'no-repeat');
   /////////////// NAV PAGE OPEN/CLOSE //////////////
 
   $("#nav-open").click(function(e) {
