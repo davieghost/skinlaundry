@@ -189,7 +189,7 @@
 		"newyork" : {
 			"name" 		: "Flatiron, NY",
 			"address1" 	: "3 W 16th St.",
-			"address2"	: "",
+			"address2"	: "(BETWEEN 5TH & 6TH AVENUE)",
 			"city_state": "New York",
 			"zipcode" 	: "10011",
 			"zone"			: "new-york",
