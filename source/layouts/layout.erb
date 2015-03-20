@@ -46,9 +46,9 @@
   <body class="<%= page_classes %>" ng-app = "SLWeb" ng-controller = "BaseCtrl as base">
     <!-- <div class="body-mask"></div> -->
     <div class="videobg">
-      <video autoplay loop muted class="hide-mobile">
-      <source src="/video/02.mp4" type="video/mp4">
-      <source src="/video/02.webm" type="video/mp4">
+      <video autoplay loop muted class="hide-mobile" poster="/images/SL_mobil_background_small.jpg" style = "display:none;" onloadeddata="this.style.display = 'block';">
+        <source src="/video/02.mp4" type="video/mp4">
+        <source src="/video/02.webm" type="video/mp4">
       </video>
       <div class="hide-desktop cover"></div>
       <img src="/images/SL_Watermark.png" id="watermark"/>
